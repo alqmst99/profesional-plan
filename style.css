@@ -35,7 +35,7 @@ body {
     gap: 1.2rem;
 }
 
-.btn {
+.btn, .btn-s {
     background: var(--secondary-color);
     color: black;
     padding: 0.5em 1.2em;
@@ -88,22 +88,101 @@ header {
     width: 100%;
 }
 
+/*--Hero--*/
+.hero{
+  background-image: url("./assets/images/image-back-4.jpg");
+  background-position: center;
+  background-repeat: repeat;
+background-clip: content-box;
+background-size: cover;
+
+}
+
+.hero-wrapper{
+width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-corousel{
+   width: 100%;
+display: flex;
+    gap: 1rem; /* Espacio entre cards */
+    overflow-x: auto; /* Hace scroll horizontal si es necesario */
+    scroll-snap-type: x mandatory; /* Para efecto de snap en scroll */
+     scroll-behavior: smooth; /* Transición suave */
+  -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+    transition: transform 0.6s ease-in-out;
+}
+
+.hero-card {
+  min-width: 100%; /* cada card ocupa todo el ancho visible */
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.342);
+  border-radius: 15px;
+    flex: 0 0 auto;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+}
+.hero-card .card-title h2{
+  color: wheat;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.hero-card .card-text p{
+  color: wheat;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.animate-slide-y {
+  animation: moving-2 1s ease-out forwards;
+}
+
 /*---about---*/
 .about-section {
     width: 100%;
     margin-top: 5rem;
     justify-content: center;
 }
+.carousel-wrapper {
+  height: 402px; /* Ajustalo al alto de una .about-card */
+  overflow: hidden;
+  position: relative;
+}
 
 .about-courrucel {
     width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  transition: transform 1s ease-in-out;
 }
 
 .about-card {
     display: flex;
+     height: 400px; /* mismo valor que .carousel-wrapper */
+  flex-shrink: 0;
+    align-content: center;
     gap: 1.2rem;
     justify-content: center;
+    align-items: center;
+    margin-top: 2px;
 }
 
 .about-desc {
@@ -130,7 +209,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
   box-shadow: 0 0 50px black;
 }
 
@@ -148,7 +226,74 @@ header {
   width: 400px;   /* Tamaño de la imagen superpuesta */
   z-index: 2;
   filter: drop-shadow(-10px -10px 4px #e414ff4b) drop-shadow(10px -10px 4px #14ff144b) ;
-  animation: moving-l 1.5s ease-out forwards;
+  
+}
+
+.animate-slide {
+  animation: moving-l 1s ease-out forwards;
+}
+
+/*--- Service Section ---*/
+
+.service-card{
+  margin-top: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.service-image img{
+object-fit: cover;
+position: relative;
+border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+}
+
+
+.service-modal{
+  display: none;
+   transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.service-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.section-modal-content {
+  top: 10rem;
+  left: 10rem;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.637);
+  
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-modal-card h2{
+  color: white;
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 99;
 }
 
 
@@ -164,7 +309,7 @@ header {
     opacity: 0.5;
   }
   80% {
-    transform: translateX(10px);
+    
     opacity: 0.9;
   }
  
@@ -172,4 +317,29 @@ header {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+
+@keyframes moving-2 {
+ 0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-y {
+  animation: moving-l 1s ease-out forwards;
+}
+
+.hero-card.show {
+  opacity: 1;
+  transform: scale(1);
 }
