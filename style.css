@@ -1,0 +1,175 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Values Root*/
+:root {
+    --primary-color: rgb(70, 0, 128);
+    --primary-color-light: #b78aff;
+    --primary-color-extra-light: #35373b;
+    --secondary-color: #75f954;
+    --secondary-color-dark: #9bee86;
+    --text-light: #d1d5db;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+/* General Styles */
+* {
+
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    color: #333;
+
+}
+
+body {
+    background-color: #ffdabc;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: black;
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+/*---HEADER---*/
+header {
+    background-color: var(--primary-color-light);
+    width: 100%;
+    font-weight: 600;
+    height: 15vh;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 0 50px black;
+}
+
+.header-section {
+    align-items: center;
+    align-self: auto;
+}
+
+.logo {
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-bar {
+    justify-content: space-between;
+    width: 50%;
+    text-align: center;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: larger;
+}
+
+/*---MAIN--*/
+.main {
+    width: 100%;
+}
+
+/*---about---*/
+.about-section {
+    width: 100%;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.about-courrucel {
+    width: 100%;
+
+}
+
+.about-card {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.about-desc {
+    max-width: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #35373b;
+    text-align: center;
+    align-items: center;
+    
+}
+.about-text .btn {
+  
+  align-items: center;
+  text-align: center;
+}
+.about-image {
+    position: relative;
+  width: 500px; /* o el ancho que necesites */
+  height: 400px; /* definí una altura */
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 50px black;
+}
+
+.about-image .back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image .over{
+     position: absolute;
+  top: 10px;     /* Ajusta según tu necesidad */
+  left: 50px;
+  width: 400px;   /* Tamaño de la imagen superpuesta */
+  z-index: 2;
+  filter: drop-shadow(-10px -10px 4px #e414ff4b) drop-shadow(10px -10px 4px #14ff144b) ;
+  animation: moving-l 1.5s ease-out forwards;
+}
+
+
+
+
+/*############# ANIMATIONS #############*/
+@keyframes moving-l {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 0.9;
+  }
+ 
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
