@@ -22,13 +22,13 @@
             </div>
             <nav class="nav_bar">
                 <ul class="nav-links  grid">
-                    <li class="link"><a href="http://" rel="noopener noreferrer">Home</a></li>
-                    <li class="link"><a href="http://" rel="noopener noreferrer">About</a></li>
-                    <li class="link"><a href="http://" rel="noopener noreferrer">Services</a></li>
-                    <li class="link"><a href="http://" rel="noopener noreferrer">Projects</a></li>
-                    <li class="link"><a href="http://" rel="noopener noreferrer">Testimonies</a></li>
-                    <li class="link"><a href="http://" rel="noopener noreferrer">Blog's</a></li>
-                    <li class="link"><a href="http://" rel="noopener noreferrer">Contact</a></li>
+                    <li class="link"><a href="#hero" rel="noopener noreferrer">Home</a></li>
+                    <li class="link"><a href="about" rel="noopener noreferrer">About</a></li>
+                    <li class="link"><a href="#servie" rel="noopener noreferrer">Services</a></li>
+                    <li class="link"><a href="#projects" rel="noopener noreferrer">Projects</a></li>
+                    <li class="link"><a href="#testimonies" rel="noopener noreferrer">Testimonies</a></li>
+                    <li class="link"><a href="#blogs" rel="noopener noreferrer">Blog's</a></li>
+                    <li class="link"><a href="#contact" rel="noopener noreferrer">Contact</a></li>
                 </ul>
             </nav>
             <div class="button">
@@ -38,7 +38,7 @@
     <main class="main">
 
         <!--Hero Section-->
-        <div class="hero">
+        <section class="hero" id="hero">
             <div class="hero-wrapper">
                 <div class="hero-corousel">
                     <!-- Card 1: Plan Landing Page -->
@@ -84,10 +84,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
-        <div class="about-section">
+        <section class="about-section" id="about">
+            <div class="title">
+                <h2 class="title-h2">Sobre Nosotros</h2>
+            </div>
+
             <div class="carousel-wrapper">
                 <div class="about-courrusel">
                     <div class="about-card">
@@ -156,26 +160,29 @@
                     </div>
                 </div>
             </div>
+        </section>
         </div>
 
+        <section class="service-section" id="service">
+            <div class="title">
+                <h2 class="title-h2">Nuestros Servicios</h2>
+            </div>
 
-        </div>
-
-        <div class="service-section">
             <div class="service-content">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="./assets/images/image-back-4.jpg" width="300px" height="300px"
+                        <img src="./assets/images/service-landing.png" width="350px" height="300px"
                             alt="service-image-plan">
                     </div>
                     <div class="service-desc">
                         <div class="service-title">
                             <h2>Landing Page Plans</h2>
                         </div>
-                        <div class="service-list">
-                            <ul class="tips">
-                                <li class="tip"></li>
-                            </ul>
+                        <div class="service-text">
+                            <p>¿Querés presencia digital sin complicaciones? Nuestras Landing Pages son rápidas,
+                                efectivas y pensadas para convertir visitantes en clientes. Ideal para campañas,
+                                servicios o presentaciones simples pero impactantes.</p>
+
                         </div>
                         <div class="service-btn">
                             <a class="btn-s" data-type="plan">Check Now</a>
@@ -184,17 +191,18 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="./assets/images/image-back-4.jpg" width="300px" height="300px"
+                        <img src="./assets/images/service-maintence.jpg" width="350px" height="300px"
                             alt="service-image-plan">
                     </div>
                     <div class="service-desc">
                         <div class="service-title">
                             <h2>Maintence Plans</h2>
                         </div>
-                        <div class="service-list">
-                            <ul class="tips">
-                                <li class="tip"></li>
-                            </ul>
+                        <div class="service-text">
+                            <p>Tu sitio ya está online, pero... ¿quién lo cuida? Con nuestros planes de mantenimiento te
+                                asegurás actualizaciones, velocidad, backups y seguridad al día. Vos vendé tranquilo;
+                                nosotros mantenemos todo en orden.</p>
+
                         </div>
                         <div class="service-btn">
                             <a class="btn-s" data-type="mant">Check Now</a>
@@ -203,17 +211,18 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="./assets/images/image-back-4.jpg" width="300px" height="300px"
+                        <img src="./assets/images/service-full.png" width="350px" height="300px"
                             alt="service-image-plan">
                     </div>
                     <div class="service-desc">
                         <div class="service-title">
                             <h2>Full Pages Plans</h2>
                         </div>
-                        <div class="service-list">
-                            <ul class="tips">
-                                <li class="tip"></li>
-                            </ul>
+                        <div class="service-text">
+                            <p>Si buscás algo completo, escalable y a medida, este plan es para vos. Desde
+                                e-commerce hasta portfolios o sitios institucionales: estructura sólida, diseño
+                                atractivo y todo lo que necesitás para crecer.</p>
+
                         </div>
                         <div class="service-btn">
                             <a class="btn-s" data-type="full">Check Now</a>
@@ -229,9 +238,16 @@
                             <div class="service-title">
                                 <h2>Plan basico</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Hasta 3 secciones</li>
+                                    <li class="tip">Formulario de contacto</li>
+                                    <li class="tip">Redes Sociales</li>
+                                    <li class="tip">Mantenimeinto 1 mes</li>
+                                    <li class="tip">SEO: basico</li>
+                                    <li class="tip">Hosting</li>
+                                    <li class="tip">Dominio x 12 meses</li>
+                                    <li class="tip">1 revicion pre-entrega</li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -243,9 +259,16 @@
                             <div class="service-title">
                                 <h2>Plan Estandar</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Hasta 5 secciones</li>
+                                    <li class="tip">Formulario de contacto</li>
+                                    <li class="tip">Redes Sociales/mensajes a WhatsApp</li>
+                                    <li class="tip">Mantenimeinto 2 mes</li>
+                                    <li class="tip">SEO: medio</li>
+                                    <li class="tip">Hosting</li>
+                                    <li class="tip">Dominio x 12 meses</li>
+                                    <li class="tip">2 revicion pre-entrega</li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -257,9 +280,18 @@
                             <div class="service-title">
                                 <h2>Plan Profecional</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Hasta 7 secciones</li>
+                                    <li class="tip">Formulario de contacto</li>
+                                    <li class="tip">Redes Sociales/mensajes a WhatsApp</li>
+                                    <li class="tip">Mantenimeinto 3 mes</li>
+                                    <li class="tip">SEO: avanzado</li>
+                                    <li class="tip">Hosting</li>
+                                    <li class="tip">Dominio x 12 meses</li>
+                                    <li class="tip">2 revicion pre-entrega</li>
+                                    <li class="tip">analitica Basica</li>
+                                    <li class="tip">3 revicion pre-entrega</li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -276,9 +308,12 @@
                             <div class="service-title">
                                 <h2>Mantenimiento basico</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Hasta 2 cambios menores por mes</li>
+                                    <li class="tip">Corrección de textos, imágenes o enlaces</li>
+                                    <li class="tip">Revisión visual general</li>
+                                    <li class="tip">Soporte en 48 hs por WhatsApp o mail</li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -290,9 +325,13 @@
                             <div class="service-title">
                                 <h2>Mantenimiento Estandar (recomendado)</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Hasta 5 cambios al mes</li>
+                                    <li class="tip"> Nuevas secciones básicas</li>
+                                    <li class="tip">Optimización de estilos (CSS)</li>
+                                    <li class="tip">Soporte en 24 hs</li>
+                                    <li class="tip">Revisión mensual de SEO básico</li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -303,9 +342,14 @@
                             <div class="service-title">
                                 <h2>Mantenimiento Personalizado</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Cambios menores ilimitados</li>
+                                    <li class="tip">Refactorización de código (JS)</li>
+                                    <li class="tip">Funcionalidades simples (modales, sliders, filtros)</li>
+                                    <li class="tip">Mejora visual completa (UX)</li>
+                                    <li class="tip">Reporte técnico mensual</li>
+                                    <li class="tip">Soporte prioritario en el día</li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -321,9 +365,28 @@
                             <div class="service-title">
                                 <h2>Pagina full Basica</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Sitio completo con 3 secciones (Inicio, Servicios, Contacto)</li>
+                                    <li class="tip">Diseño responsive (adaptado a mobile)</li>
+                                    <li class="tip">Formulario de contacto funcional (sin backend)
+
+                                    </li>
+                                    <li class="tip">Optimización SEO básica (meta tags, estructura semántica)
+
+                                    </li>
+                                    <li class="tip">Enlaces a WhatsApp, redes y ubicación
+
+                                    </li>
+                                    <li class="tip">Entrega lista para publicar + deploy en GitHub Pages
+
+                                    </li>
+                                    <li class="tip">Entrega estimada: 7 a 10 días
+
+                                    </li>
+                                    <li class="tip">Precio: $130.000 ARS
+
+                                    </li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -334,9 +397,36 @@
                             <div class="service-title">
                                 <h2>Pagina full Estandar</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Sitio web completo con hasta 5 secciones (Inicio, Nosotros,
+                                        Servicios, Galería, Contacto)
+
+                                    </li>
+                                    <li class="tip">Animaciones y transiciones suaves en JS
+
+                                    </li>
+                                    <li class="tip">Diseño a medida, limpio y profesional
+
+                                    </li>
+                                    <li class="tip">SEO intermedio (estructura jerárquica H1-H6, indexabilidad)
+
+                                    </li>
+                                    <li class="tip">Formulario con validaciones básicas
+
+                                    </li>
+                                    <li class="tip">Integración con mapa, redes sociales y WhatsApp directo
+
+                                    </li>
+                                    <li class="tip">Documentación técnica del código y despliegue
+
+                                    </li>
+                                    <li class="tip">Entrega estimada: 10 a 14 días
+
+                                    </li>
+                                    <li class="tip">Precio: $165.000 ARS
+
+                                    </li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -347,9 +437,40 @@
                             <div class="service-title">
                                 <h2>Pagina full Profecional</h2>
                             </div>
-                            <div class="service-list">
+                            <div class="service-text">
                                 <ul class="tips">
-                                    <li class="tip"></li>
+                                    <li class="tip">Sitio web completo con hasta 8 secciones + funcionalidades dinámicas
+
+                                    </li>
+                                    <li class="tip">Modales, sliders, tabs, y efectos personalizados con JavaScript
+
+                                    </li>
+                                    <li class="tip">Módulo de blog estático reutilizable
+
+                                    </li>
+                                    <li class="tip">Optimización de performance (lazy load, código minificado, preload
+                                        de fuentes)
+
+                                    </li>
+                                    <li class="tip">SEO avanzado + Checklist de publicación
+
+                                    </li>
+                                    <li class="tip">Integración con herramientas externas: Mailchimp, Google Forms,
+                                        WhatsApp
+
+                                    </li>
+                                    <li class="tip">Preparado para escalar: estructura modular y limpia
+
+                                    </li>
+                                    <li class="tip">Hosting gratuito en GitHub Pages o asistencia para dominio propio
+
+                                    </li>
+                                    <li class="tip">Entrega estimada: 15 a 20 días
+
+                                    </li>
+                                    <li class="tip">Precio: $230.000 ARS
+
+                                    </li>
                                 </ul>
                             </div>
                             <div class="service-btn">
@@ -359,23 +480,214 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="projects-section  section" id="projects">
+            <div class="title">
+                <h2 class="title-h2">Nosotros Proyectos</h2>
+            </div>
+            <div class="projects_container container grid_p">
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-3.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Classic Moto Website</h2>
+                        <a href="https://alqmst99.github.io/Landing-Moto/" class="projects_button">View Demo -> ></a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-1.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Modern Real State Website</h2>
+                        <a href="https://alqmst99.github.io/Real-State-BT/" class="projects_button">View Demo -> ></a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/image-back-2.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Shoes-WebSite</h2>
+                        <a href="https://alqmst99.github.io/Shoes-WebSite/" class="projects_button">View Demo -> </a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-4.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Modern Book Store Website</h2>
+                        <a href="https://alqmst99.github.io/Books/" class="projects_button">View Demo -> </a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-3.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Modern Gym Website</h2>
+                        <a href="https://alqmst99.github.io/Landing-Gym/" class="projects_button">View Demo -> </a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-6.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Medical-Care</h2>
+                        <a href="https://alqmst99.github.io/Medical-Care/" class="projects_button">View Demo -></a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-4.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">Web</span>
+                        <h2 class="projects_title">Modern E-comerce Website</h2>
+                        <a href="https://alqmst99.github.io/Clothes-comerce/" class="projects_button">View Demo -> </a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-5.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">API</span>
+                        <h2 class="projects_title">API E-comerce</h2>
+                        <a href="#" class="projects_button">View Demo -> </a>
+                    </div>
+                </article>
+
+                <article class="projects_card">
+                    <img src="./Assets/images/project-img-6.jpg" alt="project-image" class="project_img">
+                    <div class="project_modal">
+                        <span class="projects_subtitle">API</span>
+                        <h2 class="projects_title">Bloggin</h2>
+                        <a href="#" class="projects_button">View Demo -> </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="testimonies-section" id="testimonies">
+            <div class="title">
+                <h2 class="title-h2">Testiminios</h2>
+            </div>
+             <div class="testimonies-content">
+            <div class="testimonies-card">
+                <div class="testimonies-image">
+                    <img src="./assets/images/testimonio-2.png" width="100px" height="100px"
+                        alt="testimonies-image-plan">
+                </div>
+                <div class="testimonies-desc">
+                    <div class="testimonies-title">
+                        <h2>Jose R. Puppits</h2>
+                    </div>
+                    <div class="testimonies-text">
+                        <p>¿Querés presencia digital sin complicaciones? Nuestras Landing Pages son rápidas,
+                            efectivas y pensadas para convertir visitantes en clientes. Ideal para campañas,
+                            servicios o presentaciones simples pero impactantes.</p>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="testimonies-card">
+                <div class="testimonies-image">
+                    <img src="./assets/images/testimonio-1.png" width="100px" height="100px"
+                        alt="service-image-plan">
+                </div>
+                <div class="testimonies-desc">
+                    <div class="service-title">
+                        <h2>Mariela P Muffins</h2>
+                    </div>
+                    <div class="testimonies-text">
+                        <p>Tu sitio ya está online, pero... ¿quién lo cuida? Con nuestros planes de mantenimiento te
+                            asegurás actualizaciones, velocidad, backups y seguridad al día. Vos vendé tranquilo;
+                            nosotros mantenemos todo en orden.</p>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="testimonies-card">
+                <div class="testimonies-image">
+                    <img src="./assets/images/testimonio 3.png" width="100px" height="100px" alt="service-image-plan">
+                </div>
+                <div class="testimonies-desc">
+                    <div class="service-title">
+                        <h2>Jaime T. BlackCake</h2>
+                    </div>
+                    <div class="testimonies-text">
+                        <p>Si buscás algo completo, escalable y a medida, este plan es para vos. Desde
+                            e-commerce hasta portfolios o sitios institucionales: estructura sólida, diseño
+                            atractivo y todo lo que necesitás para crecer.</p>
+
+                    </div>
+                   
+                </div>
+            </div>
         </div>
+        </section>
 
-        <div class="projects-section">asd</div>
-
-        <div class="testimonies-section">asd</div>
-
+       
 
     </main>
 
     <footer class="footer">
-        <div class="footer-head">
-            <div class="footer-logo"></div>
-            <div class="footer-nav"></div>
-            <div class="footer-contact"></div>
+       <div class="section_cotainer footer_container">
+            <div class="footer_col">
+                <h3>FSTail <samp>Solutions</samp></h3>
+                <p>
+                    We are honored to be a part of your healthcare journey and committed
+                    to delivering compassionate, personalized, and top-noch care every step of the way.
+                </p>
+                <p>
+                    Trust us with your health, and let us work together to achieve the best possible outcomes for you
+                    loved ones.
+                </p>
+            </div>
+            <div class="footer_col">
+                <h4>About Us</h4>
+              <ul class="nav-f-links">
+                    <li class="link"><a href="#hero" rel="noopener noreferrer"><p>Home</p></a></li>
+                    <li class="link"><a href="about" rel="noopener noreferrer"><p>About</p></a></li>
+                    <li class="link"><a href="#servie" rel="noopener noreferrer"><p>Services</p></a></li>
+                    <li class="link"><a href="#projects" rel="noopener noreferrer"><p>Projects</p></a></li>
+                    <li class="link"><a href="#testimonies" rel="noopener noreferrer"><p>Testimonies</p></a></li>
+                    <li class="link"><a href="#blogs" rel="noopener noreferrer"><p>Blog's</p></a></li>
+                    <li class="link"><a href="#contact" rel="noopener noreferrer"><p>Contact</p></a></li>
+                </ul>
+                
+            </div>
+            <div class="footer_col">
+                <h4>Services</h4>
+                <p>Advance Search</p>
+                <p>Privacy Policy</p>
+                <p>Suppliers</p>
+                <p href="#">Terms & Conditions</p>
+                
+            </div>
+            <div class="footer_col">
+                <h4>Contac Us</h4>
+                <p><i class="ri-map-pin-2-fill"></i> 4073, Pasaje J E Galisteo, Santa fe Argentina</p>
+                <p><i class="ri-mail-fill"></i> healthcare@infocare.com</p>
+                <p><i class="ri-phone-fill"></i> +54 9 3425428918</p>
+                <p></p>
+            </div>
         </div>
-        <div class="footer-copy">
-
+        <div class="footer_bar">
+            <div class="footer_bar_content">
+                <p>Corpyright 2025 FSTailSolutions. All rigths reserved.</p>
+                <div class="footer_socials">
+                    <span><i class="ri-instagram-line"></i></span>
+                    <span><i class="ri-facebook-box-line"></i></span>
+                    <span><i class="ri-twitter-line"></i></span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
