@@ -4,7 +4,14 @@
   const over = document.querySelectorAll(".over");
   let current = 0;
 
-  setInterval(() => {
+  function verificarResolucion() {
+  if (window.innerWidth <= 767) { 
+    console.log("Resolución menor o igual a 767px, desactivando JavaScript para ciertos elementos/scripts");
+  
+  } else {
+    // Reactiva o modifica los elementos/scripts si es necesario
+    console.log("Resolución mayor a 767px, habilitando JavaScript para ciertos elementos/scripts");
+     setInterval(() => {
     current++;
     if (current >= cards.length) {
       current = 0;
@@ -22,8 +29,12 @@
   });
 
 }, 5000); // cambia cada 4 segundos
+  }
+}
 
 
+
+//HERO Moving
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -37,6 +48,15 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.hero-card').forEach(el => observer.observe(el));
 
 
+const carousel1 = document.querySelector('.hero-corousel');
+const cards1 = document.querySelectorAll('.hero-card');
+let currentIndex = 0;
+
+function moveCarousel() {
+  currentIndex = (currentIndex + 1) % cards1.length;
+  carousel1.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+setInterval(moveCarousel, 5000);
 
 //Modals functions
 
