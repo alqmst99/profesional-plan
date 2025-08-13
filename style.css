@@ -1024,7 +1024,7 @@ footer {
 }
 
 /* Escritorio: 1024px en adelante */
-@media (max-width: 900px) {
+@media (width: 900px) {
 
   header,
   .hero,
