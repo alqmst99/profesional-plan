@@ -1,36 +1,41 @@
-//Corousel 
-  const carousel = document.querySelector(".about-courrusel");
-  const cards = document.querySelectorAll(".about-card");
-  const over = document.querySelectorAll(".over");
-  let current = 0;
+//Corousel About
+const carousel = document.querySelector(".about-courrusel");
+const cards = document.querySelectorAll(".about-card");
+const over = document.querySelectorAll(".over");
+let current = 0;
+let aboutInterval = null;
 
-  function verificarResolucion() {
-  if (window.innerWidth <= 767) { 
-    console.log("Resolución menor o igual a 767px, desactivando JavaScript para ciertos elementos/scripts");
-  
+function startAboutCarousel() {
+  if (aboutInterval) clearInterval(aboutInterval);
+
+  let resizeTimeout = null;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(startAboutCarousel, 200);
+});
+  if (window.innerWidth > 767) {
+    aboutInterval = setInterval(() => {
+      current = (current + 1) % cards.length;
+      carousel.style.transform = `translateY(-${400 * current}px)`; // altura fija por tarjeta
+
+      // Reiniciar animaciones
+      over.forEach((overEl, index) => {
+        overEl.classList.remove("animate-slide");
+        void overEl.offsetWidth;
+        if (index === current) {
+          overEl.classList.add("animate-slide");
+        }
+      });
+    }, 5000);
   } else {
-    // Reactiva o modifica los elementos/scripts si es necesario
-    console.log("Resolución mayor a 767px, habilitando JavaScript para ciertos elementos/scripts");
-     setInterval(() => {
-    current++;
-    if (current >= cards.length) {
-      current = 0;
-    }
-    carousel.style.transform = `translateY(-${400 * current}px)`; // altura fija por tarjeta
-  
-     // Reiniciar animaciones
-  over.forEach((over, index) => {
-    over.classList.remove("animate-slide");
-    // Forzar reflow para reiniciar
-    void over.offsetWidth;
-    if (index === current) {
-      over.classList.add("animate-slide");
-    }
-  });
-
-}, 5000); // cambia cada 4 segundos
+    carousel.style.transform = "none";
+    over.forEach(overEl => overEl.classList.remove("animate-slide"));
   }
 }
+
+// Ejecutar al cargar y al cambiar tamaño de pantalla
+window.addEventListener("DOMContentLoaded", startAboutCarousel);
+window.addEventListener("resize", startAboutCarousel);
 
 
 
@@ -42,7 +47,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.5 // Se activa cuando el 50% del elemento es visible
+  threshold: 0.8// Se activa cuando el 50% del elemento es visible
 });
 
 document.querySelectorAll('.hero-card').forEach(el => observer.observe(el));
@@ -59,7 +64,10 @@ function moveCarousel() {
   } else {
     carousel1.style.transform = 'none';
   }
-setInterval(moveCarousel, 5000);}
+}
+moveCarousel();
+setInterval(moveCarousel, 5000);
+
 
 //Modals functions
 
@@ -101,4 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
       Object.values(modals).forEach(modal => modal.style.display = "none");
     }
   });
+});
+
+//Login banner
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.display = "none";
 });
