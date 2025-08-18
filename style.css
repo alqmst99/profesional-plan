@@ -25,6 +25,10 @@
 
 }
 
+.loader-logo {
+  animation: spin3d 1.2s linear infinite;
+  transform-style: preserve-3d;
+}
 .project_img img {
   max-width: 100%;
   height: auto;
@@ -716,6 +720,10 @@ footer {
   transform: scale(0.9);
 }
 
+@keyframes spin3d {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
 
 /*RESPONSIVE*/
 
