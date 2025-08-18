@@ -4,12 +4,12 @@
 /* Values Root*/
 :root {
   --primary-color: rgb(70, 0, 128);
-  --primary-color-light: #b78aff;
+  --primary-color-light: #A43931;
   --primary-color-extra-light: #35373b;
   --secondary-color: #75f954;
   --secondary-color-dark: #9bee86;
   --text-light: #d1d5db;
-  --white: #ffffff;
+  --white: #e9e0fd;
   --max-width: 1200px;
 }
 
@@ -30,6 +30,31 @@
   height: auto;
 }
 
+.button-nav{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+  position: fixed;
+display: none;
+justify-content: start;
+align-items: center;
+background-color:  #A43931;
+z-index: 100;
+}
+
+.button-nav a {
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem;
+}
+
+.button-nav a:hover {
+    background-color: var(--secondary-color);
+}
+
 a {
   text-decoration: none;
 
@@ -37,7 +62,9 @@ a {
 
 
 body {
-  background-color: #ffdabc;
+background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .grid {
@@ -89,7 +116,7 @@ header {
   background-color: var(--primary-color-light);
   width: 100%;
   font-weight: 600;
-  height: 15vh;
+  height: 30%;
   z-index: 10;
   position: relative;
   box-shadow: 0 0 50px black;
@@ -182,14 +209,14 @@ header {
 }
 
 .hero-card .card-title h2 {
-  color: wheat;
+  color: var(--white);
   margin-bottom: 5px;
   text-align: center;
 }
 
 .hero-card .card-text p {
 
-  color: wheat;
+  color: var(--white);
   margin-bottom: 5px;
   text-align: center;
 }
@@ -245,6 +272,10 @@ header {
   justify-content: center;
   box-shadow: 10px 0 15px black;
 
+}
+
+.about-text p, h2{
+  color: var(--white);
 }
 
 .about-text .btn {
@@ -362,6 +393,11 @@ header {
 
   filter: drop-shadow(-10px -10px 4px #e414ff4b) drop-shadow(10px -10px 4px #14ff144b);
 
+
+}
+
+.service-card:hover h2 {
+  color: var(--primary-color-light);
 
 }
 
@@ -703,6 +739,9 @@ footer {
     font-weight: 600;
   }
 
+  .button-nav{
+    display: flex;
+  }
   .hero-card,
   .service-card,
   .testimonies-card,
@@ -807,6 +846,10 @@ footer {
     padding: 0.5rem;
     font-size: 0.9rem;
     font-weight: 600;
+  }
+
+    .button-nav{
+    display: flex;
   }
 
   .hero-card,
@@ -916,8 +959,16 @@ align-items: center;
   }
 }
 
-/* Tablets: 600px a 1023px */
+/* Tablets: 600px a 800px */
 @media (min-width: 600px) and (max-width: 799px) {
+
+header{
+  max-height: 100px;
+}
+
+  .button-nav{
+    display: flex;
+  }
 
   header,
   .hero,
@@ -1054,7 +1105,9 @@ align-items: center;
 
 /* Escritorio: 1024px en adelante */
 @media (min-width: 800px) and (max-width: 1024px) {
-
+header{
+  max-height: 100px;
+}
   header,
   .hero,
   .about-section,
@@ -1065,14 +1118,23 @@ align-items: center;
     box-shadow: 0 0 50px black;
   }
 
-  .header-section .nav_bar {
+.nav_bar{
+  display: none;
+}
+
+  .header-section {
     display: flex;
   }
 
+  
   .btn {
     padding: 0.8rem 1.2rem;
     font-size: 1rem;
     font-weight: 700;
+  }
+
+ .button-nav{
+    display: flex;
   }
 
   .hero-card,
@@ -1088,7 +1150,7 @@ align-items: center;
     box-shadow: initial;
   }
 .hero-card{
-  max-width: 50%;
+  max-width: 100%;
 }
   .about-card {
     
