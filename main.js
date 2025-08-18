@@ -53,15 +53,18 @@ const cards1 = document.querySelectorAll('.hero-card');
 let currentIndex = 0;
 
 function moveCarousel() {
-  currentIndex = (currentIndex + 1) % cards1.length;
-  carousel1.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-setInterval(moveCarousel, 5000);
+  if (window.innerWidth > 599) {
+    currentIndex = (currentIndex + 1) % cards1.length;
+    carousel1.style.transform = `translateX(-${currentIndex * 100}%)`;
+  } else {
+    carousel1.style.transform = 'none';
+  }
+setInterval(moveCarousel, 5000);}
 
 //Modals functions
 
 document.addEventListener("DOMContentLoaded", () => {
-  const serviceCards = document.querySelectorAll(".btn-s");
+  const serviceCards = document.querySelectorAll("button.btn-s"); // Solo botones
   const modals = {
     plan: document.querySelector(".section-modal-plan"),
     mant: document.querySelector(".section-modal-mant"),
@@ -70,17 +73,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const serviceModal = document.querySelector(".service-modal");
 
-  // Mostrar modal
-  serviceCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const type = card.getAttribute("data-type");
-
-      if (modals[type]) {
-        serviceModal.style.display = "block";
-        modals[type].style.display = "block";
-      }
-    });
+ serviceCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const type = card.getAttribute("data-type");
+    // Oculta todos los modals internos antes de mostrar el correcto
+    Object.values(modals).forEach(modal => modal.style.display = "none");
+    if (modals[type]) {
+      serviceModal.style.display = "block";
+      modals[type].style.display = "block";
+    }
   });
+});
 
   // Cerrar modal al hacer click en la cruz
   const closeButtons = document.querySelectorAll(".modal-close");
