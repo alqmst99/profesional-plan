@@ -660,7 +660,7 @@ footer {
   transition: 0.3s;
 }
 
-.footer_col p:hover {
+.footer_col p:hover, footer a:hover {
   color: var(--secondary-color-dark);
   text-shadow: 0 0 20px black;
 }
@@ -669,7 +669,10 @@ footer {
   color: var(--white);
 
 }
-
+ footer a{
+  font-weight: 600px;
+  color: var(--white);
+ }
 .footer_bar {
   background-color: var(--primary-color-light);
 }
