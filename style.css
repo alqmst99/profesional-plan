@@ -66,6 +66,7 @@ a {
 }
 
 
+
 body {
   background: #1D4350;
   /* fallback for old browsers */
@@ -1465,5 +1466,165 @@ footer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: 60px;
+  }
+}
+
+
+
+/* --- Estilos para páginas secundarias (policy, terms, extra-landing) --- */
+.secondary-page-bg {
+  background: #f6f8fa;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.secondary-page-header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 18px 0;
+}
+
+.secondary-page-header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.secondary-page-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0077b6;
+  flex: 1;
+  margin-left: 12px;
+}
+
+.secondary-page-btn {
+  background: #0077b6;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.secondary-page-btn:hover {
+  background: #023e8a;
+}
+
+.secondary-page-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 12px 24px 12px;
+}
+
+.secondary-page-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin-bottom: 32px;
+  padding: 28px 22px;
+}
+
+.secondary-page-h1,
+.secondary-page-h2 {
+  color: #0077b6;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.secondary-page-h1 {
+  font-size: 2rem;
+}
+
+.secondary-page-h2 {
+  font-size: 1.3rem;
+}
+
+.secondary-page-list {
+  margin: 18px 0;
+  padding-left: 22px;
+}
+
+.secondary-page-list li {
+  margin-bottom: 10px;
+  list-style: disc;
+  color: #333;
+  font-size: 1.08rem;
+}
+
+.secondary-page-update {
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 22px;
+  font-style: italic;
+}
+
+.secondary-page-img {
+  display: block;
+  max-width: 350px;
+  width: 100%;
+  margin: 24px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.secondary-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.secondary-page-form input,
+.secondary-page-form textarea {
+  padding: 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.secondary-page-form textarea {
+  min-height: 80px;
+  max-height: 180px;
+}
+
+.secondary-page-footer {
+  background: #f8f8f8;
+  color: #555;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 32px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .secondary-page-header-content,
+  .secondary-page-main {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+  .secondary-page-section {
+    padding: 18px 8px;
+  }
+  .secondary-page-h1 {
+    font-size: 1.3rem;
+  }
+  .secondary-page-title {
+    font-size: 1.05rem;
+    margin-left: 6px;
+  }
+  .secondary-page-img {
+    max-width: 98vw;
   }
 }
