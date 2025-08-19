@@ -4,7 +4,7 @@ Proyecto web para la presentación de servicios profesionales de desarrollo web,
 
 ---
 
-## 📁 Estructura de Carpetas
+## Estructura de Carpetas
 
 Profesional/
 │
@@ -28,7 +28,7 @@ Este proyecto incluye:
 
 ---
 
-## 📝 Descripción
+## Descripción
 
 Este proyecto incluye:
 
@@ -41,7 +41,7 @@ Este proyecto incluye:
 
 ---
 
-## 🚀 Instalación y uso
+## Instalación y uso
 
 1. **Cloná el repositorio:**
    ```bash
@@ -55,50 +55,42 @@ Este proyecto incluye:
 4. **Abrí index.html en tu navegador para ver el sitio.**
 
 
-Abrí index.html en tu navegador para ver el sitio.
-
-
-Estructura recomendada:
-
-Colocá las imágenes en images y los íconos en icons .
-Los archivos de páginas secundarias van en la carpeta pages.
-Abrí index.html en tu navegador para ver el sitio.
-
-##Personalización
+## Personalización
 . **Planes y precios:** Editá los textos y valores en index.html según tus servicios.
 . **Imágenes y logos:** Reemplazá los archivos en images y icons por los tuyos.
 . **Datos de contacto:** Actualizá el email, teléfono y redes sociales en los archivos HTML y en los datos estructurados del <head>.
 . **SEO:** Modificá los meta tags y el script JSON-LD en el <head> para reflejar tu marca y ubicación.
 
-##Navegación
+## Navegación
 **Página principal:** index.html
 **Landing extra:** extra-landing.html
 **Política de privacidad:** policy.html
 **Términos y condiciones:** terms.html
 
-##Funcionalidades principales
+## Funcionalidades principales
 **Carouseles automáticos** en sección "Sobre Nosotros" y "Hero".
 **Modales** para detalles de cada plan y servicio.
 **Formulario de contacto** en la landing extra.
 **Animaciones** CSS para transiciones y efectos visuales.
 **Footer** con enlaces a redes, política y términos.
 
-##Créditos
+## Créditos
 **Desarrollo:** Nahuel Pierini & Anaclara Ferrando
 **Contacto:** fstailsolution@gmail.com
 **Ubicación:** Santa Fe, Argentina
 
 
-##Licencia
+## Licencia
 Este proyecto es de uso privado para FSTail Solutions.
 Podés adaptarlo para tu negocio, pero no redistribuirlo sin autorización.
 
-##Mejoras sugeridas
+## Mejoras sugeridas
 Integrar backend para formularios.
 Agregar analítica avanzada.
 Internacionalización (i18n) para otros idiomas.
 Mejorar accesibilidad (WCAG).
-Demo
+
+## Demo
 Podés ver una demo en https://alqmst99.github.io/profesional-plan/
 
 ¡Gracias por confiar en FSTail Solutions!
