@@ -228,6 +228,12 @@ header {
 
 }
 
+.hero-corousel,
+.nosotros-courrusel {
+  will-change: transform;
+  transition: transform 0.6s ease;
+}
+
 
 
 .hero-card {
