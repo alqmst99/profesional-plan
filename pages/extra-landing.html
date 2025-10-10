@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Extra | FSTail Solutions</title>
-    <meta name="description" content="Solicitá tu landing page personalizada y potenciá tu presencia digital con FSTail Solutions. Diseño moderno, rápido y optimizado para convertir visitantes en clientes.">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../assets/images/logo-official.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FSTail Solutions</title>
+  <meta name="description"
+    content="Solicitá tu landing page personalizada y potenciá tu presencia digital con FSTail Solutions. Diseño moderno, rápido y optimizado para convertir visitantes en clientes.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="shortcut icon" href="../assets/images/logo-official.png" type="image/x-icon">
 </head>
+
 <body class="secondary-page-bg">
-    <header class="secondary-page-header">
-        <div class="secondary-page-header-content">
-            <img src="../assets/images/logo-official.png" width="70" alt="Logo-FSTail">
-            <span class="secondary-page-title">Landing Extra</span>
-            <nav>
-                <a href="../index.html" class="secondary-page-btn">Volver al inicio</a>
-            </nav>
-        </div>
-    </header>
-    <main class="secondary-page-main">
-        <section class="secondary-page-section">
-            <h1 class="secondary-page-h1">¡Landing Page Extra para tu campaña!</h1>
-            <p>¿Necesitás una página especial para una promoción, evento o producto? Creamos landings personalizadas, rápidas y optimizadas para captar clientes y potenciar tus resultados.</p>
-            <ul class="secondary-page-list">
-                <li>Ideal para campañas publicitarias y lanzamientos.</li>
-                <li>Diseño moderno y enfocado en conversión.</li>
-                <li>Integración con WhatsApp y redes sociales.</li>
-                <li>Formulario de contacto personalizado.</li>
-                <li>Optimización SEO local y analítica básica.</li>
-            </ul>
-            <img src="../assets/images/service-landing.png" alt="Landing Extra" class="secondary-page-img">
-        </section>
-        <section class="secondary-page-section">
-            <h2 class="secondary-page-h2">¿Qué incluye?</h2>
-            <ul class="secondary-page-list">
-                <li>1 sección principal + formulario</li>
-                <li>Enlaces a redes y WhatsApp</li>
-                <li>Diseño responsive</li>
-                <li>Entrega en 3 días hábiles</li>
-            </ul>
-            <a href="mailto:fstailsolution@gmail.com?subject=Quiero%20mi%20Landing%20Extra" class="secondary-page-btn">Solicitar por Email</a>
-        </section>
-        <section class="secondary-page-section">
-            <h2 class="secondary-page-h2">Contactanos</h2>
-            <form class="secondary-page-form" action="mailto:fstailsolution@gmail.com" method="POST" enctype="text/plain">
-                <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu email" required>
-                <textarea name="message" placeholder="¿Qué tipo de landing necesitás?" required></textarea>
-                <button type="submit" class="secondary-page-btn">Enviar consulta</button>
-            </form>
-        </section>
-    </main>
-    <footer class="secondary-page-footer">
-        <p>Copyright 2025 FSTailSolutions. All rights reserved.</p>
-    </footer>
+  <header class="secondary-page-header">
+    <div class="secondary-page-header-content">
+      <img src="../assets/images/logo-official.png" width="70" alt="Logo-FSTail">
+      <span class="secondary-page-title">Landing Extra</span>
+      <nav>
+        <a href="../index.html" class="secondary-page-btn">Volver al inicio</a>
+      </nav>
+    </div>
+  </header>
+  <main class="secondary-page-main">
+    <section class="secondary-page-section">
+      <h1 class="secondary-page-h1">¡Landing Page Extra para tu campaña!</h1>
+      <p>¿Necesitás una página especial para una promoción, evento o producto? Creamos landings personalizadas, rápidas
+        y optimizadas para captar clientes y potenciar tus resultados.</p>
+      <ul class="secondary-page-list">
+        <li>Ideal para campañas publicitarias y lanzamientos.</li>
+        <li>Diseño moderno y enfocado en conversión.</li>
+        <li>Integración con WhatsApp y redes sociales.</li>
+        <li>Formulario de contacto personalizado.</li>
+        <li>Optimización SEO local y analítica básica.</li>
+      </ul>
+      <img src="../assets/images/service-landing.png" alt="Landing Extra" class="secondary-page-img">
+    </section>
+    <section class="secondary-page-section">
+      <h2 class="secondary-page-h2">¿Qué incluye?</h2>
+      <ul class="secondary-page-list">
+        <li>1 sección principal + formulario</li>
+        <li>Enlaces a redes y WhatsApp</li>
+        <li>Diseño responsive</li>
+        <li>Entrega en 3 días hábiles</li>
+      </ul>
+      <a href="mailto:fstailsolution@gmail.com?subject=Quiero%20mi%20Landing%20Extra"
+        class="secondary-page-btn">Solicitar por Email</a>
+    </section>
+    <section class="secondary-page-section">
+      <h2 class="secondary-page-h2">Contactanos</h2>
+      <form id="landingForm" class="secondary-page-form">
+        <input type="text" name="name" id="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" id="email" placeholder="Tu email" required>
+        <textarea name="message" id="message" placeholder="¿Qué tipo de landing necesitás?" required></textarea>
+        <button type="submit" class="secondary-page-btn">Enviar consulta</button>
+      </form>
+      <div id="formMsg"></div>
+    </section>
+  </main>
+  <footer class="secondary-page-footer">
+    <p>Copyright 2025 FSTailSolutions. All rights reserved.</p>
+  </footer>
 </body>
+<script src="
+https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js
+"></script>
+<script src="../emailjs.js"></script>
+
 </html>

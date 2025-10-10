@@ -1,6 +1,6 @@
 //Corousel About
-const carousel = document.querySelector(".about-courrusel");
-const cards = document.querySelectorAll(".about-card");
+const carousel = document.querySelector(".nosotros-courrusel");
+const cards = document.querySelectorAll(".nosotros-card");
 const over = document.querySelectorAll(".over");
 let current = 0;
 let aboutInterval = null;
@@ -66,7 +66,36 @@ function moveCarousel() {
   }
 }
 moveCarousel();
-setInterval(moveCarousel, 5000);
+setInterval(moveCarousel, 9000);
+
+//Ver mas cards projects
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('#proyectos_card .proyectos_card');
+  const btn = document.getElementById('ver-mas');
+  let visible = 6;
+
+  function showCards() {
+    cards.forEach((card, i) => {
+      if (i < visible) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visible >= cards.length) {
+      btn.style.display = 'none';
+    }
+  }
+
+  btn.addEventListener('click', function () {
+    visible += 6;
+    showCards();
+  });
+
+  showCards();
+});
 
 
 //Modals functions
@@ -79,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     full: document.querySelector(".section-modal-full")
   };
 
-  const serviceModal = document.querySelector(".service-modal");
+  const serviceModal = document.querySelector(".servicios-modal");
 
  serviceCards.forEach(card => {
   card.addEventListener("click", () => {
@@ -116,3 +145,4 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   if (loader) loader.style.display = "none";
 });
+
