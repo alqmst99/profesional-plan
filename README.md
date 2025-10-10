@@ -74,6 +74,25 @@ Este proyecto incluye:
 **Animaciones** CSS para transiciones y efectos visuales.
 **Footer** con enlaces a redes, política y términos.
 
+## Update v1.3.0 — Mejora de interfaz y visibilidad de proyectos  
+
+### Novedades principales  
+- Implementado el botón **“VER MÁS”** en la sección **Proyectos**, permitiendo expandir o contraer el listado dinámicamente.  
+- Agregado **JavaScript personalizado** para manejar la visibilidad de las tarjetas con animación fluida.  
+- Incorporada la clase CSS **`.hidden`** (`display: none;`) para controlar los estados visuales de los elementos.  
+- Nuevo estilo del botón **centrado y moderno**, con efecto *hover* y transición suave.  
+- Ajustes visuales en la grilla de proyectos, márgenes y espaciados para mantener coherencia en el diseño.  
+- Optimización general del HTML y CSS para una mejor legibilidad y mantenimiento del código.  
+
+### Stack involucrado  
+- **HTML5**  
+- **CSS3 (Custom classes)**  
+- **JavaScript (DOM & Event Handling)**  
+
+### Resultado  
+La sección de proyectos ahora ofrece una experiencia más **interactiva, limpia y profesional**, mostrando solo una parte inicial del contenido y permitiendo ampliarla bajo demanda.  
+Esta mejora optimiza la usabilidad y mantiene una estética visual equilibrada.  
+
 ## Créditos
 **Desarrollo:** Nahuel Pierini & Anaclara Ferrando
 **Contacto:** fstailsolution@gmail.com
