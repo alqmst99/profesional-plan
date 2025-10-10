@@ -1,6 +1,6 @@
 // EmailJS config
   (function () {
-    emailjs.init('service_iygdv6h'); // Reemplaza con tu User ID de EmailJS
+    emailjs.init('rHtdc2oyNuBY7_v4t'); // Reemplaza con tu User ID de EmailJS
   })();
 
   document.getElementById('landingForm').addEventListener('submit', function (e) {
