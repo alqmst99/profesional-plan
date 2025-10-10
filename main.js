@@ -11,7 +11,7 @@ function startAboutCarousel() {
   let resizeTimeout = null;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(startAboutCarousel, 200);
+  resizeTimeout = setTimeout(startAboutCarousel, 5000);
 });
   if (window.innerWidth > 767) {
     aboutInterval = setInterval(() => {
