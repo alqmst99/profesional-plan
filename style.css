@@ -871,16 +871,22 @@ footer {
 
   .button-nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: .01rem;
     margin: 0;
-    padding: 0;
+    padding: 0rem;
+    font-size: 1rem;
     justify-content: start;
   }
 
-  .button-nav a i {
-    width: 10px;
-    height: 10px;
+  .button-nav a{
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .button-nav a img {
+    width: 15px;
+    height: 15x;
   }
 
 
@@ -1021,6 +1027,15 @@ footer {
     box-sizing: border-box;
     opacity: 1 !important;
     transform: none !important;
+  }
+   .button-nav a{
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .button-nav a img {
+    width: 20px;
+    height: 20x;
   }
 
   header,
