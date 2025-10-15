@@ -1024,6 +1024,9 @@ footer {
     transition: none;
   }
 
+  .btn-join{
+  display: none !important;
+}
   .hero-card {
     min-width: 100%;
     max-width: 100%;
@@ -1044,8 +1047,8 @@ footer {
     height: 20x;
   }
 
-  header,
-  .hero,
+
+  .hero,header,
   .nosotros-section,
   .servicios-section,
   .testimonios-section {
@@ -1061,6 +1064,7 @@ footer {
 
 
   .button-nav {
+    width: 100%;
     display: flex;
   }
 
@@ -1176,6 +1180,7 @@ footer {
   }
 
   .footer_container {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
 
   }
