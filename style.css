@@ -38,7 +38,7 @@
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
+  transition: all ease;
 }
 
 /* Centrar dentro del contenedor padre */
@@ -102,6 +102,7 @@ a {
 
 body {
   background: #1D4350;
+  background-attachment: fixed;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #A43931, #1D4350);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -224,14 +225,14 @@ header {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  transition: transform 0.9s ease-in-out;
+  transition: transform  ease-in-out;
 
 }
 
 .hero-corousel,
 .nosotros-courrusel {
   will-change: transform;
-  transition: transform 0.6s ease;
+  transition: transform  ease;
 }
 
 
@@ -246,7 +247,7 @@ header {
   background-color: rgba(255, 255, 255, 0.342);
   border-radius: 15px;
   flex: 0 0 auto;
-  transition: transform 0.9s ease, opacity 0.9s ease;
+  transition: transform  ease, opacity 0.9s ease;
   opacity: 0;
   transform: scale(0.95);
 
@@ -348,7 +349,7 @@ h2 {
 }
 
 .nosotros-image .back {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -359,7 +360,8 @@ h2 {
   top: 10px;
   /* Ajusta según tu necesidad */
   left: 50px;
-  
+  width: 80%;
+  object-fit: contain;
   /* Tamaño de la imagen superpuesta */
   z-index: 2;
   filter: drop-shadow(10px -8px 14px #494949);
@@ -398,12 +400,12 @@ h2 {
 
 .servicios-modal {
   display: none;
-  transition: all 0.3s ease;
+  transition: all  ease;
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: none;
   justify-content: center;
@@ -817,7 +819,7 @@ footer {
 /*RESPONSIVE*/
 
 /* Celulares pequeños: 5" (~320px a 399px ancho) */
-@media (max-width: 399px) {
+@media (min-width: 320px) and (max-width: 399px) {
 
   .hero-wrapper {
     flex-direction: column;
@@ -831,29 +833,32 @@ footer {
     scroll-snap-type: x mandatory;
     gap: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     transition: none;
   }
 
   .hero-card {
-    min-width: 100vw;
-    max-width: 100vw;
+    min-width: 100%;
+    max-width: 100%;
     flex: 0 0 100vw;
     scroll-snap-align: start;
     padding: 1rem;
     box-sizing: border-box;
     opacity: 1 !important;
     transform: none !important;
+    color: white;
   }
 
-
+.btn-join{
+  display: none !important;
+}
   header,
   .hero,
   .nosotros-section,
   .servicios-section,
   .testimonios-section {
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     box-shadow: none;
   }
@@ -883,7 +888,7 @@ footer {
   .servicios-card,
   .testimonios-card,
   .nosotros-card {
-    width: 100vw;
+    width: 100%;
     left: 20px;
     margin: 0 auto 10px auto;
     height: auto;
@@ -921,8 +926,9 @@ footer {
   .nosotros-image .over {
     max-width: 120px;
     height: 120px;
-    top: 30%;
+    top: 35%;
     left: 35%;
+
   }
 
   .carousel-wrapper {
@@ -949,7 +955,7 @@ footer {
 
   .servicios-modal {
     top: 10%;
-    width: 35%;
+    width: 100%;
     height: fit-content;
   }
 
@@ -964,6 +970,8 @@ footer {
   }
 
   .section-modal-card {
+    max-width: 90%;
+    margin: auto;
     left: 15px;
     width: 100%;
   }
@@ -979,6 +987,7 @@ footer {
 
   .footer_container {
     grid-template-columns: repeat(1, 1fr);
+    align-items: center;
     margin-bottom: 200px;
   }
 }
@@ -998,14 +1007,14 @@ footer {
     scroll-snap-type: x mandatory;
     gap: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     transition: none;
   }
 
   .hero-card {
-    min-width: 100vw;
-    max-width: 100vw;
+    min-width: 100%;
+    max-width: 100%;
     flex: 0 0 100vw;
     scroll-snap-align: start;
     padding: 1rem;
@@ -1019,7 +1028,7 @@ footer {
   .nosotros-section,
   .servicios-section,
   .testimonios-section {
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     box-shadow: none;
   }
@@ -1040,7 +1049,7 @@ footer {
   .servicios-card,
   .testimonios-card,
   .nosotros-card {
-    width: 100vw;
+    width: 100%;
     max-width: 450px;
     min-width: 0;
     margin: 0 auto 10px auto;
@@ -1080,7 +1089,7 @@ footer {
     max-width: 200px;
    
     border-radius: 50%;
-    top: 0%;
+    top: 5%;
     left: 25%;
   }
 
@@ -1164,14 +1173,14 @@ footer {
     scroll-snap-type: x mandatory;
     gap: 1;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     transition: none;
   }
 
   .hero-card {
-    min-width: 100vw;
-    max-width: 100vw;
+    min-width: 100%;
+    max-width: 100%;
     flex: 0 0 100vw;
     scroll-snap-align: start;
     padding: 1rem;
@@ -1193,7 +1202,7 @@ footer {
   .hero,
   .servicios-section,
   .testimonios-section {
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     box-shadow: none;
   }
@@ -1238,7 +1247,7 @@ footer {
   }
 
   .nosotros-image {
-    width: 100vw;
+    width: 100%;
     max-width: 550px;
     height: 220px;
     margin: auto;
@@ -1343,14 +1352,14 @@ footer {
     scroll-snap-type: x mandatory;
     gap: 1;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     transition: none;
   }
 
   .hero-card {
-    min-width: 100vw;
-    max-width: 100vw;
+    min-width: 100%;
+    max-width: 100%;
     flex: 0 0 100vw;
     scroll-snap-align: start;
     padding: 1rem;

@@ -49,12 +49,16 @@
     <section class="secondary-page-section">
       <h2 class="secondary-page-h2">Contactanos</h2>
       <form id="landingForm" class="secondary-page-form">
+        <label for="name"></label>
         <input type="text" name="name" id="name" placeholder="Tu nombre" required>
+        <label for="email"></label>
         <input type="email" name="email" id="email" placeholder="Tu email" required>
         <textarea name="message" id="message" placeholder="¿Qué tipo de landing necesitás?" required></textarea>
-        <button type="submit" class="secondary-page-btn">Enviar consulta</button>
+        <button type="submit" class="secondary-page-btn" id="sendBtn">Enviar consulta</button>
+        <div id="formMsg"></div>
       </form>
-      <div id="formMsg"></div>
+      <!-- Loader -->
+<div id="loader" style="display:none;">Enviando...</div>
     </section>
   </main>
   <footer class="secondary-page-footer">
