@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  window.addEventListener("resize", debounce(startAboutCarousel, 3000));
+  window.addEventListener("resize", debounce(startAboutCarousel, 5000));
   startAboutCarousel();
 
   // ===== PROYECTOS - VER MÁS =====
@@ -89,14 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", closeModal);
   });
 
-  serviceModal.addEventListener("click", e => {
-    if (e.target === serviceModal) closeModal();
-  });
-
-  function closeModal() {
-    serviceModal.style.display = "none";
-    Object.values(modals).forEach(m => m.style.display = "none");
+  
+// ✅ Cerrar al hacer clic fuera del modal (funcional)
+serviceModal.addEventListener("click", e => {
+  const isOutsideClick = !e.target.closest(".section-modal-content");
+  if (isOutsideClick && serviceModal.style.display === "block") {
+    closeModal();
   }
+});
+
+// ✅ Cerrar con tecla ESC
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && serviceModal.style.display === "block") {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  serviceModal.style.display = "none";
+  Object.values(modals).forEach(m => m.style.display = "none");
+}
 
   // ===== HERO SCROLL ANIMATIONS =====
   const observer = new IntersectionObserver((entries) => {
