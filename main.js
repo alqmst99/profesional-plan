@@ -1,20 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== HERO CAROUSEL =====
-  const carousel1 = document.querySelector('.hero-corousel');
-  const cards1 = document.querySelectorAll('.hero-card');
-  let currentIndex = 0;
 
-  function moveCarousel() {
-    if (window.innerWidth > 599) {
-      currentIndex = (currentIndex + 1) % cards1.length;
-      carousel1.style.transform = `translateX(-${currentIndex * 100}%)`;
-    } else {
-      carousel1.style.transform = 'none';
-    }
-  }
-
-  setInterval(moveCarousel, 9000);
-  moveCarousel();
 
   // ===== ABOUT CAROUSEL =====
   const carousel = document.querySelector(".nosotros-courrusel");
