@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // ===== LOADER =====
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.display = "none";
+});
+
+// ===== Helper: debounce =====
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
 
   // ===== ABOUT CAROUSEL =====
   const carousel = document.querySelector(".nosotros-courrusel");
@@ -104,16 +117,4 @@ function closeModal() {
 
   document.querySelectorAll('.hero-card').forEach(el => observer.observe(el));
 
-  // ===== LOADER =====
-  const loader = document.getElementById("loader");
-  if (loader) loader.style.display = "none";
-});
 
-// ===== Helper: debounce =====
-function debounce(func, delay) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), delay);
-  };
-}
