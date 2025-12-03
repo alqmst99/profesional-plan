@@ -302,7 +302,7 @@ header {
 
 .nosotros-card {
   display: flex;
-  height: 400px;
+  height: 396px;
   /* mismo valor que .carousel-wrapper */
   flex-shrink: 0;
   align-content: center;
@@ -319,7 +319,7 @@ header {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #35373b;
+  border-right: 4px solid #35373b;
   text-align: center;
   justify-content: center;
 
@@ -355,7 +355,7 @@ h2 {
 
 .nosotros-image .over {
   position: absolute;
-  top: 10px;
+  
   /* Ajusta según tu necesidad */
   left: 50px;
   width: 80%;
