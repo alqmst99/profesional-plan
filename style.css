@@ -404,7 +404,7 @@ h2 {
 
 .services-images {
   display: flex;
-
+  width: 100%;
 }
 
 .img-small {
@@ -428,7 +428,9 @@ h2 {
 }
 
 /* Columna derecha: texto */
-
+.services-text{
+  width: 100%;
+}
 
 .services-text h2 {
   font-size: 2rem;
