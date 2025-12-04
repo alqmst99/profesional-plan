@@ -1327,12 +1327,12 @@ flex-direction: column;
 
 
   .nosotros-image .over {
-    width: 50%;
+    width: 80%;
 
   }
  .nosotros-image .overs {
     position: none;
-    width: 80%;
+    width: 90%;
   }
 
   .carousel-wrapper {

@@ -24,7 +24,7 @@ function debounce(func, delay) {
   function startAboutCarousel() {
     clearInterval(aboutInterval);
 
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 800) {
       aboutInterval = setInterval(() => {
         current = (current + 1) % cards.length;
         carousel.style.transform = `translateY(-${400 * current}px)`;
