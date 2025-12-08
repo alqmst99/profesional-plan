@@ -124,7 +124,12 @@ body {
   margin-top: 0;
   font-weight: 700;
 }
+.btn:hover,
+.btn-s:hover{
+color: var(--white);
+transition: .5s;
 
+}
 .section {
   padding-block: 5rem 2rem;
 }
@@ -280,7 +285,7 @@ header {
   animation: moving-2 2s ease-out forwards;
 }
 
-/*---nosotros---*/
+/*---NOSOTROS---*/
 .nosotros-section {
   width: 100%;
   margin-top: 5rem;
@@ -471,7 +476,7 @@ font-size: 2em;
   }
 }
 
-/*SErvicios page*/
+/*Servicios page*/
 .servicios-section {
   margin-top: 5rem;
    background-color: #1A1A1C;
@@ -529,12 +534,18 @@ background-color: transparent;
 
 .servicios-title h2{
   color: white;
-  text-shadow: 2px 1px black;;
+  text-shadow: 2px 1px black;
+  font-size: 2em;
 }
 .servicios-text {
    font-weight: 600;
   text-align: center;
-  
+}
+
+.servicios-text p{
+  color: black;
+font-size: 1.1em;
+text-shadow: 0px 0px 5px rgb(255, 254, 254);
 }
 
 .tips {
@@ -586,7 +597,7 @@ width: 400px;
 
 
 
-/*PROyectos*/
+/*Proyectos*/
 
 .proyectos-section {
   margin-top: 5rem;
@@ -632,7 +643,7 @@ width: 400px;
 
 .proyectos_subtitle,
 .proyectos_button {
-  color: var(--primary-color-light);
+  color: var(--text-light);
   font-size: var(--small-font-size);
 }
 
@@ -652,7 +663,7 @@ width: 400px;
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: .75rem;
-  color: var(--primary-color-light);
+  color: var(--text-light);
 
 }
 
