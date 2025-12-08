@@ -17,7 +17,7 @@ function debounce(func, delay) {
   // ===== ABOUT CAROUSEL =====
   const carousel = document.querySelector(".nosotros-courrusel");
   const cards = document.querySelectorAll(".nosotros-card");
-  const overs = document.querySelectorAll(".over");
+  const overs = document.querySelectorAll(".over, .overs");
   let current = 0;
   let aboutInterval;
 

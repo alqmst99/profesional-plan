@@ -3,10 +3,10 @@
 
 /* Values Root*/
 :root {
-  --primary-color: rgb(70, 0, 128);
-  --primary-color-light: #53b48f;
+  --primary-color: #1B6CA8;
+  --primary-color-light: #3E4C59;
   --primary-color-extra-light: #35373b;
-  --secondary-color: 	#6B8E23;
+  --secondary-color: 	#1B6CA8;
   --secondary-color-dark: #9bee86;
   --text-light: #d1d5db;
   --white: #e9e0fd;
@@ -20,8 +20,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 4s;
-  color: #333;
+  transition: 3s;
+  color:#C9A86A; ;
 
 }
 
@@ -103,9 +103,9 @@ body {
   background: #1D4350;
   background-attachment: fixed;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #53b48f, #440b49);
+  background: -webkit-linear-gradient(to right, #F4F7FB, #1A1A1C);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #53b48f, #440b49);
+  background: linear-gradient(to right, #F4F7FB, #1A1A1C);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -118,10 +118,9 @@ body {
 .btn,
 .btn-s {
   background: var(--secondary-color);
-  color: black;
+  color: #1A1A1C;
   padding: 0.5em 1.2em;
   text-decoration: none;
-  border-radius: 8px;
   margin-top: 0;
   font-weight: 700;
 }
@@ -190,12 +189,16 @@ header {
 }
 
 .nav-links a {
-  color: var(--text-light);
+  color: white;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: larger;
 }
 
+.nav-links a:hover{
+    color: #C9A86A;
+    transition: .5s;
+}
 
 /*---MAIN--*/
 .main {
@@ -274,7 +277,7 @@ header {
 }
 
 .animate-slide-y {
-  animation: moving-2 1s ease-out forwards;
+  animation: moving-2 2s ease-out forwards;
 }
 
 /*---nosotros---*/
@@ -310,7 +313,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 2px;
-  border-bottom: 4px solid #35373b;
+ 
 }
 
 .nosotros-desc {
@@ -324,11 +327,11 @@ header {
 
 
 h2 {
-  color: var(--white);
+  color: #1A1A1C;
 }
 
 .nosotros-text p{
-   color: wheat;
+   color: #1A1A1C;
 }
 .nosotros-text .btn {
 
@@ -346,7 +349,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-
+border-radius: 40%;
 
  
 }
@@ -362,20 +365,19 @@ h2 {
   object-fit: contain;
   /* Tamaño de la imagen superpuesta */
   z-index: 2;
-  filter: drop-shadow(10px -8px 14px #494949);
+
 
 }
 .nosotros-image .overs {
   position: absolute;
-  top: 25px;
+
   /* Ajusta según tu necesidad */
-  left: 10px;
-  width: 100%;
+
+  width: 90%;
   object-fit: contain;
   /* Tamaño de la imagen superpuesta */
   z-index: 2;
-  filter: drop-shadow(10px 8px 14px #494949);
- border-radius: 25%;
+
 }
 
 .animate-slide {
@@ -385,12 +387,18 @@ h2 {
 /*--- Servicios Section ---*/
 .services-section {
   padding: 4rem 0;
-  border-bottom: 4px solid #35373b;
+  background-color: #1A1A1C;
+
 }
 
 .services-header {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.services-header h2{
+font-size: 2em;
+  color: white;
 }
 
 .services-container {
@@ -436,10 +444,11 @@ h2 {
 .services-text h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #F4F7FB ;
 }
 
 .services-text p {
-  color: wheat;
+  color: #C9A86A;
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
@@ -465,11 +474,12 @@ h2 {
 /*SErvicios page*/
 .servicios-section {
   margin-top: 5rem;
+   background-color: #1A1A1C;
 }
 
 .servicios-card {
 width: 100%;
-background-color: white;
+background-color: transparent;
   transition: 3s;
   text-align: center;
   border-bottom: 8px solid #000000;
@@ -482,9 +492,6 @@ background-color: white;
   position: relative;
 }
 
-/* .servicios-card:hover{
-  background-color: #a1916c; 
-} */
 
 
 .section-modal-card {
@@ -520,9 +527,14 @@ background-color: white;
   margin-top: 1rem;
 }
 
+.servicios-title h2{
+  color: white;
+  text-shadow: 2px 1px black;;
+}
 .servicios-text {
    font-weight: 600;
   text-align: center;
+  
 }
 
 .tips {
@@ -536,14 +548,6 @@ background-color: white;
 }
 
 
-
-.servicios-card:hover h2 {
-  color: var(--primary-color-light);
-
-  font-size: 1.8em;
-
-}
-
 .section-content {
   top: .8rem;
   padding: 2rem;
@@ -555,10 +559,19 @@ color: black;
 }
 
 .section-modal-card {
-  width: 300px;
- border-right: 0.05em solid black;
-  gap: 2rem;
-          margin-left: 20px;
+width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    /* align-self: start; */
+    /* align-content: center; */
+    align-self: normal;
+    /* height: 500px; */
+    display: felx;
+    gap: 1em;
+    /* margin-left: 20px; */
+    background: wheat;
+    padding: 20px;
+    border-radius: 5%;
 }
 
 .section-modal-card li {
