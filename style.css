@@ -540,6 +540,8 @@ background-color: transparent;
 .servicios-text {
    font-weight: 600;
   text-align: center;
+  display:flex;
+  
 }
 
 .servicios-text p{
