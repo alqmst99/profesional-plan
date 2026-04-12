@@ -707,8 +707,9 @@ width: 400px;
 .testimonios-desc {
   background-color: rgba(0, 0, 0, 0.61);
   border-top-right-radius: 50px;
-  height: max-content;
-  border-bottom-left-radius: 15px;
+height: 190px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 
 }
 
@@ -719,7 +720,7 @@ width: 400px;
 
 .testimonios-text {
   margin-top: 3px;
- height: 150px;
+
 }
 
 .testimonios-text p {
