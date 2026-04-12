@@ -1,11 +1,130 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* ============================================================
+   FSTail Solutions — main.js
+   ============================================================ */
 
-  // ===== LOADER =====
-  const loader = document.getElementById("loader");
-  if (loader) loader.style.display = "none";
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── LOADER ── */
+  const loader = document.getElementById('loader');
+  if (loader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => loader.remove(), 700);
+      }, 600);
+    });
+  }
+
+  /* ── HEADER SCROLL EFFECT ── */
+  const header = document.getElementById('main-header');
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ── HAMBURGER / MOBILE NAV ── */
+  const hamburger  = document.getElementById('hamburger');
+  const mobileNav  = document.getElementById('mobile-nav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+  }
+
+  /* ── CLOSE MOBILE NAV (exported for onclick in HTML) ── */
+  window.closeMobileNav = () => {
+    if (mobileNav) mobileNav.classList.remove('open');
+    if (hamburger) hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  /* ── REVEAL ON SCROLL ── */
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+  }
+
+  /* ── SERVICE MODALS ── */
+  const serviceModal = document.getElementById('servicios-modal');
+  const modals = {
+    plan: document.getElementById('modal-plan'),
+    mant: document.getElementById('modal-mant'),
+    full: document.getElementById('modal-full'),
+  };
+
+  const openModal = (type) => {
+    if (!serviceModal || !modals[type]) return;
+    // hide all sub-modals first
+    Object.values(modals).forEach(m => { if (m) m.style.display = 'none'; });
+    modals[type].style.display = 'block';
+    serviceModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    if (!serviceModal) return;
+    serviceModal.classList.remove('open');
+    Object.values(modals).forEach(m => { if (m) m.style.display = 'none'; });
+    document.body.style.overflow = '';
+  };
+
+  // Buttons that open modals (.btn-s with data-type)
+  document.querySelectorAll('.btn-s[data-type]').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.getAttribute('data-type')));
+  });
+
+  // Close buttons inside modal
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
+
+  // Click outside content
+  if (serviceModal) {
+    serviceModal.addEventListener('click', (e) => {
+      if (!e.target.closest('.section-modal-content')) closeModal();
+    });
+  }
+
+  // ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  /* ── PROJECTS "VER MÁS" (projects.html) ── */
+  const cardsP   = document.querySelectorAll('#proyectos_card .proyectos_card');
+  const verMaBtn = document.getElementById('ver-mas');
+  let visible = 6;
+
+  function showCards() {
+    cardsP.forEach((card, i) => card.classList.toggle('hidden', i >= visible));
+    if (verMaBtn) verMaBtn.style.display = visible >= cardsP.length ? 'none' : '';
+  }
+
+  if (cardsP.length) {
+    showCards();
+    if (verMaBtn) {
+      verMaBtn.addEventListener('click', () => { visible += 6; showCards(); });
+    }
+  }
+
 });
 
-// ===== Helper: debounce =====
+/* ── DEBOUNCE HELPER ── */
 function debounce(func, delay) {
   let timeout;
   return function (...args) {
@@ -13,108 +132,3 @@ function debounce(func, delay) {
     timeout = setTimeout(() => func.apply(this, args), delay);
   };
 }
-
-  // ===== ABOUT CAROUSEL =====
-  const carousel = document.querySelector(".nosotros-courrusel");
-  const cards = document.querySelectorAll(".nosotros-card");
-  const overs = document.querySelectorAll(".over, .overs");
-  let current = 0;
-  let aboutInterval;
-
-  function startAboutCarousel() {
-    clearInterval(aboutInterval);
-
-    if (window.innerWidth > 800) {
-      aboutInterval = setInterval(() => {
-        current = (current + 1) % cards.length;
-        carousel.style.transform = `translateY(-${400 * current}px)`;
-
-        overs.forEach((overEl, i) => {
-          overEl.classList.toggle("animate-slide", i === current);
-        });
-      }, 5000);
-    } else {
-      carousel.style.transform = "none";
-      overs.forEach(overEl => overEl.classList.remove("animate-slide"));
-    }
-  }
-
-  window.addEventListener("resize", debounce(startAboutCarousel, 5000));
-  startAboutCarousel();
-
-  // ===== PROYECTOS - VER MÁS =====
-  const cardsP = document.querySelectorAll('#proyectos_card .proyectos_card');
-  const btn = document.getElementById('ver-mas');
-  let visible = 6;
-
-  function showCards() {
-    cardsP.forEach((card, i) => {
-      card.classList.toggle('hidden', i >= visible);
-    });
-    if (visible >= cardsP.length) btn.style.display = 'none';
-  }
-
-  if (btn) {
-    btn.addEventListener('click', () => {
-      visible += 6;
-      showCards();
-    });
-  }
-
-  showCards();
-
-  // ===== MODALES =====
-  const serviceCards = document.querySelectorAll("button.btn-s");
-  const modals = {
-    plan: document.querySelector(".section-modal-plan"),
-    mant: document.querySelector(".section-modal-mant"),
-    full: document.querySelector(".section-modal-full")
-  };
-  const serviceModal = document.querySelector(".servicios-modal");
-
-  serviceCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const type = card.getAttribute("data-type");
-      Object.values(modals).forEach(m => m.style.display = "none");
-      if (modals[type]) {
-        serviceModal.style.display = "block";
-        modals[type].style.display = "block";
-      }
-    });
-  });
-
-  document.querySelectorAll(".modal-close").forEach(btn => {
-    btn.addEventListener("click", closeModal);
-  });
-
-  
-// ✅ Cerrar al hacer clic fuera del modal (funcional)
-serviceModal.addEventListener("click", e => {
-  const isOutsideClick = !e.target.closest(".section-modal-content");
-  if (isOutsideClick && serviceModal.style.display === "block") {
-    closeModal();
-  }
-});
-
-// ✅ Cerrar con tecla ESC
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape" && serviceModal.style.display === "block") {
-    closeModal();
-  }
-});
-
-function closeModal() {
-  serviceModal.style.display = "none";
-  Object.values(modals).forEach(m => m.style.display = "none");
-}
-
-  // ===== HERO SCROLL ANIMATIONS =====
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.8 });
-
-  document.querySelectorAll('.hero-card').forEach(el => observer.observe(el));
-
-

@@ -1,522 +1,674 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Avanzado -->
-    <title>FSTail Solutions | Desarrollo Web, Mantenimiento y Landing Pages</title>
-    <meta name="description"
-        content="FSTail Solutions: desarrollo web profesional, mantenimiento, landing pages, integración de software y hardware. Soluciones rápidas, seguras y personalizadas para tu negocio.">
-    <meta name="keywords"
-        content="Desarrollo web, landing page, mantenimiento web, programacion, desarrollo de aplicaciones, software, Santa Fe, Argentina, FSTail Solutions, portfolio, proyectos, servicios digitales, SEO, responsive">
-    <meta name="author" content="FSTail Solutions, Nahuel Pierini, Anaclara Ferrando">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="es">
+  <!-- SEO -->
+  <title>FSTail Solutions | Desarrollo Web Profesional — Santa Fe, Argentina</title>
+  <meta name="description" content="FSTail Solutions: desarrollo web profesional, mantenimiento, landing pages y soluciones tecnológicas integrales. Diseño moderno, código limpio, resultados reales. Santa Fe, Argentina.">
+  <meta name="keywords" content="desarrollo web, landing page, mantenimiento web, programacion, software, Santa Fe, Argentina, FSTail Solutions, portfolio, proyectos, SEO, responsive">
+  <meta name="author" content="FSTail Solutions, Nahuel Pierini, Anaclara Ferrando">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="es">
 
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:title" content="FSTail Solutions |  Web y Mantenimiento">
-    <meta property="og:description"
-        content="Desarrollo web, mantenimiento, landing pages y soluciones tecnológicas integrales. ¡Conocé nuestros planes y proyectos!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://alqmst99.github.io/profesional-plan/index.html">
-    <meta property="og:image" content="https://alqmst99.github.io/profesional-plan/assets/images/logo-official.png">
-    <meta property="og:locale" content="es_AR">
+  <!-- Open Graph -->
+  <meta property="og:title" content="FSTail Solutions | Desarrollo Web Profesional">
+  <meta property="og:description" content="Desarrollo web, mantenimiento, landing pages y soluciones tecnológicas integrales.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fstailsolutions.com.ar/">
+  <meta property="og:image" content="https://fstailsolutions.com.ar/assets/images/logo-official.png">
+  <meta property="og:locale" content="es_AR">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FSTail Solutions |  Web y Mantenimiento">
-    <meta name="twitter:description"
-        content="Desarrollo web, mantenimiento, landing pages y soluciones tecnológicas integrales.">
-    <meta name="twitter:image" content="https://alqmst99.github.io/profesional-plan/assets/images/logo-official.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FSTail Solutions | Desarrollo Web Profesional">
+  <meta name="twitter:description" content="Desarrollo web, mantenimiento, landing pages y soluciones tecnológicas integrales.">
+  <meta name="twitter:image" content="https://fstailsolutions.com.ar/assets/images/logo-official.png">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://alqmst99.github.io/profesional-plan/index.html">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fstailsolutions.com.ar/">
+  <link rel="shortcut icon" href="./assets/images/logo-official.png" type="image/x-icon">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/images/logo-official.png" type="image/x-icon">
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Font y CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    <script>
-        // Datos estructurados para SEO local (Google Local Business)
-        const localBusiness = {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "FSTail Solutions",
-            "image": "https://alqmst99.github.io/profesional-plan/assets/images/logo-official.png",
-            "telephone": "+54 9 3425428918",
-            "email": "fstailsolution@gmail.com",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "4073, Pasaje J E Galisteo",
-                "addressLocality": "Santa Fe",
-                "addressRegion": "Santa Fe",
-                "addressCountry": "AR"
-            },
-            "url": "https://alqmst99.github.io/profesional-plan/index.html",
-            "priceRange": "$$$",
-            "description": "Startup de desarrollo web, mantenimiento, programacion, desarrollo de aplicaciones en Santa Fe, Argentina.",
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "-31.6333",
-                "longitude": "-60.7000"
-            },
-            "openingHours": "Mo-Fr 09:00-18:00",
-            "contactPoint": {
-                "@type": "ContactoPoint",
-                "telephone": "+54 9 3425428918",
-                "contactoType": "customer servicios",
-                "email": "fstailsolution@gmail.com"
-            },
-            "sameAs": [
-                "https://www.facebook.com/FSTailSolutions/",
-                "https://www.instagram.com/fstailsolution/",
-                "https://wa.me/5493425428918"
-            ]
-        };
-
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(localBusiness);
-        document.head.appendChild(script);
-    </script>
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FSTail Solutions",
+    "image": "https://fstailsolutions.com.ar/assets/images/logo-official.png",
+    "telephone": "+54 9 3425428918",
+    "email": "fstailsolution@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4073, Pasaje J E Galisteo",
+      "addressLocality": "Santa Fe",
+      "addressRegion": "Santa Fe",
+      "addressCountry": "AR"
+    },
+    "url": "https://fstailsolutions.com.ar/",
+    "priceRange": "$$$",
+    "description": "Startup de desarrollo web, mantenimiento y soluciones digitales en Santa Fe, Argentina.",
+    "geo": { "@type": "GeoCoordinates", "latitude": "-31.6333", "longitude": "-60.7000" },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/FSTailSolutions/",
+      "https://www.instagram.com/fstailsolution/",
+      "https://wa.me/5493425428918"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-    <div id="loader"
-        style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1D4350;display:flex;align-items:center;justify-content:center;z-index:9999;">
-        <div style="text-align:center;">
-            <img loading="lazy" src="./assets/images/logo-official.png" alt="Logo de carga fstail solutions" width="80"
-                class="loader-logo">
-            <p style="color:#fff;font-size:1.2rem;margin-top:1rem;">Cargando...</p>
-        </div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-wordmark"><span>FS</span>Tail Solutions</div>
+      <div class="loader-line"></div>
     </div>
-    <header>
-        <div class="header-section grid">
-            <div class="logo grid">
-                <div class="logo-img loading=" lazy"">
-                    <img loading="lazy" src="./assets/images/logo-official.png" width="100px" alt="Logo-FSTail header">
-                </div>
-                <div class="logo-text">
-                    <p><span>FSTail</span> Solutions</p>
-                </div>
-            </div>
-            <nav class="nav_bar">
-                <ul class="nav-links  grid">
-                    <li class="link"><a href="#home" rel="noopener noreferrer">Home</a></li>
-                    <li class="link"><a href="#nosotros" rel="noopener noreferrer">Nosotros</a></li>
-                    <li class="link"><a href="./pages/service.html" rel="noopener noreferrer">Servicios</a></li>
-                    <li class="link"><a href="./pages/projects.html" rel="noopener noreferrer">Proyectos</a></li>
-                    <li class="link"><a href="#testimonios" rel="noopener noreferrer">Testimonios</a></li>
-                </ul>
-            </nav>
-            <a href="./pages/extra-landing.html" target="_blank" aria-label="boton ref contacto" class="btn btn-join"
-                rel="noopener noreferrer">Join Now</a>
-        </div>
-    </header>
-    <nav class="button-nav">
+  </div>
 
-        <a href="#home"><img loading="lazy" src="./assets/icons/home-ico.svg" width="25px" alt="home-ico"></a>
-        <a href="#nosotros"><img loading="lazy" src="./assets/icons/about-ico.svg" width="25px" alt="nosotros-ico"></a>
-        <a href="#servicios"><img loading="lazy" src="./assets/icons/serv-ico.svg" width="25px" alt="serv-ico"></a>
-        <a href="#proyectos"><img loading="lazy" src="./assets/icons/project-ico.svg" width="25px" alt="proj-ico"></a>
-        <a href="#testimonios"><img loading="lazy" src="./assets/icons/test-ico.svg" width="25px" alt="test-ico"></a>
-        <a href="./pages/extra-landing.html"><img loading="lazy" src="./assets/icons/cont-ico.svg" width="25px"
-                alt="contacto-ico"></a>
-    </nav>
-    <main class="main">
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <img src="./assets/images/logo-official.png" alt="FSTail Solutions Logo">
+        <span class="logo-wordmark"><em>FS</em>Tail</span>
+      </a>
 
-        <!--Hero Section-->
-        <section class="hero" id="home">
-            <!-- <div class="hero-wrapper">
-                <div class="hero-corousel">
-                    Card 1: Plan Landing Page
-                    <div class="hero-card">
-                        <div class="card-title">
-                            <h2>Plan Landing Page</h2>
-                        </div>
-                        <div class="card-text">
-                            <p>Ideal para presencia rápida y profesional. Una sola sección, diseño moderno, optimizada
-                                para celulares y conectada a tus redes sociales o WhatsApp.</p>
-                        </div>
-                   
-                            <a  class="card-btn btn" aria-label="boton ref contacto" rel="noopener noreferrer" href="#contacto" >Solicitar este plan</a>
-                        
-                    </div>
+      <nav class="nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#testimonios">Testimonios</a>
+      </nav>
 
-                    Card 2: Mantenimiento Web
-                    <div class="hero-card">
-                        <div class="card-title">
-                            <h2>Plan Mantenimiento</h2>
-                        </div>
-                        <div class="card-text">
-                            <p>Actualizamos tu sitio web, corregimos errores, mejoramos tiempos de carga, reforzamos
-                                seguridad y agregamos contenido o secciones cuando lo necesites.</p>
-                        </div>
-                    
-                            <a   class="card-btn btn" aria-label="boton ref contacto" href="#contacto" rel="noopener noreferrer">Contratar mantenimiento</a>
-                      
-                    </div>
+      <a href="./pages/extra-landing.html" class="btn-nav-cta" target="_blank" rel="noopener noreferrer">Contacto</a>
 
-                    Card 3: Página Estática Completa
-                    <div class="hero-card">
-                        <div class="card-title">
-                            <h2>Plan Web Completa</h2>
-                        </div>
-                        <div class="card-text">
-                            <p>Diseño de una página web completa, con múltiples secciones, galería, formularios,
-                                optimización SEO básica, diseño adaptable y vinculación total con redes y contactoo.</p>
-                        </div>
-                       
-                            <a  class="card-btn btn" aria-label="boton ref contacto" href="#contacto" rel="noopener noreferrer">Ver detalles</a>
-                        
-                    </div>
-                </div>
-            </div> -->
-        </section>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-        <!--Home Section-->
-        <section class="nosotros-section" id="nosotros">
-            <div class="title">
-                <h2 class="title-h2">Nosotros</h2>
-            </div>
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#home"        onclick="closeMobileNav()">Inicio</a>
+    <a href="#nosotros"    onclick="closeMobileNav()">Nosotros</a>
+    <a href="#servicios"   onclick="closeMobileNav()">Servicios</a>
+    <a href="#proyectos"   onclick="closeMobileNav()">Proyectos</a>
+    <a href="#testimonios" onclick="closeMobileNav()">Testimonios</a>
+    <a href="./pages/extra-landing.html" class="btn-primary" style="margin-top:1rem;">Contacto</a>
+  </nav>
 
-            <div class="carousel-wrapper">
-                <div class="nosotros-courrusel">
-                    <div class="nosotros-card">
-                        <div class="nosotros-desc">
-                            <div class="nosotros-title">
-                                <h2>FSTail Solutions</h2>
-                            </div>
-                            <div class="nosotros-text">
-                                <p>Somos una startup de desarrollo tecnológico con foco en soluciones integrales en
-                                    software, ciberseguridad y automatización. Nos especializamos en sistemas backend
-                                    robustos, integración de hardware, y plataformas web modernas. Fusionamos arte,
-                                    electrónica y análisis de datos con una mirada práctica, veloz y sin vueltas.
-                                </p> <br />
-                                <a class="btn" type="button" aria-label=" Boton Contactenos"
-                                    href="https://wa.me/5493425428918" target="_blank">¡Quiero
-                                    asesoría personalizada!</a>
+  <main>
 
+    <!-- ── HERO ── -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
 
-                            </div>
-                        </div>
-                        <div class="nosotros-image">
-                            <img loading="lazy" src="./assets/images/logo-official.png" alt="imagen fstail logo "
-                                width="400px" class="over">
-                        </div>
-                    </div>
-                    <div class="nosotros-card">
-                        <div class="nosotros-desc">
-                            <div class="nosotros-title">
-                                <h2>Nahuel Pierini – Developer </h2>
-                            </div>
-                            <div class="nosotros-text">
-                                <p>
-                                    Desarrollador con foco en MERN y back-end Java. Formado en MindHub y
-                                    Oracle Next Education, con experiencia en creación de interfaces modernas, APIs
-                                    eficientes y arquitectura integral de aplicaciones web. Maneja React, Node, Express,
-                                    MongoDB y bases de datos SQL. Combina velocidad, criterio y una visión
-                                    pragmática para llevar cada proyecto a producción sin vueltas.
-                                </p> <br>
-                                <a class="btn" aria-label="boton developer contacto" href="https://wa.me/5493425428918"
-                                    target="_blank">Habla con el
-                                    desarrollador</a>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Santa Fe, Argentina</p>
 
+        <h1 class="hero-headline">
+          Soluciones digitales<br>
+          diseñadas para<br>
+          <em>crecer.</em>
+        </h1>
 
-                            </div>
-                        </div>
-                        <div class="nosotros-image">
-                            <img loading="lazy" src="./assets/images/nahuel-2.png" loading="lazy"
-                                alt=" imagen desarrollador Nahuel Pierini" class="overs">
-                        </div>
-                    </div>
-                    <div class="nosotros-card">
-                        <div class="nosotros-desc">
-                            <div class="nosotros-title">
-                                <h2>Anaclara Ferrando – Developer </h2>
-                            </div>
-                            <div class="nosotros-text">
-                                <p>
-                                    Desarrolladora orientada al back-end con formación sólida en Java, Spring Boot y
-                                    MySQL. Certificada en SQL, programación orientada a objetos y desarrollo web por
-                                    Alura Latam, Oracle Next Education y Cisco. Maneja bases de datos relacionales,
-                                    seguridad en sistemas y creación de APIs estables. Complementa su perfil con
-                                    fundamentos en HTML, CSS y JavaScript, aportando una visión integral y precisa en
-                                    cada proyecto.
-                                </p> <br>
-                                <a class="btn" aria-label="boton desarrollador contacto"
-                                    href="https://wa.me/5493425428918" target="_blank">Habla con el
-                                    desarrolladora</a>
+        <p class="hero-sub">
+          Desarrollo web, mantenimiento y presencia digital a medida.
+          Código limpio, diseño preciso y resultados que perduran.
+        </p>
 
-
-
-                            </div>
-                        </div>
-                        <div class="nosotros-image">
-                            <img loading="lazy" src="./assets/images/anaclara-1-f.png"
-                                alt="imagen desarroladora Anaclara Ferrando" width="500px" class="overs">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="hero-actions">
+          <a href="#servicios" class="btn-primary">Ver servicios</a>
+          <a href="#proyectos" class="btn-outline">Proyectos</a>
         </div>
 
-        <!--Servicios Section-->
-        <section class="services-section" id="services">
-            <div class="services-header">
-                <h2>Servicios</h2>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">30+</div>
+            <div class="hero-stat-label">Proyectos</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">2+</div>
+            <div class="hero-stat-label">Años de trabajo</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">5★</div>
+            <div class="hero-stat-label">Satisfacción</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ── NOSOTROS ── -->
+    <section class="nosotros-section" id="nosotros">
+      <div class="nosotros-inner">
+
+        <!-- FSTail -->
+        <div class="reveal">
+          <p class="section-label">Quiénes somos</p>
+        </div>
+        <div class="nosotros-layout reveal">
+          <div class="nosotros-text-block">
+            <h2 class="nosotros-name">FSTail Solutions</h2>
+            <p class="nosotros-role">Startup de Desarrollo Tecnológico</p>
+            <p class="nosotros-bio">
+              Somos una startup de desarrollo tecnológico con foco en soluciones integrales en
+              software, ciberseguridad y automatización. Nos especializamos en sistemas backend
+              robustos, integración de hardware y plataformas web modernas. Fusionamos arte,
+              electrónica y análisis de datos con una mirada práctica, veloz y sin vueltas.
+            </p>
+            <a href="https://wa.me/5493425428918" class="btn-ghost" target="_blank" rel="noopener noreferrer">
+              Asesoría personalizada <span class="arrow">→</span>
+            </a>
+          </div>
+          <div class="nosotros-image-wrap">
+            <img loading="lazy" src="./assets/images/logo-official.png" alt="FSTail Solutions Logo">
+          </div>
+        </div>
+
+        <div class="team-divider"></div>
+
+        <!-- Nahuel -->
+        <div class="nosotros-layout reverse reveal">
+          <div class="nosotros-text-block">
+            <h2 class="nosotros-name">Nahuel Pierini</h2>
+            <p class="nosotros-role">Full Stack Developer</p>
+            <p class="nosotros-bio">
+              Desarrollador con foco en MERN y back-end Java. Formado en MindHub y Oracle Next Education,
+              con experiencia en interfaces modernas, APIs eficientes y arquitectura integral de aplicaciones.
+              Maneja React, Node, Express, MongoDB y bases de datos SQL. Instalador de redes, CCTV y hardware digital.
+            </p>
+            <a href="https://wa.me/5493425428918" class="btn-ghost" target="_blank" rel="noopener noreferrer">
+              Hablar con Nahuel <span class="arrow">→</span>
+            </a>
+          </div>
+          <div class="nosotros-image-wrap">
+            <img loading="lazy" src="./assets/images/nahuel-2.png" alt="Nahuel Pierini — Developer">
+          </div>
+        </div>
+
+        <div class="team-divider"></div>
+
+        <!-- Anaclara -->
+        <div class="nosotros-layout reveal">
+          <div class="nosotros-text-block">
+            <h2 class="nosotros-name">Anaclara Ferrando</h2>
+            <p class="nosotros-role">Backend Developer</p>
+            <p class="nosotros-bio">
+              Desarrolladora orientada al back-end con formación sólida en Java, Spring Boot y MySQL.
+              Certificada en SQL, POO y desarrollo web por Alura Latam, Oracle Next Education y Cisco.
+              Maneja bases de datos relacionales, seguridad en sistemas y APIs estables, con fundamentos
+              en HTML, CSS y JavaScript.
+            </p>
+            <a href="https://wa.me/5493425428918" class="btn-ghost" target="_blank" rel="noopener noreferrer">
+              Hablar con Anaclara <span class="arrow">→</span>
+            </a>
+          </div>
+          <div class="nosotros-image-wrap">
+            <img loading="lazy" src="./assets/images/anaclara-1-f.png" alt="Anaclara Ferrando — Developer">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SERVICIOS ── -->
+    <section class="services-section" id="servicios">
+      <div class="services-inner">
+        <div class="section-header reveal">
+          <div>
+            <p class="section-label">Lo que hacemos</p>
+            <h2 class="section-title">Servicios diseñados<br>para <em>hacer crecer</em><br>tu negocio.</h2>
+          </div>
+          <a href="./pages/service.html" class="btn-ghost">Ver todos <span class="arrow">→</span></a>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-number">01</div>
+            <img loading="lazy" src="./assets/images/service-landing.png" alt="Landing Page" class="service-img">
+            <h3 class="service-name">Landing Page</h3>
+            <p class="service-desc">Presencia digital rápida y efectiva. Diseño moderno, optimizado para convertir visitantes en clientes. Ideal para campañas y presentaciones.</p>
+            <button class="btn-ghost btn-s" data-type="plan" aria-label="Ver planes landing">
+              Ver planes <span class="arrow">→</span>
+            </button>
+          </div>
+
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-number">02</div>
+            <img loading="lazy" src="./assets/images/service-maintence.jpg" alt="Mantenimiento Web" class="service-img">
+            <h3 class="service-name">Mantenimiento</h3>
+            <p class="service-desc">Actualizaciones, backups, seguridad y velocidad. Tu sitio siempre en óptimas condiciones, sin que tengas que preocuparte.</p>
+            <button class="btn-ghost btn-s" data-type="mant" aria-label="Ver planes mantenimiento">
+              Ver planes <span class="arrow">→</span>
+            </button>
+          </div>
+
+          <div class="service-card reveal reveal-delay-3">
+            <div class="service-number">03</div>
+            <img loading="lazy" src="./assets/images/service-full.png" alt="Página Full" class="service-img">
+            <h3 class="service-name">Página Completa</h3>
+            <p class="service-desc">Desde e-commerce hasta sitios institucionales. Estructura sólida, diseño atractivo y todo lo que necesitás para escalar.</p>
+            <button class="btn-ghost btn-s" data-type="full" aria-label="Ver planes full page">
+              Ver planes <span class="arrow">→</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SERVICE MODAL -->
+      <div class="servicios-modal" id="servicios-modal">
+
+        <!-- Modal Landing -->
+        <div class="section-modal-plan" id="modal-plan">
+          <div class="section-modal-content">
+            <span class="modal-close" role="button" aria-label="Cerrar modal">&times;</span>
+
+            <div class="section-modal-card">
+              <p class="modal-plan-label">Landing Page</p>
+              <h3 class="modal-plan-name">Básico</h3>
+              <p class="modal-plan-price">$95.000 <sub>ARS</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 3 secciones</li>
+                <li class="tip">Formulario de contacto</li>
+                <li class="tip">Redes sociales</li>
+                <li class="tip">Mantenimiento 1 mes</li>
+                <li class="tip">SEO básico</li>
+                <li class="tip">Hosting + Dominio 12 meses</li>
+                <li class="tip">1 revisión pre-entrega</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20quiero%20información%20sobre%20el%20Plan%20Básico%20Landing%20Page." target="_blank" rel="noopener noreferrer">Contratar</a>
             </div>
 
-            <div class="services-container">
-
-                <div class="services-images">
-                    <img src="./assets/images/service-maintence.jpg" alt="maintenance service" class="img-small">
-                    <img src="./assets/images/service-landing.png" alt="landing service" class="img-large">
-                </div>
-
-                <div class="services-text">
-                    <h2>Servicios Digitales Diseñados <br> para hacer Crecer tu Negocio</h2>
-
-                    <p>
-                        Descubrí todos nuestros servicios
-                        Desarrollo web, automatizaciones y soluciones digitales creadas para hacer crecer tu proyecto.
-                        Entrá y explorá todo lo que podemos hacer por vos.
-                    </p>
-
-                    <a href="./pages/service.html" class="btn">See More</a>
-                </div>
-
+            <div class="section-modal-card modal-featured">
+              <span class="modal-featured-badge">Recomendado</span>
+              <p class="modal-plan-label">Landing Page</p>
+              <h3 class="modal-plan-name">Estándar</h3>
+              <p class="modal-plan-price">$120.000 <sub>ARS</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 5 secciones</li>
+                <li class="tip">Formulario de contacto</li>
+                <li class="tip">WhatsApp + Redes</li>
+                <li class="tip">Mantenimiento 2 meses</li>
+                <li class="tip">SEO intermedio</li>
+                <li class="tip">Hosting + Dominio 12 meses</li>
+                <li class="tip">2 revisiones pre-entrega</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20me%20interesa%20el%20Plan%20Estándar%20Landing%20Page." target="_blank" rel="noopener noreferrer">Contratar</a>
             </div>
-        </section>
 
-        <!--Proyectos Section-->
-
-        <section class="proyectos-section  section" id="proyectos">
-            <div class="title">
-                <h2 class="title-h2">Nuestros Proyectos</h2>
+            <div class="section-modal-card">
+              <p class="modal-plan-label">Landing Page</p>
+              <h3 class="modal-plan-name">Profesional</h3>
+              <p class="modal-plan-price">$170.000 <sub>ARS</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 7 secciones</li>
+                <li class="tip">WhatsApp + Redes</li>
+                <li class="tip">Mantenimiento 3 meses</li>
+                <li class="tip">SEO avanzado</li>
+                <li class="tip">Hosting + Dominio 12 meses</li>
+                <li class="tip">Analítica básica</li>
+                <li class="tip">3 revisiones pre-entrega</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20quiero%20contratar%20el%20Plan%20Profesional%20Landing%20Page." target="_blank" rel="noopener noreferrer">Contratar</a>
             </div>
-            <div class="proyectos_container container grid_p" id="proyectos_card">
+          </div>
+        </div>
 
-                <article class="proyectos_card">
-                    <img loading="lazy" loading="lazy" src="./assets/images/project-img-2.jpg" alt="project-imagen 2"
-                        class="project_img" loading=" lazy">
-                    <div class="project_modal">
-                        <span class="proyectos_subtitle">Web</span>
-                        <h2 class="proyectos_title">Plan Estandar</h2>
-                        <a href="https://alqmst99.github.io/Plan-Est-ndar/" class="proyectos_button" target="_blank"
-                            aria-label="Boton ver demo">View Demo -> ></a>
-                    </div>
-                </article>
+        <!-- Modal Mantenimiento -->
+        <div class="section-modal-mant" id="modal-mant">
+          <div class="section-modal-content">
+            <span class="modal-close" role="button" aria-label="Cerrar modal">&times;</span>
 
-                <article class="proyectos_card">
-                    <img loading="lazy" loading="lazy" src="./assets/images/project-img-1.jpg" alt="project-imagen 1"
-                        class="project_img" loading=" lazy">
-                    <div class="project_modal">
-                        <span class="proyectos_subtitle">Web</span>
-                        <h2 class="proyectos_title">Portfolio Ana</h2>
-                        <a href="https://anaclara-95.github.io/portfolio-frontend/" class="proyectos_button"
-                            target="_blank" aria-label="Boton ver demo">View Demo -> ></a>
-                    </div>
-                </article>
+            <div class="section-modal-card">
+              <p class="modal-plan-label">Mantenimiento</p>
+              <h3 class="modal-plan-name">Básico</h3>
+              <p class="modal-plan-price">$40.000 <sub>ARS/mes</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 2 cambios menores por mes</li>
+                <li class="tip">Corrección de textos, imágenes o enlaces</li>
+                <li class="tip">Revisión visual general</li>
+                <li class="tip">Soporte en 48 hs por WhatsApp o mail</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20quiero%20contratar%20Mantenimiento%20Básico." target="_blank" rel="noopener noreferrer">Contratar</a>
+            </div>
 
-                <article class="proyectos_card">
-                    <img loading="lazy" loading="lazy" src="./assets/images/project-img-3.jpg" alt="project-imagen 3"
-                        class="project_img" loading=" lazy">
-                    <div class="project_modal">
-                        <span class="proyectos_subtitle">Web</span>
-                        <h2 class="proyectos_title">Portfolio Nahuel</h2>
-                        <a href="https://alqmst99.github.io/PortaFolio-web/" class="proyectos_button" target="_blank"
-                            aria-label="Boton ver demo">View Demo -> ></a>
-                    </div>
-                </article>
+            <div class="section-modal-card modal-featured">
+              <span class="modal-featured-badge">Recomendado</span>
+              <p class="modal-plan-label">Mantenimiento</p>
+              <h3 class="modal-plan-name">Estándar</h3>
+              <p class="modal-plan-price">$70.000 <sub>ARS/mes</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 5 cambios al mes</li>
+                <li class="tip">Nuevas secciones básicas</li>
+                <li class="tip">Optimización de estilos CSS</li>
+                <li class="tip">Soporte en 24 hs</li>
+                <li class="tip">Revisión mensual de SEO básico</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20me%20interesa%20el%20Mantenimiento%20Estándar." target="_blank" rel="noopener noreferrer">Contratar</a>
+            </div>
 
-                <article class="proyectos_card">
-                    <img loading="lazy" loading="lazy" src="./assets/images/project-img-2.jpg" alt="project-imagen 2"
-                        class="project_img" loading=" lazy">
-                    <div class="project_modal">
-                        <span class="proyectos_subtitle">Web</span>
-                        <h2 class="proyectos_title">Lawyer Website</h2>
-                        <a href="https://alqmst99.github.io/site-lawyer/" class="proyectos_button" target="_blank"
-                            aria-label="Boton ver demo">View Demo -> ></a>
-                    </div>
-                </article>
+            <div class="section-modal-card">
+              <p class="modal-plan-label">Mantenimiento</p>
+              <h3 class="modal-plan-name">Completo</h3>
+              <p class="modal-plan-price">$150.000 <sub>ARS/mes</sub></p>
+              <ul class="tips">
+                <li class="tip">Cambios menores ilimitados</li>
+                <li class="tip">Refactorización de código JS</li>
+                <li class="tip">Funcionalidades simples (modales, sliders)</li>
+                <li class="tip">Mejora visual completa UX</li>
+                <li class="tip">Soporte prioritario en el día</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20quiero%20el%20Mantenimiento%20Completo." target="_blank" rel="noopener noreferrer">Contratar</a>
+            </div>
+          </div>
+        </div>
 
-                <article class="proyectos_card">
-                    <img loading="lazy" loading="lazy" src="./assets/images/project-img-3.jpg" alt="project-image 3"
-                        class="project_img" loading=" lazy">
-                    <div class="project_modal">
-                        <span class="proyectos_subtitle">Web</span>
-                        <h2 class="proyectos_title">Bakery Website</h2>
-                        <a href="https://anaclara-95.github.io/bakery-website/" class="proyectos_button" target="_blank"
-                            aria-label="Boton ver demo">View Demo -> ></a>
-                    </div>
-                </article>
+        <!-- Modal Full -->
+        <div class="section-modal-full" id="modal-full">
+          <div class="section-modal-content">
+            <span class="modal-close" role="button" aria-label="Cerrar modal">&times;</span>
 
-                <article class="proyectos_card">
-                    <img loading="lazy" loading="lazy" src="./assets/images/project-img-2.jpg" alt="project-imagen 2"
-                        class="project_img" loading=" lazy">
-                    <div class="project_modal">
-                        <span class="proyectos_subtitle">Web</span>
-                        <h2 class="proyectos_title">Cake Website</h2>
-                        <a href="https://anaclara-95.github.io/cake-website/" class="proyectos_button" target="_blank"
-                            aria-label="Boton ver demo">View Demo -> ></a>
-                    </div>
-                </article>
+            <div class="section-modal-card">
+              <p class="modal-plan-label">Página Completa</p>
+              <h3 class="modal-plan-name">Básica</h3>
+              <p class="modal-plan-price">$150.000 <sub>ARS</sub></p>
+              <ul class="tips">
+                <li class="tip">3 secciones (Inicio, Servicios, Contacto)</li>
+                <li class="tip">Diseño responsive</li>
+                <li class="tip">Formulario funcional</li>
+                <li class="tip">SEO básico</li>
+                <li class="tip">Deploy en GitHub Pages</li>
+                <li class="tip">Mantenimiento 1 mes GRATIS</li>
+                <li class="tip">Entrega: 7–10 días hábiles</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20quiero%20información%20sobre%20Página%20Full%20Básica." target="_blank" rel="noopener noreferrer">Contratar</a>
+            </div>
+
+            <div class="section-modal-card modal-featured">
+              <span class="modal-featured-badge">Recomendado</span>
+              <p class="modal-plan-label">Página Completa</p>
+              <h3 class="modal-plan-name">Estándar</h3>
+              <p class="modal-plan-price">$250.000 <sub>ARS</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 5 secciones</li>
+                <li class="tip">Animaciones y transiciones JS</li>
+                <li class="tip">SEO intermedio</li>
+                <li class="tip">Mapa, redes y WhatsApp</li>
+                <li class="tip">Documentación técnica</li>
+                <li class="tip">Entrega: 10–14 días hábiles</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20me%20interesa%20la%20Página%20Full%20Estándar." target="_blank" rel="noopener noreferrer">Contratar</a>
+            </div>
+
+            <div class="section-modal-card">
+              <p class="modal-plan-label">Página Completa</p>
+              <h3 class="modal-plan-name">Profesional</h3>
+              <p class="modal-plan-price">$400.000 <sub>ARS</sub></p>
+              <ul class="tips">
+                <li class="tip">Hasta 8 secciones + funcionalidades dinámicas</li>
+                <li class="tip">Modales, sliders, tabs personalizados</li>
+                <li class="tip">Módulo de blog estático</li>
+                <li class="tip">SEO avanzado + checklist</li>
+                <li class="tip">Integraciones externas</li>
+                <li class="tip">Entrega: 15–20 días hábiles</li>
+              </ul>
+              <a class="btn-primary" href="https://wa.me/5493425428918?text=Hola%20FSTail%20Solutions,%20quiero%20contratar%20la%20Página%20Full%20Profesional." target="_blank" rel="noopener noreferrer">Contratar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── PROYECTOS ── -->
+    <section class="proyectos-section" id="proyectos">
+      <div class="proyectos-inner">
+        <div class="section-header reveal">
+          <div>
+            <p class="section-label">Nuestro trabajo</p>
+            <h2 class="section-title">Proyectos que<br><em>hablan</em> por sí solos.</h2>
+          </div>
+          <a href="./pages/projects.html" class="btn-ghost">Ver todos <span class="arrow">→</span></a>
+        </div>
+
+        <div class="proyectos-grid" id="proyectos_card">
+
+          <article class="proyectos_card">
+            <img loading="lazy" src="./assets/images/project-img-2.jpg" alt="Plan Estándar" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Plan Estándar</h3>
+              <a href="https://alqmst99.github.io/Plan-Est-ndar/" class="proyectos_button" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            </div>
+          </article>
+
+          <article class="proyectos_card">
+            <img loading="lazy" src="./assets/images/project-img-1.jpg" alt="Portfolio Ana" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Portfolio Ana</h3>
+              <a href="https://anaclara-95.github.io/portfolio-frontend/" class="proyectos_button" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            </div>
+          </article>
+
+          <article class="proyectos_card">
+            <img loading="lazy" src="./assets/images/project-img-3.jpg" alt="Portfolio Nahuel" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Portfolio Nahuel</h3>
+              <a href="https://alqmst99.github.io/PortaFolio-web/" class="proyectos_button" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            </div>
+          </article>
+
+          <article class="proyectos_card">
+            <img loading="lazy" src="./assets/images/project-img-2.jpg" alt="Lawyer Website" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Lawyer Website</h3>
+              <a href="https://alqmst99.github.io/site-lawyer/" class="proyectos_button" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            </div>
+          </article>
+
+          <article class="proyectos_card">
+            <img loading="lazy" src="./assets/images/project-img-3.jpg" alt="Bakery Website" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Bakery Website</h3>
+              <a href="https://anaclara-95.github.io/bakery-website/" class="proyectos_button" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            </div>
+          </article>
+
+          <article class="proyectos_card">
+            <img loading="lazy" src="./assets/images/project-img-2.jpg" alt="Cake Website" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Cake Website</h3>
+              <a href="https://anaclara-95.github.io/cake-website/" class="proyectos_button" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="ver-mas-wrap">
+          <a href="./pages/projects.html" class="btn-outline" target="_blank" rel="noopener noreferrer">Ver todos los proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIOS ── -->
+    <section class="testimonios-section" id="testimonios">
+      <div class="testimonios-inner">
+        <div class="reveal">
+          <p class="section-label">Lo que dicen nuestros clientes</p>
+          <h2 class="section-title">Resultados que<br><em>generan confianza.</em></h2>
+        </div>
+
+        <div class="testimonios-grid" style="margin-top: var(--space-lg);">
+
+          <div class="testimonios-card reveal reveal-delay-1">
+            <div class="testimonios-quote">"</div>
+            <p class="testimonios-text">
+              Gracias al equipo de FSTail Solutions, mi emprendimiento logró tener presencia digital en
+              tiempo récord. La landing page es moderna, rápida y mis clientes pueden contactarme fácilmente.
+            </p>
+            <div class="testimonios-author">
+              <img loading="lazy" src="./assets/images/testimonio-2.png" alt="Jose R. Puppits">
+              <div>
+                <div class="testimonios-name">Jose R. Puppits</div>
+                <div class="testimonios-since">Cliente</div>
               </div>
-            <button type="button" class="ver-mas" aria-label="Boton ver mas proyectos"><a href="./pages/projects.html"
-                    target="_blank" rel="noopener noreferrer">VER MÁS</a> </button>
-        </section>
-
-
-        <!--Testimonios-->
-        <section class="testimonios-section" id="testimonios">
-            <div class="title">
-                <h2 class="title-h2">Testimonios</h2>
             </div>
-            <div class="testimonios-content">
-                <div class="testimonios-card">
-                    <div class="testimonios-image">
-                        <img loading="lazy" src="./assets/images/testimonio-2.png" width="100px" height="100px"
-                            alt="testimonios-imagen Jose R">
-                    </div>
-                    <div class="testimonios-desc">
-                        <div class="testimonios-title">
-                            <h2>Jose R. Puppits</h2>
-                        </div>
-                        <div class="testimonios-text">
-                            <p>Gracias al equipo de FSTail Solutions, mi emprendimiento logró tener presencia digital en
-                                tiempo récord. La landing page es moderna, rápida y mis clientes pueden contactoarme
-                                fácilmente.</p>
+          </div>
 
-                        </div>
-
-                    </div>
-                </div>
-                <div class="testimonios-card">
-                    <div class="testimonios-image">
-                        <img loading="lazy" src="./assets/images/testimonio-1.png" width="100px" height="100px"
-                            alt="testimonios-imagen Meriela P Muffins">
-                    </div>
-                    <div class="testimonios-desc">
-                        <div class="servicios-title">
-                            <h2>Mariela P Muffins</h2>
-                        </div>
-                        <div class="testimonios-text">
-                            <p>Contraté el plan de mantenimiento y fue la mejor decisión. Siempre están atentos a los
-                                detalles, corrigen errores y mantienen mi sitio seguro y actualizado.</p>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div class="testimonios-card">
-                    <div class="testimonios-image">
-                        <img loading="lazy" src="./assets/images/testimonio-3.png" width="100px" height="100px"
-                            alt="testimonios-imagen Jaime T BlackCake">
-                    </div>
-                    <div class="testimonios-desc">
-                        <div class="servicios-title">
-                            <h2>Jaime T. BlackCake</h2>
-                        </div>
-                        <div class="testimonios-text">
-                            <p>El equipo entendió
-                                perfectamente lo que buscaba, me asesoró en cada etapa y el resultado superó mis
-                                expectativas. El diseño es atractivo y funcional, y el proceso fue muy transparente.</p>
-
-                        </div>
-
-                    </div>
-                </div>
+          <div class="testimonios-card reveal reveal-delay-2">
+            <div class="testimonios-quote">"</div>
+            <p class="testimonios-text">
+              Contraté el plan de mantenimiento y fue la mejor decisión. Siempre están atentos a los detalles,
+              corrigen errores y mantienen mi sitio seguro y actualizado.
+            </p>
+            <div class="testimonios-author">
+              <img loading="lazy" src="./assets/images/testimonio-1.png" alt="Mariela P Muffins">
+              <div>
+                <div class="testimonios-name">Mariela P. Muffins</div>
+                <div class="testimonios-since">Cliente</div>
+              </div>
             </div>
-        </section>
+          </div>
 
-
-
-    </main>
-
-    <footer class="footer">
-        <div class="section_cotainer footer_container">
-            <div class="footer_col">
-                <h3>FSTail <samp>Solutions</samp></h3>
-                <p>
-                    Desarrollamos soluciones digitales eficientes y a la medida para potenciar el crecimiento de tu
-                    negocio.
-                    Nuestro enfoque combina diseño moderno, tecnología confiable y una ejecución precisa en cada
-                    proyecto.
-                </p>
-                <p>
-                    Confía en nosotros para construir, optimizar y mantener tu presencia digital.
-                    Trabajamos con compromiso y profesionalismo para lograr resultados reales y sostenibles para tu
-                    marca.
-                </p>
+          <div class="testimonios-card reveal reveal-delay-3">
+            <div class="testimonios-quote">"</div>
+            <p class="testimonios-text">
+              El equipo entendió perfectamente lo que buscaba. Me asesoró en cada etapa y el resultado
+              superó mis expectativas. El diseño es atractivo, funcional y el proceso fue muy transparente.
+            </p>
+            <div class="testimonios-author">
+              <img loading="lazy" src="./assets/images/testimonio-3.png" alt="Jaime T. BlackCake">
+              <div>
+                <div class="testimonios-name">Jaime T. BlackCake</div>
+                <div class="testimonios-since">Cliente</div>
+              </div>
             </div>
-            <div class="footer_col">
-                <h4>nosotros Us</h4>
-                <ul class="nav-f-links">
-                    <li class="link"><a href="#home" rel="noopener noreferrer">
-                            <p>Home</p>
-                        </a></li>
-                    <li class="link"><a href="#nosotros" rel="noopener noreferrer">
-                            <p>nosotros</p>
-                        </a></li>
-                    <li class="link"><a href="./pages/service.html" rel="noopener noreferrer">
-                            <p>Servicios</p>
-                        </a></li>
-                    <li class="link"><a href="./pages/projects.html" rel="noopener noreferrer">
-                            <p>Proyectos</p>
-                        </a></li>
-                    <li class="link"><a href="#testimonios" rel="noopener noreferrer">
-                            <p>Testimonios</p>
-                        </a></li>
-                    <li class="link"><a href="./pages/extra-landing.html" rel="noopener noreferrer">
-                            <p>Contacto</p>
-                        </a></li>
-                </ul>
+          </div>
 
-            </div>
-            <div class="footer_col">
-                <h4>Servicios</h4>
-                <p>Advance Search</p>
-                <a href="./pages/policy.html">Privacy Policy</a>
-                <p>Suppliers</p>
-                <a href="./pages/terms.html">Terms & Conditions</a>
-
-            </div>
-            <div class="footer_col">
-                <h4>Contac Us</h4>
-                <p><i class="ri-map-pin-2-fill"></i> 4073, Pasaje J E Galisteo, Santa fe Argentina</p>
-                <p><i class="ri-mail-fill"></i> fstailsolution@gmail.com</p>
-                <p><i class="ri-phone-fill"></i> +54 9 3425428918</p>
-                <p></p>
-            </div>
         </div>
-        <div class="footer_bar">
-            <div class="footer_bar_content">
-                <p>Corpyright 2025 FSTailSolutions. All rigths reserved.</p>
-                <div class="footer_socials">
-                    <span><a href="https://www.facebook.com/FSTailSolutions/" target="_blank"
-                            rel="noopener noreferrer"><img loading="lazy" src="./assets/icons/facebook.png"
-                                alt="face-ico" width="20px" height="20px"></a></span>
-                    <span><a href="https://www.instagram.com/fstailsolution/" target="_blank"
-                            rel="noopener noreferrer"><img loading="lazy" src="./assets/icons/ig.png"
-                                alt="instagram-ico" width="20px" height="20px"></a></span>
-                    <span><a href="https://wa.me/5493425428918" target="_blank" rel="noopener noreferrer"><img
-                                loading="lazy" src="./assets/icons/Whatsapp.png" alt="whatsapp-ico" width="20px"
-                                height="20px"></a></span>
-                    <span><a href="mailto:fstailsolution@gmail.com" target="_blank" rel="noopener noreferrer"><img
-                                loading="lazy" src="./assets/icons/email.png" alt="email-ico" width="20px"
-                                height="20px"></a></span>
+      </div>
+    </section>
 
-                </div>
-            </div>
+    <!-- ── CTA STRIP ── -->
+    <section class="cta-strip">
+      <div class="cta-strip-inner">
+        <h2 class="cta-headline reveal">
+          ¿Listo para llevar<br>tu negocio al <em>siguiente nivel?</em>
+        </h2>
+        <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+          <a href="./pages/extra-landing.html" class="btn-primary" target="_blank" rel="noopener noreferrer">Iniciar proyecto</a>
+          <a href="https://wa.me/5493425428918" class="btn-ghost" target="_blank" rel="noopener noreferrer">
+            WhatsApp <span class="arrow">→</span>
+          </a>
         </div>
-    </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand-name"><em>FS</em>Tail Solutions</div>
+          <p class="footer-brand-desc">
+            Desarrollamos soluciones digitales eficientes y a la medida. Diseño moderno, tecnología confiable
+            y ejecución precisa en cada proyecto.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Navegación</p>
+          <ul class="footer-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="./pages/service.html">Servicios</a></li>
+            <li><a href="./pages/projects.html">Proyectos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Legal</p>
+          <ul class="footer-links">
+            <li><a href="./pages/policy.html">Política de Privacidad</a></li>
+            <li><a href="./pages/terms.html">Términos y Condiciones</a></li>
+            <li><a href="./pages/extra-landing.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Contacto</p>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>4073 Pasaje J E Galisteo, Santa Fe, Argentina</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉</span>
+            <a href="mailto:fstailsolution@gmail.com">fstailsolution@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <a href="tel:+5493425428918">+54 9 3425428918</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>🕐</span>
+            <span>Lun–Vie 09:00–18:00</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bar">
+        <p class="footer-copy">© 2025 FSTail Solutions — Todos los derechos reservados.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/FSTailSolutions/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img loading="lazy" src="./assets/icons/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/fstailsolution/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img loading="lazy" src="./assets/icons/ig.png" alt="Instagram">
+          </a>
+          <a href="https://wa.me/5493425428918" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img loading="lazy" src="./assets/icons/Whatsapp.png" alt="WhatsApp">
+          </a>
+          <a href="mailto:fstailsolution@gmail.com" aria-label="Email">
+            <img loading="lazy" src="./assets/icons/email.png" alt="Email">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
-<script src="./main.js" defer></script>
-
 </html>
