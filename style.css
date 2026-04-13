@@ -175,7 +175,7 @@ header.scrolled {
   gap: 0.75rem;
   text-decoration: none;
 }
-.logo img { width: 36px; height: 36px; object-fit: contain; }
+.logo img { width: 80px; height: 80px; object-fit: contain; border-radius: 25px; }
 .logo-wordmark {
   font-family: var(--font-serif);
   font-size: 1.2rem;
