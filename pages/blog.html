@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | FSTail Solutions</title>
+  <meta name="description" content="Read articles, tutorials and insights from the FSTail Solutions team on web development, design and digital strategy.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fstailsolutions.com.ar/pages/blog.html">
+  <link rel="shortcut icon" href="../assets/images/logo-official.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-redirect-wrap {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem var(--space-md);
+    }
+    .blog-redirect-counter {
+      font-size: 4rem;
+      font-family: var(--font-serif);
+      color: var(--clr-accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .blog-redirect-note {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--clr-text-muted);
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-wordmark"><span>FS</span>Tail Solutions</div>
+      <div class="loader-line"></div>
+    </div>
+  </div>
+
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo-official.png" alt="FSTail Solutions Logo">
+        <span class="logo-wordmark"><em>FS</em>Tail</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html#home">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./service.html">Services</a>
+        <a href="./projects.html">Projects</a>
+        <a href="#blog">Blog</a>
+      </nav>
+      <a href="./extra-landing.html" class="btn-nav-cta" target="_blank" rel="noopener noreferrer">Contact</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="../index.html#home" onclick="closeMobileNav()">Home</a>
+    <a href="./about.html" onclick="closeMobileNav()">About</a>
+    <a href="./service.html" onclick="closeMobileNav()">Services</a>
+    <a href="./projects.html" onclick="closeMobileNav()">Projects</a>
+    <a href="./extra-landing.html" class="btn-primary" style="margin-top:1rem;">Contact</a>
+  </nav>
+
+  <main style="padding-top: var(--header-h);" id="blog">
+
+    <div style="padding:5rem 0 4rem;border-bottom:1px solid var(--clr-border);background:var(--clr-bg-2);">
+      <div class="container">
+        <p class="section-label">Blog</p>
+        <h1 class="section-title" style="max-width:700px;">Ideas, tutorials &amp;<br><em>insights from the team.</em></h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="blog-redirect-wrap">
+          <div class="blog-redirect-counter" id="blogCounter">3</div>
+          <p class="blog-redirect-note">Redirecting to our blog</p>
+          <p style="font-size:0.9rem;color:var(--clr-text-muted);max-width:420px;line-height:1.7;margin-bottom:2rem;">
+            Our full blog is hosted on WordPress. You'll be redirected automatically — or click the button below.
+          </p>
+          <a href="https://blog.fstailsolutions.com.ar" class="btn-primary" target="_blank" rel="noopener noreferrer" id="blogLink">
+            Go to blog now →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name"><em>FS</em>Tail Solutions</div>
+          <p class="footer-brand-desc">We build efficient, tailor-made digital solutions to boost your business growth.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./service.html">Services</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Legal</p>
+          <ul class="footer-links">
+            <li><a href="./policy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Contact</p>
+          <div class="footer-contact-item"><span>✉</span><a href="mailto:fstailsolution@gmail.com">fstailsolution@gmail.com</a></div>
+          <div class="footer-contact-item"><span>📞</span><a href="tel:+5493425428918">+54 9 3425428918</a></div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p class="footer-copy">© 2025 FSTail Solutions — All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // Countdown redirect to WP blog
+    const WP_BLOG = 'https://blog.fstailsolutions.com.ar';
+    let count = 3;
+    const el = document.getElementById('blogCounter');
+    const interval = setInterval(() => {
+      count--;
+      el.textContent = count;
+      if (count <= 0) {
+        clearInterval(interval);
+        window.location.href = WP_BLOG;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
