@@ -1,0 +1,44 @@
+═══════════════════════════════════════════════════════
+   BELL VITA CHATBOT — INTEGRATION GUIDE
+═══════════════════════════════════════════════════════
+
+ONE LINE. Add this tag just before </body> in every HTML page:
+
+ROOT PAGES (index.html):
+  <script src="./assets/js/chatbot.js" defer></script>
+
+PAGES/ FOLDER (about, windows, contact, etc.):
+  <script src="../assets/js/chatbot.js" defer></script>
+
+That's it. No CSS to add. No HTML to add.
+The chatbot injects everything itself (button, window, styles).
+
+═══════════════════════════════════════════════════════
+   WHAT IT KNOWS
+═══════════════════════════════════════════════════════
+
+WINDOWS (all 10 — with specs, highlights, link):
+  · Panoramic Fixed Glass     · Lift & Slide System
+  · Minimalist Casement       · Tilt & Turn Window
+  · Architectural Pivot       · Frameless Corner Glass
+  · Motorized Guillotine      · Top-Hung Awning Window
+  · Invisible Integrated      · Acoustic Performance
+
+FAQ TOPICS (auto-detected):
+  · Pricing & quotes          · Lead times & delivery
+  · Installation              · Warranty (10yr product)
+  · Colors & RAL finishes     · Smart home / automation
+  · Security (RC2)            · Energy / U-Value / thermal
+  · Samples & documentation   · Custom sizing
+  · Maintenance & cleaning    · Architect specs & BIM
+
+═══════════════════════════════════════════════════════
+   CUSTOMIZATION
+═══════════════════════════════════════════════════════
+
+To update content: edit KB object at top of chatbot.js
+To change email:   search "bell.vita04@gmail.com" → replace
+To change color:   search "#c9a96e" (gold) → replace with new hex
+To change brand:   search "Bell Vita" → replace
+
+═══════════════════════════════════════════════════════

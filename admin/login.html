@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso Privado — FSTail Solutions</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logo-official-3.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/audit.css">
+</head>
+<body>
+
+<div class="login-wrap">
+  <div class="login-box">
+    <div class="login-logo">
+      <img src="../assets/images/logo-official.png" alt="FSTail Solutions">
+      <div class="login-logo-text"><em>FS</em>Tail Solutions</div>
+    </div>
+    <h1 class="login-title">Área<br><em style="font-style:italic;color:var(--clr-accent);">privada</em></h1>
+    <p class="login-sub">Sistema de Auditoría Web · Acceso restringido</p>
+
+    <div class="field-group">
+      <label class="field-label" for="username">Usuario</label>
+      <input class="field-input" type="text" id="username" placeholder="ADMIN_1 / ADMIN_2" autocomplete="username">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="password">Contraseña</label>
+      <input class="field-input" type="password" id="password" placeholder="••••••••" autocomplete="current-password">
+    </div>
+
+    <button class="btn-primary" style="width:100%;margin-top:0.5rem;justify-content:center;" id="loginBtn">
+      Ingresar
+    </button>
+
+    <div class="login-error" id="loginError"></div>
+
+    <p style="font-size:0.7rem;color:var(--clr-text-faint);margin-top:2rem;text-align:center;">
+      Solo para uso interno de FSTail Solutions.<br>
+      <a href="../index.html" style="color:var(--clr-text-faint);text-decoration:underline;">Volver al sitio público</a>
+    </p>
+  </div>
+</div>
+
+<script src="../js/auth-config.js"></script>
+<script>
+  // Redirect if already logged in
+  if (Auth.getSession()) {
+    window.location.href = './dashboard.html';
+  }
+
+  const loginBtn = document.getElementById('loginBtn');
+  const errDiv   = document.getElementById('loginError');
+
+  async function doLogin() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+    errDiv.classList.remove('show');
+    loginBtn.disabled = true;
+    loginBtn.textContent = 'Verificando...';
+    const result = await Auth.login(username, password);
+    if (result.ok) {
+      window.location.href = './dashboard.html';
+    } else {
+      errDiv.textContent = result.error;
+      errDiv.classList.add('show');
+      loginBtn.disabled = false;
+      loginBtn.textContent = 'Ingresar';
+    }
+  }
+
+  loginBtn.addEventListener('click', doLogin);
+  document.addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+</script>
+</body>
+</html>

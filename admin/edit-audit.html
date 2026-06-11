@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Auditoría — FSTail Audit</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/audit.css">
+</head>
+<body>
+<script src="../js/auth-config.js"></script>
+<script>
+  Auth.require();
+  // edit-audit.html is just a pass-through that redirects to new-audit.html with the id
+  const id = new URLSearchParams(window.location.search).get('id');
+  if (id) {
+    window.location.replace('./new-audit.html?id=' + id);
+  } else {
+    window.location.replace('./dashboard.html');
+  }
+</script>
+</body>
+</html>

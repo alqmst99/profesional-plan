@@ -109,7 +109,7 @@ Agregar analítica avanzada.
 Internacionalización (i18n) para otros idiomas.
 Mejorar accesibilidad (WCAG).
 
-## Demo
-Podés ver una demo en https://alqmst99.github.io/profesional-plan/
+
+Podés ver  en https://alqmst99.github.io/profesional-plan/
 
 ¡Gracias por confiar en FSTail Solutions!

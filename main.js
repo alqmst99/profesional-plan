@@ -37,6 +37,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Improve navigation: hide .html from URLs and mark active link
+  document.querySelectorAll('a[href]').forEach(a => {
+    try {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#')) return;
+      // normalize display URL without .html
+      const clean = href.replace(/\.html(#.*)?$/, '$1');
+      a.dataset.cleanHref = clean;
+      // When clicked, navigate to the real href but update history to show clean URL
+      a.addEventListener('click', (e) => {
+        if (href.startsWith('http') || href.startsWith('#')) return;
+        e.preventDefault();
+        const target = href;
+        history.pushState(null, '', clean);
+        window.location.href = target;
+      });
+    } catch (e) {}
+  });
+
+  // mark active nav link
+  const path = window.location.pathname.split('/').pop().replace('.html','') || 'index';
+  document.querySelectorAll('.nav-links a, .admin-nav a').forEach(a => {
+    const href = (a.getAttribute('href')||'').replace('.html','').split('/').pop();
+    if (href === path) a.classList.add('active');
+  });
+
   /* ── CLOSE MOBILE NAV (exported for onclick in HTML) ── */
   window.closeMobileNav = () => {
     if (mobileNav) mobileNav.classList.remove('open');
