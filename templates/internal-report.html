@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe Técnico Interno — FSTail Audit</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logo-official-3.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/audit.css">
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: #111 !important; }
+      .report-wrap { border: none; padding: 0; max-width: 100%; background: white; }
+      :root {
+        --clr-bg: white; --clr-bg-2: #f9f9f9; --clr-text: #111;
+        --clr-text-muted: #444; --clr-accent: #9b7e47;
+        --clr-border: rgba(0,0,0,0.12); --clr-surface: #f2f2f2;
+      }
+    }
+    .tech-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .tech-row:last-child { border-bottom: none; }
+    .tech-key {
+      padding: 0.65rem 1rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clr-text-muted);
+      background: var(--clr-bg-3);
+      border-right: 1px solid var(--clr-border);
+    }
+    .tech-val {
+      padding: 0.65rem 1rem;
+      font-size: 0.85rem;
+      color: var(--clr-text);
+      background: var(--clr-bg-2);
+    }
+    .section-score-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--clr-border);
+      font-size: 0.82rem;
+    }
+    .section-score-row:last-child { border-bottom: none; }
+    .section-score-name { color: var(--clr-text-muted); }
+    .section-score-val {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+    }
+    .score-bar-wrap { flex: 1; max-width: 120px; margin: 0 1rem; }
+    .score-bar-track { height: 3px; background: var(--clr-border); }
+    .score-bar-fill  { height: 100%; transition: width 0.8s; }
+    .security-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--clr-border);
+      font-size: 0.82rem;
+    }
+    .security-row:last-child { border-bottom: none; }
+    .sec-check-ok  { color: #6db87a; font-weight: 500; }
+    .sec-check-no  { color: #d46b6b; }
+    .sec-check-na  { color: var(--clr-text-faint); }
+  </style>
+</head>
+<body>
+
+  <!-- Control bar -->
+  <div class="no-print" style="position:sticky;top:0;z-index:100;background:rgba(10,10,11,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--clr-border);padding:0.75rem var(--space-md);display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="../admin/dashboard.html" class="btn-ghost">← Dashboard</a>
+      <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#d4a843;border:1px solid #d4a843;padding:0.25rem 0.65rem;">🔬 Informe interno</span>
+    </div>
+    <div style="display:flex;gap:0.75rem;">
+      <button class="btn-outline" onclick="window.print()" style="font-size:0.75rem;padding:0.5rem 1.25rem;">🖨 Imprimir / PDF</button>
+    </div>
+  </div>
+
+  <main style="padding:3rem var(--space-md);">
+    <div class="report-wrap" id="reportContent">
+
+      <!-- Header -->
+      <div class="report-header">
+        <div>
+          <div class="report-brand"><em>FS</em>Tail Solutions</div>
+          <div style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#d4a843;margin-top:0.25rem;">Informe Técnico Interno — Uso Exclusivo</div>
+        </div>
+        <div class="report-meta" id="reportMeta"></div>
+      </div>
+
+      <!-- Dynamic content injected here -->
+      <div id="reportBody"></div>
+
+      <!-- Footer -->
+      <div style="margin-top:4rem;padding-top:2rem;border-top:1px solid var(--clr-border);display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:0.72rem;color:var(--clr-text-faint);">FSTail Solutions — Documento interno. No distribuir.</div>
+        <div style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--clr-text-faint);">Generado: <span id="genDate"></span></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/auth-config.js"></script>
+  <script src="../js/audit-store.js"></script>
+  <script>
+    Auth.require();
+
+    document.getElementById('genDate').textContent = new Date().toLocaleString('es-AR');
+
+    const id = new URLSearchParams(window.location.search).get('id');
+    const audit = id ? AuditStore.getById(id) : null;
+
+    if (!audit) {
+      document.getElementById('reportBody').innerHTML =
+        '<p style="padding:4rem;text-align:center;color:var(--clr-text-muted);">Auditoría no encontrada. <a href="../admin/dashboard.html" style="color:var(--clr-accent);">Volver al dashboard</a></p>';
+    } else {
+      renderInternalReport(audit);
+    }
+
+    function fmtDate(iso) {
+      if (!iso) return '—';
+      return new Date(iso).toLocaleDateString('es-AR', { day:'2-digit', month:'long', year:'numeric' });
+    }
+    function scoreColor(s) {
+      if (!s && s !== 0) return 'var(--clr-text-faint)';
+      if (s >= 7) return '#6db87a'; if (s >= 5) return '#d4a843'; return '#d46b6b';
+    }
+    function scoreColorFinal(s) {
+      if (s >= 75) return '#6db87a'; if (s >= 50) return '#d4a843'; return '#d46b6b';
+    }
+    function yesNo(val, yes='✔ Sí', no='✗ No') {
+      if (val === 'yes') return `<span class="sec-check-ok">${yes}</span>`;
+      if (val === 'no')  return `<span class="sec-check-no">${no}</span>`;
+      return `<span class="sec-check-na">—</span>`;
+    }
+
+    function renderInternalReport(a) {
+      const info = a.generalInfo || {};
+      const sc = a.finalScore;
+
+      // Meta block
+      document.getElementById('reportMeta').innerHTML = `
+        <div style="font-weight:500;">${info.company || 'Cliente'}</div>
+        <div>${info.url || '—'}</div>
+        <div>Auditoría: ${fmtDate(info.date || a.createdAt)}</div>
+        <div>Auditor: ${info.auditor || 'FSTail Solutions'}</div>
+        <div>Tipo: ${info.siteType || '—'}</div>`;
+
+      const sections = [];
+
+      /* ── 1. Identificación ── */
+      sections.push(`
+        <h1 class="report-title">Informe Técnico Interno<br><em>${info.company || 'Cliente'}</em></h1>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);margin-bottom:2.5rem;">
+          <div style="background:var(--clr-bg-2);padding:1.5rem;">
+            <p class="small-label" style="margin-bottom:0.4rem;">Score global</p>
+            <p style="font-family:var(--font-serif);font-size:2.5rem;color:${scoreColorFinal(sc||0)};line-height:1;">${sc !== undefined && sc !== null ? sc+'/100' : '—'}</p>
+          </div>
+          <div style="background:var(--clr-bg-2);padding:1.5rem;">
+            <p class="small-label" style="margin-bottom:0.4rem;">Estado</p>
+            <p style="font-size:0.95rem;color:var(--clr-text);">${a.status === 'done' ? '✔ Completada' : a.status === 'in-progress' ? '⏳ En progreso' : 'Borrador'}</p>
+          </div>
+          <div style="background:var(--clr-bg-2);padding:1.5rem;">
+            <p class="small-label" style="margin-bottom:0.4rem;">Objetivo</p>
+            <p style="font-size:0.82rem;color:var(--clr-text-muted);line-height:1.7;">${info.objective || '—'}</p>
+          </div>
+        </div>`);
+
+      /* ── 2. Scores por sección ── */
+      const SECTIONS_MAP = [
+        ['firstImpression','Primera Impresión'], ['header','Header / Hero'], ['home','Home'],
+        ['about','About'], ['services','Servicios'], ['portfolio','Portfolio'],
+        ['testimonials','Testimonios'], ['faq','FAQ'], ['blog','Blog'],
+        ['contact','Contacto'], ['footer','Footer'], ['responsive','Responsive'],
+        ['performance','Performance'], ['seo','SEO'], ['accessibility','Accesibilidad'],
+        ['security','Seguridad'], ['ux','UX'], ['conversion','Conversión'], ['content','Contenido'],
+      ];
+      const scored = SECTIONS_MAP.filter(([k]) => a[k] && a[k].score);
+      if (scored.length) {
+        sections.push(`
+          <h2 class="report-section-title">Puntajes por sección</h2>
+          <div style="background:var(--clr-bg-2);border:1px solid var(--clr-border);">
+            ${scored.map(([k,label]) => {
+              const s = a[k].score;
+              const col = scoreColor(s);
+              return `<div class="section-score-row">
+                <span class="section-score-name">${label}</span>
+                <div class="score-bar-wrap">
+                  <div class="score-bar-track">
+                    <div class="score-bar-fill" style="width:${s*10}%;background:${col};"></div>
+                  </div>
+                </div>
+                <span class="section-score-val" style="color:${col};">${s}/10</span>
+              </div>`;
+            }).join('')}
+          </div>`);
+      }
+
+      /* ── 3. PageSpeed ── */
+      const perf = a.performance || {};
+      sections.push(`
+        <h2 class="report-section-title">Performance — PageSpeed Insights</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);">
+          ${renderDeviceBlock('Desktop', perf.desktop)}
+          ${renderDeviceBlock('Mobile', perf.mobile)}
+        </div>
+        ${perf.coreWebVitals ? `<div class="audit-guide-box" style="margin-top:1rem;"><strong>Core Web Vitals</strong>${perf.coreWebVitals}</div>` : ''}
+        ${perf.opportunities ? `<div class="audit-guide-box" style="border-color:var(--clr-border);margin-top:0.75rem;"><strong>Oportunidades</strong>${perf.opportunities}</div>` : ''}`);
+
+      /* ── 4. SEO ── */
+      const seo = a.seo || {};
+      sections.push(`
+        <h2 class="report-section-title">SEO</h2>
+        <div style="background:var(--clr-bg-2);border:1px solid var(--clr-border);">
+          ${techRow('Title tag', seo.titleTag)}
+          ${techRow('Meta description', seo.metaDesc)}
+          ${techRow('H1', seo.h1Present)}
+          ${techRow('Sitemap.xml', seo.sitemap)}
+          ${techRow('robots.txt', seo.robots)}
+          ${techRow('Schema / datos estructurados', seo.schema)}
+          ${techRow('Palabras clave', seo.keywords)}
+        </div>
+        ${seo.issues ? `<div class="audit-guide-box" style="border-color:var(--clr-border);margin-top:1rem;"><strong>Problemas SEO</strong>${seo.issues}</div>` : ''}`);
+
+      /* ── 5. Seguridad ── */
+      const sec = a.security || {};
+      sections.push(`
+        <h2 class="report-section-title">Seguridad — Headers HTTP</h2>
+        <div style="background:var(--clr-bg-2);border:1px solid var(--clr-border);padding:1.25rem 1.5rem;">
+          ${secRow('HTTPS activo', sec.https)}
+          ${secRow('HSTS', sec.hsts)}
+          ${secRow('Content Security Policy (CSP)', sec.csp)}
+          ${secRow('X-Frame-Options', sec.xframe)}
+          ${secRow('Referrer Policy', sec.referrer)}
+          <div class="security-row">
+            <span style="color:var(--clr-text-muted);">Rating SecurityHeaders.com</span>
+            <span style="font-family:var(--font-serif);font-size:1.2rem;color:${sec.rating==='A+'||sec.rating==='A'?'#6db87a':sec.rating==='B'?'#d4a843':'#d46b6b'};">${sec.rating || '—'}</span>
+          </div>
+        </div>
+        ${sec.notes ? `<div class="audit-guide-box" style="border-color:var(--clr-border);margin-top:1rem;"><strong>Notas de seguridad</strong>${sec.notes}</div>` : ''}`);
+
+      /* ── 6. Tecnologías ── */
+      const tech = a.technologies || {};
+      sections.push(`
+        <h2 class="report-section-title">Stack tecnológico detectado</h2>
+        <div style="background:var(--clr-bg-2);border:1px solid var(--clr-border);">
+          ${techRow('Frontend', tech.frontend)}
+          ${techRow('Backend', tech.backend)}
+          ${techRow('Framework / CMS', tech.cms)}
+          ${techRow('Hosting / Servidor', tech.hosting)}
+          ${techRow('Analytics', tech.analytics)}
+          ${techRow('CDN', tech.cdn)}
+          ${techRow('Otras', tech.other)}
+        </div>`);
+
+      /* ── 7. Consola ── */
+      const con = a.console || {};
+      sections.push(`
+        <h2 class="report-section-title">Consola del navegador</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);margin-bottom:1rem;">
+          ${counterCard('Errores JS', con.jsErrors, '#d46b6b')}
+          ${counterCard('Warnings', con.warnings, '#d4a843')}
+          ${counterCard('Errores CSS', con.cssErrors, '#d4a843')}
+          ${counterCard('Errores red', con.networkErrors, '#d46b6b')}
+        </div>
+        ${con.details ? `<div class="audit-guide-box" style="border-color:var(--clr-border);"><strong>Detalle</strong><pre style="font-size:0.75rem;white-space:pre-wrap;color:var(--clr-text-muted);">${con.details}</pre></div>` : ''}`);
+
+      /* ── 8. Accesibilidad ── */
+      const acc = a.accessibility || {};
+      sections.push(`
+        <h2 class="report-section-title">Accesibilidad — WAVE</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);margin-bottom:1rem;">
+          ${counterCard('Errores WAVE', acc.waveErrors, '#d46b6b')}
+          ${counterCard('Alertas WAVE', acc.waveAlerts, '#d4a843')}
+        </div>
+        ${acc.issues ? `<div class="audit-guide-box" style="border-color:var(--clr-border);"><strong>Problemas</strong>${acc.issues}</div>` : ''}`);
+
+      /* ── 9. Responsive ── */
+      const res = a.responsive || {};
+      sections.push(`
+        <h2 class="report-section-title">Responsive</h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);">
+          <div style="background:var(--clr-bg-2);padding:1.25rem;">
+            <p class="small-label" style="margin-bottom:0.5rem;">Mobile</p>
+            <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.7;">${res.mobile||'—'}</p>
+          </div>
+          <div style="background:var(--clr-bg-2);padding:1.25rem;">
+            <p class="small-label" style="margin-bottom:0.5rem;">Tablet</p>
+            <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.7;">${res.tablet||'—'}</p>
+          </div>
+          <div style="background:var(--clr-bg-2);padding:1.25rem;">
+            <p class="small-label" style="margin-bottom:0.5rem;">Desktop</p>
+            <p style="font-size:0.85rem;color:var(--clr-text-muted);line-height:1.7;">${res.desktop||'—'}</p>
+          </div>
+        </div>`);
+
+      /* ── 10. Competidores ── */
+      const comp = a.competitors || {};
+      if (comp.c1name || comp.c2name) {
+        sections.push(`
+          <h2 class="report-section-title">Análisis competidores</h2>
+          ${comp.c1name ? `<div class="audit-guide-box" style="border-color:var(--clr-border);"><strong>${comp.c1name}</strong>${comp.c1notes||'Sin notas.'}</div>` : ''}
+          ${comp.c2name ? `<div class="audit-guide-box" style="border-color:var(--clr-border);"><strong>${comp.c2name}</strong>${comp.c2notes||'Sin notas.'}</div>` : ''}
+          ${comp.advantages ? `<div class="audit-guide-box"><strong>Ventajas competitivas</strong>${comp.advantages}</div>` : ''}`);
+      }
+
+      /* ── 11. Issues ── */
+      const issues = (a.issues && a.issues.list) || [];
+      if (issues.length) {
+        const byP = (p) => issues.filter(i => i.priority === p);
+        sections.push(`
+          <h2 class="report-section-title">Problemas detectados (${issues.length})</h2>
+          ${byP('high').length ? `<p class="small-label" style="color:#d46b6b;margin-bottom:0.4rem;">ALTA prioridad (${byP('high').length})</p>${byP('high').map(i=>`<div class="report-finding priority-high">${i.desc}</div>`).join('')}` : ''}
+          ${byP('mid').length  ? `<p class="small-label" style="color:#d4a843;margin:1rem 0 0.4rem;">MEDIA prioridad (${byP('mid').length})</p>${byP('mid').map(i=>`<div class="report-finding priority-mid">${i.desc}</div>`).join('')}` : ''}
+          ${byP('low').length  ? `<p class="small-label" style="color:#6db87a;margin:1rem 0 0.4rem;">BAJA prioridad (${byP('low').length})</p>${byP('low').map(i=>`<div class="report-finding priority-low">${i.desc}</div>`).join('')}` : ''}`);
+      }
+
+      /* ── 12. Recommendations ── */
+      const rec = a.recommendations || {};
+      if (rec.immediate || rec.shortTerm || rec.longTerm) {
+        sections.push(`
+          <h2 class="report-section-title">Recomendaciones técnicas</h2>
+          ${rec.immediate ? `<div class="audit-guide-box"><strong>Acciones inmediatas</strong>${rec.immediate}</div>` : ''}
+          ${rec.shortTerm  ? `<div class="audit-guide-box" style="border-color:var(--clr-border);"><strong>Corto plazo</strong>${rec.shortTerm}</div>` : ''}
+          ${rec.longTerm   ? `<div class="audit-guide-box" style="border-color:var(--clr-border);"><strong>Largo plazo</strong>${rec.longTerm}</div>` : ''}`);
+      }
+
+      /* ── 13. Notes per section ── */
+      const sectionNotes = [
+        ['firstImpression','Primera Impresión','notes'],['header','Header/Hero','heroNotes'],
+        ['home','Home','notes'],['about','About','notes'],['services','Servicios','notes'],
+        ['portfolio','Portfolio','notes'],['testimonials','Testimonios','notes'],
+        ['faq','FAQ','notes'],['blog','Blog','notes'],['contact','Contacto','notes'],
+        ['footer','Footer','notes'],['ux','UX','notes'],['conversion','Conversión','notes'],
+        ['content','Contenido','issues'],
+      ];
+      const noteSections = sectionNotes.filter(([k,,f]) => a[k] && a[k][f]);
+      if (noteSections.length) {
+        sections.push(`
+          <h2 class="report-section-title">Notas detalladas por sección</h2>
+          ${noteSections.map(([k,label,field]) => `
+            <div class="audit-guide-box" style="border-color:var(--clr-border);">
+              <strong>${label}</strong>
+              ${a[k][field]}
+            </div>`).join('')}`);
+      }
+
+      /* ── 14. Internal notes ── */
+      const internalNotes = a.conclusions && a.conclusions.internalNotes;
+      if (internalNotes) {
+        sections.push(`
+          <h2 class="report-section-title">Notas internas del auditor</h2>
+          <div class="audit-guide-box" style="border-color:#d4a843;">
+            <strong>Solo uso interno</strong>
+            ${internalNotes}
+          </div>`);
+      }
+
+      /* ── 15. Evidences summary ── */
+      const EVIDENCE_SECTIONS = [
+        'firstImpression','header','home','about','services','portfolio',
+        'testimonials','faq','blog','contact','footer','responsive',
+        'performance','seo','accessibility','security','ux','conversion','content'
+      ];
+      const evidenceHtml = EVIDENCE_SECTIONS.map(sk => {
+        const evs = (a[sk] && a[sk].evidences) || [];
+        if (!evs.length) return '';
+        return `<div style="margin-bottom:1.5rem;">
+          <p class="small-label" style="margin-bottom:0.5rem;">${sk}</p>
+          <div class="evidence-thumbs">
+            ${evs.map(ev => `<img class="evidence-thumb" src="${ev.data}" alt="${ev.name}" title="${ev.name}">`).join('')}
+          </div>
+        </div>`;
+      }).filter(Boolean).join('');
+      if (evidenceHtml) {
+        sections.push(`<h2 class="report-section-title">Evidencias y capturas</h2>${evidenceHtml}`);
+      }
+
+      document.getElementById('reportBody').innerHTML = sections.join('\n');
+    }
+
+    /* ── Helpers ── */
+    function renderDeviceBlock(label, data) {
+      if (!data) return `<div style="background:var(--clr-bg-2);padding:1.5rem;"><p class="small-label">${label} — sin datos</p></div>`;
+      const metrics = [
+        ['performance','Performance'], ['accessibility','Accessibility'],
+        ['bestPractices','Best Practices'], ['seo','SEO'],
+      ];
+      function mColor(v) { if (v>=90) return '#6db87a'; if (v>=50) return '#d4a843'; return '#d46b6b'; }
+      return `<div style="background:var(--clr-bg-2);padding:1.5rem;">
+        <p class="small-label" style="margin-bottom:0.75rem;">🖥 ${label}</p>
+        ${metrics.map(([k,l]) => {
+          const v = data[k];
+          return `<div style="display:flex;align-items:center;gap:0.75rem;padding:0.35rem 0;border-bottom:1px solid var(--clr-border);">
+            <span style="font-size:0.75rem;color:var(--clr-text-muted);width:110px;">${l}</span>
+            <div style="flex:1;height:3px;background:var(--clr-border);">
+              <div style="height:100%;width:${v||0}%;background:${mColor(v||0)};"></div>
+            </div>
+            <span style="font-family:var(--font-serif);font-size:1rem;color:${mColor(v||0)};width:30px;text-align:right;">${v!==undefined?v:'—'}</span>
+          </div>`;
+        }).join('')}
+      </div>`;
+    }
+
+    function techRow(label, val) {
+      return `<div class="tech-row">
+        <div class="tech-key">${label}</div>
+        <div class="tech-val">${val || '<span style="color:var(--clr-text-faint);">—</span>'}</div>
+      </div>`;
+    }
+
+    function secRow(label, val) {
+      return `<div class="security-row">
+        <span style="color:var(--clr-text-muted);">${label}</span>
+        ${yesNo(val)}
+      </div>`;
+    }
+
+    function yesNo(val) {
+      if (val === 'yes') return '<span class="sec-check-ok">✔ Presente</span>';
+      if (val === 'no')  return '<span class="sec-check-no">✗ Ausente</span>';
+      return '<span class="sec-check-na">—</span>';
+    }
+
+    function counterCard(label, val, col) {
+      const n = (val !== undefined && val !== null && val !== '') ? parseInt(val) : null;
+      const color = n === null ? 'var(--clr-text-faint)' : n === 0 ? '#6db87a' : col;
+      return `<div style="background:var(--clr-bg-2);padding:1.25rem;text-align:center;">
+        <p class="small-label" style="margin-bottom:0.4rem;">${label}</p>
+        <p style="font-family:var(--font-serif);font-size:2rem;color:${color};line-height:1;">${n !== null ? n : '—'}</p>
+      </div>`;
+    }
+  </script>
+</body>
+</html>

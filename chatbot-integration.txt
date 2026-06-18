@@ -1,5 +1,5 @@
 ═══════════════════════════════════════════════════════
-   BELL VITA CHATBOT — INTEGRATION GUIDE
+  FSTAIL SOLUTION CHATBOT — INTEGRATION GUIDE
 ═══════════════════════════════════════════════════════
 
 ONE LINE. Add this tag just before </body> in every HTML page:
@@ -39,6 +39,6 @@ FAQ TOPICS (auto-detected):
 To update content: edit KB object at top of chatbot.js
 To change email:   search "bell.vita04@gmail.com" → replace
 To change color:   search "#c9a96e" (gold) → replace with new hex
-To change brand:   search "Bell Vita" → replace
+To change brand:   search "Bell Vita" → replace with "Fstail Solution"
 
 ═══════════════════════════════════════════════════════

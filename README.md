@@ -17,7 +17,7 @@ Profesional/
 │   └── icons/
 │
 ├── pages/
-│   ├── extra-landing.html    # Landing extra para campañas/promos
+│   ├── contact.html          # Plantilla de contacto para campañas/promos
 │   ├── policy.html           # Política de privacidad
 │   └── terms.html            # Términos y condiciones
 │
@@ -63,7 +63,7 @@ Este proyecto incluye:
 
 ## Navegación
 **Página principal:** index.html
-**Landing extra:** extra-landing.html
+**Landing extra:** pages/contact.html
 **Política de privacidad:** policy.html
 **Términos y condiciones:** terms.html
 

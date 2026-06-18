@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — FSTail Audit</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logo-official-3.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/audit.css">
+</head>
+<body>
+
+  <!-- shared header -->
+  <header id="main-header" class="scrolled">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo-official.png" alt="FSTail Solutions Logo">
+        <span class="logo-wordmark"><em>FS</em>Tail</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clr-accent);border:1px solid var(--clr-accent-dark);padding:0.3rem 0.75rem;" id="userBadge"></span>
+        <button class="btn-nav-cta" id="logoutBtn">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-shell">
+    <!-- sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-logo">
+        <div style="font-family:var(--font-serif);font-size:0.9rem;letter-spacing:0.1em;color:var(--clr-text);">Audit System</div>
+        <p>FSTail Solutions</p>
+      </div>
+      <nav class="admin-nav">
+        <a href="./dashboard.html" class="active"><span class="nav-icon">◈</span> Dashboard</a>
+        <a href="./new-audit.html"><span class="nav-icon">＋</span> Nueva Auditoría</a>
+        <a href="./history.html"><span class="nav-icon">☰</span> Historial</a>
+        <div class="admin-nav-divider"></div>
+        <a href="../index.html"><span class="nav-icon">↗</span> Sitio público</a>
+      </nav>
+    </aside>
+
+    <!-- main -->
+    <main class="admin-main">
+      <div class="admin-page-header">
+        <div>
+          <p class="section-label" style="margin-bottom:0.4rem;">Panel de control</p>
+          <h1 class="admin-page-title">Dashboard <em>auditorías</em></h1>
+        </div>
+        <a href="./new-audit.html" class="btn-primary">+ Nueva auditoría</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid" id="statGrid">
+        <div class="stat-card">
+          <div class="stat-card-label">Total auditorías</div>
+          <div class="stat-card-num" id="statTotal">0</div>
+          <div class="stat-card-sub">registradas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Completadas</div>
+          <div class="stat-card-num" id="statDone">0</div>
+          <div class="stat-card-sub">estado: done</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">En progreso</div>
+          <div class="stat-card-num" id="statProgress">0</div>
+          <div class="stat-card-sub">estado: in-progress</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Score promedio</div>
+          <div class="stat-card-num" id="statAvg">—</div>
+          <div class="stat-card-sub">sobre 100</div>
+        </div>
+      </div>
+
+      <!-- Search + table -->
+      <div class="admin-search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar por empresa, URL o estado…">
+        <select class="field-select" id="statusFilter" style="width:180px;">
+          <option value="">Todos los estados</option>
+          <option value="draft">Borrador</option>
+          <option value="in-progress">En progreso</option>
+          <option value="done">Completado</option>
+        </select>
+      </div>
+
+      <div class="audit-table-wrap">
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Empresa</th>
+              <th>URL</th>
+              <th>Estado</th>
+              <th>Score</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="auditTableBody">
+            <tr id="emptyRow">
+              <td colspan="6" style="text-align:center;padding:3rem;color:var(--clr-text-faint);">
+                No hay auditorías registradas. <a href="./new-audit.html" style="color:var(--clr-accent);">Crear la primera →</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Confirm dialog -->
+  <div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+      <h3>¿Eliminar auditoría?</h3>
+      <p>Esta acción no se puede deshacer. La auditoría y todos sus datos serán eliminados permanentemente.</p>
+      <div class="confirm-actions">
+        <button class="btn-outline" id="confirmCancel">Cancelar</button>
+        <button class="btn-primary" style="background:var(--clr-accent);" id="confirmDelete">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="../js/auth-config.js"></script>
+  <script src="../js/audit-store.js"></script>
+  <script>
+    const session = Auth.require();
+    if (!session) throw new Error('Unauthorized');
+
+    document.getElementById('userBadge').textContent = session.displayName;
+    document.getElementById('logoutBtn').addEventListener('click', () => Auth.logout());
+
+    let pendingDeleteId = null;
+
+    function scoreClass(s) {
+      if (!s && s !== 0) return '';
+      if (s >= 75) return 'high';
+      if (s >= 50) return 'mid';
+      return 'low';
+    }
+
+    function statusBadge(s) {
+      if (s === 'done')        return '<span class="badge badge-done">Completado</span>';
+      if (s === 'in-progress') return '<span class="badge badge-progress">En progreso</span>';
+      return '<span class="badge badge-draft">Borrador</span>';
+    }
+
+    function formatDate(iso) {
+      if (!iso) return '—';
+      const d = new Date(iso);
+      return d.toLocaleDateString('es-AR', { day:'2-digit', month:'2-digit', year:'numeric' });
+    }
+
+    function toast(msg, type = '') {
+      const c = document.getElementById('toastContainer');
+      const t = document.createElement('div');
+      t.className = 'toast ' + type;
+      t.textContent = msg;
+      c.appendChild(t);
+      setTimeout(() => t.remove(), 3500);
+    }
+
+    function renderTable(audits) {
+      const tbody = document.getElementById('auditTableBody');
+      if (!audits.length) {
+        tbody.innerHTML = '<tr id="emptyRow"><td colspan="6" style="text-align:center;padding:3rem;color:var(--clr-text-faint);">No hay auditorías. <a href="./new-audit.html" style="color:var(--clr-accent);">Crear la primera →</a></td></tr>';
+        return;
+      }
+      tbody.innerHTML = audits.map(a => {
+        const info = a.generalInfo || {};
+        const score = a.finalScore;
+        const sc = score !== undefined && score !== null ? score : null;
+        return `<tr>
+          <td>${formatDate(a.createdAt)}</td>
+          <td class="td-company">${info.company || '—'}</td>
+          <td><span class="td-url">${info.url || '—'}</span></td>
+          <td>${statusBadge(a.status)}</td>
+          <td><span class="score-chip ${scoreClass(sc)}">${sc !== null ? sc + '/100' : '—'}</span></td>
+          <td>
+            <div class="table-actions">
+              <button class="tbl-btn" title="Editar" onclick="editAudit('${a.id}')">✎</button>
+              <button class="tbl-btn" title="Ver informe" onclick="viewReport('${a.id}')">⊞</button>
+              <button class="tbl-btn" title="Duplicar" onclick="dupAudit('${a.id}')">⧉</button>
+              <button class="tbl-btn" title="Exportar JSON" onclick="exportJSON('${a.id}')">↓</button>
+              <button class="tbl-btn danger" title="Eliminar" onclick="confirmDeleteAudit('${a.id}')">✕</button>
+            </div>
+          </td>
+        </tr>`;
+      }).join('');
+    }
+
+    function updateStats(audits) {
+      document.getElementById('statTotal').textContent = audits.length;
+      document.getElementById('statDone').textContent = audits.filter(a => a.status === 'done').length;
+      document.getElementById('statProgress').textContent = audits.filter(a => a.status === 'in-progress').length;
+      const scored = audits.filter(a => a.finalScore !== undefined && a.finalScore !== null);
+      if (scored.length) {
+        const avg = Math.round(scored.reduce((s, a) => s + a.finalScore, 0) / scored.length);
+        document.getElementById('statAvg').textContent = avg;
+      } else {
+        document.getElementById('statAvg').textContent = '—';
+      }
+    }
+
+    function loadAll() {
+      const q = document.getElementById('searchInput').value.trim();
+      const st = document.getElementById('statusFilter').value;
+      let audits = q ? AuditStore.search(q) : AuditStore.getAll();
+      if (st) audits = audits.filter(a => a.status === st);
+      renderTable(audits);
+      updateStats(AuditStore.getAll());
+    }
+
+    function editAudit(id) { window.location.href = './edit-audit.html?id=' + id; }
+    function viewReport(id) { window.location.href = '../templates/client-report.html?id=' + id; }
+
+    function dupAudit(id) {
+      const copy = AuditStore.duplicate(id);
+      if (copy) { toast('Auditoría duplicada.', 'success'); loadAll(); }
+    }
+
+    function exportJSON(id) {
+      const a = AuditStore.getById(id);
+      if (!a) return;
+      const blob = new Blob([JSON.stringify(a, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `auditoria-${(a.generalInfo?.company || id).replace(/\s+/g,'-')}.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function confirmDeleteAudit(id) {
+      pendingDeleteId = id;
+      document.getElementById('confirmOverlay').classList.add('open');
+    }
+
+    document.getElementById('confirmCancel').addEventListener('click', () => {
+      document.getElementById('confirmOverlay').classList.remove('open');
+      pendingDeleteId = null;
+    });
+
+    document.getElementById('confirmDelete').addEventListener('click', () => {
+      if (pendingDeleteId) {
+        AuditStore.remove(pendingDeleteId);
+        toast('Auditoría eliminada.', 'error');
+        loadAll();
+      }
+      document.getElementById('confirmOverlay').classList.remove('open');
+      pendingDeleteId = null;
+    });
+
+    document.getElementById('searchInput').addEventListener('input', loadAll);
+    document.getElementById('statusFilter').addEventListener('change', loadAll);
+
+    loadAll();
+  </script>
+</body>
+</html>

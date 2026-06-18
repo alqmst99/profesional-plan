@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe de Auditoría — FSTail Solutions</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logo-official-3.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/audit.css">
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: #111 !important; }
+      .report-wrap { border: none; padding: 0; max-width: 100%; background: white; }
+      :root {
+        --clr-bg: white; --clr-bg-2: #f8f8f8; --clr-text: #111;
+        --clr-text-muted: #555; --clr-accent: #9b7e47;
+        --clr-border: rgba(0,0,0,0.1); --clr-surface: #f4f4f4;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print / Back bar -->
+  <div class="no-print" style="position:sticky;top:0;z-index:100;background:rgba(10,10,11,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--clr-border);padding:0.75rem var(--space-md);display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="../admin/dashboard.html" class="btn-ghost">← Dashboard</a>
+      <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clr-accent);">Informe para cliente</span>
+    </div>
+    <div style="display:flex;gap:0.75rem;">
+      <button class="btn-outline" onclick="window.print()" style="font-size:0.75rem;padding:0.5rem 1.25rem;">🖨 Imprimir / PDF</button>
+      <button class="btn-primary" onclick="exportPDF()" style="font-size:0.75rem;padding:0.5rem 1.25rem;">↓ Descargar PDF</button>
+    </div>
+  </div>
+
+  <main style="padding:3rem var(--space-md);">
+    <div class="report-wrap" id="reportContent">
+
+      <!-- Header -->
+      <div class="report-header">
+        <div>
+          <div class="report-brand"><em>FS</em>Tail Solutions</div>
+          <div style="font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clr-text-muted);margin-top:0.25rem;">Auditoría Web Profesional</div>
+        </div>
+        <div class="report-meta" id="reportMeta"></div>
+      </div>
+
+      <!-- Title -->
+      <div id="reportTitle"></div>
+
+      <!-- Score hero -->
+      <div id="scoreHero"></div>
+
+      <!-- Executive summary -->
+      <div id="executiveSummary"></div>
+
+      <!-- Strengths & Weaknesses -->
+      <div id="strengthsWeaknesses"></div>
+
+      <!-- PageSpeed scores visual -->
+      <div id="pagespeedSection"></div>
+
+      <!-- Issues by priority -->
+      <div id="issuesSection"></div>
+
+      <!-- Recommendations -->
+      <div id="recommendationsSection"></div>
+
+      <!-- Conclusions -->
+      <div id="conclusionSection"></div>
+
+      <!-- Footer -->
+      <div style="margin-top:4rem;padding-top:2rem;border-top:1px solid var(--clr-border);display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:0.72rem;color:var(--clr-text-faint);">FSTail Solutions · fstailsolution@gmail.com · +54 9 3425428918</div>
+        <div style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--clr-text-faint);">Documento confidencial</div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/auth-config.js"></script>
+  <script src="../js/audit-store.js"></script>
+  <script>
+    Auth.require();
+
+    const id = new URLSearchParams(window.location.search).get('id');
+    const audit = id ? AuditStore.getById(id) : null;
+
+    if (!audit) {
+      document.getElementById('reportContent').innerHTML = '<p style="padding:4rem;text-align:center;color:var(--clr-text-muted);">Auditoría no encontrada. <a href="../admin/dashboard.html" style="color:var(--clr-accent);">Volver al dashboard</a></p>';
+    } else {
+      renderReport(audit);
+    }
+
+    function fmtDate(iso) {
+      if (!iso) return '—';
+      return new Date(iso).toLocaleDateString('es-AR',{day:'2-digit',month:'long',year:'numeric'});
+    }
+
+    function scoreColor(s) {
+      if (s >= 75) return '#6db87a'; if (s >= 50) return '#d4a843'; return '#d46b6b';
+    }
+    function scoreLabel(s) {
+      if (s >= 85) return 'Excelente'; if (s >= 70) return 'Bueno'; if (s >= 50) return 'Regular'; return 'Necesita mejoras';
+    }
+
+    function renderReport(a) {
+      const info = a.generalInfo || {};
+      const sc = a.finalScore;
+
+      // Meta
+      document.getElementById('reportMeta').innerHTML = `
+        <div>${info.company || 'Cliente'}</div>
+        <div>${info.url || ''}</div>
+        <div>${fmtDate(info.date || a.createdAt)}</div>
+        <div>Auditor: ${info.auditor || 'FSTail Solutions'}</div>`;
+
+      // Title
+      document.getElementById('reportTitle').innerHTML = `
+        <h1 class="report-title">Informe de Auditoría Web<br><em>${info.company || 'Cliente'}</em></h1>`;
+
+      // Score hero
+      if (sc !== undefined && sc !== null) {
+        document.getElementById('scoreHero').innerHTML = `
+          <div class="report-score-hero">
+            <div class="report-score-num" style="color:${scoreColor(sc)}">${sc}</div>
+            <div>
+              <div class="score-label" style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--clr-text-muted);">Score global</div>
+              <div style="font-family:var(--font-serif);font-size:1.6rem;color:var(--clr-text);margin-top:0.3rem;">${scoreLabel(sc)}</div>
+              <div style="font-size:0.78rem;color:var(--clr-text-muted);margin-top:0.5rem;">${info.url || ''} · ${fmtDate(info.date || a.createdAt)}</div>
+            </div>
+            ${renderMiniScoreBar(sc)}
+          </div>`;
+      }
+
+      // Executive summary
+      const exec = (a.conclusions && a.conclusions.executive) || '';
+      document.getElementById('executiveSummary').innerHTML = `
+        <h2 class="report-section-title">Resumen ejecutivo</h2>
+        <p style="font-size:0.95rem;color:var(--clr-text-muted);line-height:1.9;">${exec || 'Sin conclusión ejecutiva registrada.'}</p>`;
+
+      // Strengths & Weaknesses
+      const str = (a.conclusions && a.conclusions.strengths) || '';
+      const wk  = (a.conclusions && a.conclusions.weaknesses) || '';
+      document.getElementById('strengthsWeaknesses').innerHTML = `
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);margin:2rem 0;">
+          <div style="background:var(--clr-bg-2);padding:1.75rem;">
+            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#6db87a;margin-bottom:0.75rem;">Fortalezas</p>
+            <p style="font-size:0.88rem;color:var(--clr-text-muted);line-height:1.8;">${str || '—'}</p>
+          </div>
+          <div style="background:var(--clr-bg-2);padding:1.75rem;">
+            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#d4a843;margin-bottom:0.75rem;">Áreas de mejora</p>
+            <p style="font-size:0.88rem;color:var(--clr-text-muted);line-height:1.8;">${wk || '—'}</p>
+          </div>
+        </div>`;
+
+      // PageSpeed
+      const perf = a.performance || {};
+      if (perf.desktop || perf.mobile) {
+        document.getElementById('pagespeedSection').innerHTML = `
+          <h2 class="report-section-title">Performance — PageSpeed Insights</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);">
+            ${renderDeviceScores('Desktop 🖥', perf.desktop)}
+            ${renderDeviceScores('Mobile 📱', perf.mobile)}
+          </div>`;
+      }
+
+      // Issues
+      const issues = (a.issues && a.issues.list) || [];
+      if (issues.length) {
+        const byPriority = (p) => issues.filter(i => i.priority === p);
+        document.getElementById('issuesSection').innerHTML = `
+          <h2 class="report-section-title">Problemas detectados</h2>
+          ${byPriority('high').length ? `<p style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#d46b6b;margin:1rem 0 0.5rem;">Alta prioridad</p>${byPriority('high').map(i=>`<div class="report-finding priority-high">${i.desc}</div>`).join('')}` : ''}
+          ${byPriority('mid').length  ? `<p style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#d4a843;margin:1rem 0 0.5rem;">Prioridad media</p>${byPriority('mid').map(i=>`<div class="report-finding priority-mid">${i.desc}</div>`).join('')}` : ''}
+          ${byPriority('low').length  ? `<p style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#6db87a;margin:1rem 0 0.5rem;">Prioridad baja</p>${byPriority('low').map(i=>`<div class="report-finding priority-low">${i.desc}</div>`).join('')}` : ''}`;
+      }
+
+      // Recommendations
+      const rec = a.recommendations || {};
+      if (rec.immediate || rec.shortTerm || rec.longTerm) {
+        document.getElementById('recommendationsSection').innerHTML = `
+          <h2 class="report-section-title">Plan de acción recomendado</h2>
+          ${rec.immediate ? `<p class="small-label" style="color:var(--clr-accent);margin-bottom:0.5rem;">Acciones inmediatas</p><p style="font-size:0.88rem;color:var(--clr-text-muted);line-height:1.8;margin-bottom:1.5rem;">${rec.immediate}</p>` : ''}
+          ${rec.shortTerm  ? `<p class="small-label" style="color:var(--clr-accent);margin-bottom:0.5rem;">Corto plazo (1 mes)</p><p style="font-size:0.88rem;color:var(--clr-text-muted);line-height:1.8;margin-bottom:1.5rem;">${rec.shortTerm}</p>` : ''}
+          ${rec.longTerm   ? `<p class="small-label" style="color:var(--clr-accent);margin-bottom:0.5rem;">Largo plazo (3+ meses)</p><p style="font-size:0.88rem;color:var(--clr-text-muted);line-height:1.8;">${rec.longTerm}</p>` : ''}`;
+      }
+
+      // Conclusion
+      document.getElementById('conclusionSection').innerHTML = `
+        <h2 class="report-section-title">Conclusión</h2>
+        <p style="font-size:0.95rem;color:var(--clr-text-muted);line-height:1.9;">${exec || 'Auditoría realizada por FSTail Solutions.'}</p>`;
+    }
+
+    function renderMiniScoreBar(sc) {
+      const w = sc + '%';
+      const col = scoreColor(sc);
+      return `<div style="flex:1;max-width:200px;">
+        <div style="height:4px;background:var(--clr-border);margin-bottom:0.5rem;">
+          <div style="height:100%;width:${w};background:${col};transition:width 1s;"></div>
+        </div>
+        <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--clr-text-faint);">${sc}/100</div>
+      </div>`;
+    }
+
+    function renderDeviceScores(label, data) {
+      if (!data) return `<div style="background:var(--clr-bg-2);padding:1.5rem;"><p style="font-size:0.72rem;color:var(--clr-text-faint);">${label} — sin datos</p></div>`;
+      const metrics = [
+        { key:'performance', label:'Performance' },
+        { key:'accessibility', label:'Accessibility' },
+        { key:'bestPractices', label:'Best Practices' },
+        { key:'seo', label:'SEO' },
+      ];
+      return `<div style="background:var(--clr-bg-2);padding:1.5rem;">
+        <p style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:1rem;">${label}</p>
+        ${metrics.map(m => {
+          const val = data[m.key];
+          const col = val !== undefined ? scoreColor(val) : 'var(--clr-text-faint)';
+          return `<div style="display:flex;align-items:center;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--clr-border);">
+            <span style="font-size:0.78rem;color:var(--clr-text-muted);">${m.label}</span>
+            <span style="font-family:var(--font-serif);font-size:1.1rem;color:${col};">${val !== undefined ? val : '—'}</span>
+          </div>`;
+        }).join('')}
+      </div>`;
+    }
+
+    function exportPDF() {
+      window.print();
+    }
+  </script>
+</body>
+</html>

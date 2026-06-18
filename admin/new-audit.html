@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva Auditoría — FSTail Audit</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logo-official-3.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/audit.css">
+</head>
+<body>
+
+  <header id="main-header" class="scrolled">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo-official.png" alt="FSTail Solutions Logo">
+        <span class="logo-wordmark"><em>FS</em>Tail</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--clr-accent);border:1px solid var(--clr-accent-dark);padding:0.3rem 0.75rem;" id="userBadge"></span>
+        <button class="btn-nav-cta" id="logoutBtn">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-logo">
+        <div style="font-family:var(--font-serif);font-size:0.9rem;letter-spacing:0.1em;color:var(--clr-text);">Audit System</div>
+        <p>FSTail Solutions</p>
+      </div>
+      <nav class="admin-nav">
+        <a href="./dashboard.html"><span class="nav-icon">◈</span> Dashboard</a>
+        <a href="./new-audit.html" class="active"><span class="nav-icon">＋</span> Nueva Auditoría</a>
+        <a href="./history.html"><span class="nav-icon">☰</span> Historial</a>
+        <div class="admin-nav-divider"></div>
+        <a href="../index.html"><span class="nav-icon">↗</span> Sitio público</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-page-header">
+        <div>
+          <p class="section-label" style="margin-bottom:0.4rem;">Asistente guiado</p>
+          <h1 class="admin-page-title">Nueva <em>auditoría</em></h1>
+        </div>
+        <div style="display:flex;gap:0.75rem;">
+          <button class="btn-outline" id="saveDraftBtn">Guardar borrador</button>
+          <button class="btn-primary" id="generateBtn">Generar informe</button>
+        </div>
+      </div>
+
+      <div class="audit-wizard" id="auditWizard">
+        <!-- Sidebar steps -->
+        <div class="audit-wizard-sidebar">
+          <ul class="wizard-steps" id="wizardSteps">
+            <li class="wizard-step active" data-section="general"><span class="wizard-step-num">01</span>Información general</li>
+            <li class="wizard-step" data-section="firstImpression"><span class="wizard-step-num">02</span>1ª impresión</li>
+            <li class="wizard-step" data-section="header"><span class="wizard-step-num">03</span>Header & Hero</li>
+            <li class="wizard-step" data-section="home"><span class="wizard-step-num">04</span>Home</li>
+            <li class="wizard-step" data-section="about"><span class="wizard-step-num">05</span>About</li>
+            <li class="wizard-step" data-section="services"><span class="wizard-step-num">06</span>Servicios</li>
+            <li class="wizard-step" data-section="portfolio"><span class="wizard-step-num">07</span>Portfolio</li>
+            <li class="wizard-step" data-section="testimonials"><span class="wizard-step-num">08</span>Testimonios</li>
+            <li class="wizard-step" data-section="faq"><span class="wizard-step-num">09</span>FAQ</li>
+            <li class="wizard-step" data-section="blog"><span class="wizard-step-num">10</span>Blog</li>
+            <li class="wizard-step" data-section="contact"><span class="wizard-step-num">11</span>Contacto</li>
+            <li class="wizard-step" data-section="footer"><span class="wizard-step-num">12</span>Footer</li>
+            <li class="wizard-step" data-section="responsive"><span class="wizard-step-num">13</span>Responsive</li>
+            <li class="wizard-step" data-section="performance"><span class="wizard-step-num">14</span>Performance</li>
+            <li class="wizard-step" data-section="seo"><span class="wizard-step-num">15</span>SEO</li>
+            <li class="wizard-step" data-section="accessibility"><span class="wizard-step-num">16</span>Accesibilidad</li>
+            <li class="wizard-step" data-section="security"><span class="wizard-step-num">17</span>Seguridad</li>
+            <li class="wizard-step" data-section="ux"><span class="wizard-step-num">18</span>UX</li>
+            <li class="wizard-step" data-section="conversion"><span class="wizard-step-num">19</span>Conversión</li>
+            <li class="wizard-step" data-section="content"><span class="wizard-step-num">20</span>Contenido</li>
+            <li class="wizard-step" data-section="technologies"><span class="wizard-step-num">21</span>Tecnologías</li>
+            <li class="wizard-step" data-section="console"><span class="wizard-step-num">22</span>Consola</li>
+            <li class="wizard-step" data-section="competitors"><span class="wizard-step-num">23</span>Competidores</li>
+            <li class="wizard-step" data-section="issues"><span class="wizard-step-num">24</span>Problemas</li>
+            <li class="wizard-step" data-section="recommendations"><span class="wizard-step-num">25</span>Recomendaciones</li>
+            <li class="wizard-step" data-section="conclusions"><span class="wizard-step-num">26</span>Conclusiones</li>
+          </ul>
+        </div>
+
+        <!-- Wizard main content -->
+        <div class="audit-wizard-main" id="auditFormMain">
+
+          <!-- 01 General Info -->
+          <div class="audit-section-card" id="sec-general">
+            <div class="audit-section-header">
+              <div>
+                <span class="audit-section-label">01</span>
+                <h3>Información general</h3>
+              </div>
+            </div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Qué completar</strong>
+                Datos básicos del cliente y del sitio a auditar. Esta información aparecerá en el encabezado de ambos informes.
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Empresa / Cliente</label>
+                  <input class="field-input" type="text" data-field="generalInfo.company" placeholder="Nombre del cliente">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">URL del sitio</label>
+                  <input class="field-input" type="url" data-field="generalInfo.url" placeholder="https://ejemplo.com">
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Auditor</label>
+                  <input class="field-input" type="text" data-field="generalInfo.auditor" placeholder="Nombre del auditor">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Fecha de auditoría</label>
+                  <input class="field-input" type="date" data-field="generalInfo.date">
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Tipo de sitio</label>
+                  <select class="field-select" data-field="generalInfo.siteType">
+                    <option value="">Seleccionar...</option>
+                    <option>Landing page</option>
+                    <option>Sitio corporativo</option>
+                    <option>E-commerce</option>
+                    <option>Portfolio</option>
+                    <option>Blog</option>
+                    <option>App web</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Estado</label>
+                  <select class="field-select" data-field="status">
+                    <option value="draft">Borrador</option>
+                    <option value="in-progress">En progreso</option>
+                    <option value="done">Completado</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Objetivo de la auditoría</label>
+                <textarea class="field-textarea" rows="3" data-field="generalInfo.objective" placeholder="Describe el objetivo principal de esta auditoría..."></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Contexto / notas previas</label>
+                <textarea class="field-textarea" rows="2" data-field="generalInfo.context" placeholder="Información previa relevante sobre el cliente..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- MACRO: renders a standard section card -->
+          <!-- 02 First Impression -->
+          <div class="audit-section-card" id="sec-firstImpression">
+            <div class="audit-section-header">
+              <div><span class="audit-section-label">02</span><h3>Primera impresión</h3></div>
+            </div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Qué revisar</strong>
+                Abrí el sitio por primera vez en modo incógnito y prestá atención a: velocidad de carga inicial, impacto visual, claridad del mensaje principal, llamada a la acción visible, confianza transmitida.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">🔍 Ojo crítico</span>
+                <span class="tool-chip">⏱ Cronómetro</span>
+                <span class="tool-chip">🕵️ Modo incógnito</span>
+              </div>
+              <div class="audit-guide-box" style="border-color:var(--clr-border);">
+                <strong>Qué anotar</strong>
+                ¿Se entiende en 5 segundos qué hace el sitio? ¿El diseño genera confianza? ¿Hay un CTA claro?
+              </div>
+              <div id="scores-firstImpression"></div>
+              <div class="field-group">
+                <label class="field-label">Observaciones</label>
+                <textarea class="field-textarea" rows="4" data-field="firstImpression.notes" placeholder="Describí tu primera impresión general del sitio..."></textarea>
+              </div>
+              <div id="evidence-firstImpression" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 03 Header & Hero -->
+          <div class="audit-section-card" id="sec-header">
+            <div class="audit-section-header">
+              <div><span class="audit-section-label">03</span><h3>Header &amp; Hero</h3></div>
+            </div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Qué revisar</strong>
+                Logo visible y con buena resolución. Navegación clara y coherente. El hero debe comunicar el valor principal. CTA prominente. Responsive del header en mobile.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">🖥 DevTools responsive</span>
+                <span class="tool-chip">🔬 Inspeccioná el DOM</span>
+              </div>
+              <div id="scores-header"></div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Logo (resolución / visibilidad)</label>
+                  <textarea class="field-textarea" rows="2" data-field="header.logoNotes"></textarea>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Navegación</label>
+                  <textarea class="field-textarea" rows="2" data-field="header.navNotes"></textarea>
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Hero / mensaje principal</label>
+                <textarea class="field-textarea" rows="3" data-field="header.heroNotes" placeholder="¿Es claro el mensaje? ¿El CTA es visible?"></textarea>
+              </div>
+              <div id="evidence-header" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- Sections 04-12: repeating structure (Home, About, Services, Portfolio, Testimonials, FAQ, Blog, Contact, Footer) -->
+          <div class="audit-section-card" id="sec-home">
+            <div class="audit-section-header"><div><span class="audit-section-label">04</span><h3>Home</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Propuesta de valor clara. Secciones bien diferenciadas. Jerarquía visual correcta. Imágenes de calidad. Coherencia de marca.</div>
+              <div id="scores-home"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="home.notes"></textarea></div>
+              <div id="evidence-home" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-about">
+            <div class="audit-section-header"><div><span class="audit-section-label">05</span><h3>About</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Historia de la empresa. Fotos del equipo. Transmisión de confianza. Claridad del mensaje. Humanización de la marca.</div>
+              <div id="scores-about"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="about.notes"></textarea></div>
+              <div id="evidence-about" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-services">
+            <div class="audit-section-header"><div><span class="audit-section-label">06</span><h3>Servicios</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Claridad en la descripción de servicios. Precios visibles o mecanismo de cotización. Diferenciación. CTAs por servicio.</div>
+              <div id="scores-services"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="services.notes"></textarea></div>
+              <div id="evidence-services" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-portfolio">
+            <div class="audit-section-header"><div><span class="audit-section-label">07</span><h3>Portfolio / Proyectos</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Calidad de los casos presentados. Descripción de cada proyecto. Variedad de trabajos. Llamadas a la acción. Filtros o categorías.</div>
+              <div id="scores-portfolio"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="portfolio.notes"></textarea></div>
+              <div class="field-group"><label class="field-label">¿Tiene portfolio? ¿Cuántos proyectos?</label><input class="field-input" type="text" data-field="portfolio.count"></div>
+              <div id="evidence-portfolio" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-testimonials">
+            <div class="audit-section-header"><div><span class="audit-section-label">08</span><h3>Testimonios</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Autenticidad de los testimonios. Fotos reales. Nombres completos. Cargos o empresas. Ratings / estrellas. Plataformas vinculadas (Google, etc.).</div>
+              <div id="scores-testimonials"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="testimonials.notes"></textarea></div>
+              <div id="evidence-testimonials" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-faq">
+            <div class="audit-section-header"><div><span class="audit-section-label">09</span><h3>FAQ</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Preguntas relevantes y frecuentes. Respuestas claras y concisas. Schema markup para FAQ SEO. Acordeón funcional.</div>
+              <div id="scores-faq"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="faq.notes"></textarea></div>
+              <div id="evidence-faq" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-blog">
+            <div class="audit-section-header"><div><span class="audit-section-label">10</span><h3>Blog</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Frecuencia de publicación. Calidad del contenido. Estructura de artículos (H1-H3, meta). Imágenes optimizadas. Categorías y etiquetas. Sharing social.</div>
+              <div id="scores-blog"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="blog.notes"></textarea></div>
+              <div id="evidence-blog" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-contact">
+            <div class="audit-section-header"><div><span class="audit-section-label">11</span><h3>Contacto</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Formulario funcional. Campos necesarios pero no excesivos. Confirmación de envío. WhatsApp / email visibles. Mapa embebido. Horarios de atención.</div>
+              <div id="scores-contact"></div>
+              <div class="field-group"><label class="field-label">¿Formulario funcional?</label>
+                <select class="field-select" data-field="contact.formWorking">
+                  <option value="">Sin verificar</option>
+                  <option value="yes">Sí, funciona</option>
+                  <option value="no">No funciona</option>
+                  <option value="partial">Parcialmente</option>
+                </select>
+              </div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="contact.notes"></textarea></div>
+              <div id="evidence-contact" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <div class="audit-section-card" id="sec-footer">
+            <div class="audit-section-header"><div><span class="audit-section-label">12</span><h3>Footer</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Links de navegación presentes. Legal (política, términos). Redes sociales. Datos de contacto. Copyright actualizado. Coherencia visual.</div>
+              <div id="scores-footer"></div>
+              <div class="field-group"><label class="field-label">Notas y hallazgos</label><textarea class="field-textarea" rows="4" data-field="footer.notes"></textarea></div>
+              <div id="evidence-footer" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 13 Responsive -->
+          <div class="audit-section-card" id="sec-responsive">
+            <div class="audit-section-header"><div><span class="audit-section-label">13</span><h3>Responsive</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramienta: DevTools → Toggle device toolbar</strong>
+                Probá en: iPhone SE (375px), iPhone 14 (390px), iPad (768px), laptop (1366px). Verificá: texto legible sin zoom, imágenes no desbordadas, navegación usable, botones tocables (48px mínimo).
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">🖥 DevTools</span>
+                <span class="tool-chip">📱 Dispositivos reales</span>
+                <span class="tool-chip">🌐 BrowserStack</span>
+              </div>
+              <div id="scores-responsive"></div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Mobile (< 768px)</label>
+                  <textarea class="field-textarea" rows="3" data-field="responsive.mobile"></textarea>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Tablet (768–1024px)</label>
+                  <textarea class="field-textarea" rows="3" data-field="responsive.tablet"></textarea>
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Desktop (> 1024px)</label>
+                <textarea class="field-textarea" rows="3" data-field="responsive.desktop"></textarea>
+              </div>
+              <div id="evidence-responsive" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 14 Performance / PageSpeed -->
+          <div class="audit-section-card" id="sec-performance">
+            <div class="audit-section-header"><div><span class="audit-section-label">14</span><h3>Performance — PageSpeed</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramienta: Google PageSpeed Insights</strong>
+                Ingresá en <a href="https://pagespeed.web.dev/" target="_blank" style="color:var(--clr-accent);">pagespeed.web.dev</a>, analizá la URL del cliente y registrá los 4 scores tanto en Desktop como en Mobile.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">⚡ PageSpeed Insights</span>
+                <span class="tool-chip">🔦 Lighthouse</span>
+                <span class="tool-chip">🌐 WebPageTest</span>
+              </div>
+              <div class="pagespeed-grid">
+                <div class="pagespeed-device">
+                  <div class="pagespeed-device-label">🖥 Desktop</div>
+                  <div class="pagespeed-scores">
+                    <div class="pagespeed-score-field"><label>Performance</label><input type="number" min="0" max="100" data-field="performance.desktop.performance" placeholder="0-100"></div>
+                    <div class="pagespeed-score-field"><label>Accessibility</label><input type="number" min="0" max="100" data-field="performance.desktop.accessibility" placeholder="0-100"></div>
+                    <div class="pagespeed-score-field"><label>Best Practices</label><input type="number" min="0" max="100" data-field="performance.desktop.bestPractices" placeholder="0-100"></div>
+                    <div class="pagespeed-score-field"><label>SEO</label><input type="number" min="0" max="100" data-field="performance.desktop.seo" placeholder="0-100"></div>
+                  </div>
+                </div>
+                <div class="pagespeed-device">
+                  <div class="pagespeed-device-label">📱 Mobile</div>
+                  <div class="pagespeed-scores">
+                    <div class="pagespeed-score-field"><label>Performance</label><input type="number" min="0" max="100" data-field="performance.mobile.performance" placeholder="0-100"></div>
+                    <div class="pagespeed-score-field"><label>Accessibility</label><input type="number" min="0" max="100" data-field="performance.mobile.accessibility" placeholder="0-100"></div>
+                    <div class="pagespeed-score-field"><label>Best Practices</label><input type="number" min="0" max="100" data-field="performance.mobile.bestPractices" placeholder="0-100"></div>
+                    <div class="pagespeed-score-field"><label>SEO</label><input type="number" min="0" max="100" data-field="performance.mobile.seo" placeholder="0-100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">LCP / FCP / CLS — valores detectados</label>
+                <textarea class="field-textarea" rows="3" data-field="performance.coreWebVitals" placeholder="LCP: Xms | FCP: Xms | CLS: 0.XX | TBT: Xms"></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Oportunidades de mejora</label>
+                <textarea class="field-textarea" rows="4" data-field="performance.opportunities"></textarea>
+              </div>
+              <div id="evidence-performance" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 15 SEO -->
+          <div class="audit-section-card" id="sec-seo">
+            <div class="audit-section-header"><div><span class="audit-section-label">15</span><h3>SEO</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramientas: SEO Meta in 1 Click · Ahrefs · Google Search Console</strong>
+                Verificá: título y meta description presentes y optimizados, estructura de encabezados (H1→H6), alt en imágenes, URLs amigables, sitemap.xml, robots.txt, canonical tags, datos estructurados.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">🔎 SEO Meta in 1 Click</span>
+                <span class="tool-chip">📊 Ahrefs</span>
+                <span class="tool-chip">🗺 Screaming Frog</span>
+                <span class="tool-chip">🌐 Google Search Console</span>
+              </div>
+              <div id="scores-seo"></div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Title tag detectado</label>
+                  <input class="field-input" type="text" data-field="seo.titleTag">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Meta description</label>
+                  <input class="field-input" type="text" data-field="seo.metaDesc">
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">H1 presente</label>
+                  <select class="field-select" data-field="seo.h1Present">
+                    <option value="">—</option><option value="yes">Sí</option><option value="no">No</option><option value="multiple">Múltiples H1</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Sitemap.xml</label>
+                  <select class="field-select" data-field="seo.sitemap">
+                    <option value="">—</option><option value="yes">Sí, presente</option><option value="no">No encontrado</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">robots.txt</label>
+                  <select class="field-select" data-field="seo.robots">
+                    <option value="">—</option><option value="ok">OK</option><option value="blocking">Bloqueando indexación</option><option value="missing">Faltante</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Datos estructurados (Schema)</label>
+                  <select class="field-select" data-field="seo.schema">
+                    <option value="">—</option><option value="yes">Presentes</option><option value="no">Ausentes</option><option value="partial">Parciales</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Palabras clave detectadas / análisis</label>
+                <textarea class="field-textarea" rows="3" data-field="seo.keywords"></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Problemas y oportunidades SEO</label>
+                <textarea class="field-textarea" rows="4" data-field="seo.issues"></textarea>
+              </div>
+              <div id="evidence-seo" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 16 Accessibility -->
+          <div class="audit-section-card" id="sec-accessibility">
+            <div class="audit-section-header"><div><span class="audit-section-label">16</span><h3>Accesibilidad — WAVE</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramienta: WAVE Accessibility Evaluator</strong>
+                Ingresá en <a href="https://wave.webaim.org/" target="_blank" style="color:var(--clr-accent);">wave.webaim.org</a>. Verificá: contraste de colores, alt en imágenes, roles ARIA, navegación por teclado, labels en formularios, orden de encabezados.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">♿ WAVE</span>
+                <span class="tool-chip">🎨 Contrast Checker</span>
+                <span class="tool-chip">⌨ Teclado</span>
+                <span class="tool-chip">📢 Screen reader</span>
+              </div>
+              <div id="scores-accessibility"></div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Errores WAVE</label>
+                  <input class="field-input" type="number" data-field="accessibility.waveErrors" placeholder="0">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Alertas WAVE</label>
+                  <input class="field-input" type="number" data-field="accessibility.waveAlerts" placeholder="0">
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Problemas detectados</label>
+                <textarea class="field-textarea" rows="4" data-field="accessibility.issues"></textarea>
+              </div>
+              <div id="evidence-accessibility" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 17 Security -->
+          <div class="audit-section-card" id="sec-security">
+            <div class="audit-section-header"><div><span class="audit-section-label">17</span><h3>Seguridad — Headers</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramienta: SecurityHeaders.com</strong>
+                Ingresá la URL en <a href="https://securityheaders.com/" target="_blank" style="color:var(--clr-accent);">securityheaders.com</a>. Registrá el rating y cada header presente o ausente.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">🔒 SecurityHeaders.com</span>
+                <span class="tool-chip">🛡 SSL Labs</span>
+                <span class="tool-chip">🌐 DevTools</span>
+              </div>
+              <div id="scores-security"></div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">HTTPS</label>
+                  <select class="field-select" data-field="security.https"><option value="">—</option><option value="yes">✔ Activo</option><option value="no">✗ Sin HTTPS</option></select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">HSTS</label>
+                  <select class="field-select" data-field="security.hsts"><option value="">—</option><option value="yes">✔ Presente</option><option value="no">✗ Ausente</option></select>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">CSP (Content Security Policy)</label>
+                  <select class="field-select" data-field="security.csp"><option value="">—</option><option value="yes">✔ Presente</option><option value="no">✗ Ausente</option></select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">X-Frame-Options</label>
+                  <select class="field-select" data-field="security.xframe"><option value="">—</option><option value="yes">✔ Presente</option><option value="no">✗ Ausente</option></select>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Referrer Policy</label>
+                  <select class="field-select" data-field="security.referrer"><option value="">—</option><option value="yes">✔ Presente</option><option value="no">✗ Ausente</option></select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Rating general SecurityHeaders</label>
+                  <select class="field-select" data-field="security.rating"><option value="">—</option><option>A+</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option></select>
+                </div>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Observaciones de seguridad</label>
+                <textarea class="field-textarea" rows="3" data-field="security.notes"></textarea>
+              </div>
+              <div id="evidence-security" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 18 UX -->
+          <div class="audit-section-card" id="sec-ux">
+            <div class="audit-section-header"><div><span class="audit-section-label">18</span><h3>UX — Experiencia de usuario</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Flujos de usuario claros. Jerarquía visual efectiva. Consistencia en tipografías y colores. Feedback visual en acciones. Tiempos de respuesta. Microinteracciones. Errores de usabilidad.</div>
+              <div id="scores-ux"></div>
+              <div class="field-group"><label class="field-label">Hallazgos UX</label><textarea class="field-textarea" rows="5" data-field="ux.notes"></textarea></div>
+              <div id="evidence-ux" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 19 Conversion -->
+          <div class="audit-section-card" id="sec-conversion">
+            <div class="audit-section-header"><div><span class="audit-section-label">19</span><h3>Conversión</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>CTAs presentes y visibles. Formularios accesibles. Proceso de contacto sin fricciones. Elementos de confianza (reviews, badges, garantías). Urgencia / escasez. Pop-ups no intrusivos.</div>
+              <div id="scores-conversion"></div>
+              <div class="field-group"><label class="field-label">CTAs existentes (listá cada uno)</label><textarea class="field-textarea" rows="3" data-field="conversion.ctas"></textarea></div>
+              <div class="field-group"><label class="field-label">Fricciones detectadas</label><textarea class="field-textarea" rows="3" data-field="conversion.friction"></textarea></div>
+              <div id="evidence-conversion" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 20 Content -->
+          <div class="audit-section-card" id="sec-content">
+            <div class="audit-section-header"><div><span class="audit-section-label">20</span><h3>Contenido</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué revisar</strong>Ortografía y gramática. Textos actualizados. Propuesta de valor clara. Tono y voz de marca consistentes. Imágenes de alta calidad. Videos funcionales. Contenido duplicado.</div>
+              <div id="scores-content"></div>
+              <div class="field-group"><label class="field-label">Problemas de contenido</label><textarea class="field-textarea" rows="4" data-field="content.issues"></textarea></div>
+              <div id="evidence-content" class="evidence-area"></div>
+            </div>
+          </div>
+
+          <!-- 21 Technologies / Wappalyzer -->
+          <div class="audit-section-card" id="sec-technologies">
+            <div class="audit-section-header"><div><span class="audit-section-label">21</span><h3>Tecnologías — Wappalyzer</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramienta: Wappalyzer (extensión del navegador)</strong>
+                Activá Wappalyzer en el sitio del cliente y registrá todas las tecnologías detectadas.
+              </div>
+              <div class="tools-row">
+                <span class="tool-chip">🔧 Wappalyzer</span>
+                <span class="tool-chip">🌐 BuiltWith</span>
+              </div>
+              <div class="field-row">
+                <div class="field-group"><label class="field-label">Frontend</label><input class="field-input" type="text" data-field="technologies.frontend" placeholder="React, Vue, jQuery..."></div>
+                <div class="field-group"><label class="field-label">Backend</label><input class="field-input" type="text" data-field="technologies.backend" placeholder="Node.js, PHP, Python..."></div>
+              </div>
+              <div class="field-row">
+                <div class="field-group"><label class="field-label">Framework / CMS</label><input class="field-input" type="text" data-field="technologies.cms" placeholder="WordPress, Next.js, Shopify..."></div>
+                <div class="field-group"><label class="field-label">Hosting / Servidor</label><input class="field-input" type="text" data-field="technologies.hosting" placeholder="AWS, Vercel, cPanel..."></div>
+              </div>
+              <div class="field-row">
+                <div class="field-group"><label class="field-label">Analytics</label><input class="field-input" type="text" data-field="technologies.analytics" placeholder="Google Analytics, Hotjar..."></div>
+                <div class="field-group"><label class="field-label">CDN</label><input class="field-input" type="text" data-field="technologies.cdn" placeholder="Cloudflare, Fastly..."></div>
+              </div>
+              <div class="field-group"><label class="field-label">Otras tecnologías detectadas</label><textarea class="field-textarea" rows="2" data-field="technologies.other"></textarea></div>
+            </div>
+          </div>
+
+          <!-- 22 Console -->
+          <div class="audit-section-card" id="sec-console">
+            <div class="audit-section-header"><div><span class="audit-section-label">22</span><h3>Consola del navegador</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box">
+                <strong>Herramienta: DevTools → Console + Network</strong>
+                Abrí DevTools (F12) y revisá la pestaña Console. Luego revisá Network en busca de recursos fallidos o lentos.
+              </div>
+              <div class="tools-row"><span class="tool-chip">🔬 DevTools Console</span><span class="tool-chip">🌐 Network tab</span></div>
+              <div class="field-row">
+                <div class="field-group"><label class="field-label">Errores JS</label><input class="field-input" type="number" data-field="console.jsErrors" placeholder="0"></div>
+                <div class="field-group"><label class="field-label">Warnings</label><input class="field-input" type="number" data-field="console.warnings" placeholder="0"></div>
+              </div>
+              <div class="field-row">
+                <div class="field-group"><label class="field-label">Errores CSS</label><input class="field-input" type="number" data-field="console.cssErrors" placeholder="0"></div>
+                <div class="field-group"><label class="field-label">Errores de red (404, etc.)</label><input class="field-input" type="number" data-field="console.networkErrors" placeholder="0"></div>
+              </div>
+              <div class="field-group"><label class="field-label">Detalle de errores encontrados</label><textarea class="field-textarea" rows="4" data-field="console.details" placeholder="Copiá los mensajes de error más relevantes..."></textarea></div>
+            </div>
+          </div>
+
+          <!-- 23 Competitors -->
+          <div class="audit-section-card" id="sec-competitors">
+            <div class="audit-section-header"><div><span class="audit-section-label">23</span><h3>Competidores</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Qué analizar</strong>Identificá 2-3 competidores directos. Comparalos en diseño, funcionalidades, SEO y propuesta de valor. Detectá oportunidades de diferenciación.</div>
+              <div class="field-group"><label class="field-label">Competidor 1</label><input class="field-input" type="text" data-field="competitors.c1name" placeholder="Nombre / URL"></div>
+              <div class="field-group"><label class="field-label">Análisis competidor 1</label><textarea class="field-textarea" rows="3" data-field="competitors.c1notes"></textarea></div>
+              <div class="field-group"><label class="field-label">Competidor 2</label><input class="field-input" type="text" data-field="competitors.c2name"></div>
+              <div class="field-group"><label class="field-label">Análisis competidor 2</label><textarea class="field-textarea" rows="3" data-field="competitors.c2notes"></textarea></div>
+              <div class="field-group"><label class="field-label">Ventajas competitivas detectadas</label><textarea class="field-textarea" rows="3" data-field="competitors.advantages"></textarea></div>
+            </div>
+          </div>
+
+          <!-- 24 Issues -->
+          <div class="audit-section-card" id="sec-issues">
+            <div class="audit-section-header"><div><span class="audit-section-label">24</span><h3>Problemas encontrados</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Consolidación de problemas</strong>Listá todos los problemas detectados con su prioridad: Alta (bloquea conversiones), Media (afecta experiencia), Baja (mejora recomendada).</div>
+              <div id="issues-list" data-field="issues.list"></div>
+              <button class="btn-outline" onclick="addIssue()" style="margin-top:1rem;">+ Agregar problema</button>
+            </div>
+          </div>
+
+          <!-- 25 Recommendations -->
+          <div class="audit-section-card" id="sec-recommendations">
+            <div class="audit-section-header"><div><span class="audit-section-label">25</span><h3>Recomendaciones</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Plan de acción</strong>Organizá las recomendaciones en: acciones inmediatas (< 1 semana), corto plazo (1 mes) y largo plazo (3+ meses). Priorizá por impacto en conversiones.</div>
+              <div class="field-group"><label class="field-label">Acciones inmediatas (críticas)</label><textarea class="field-textarea" rows="4" data-field="recommendations.immediate"></textarea></div>
+              <div class="field-group"><label class="field-label">Corto plazo (1 mes)</label><textarea class="field-textarea" rows="4" data-field="recommendations.shortTerm"></textarea></div>
+              <div class="field-group"><label class="field-label">Largo plazo (3+ meses)</label><textarea class="field-textarea" rows="4" data-field="recommendations.longTerm"></textarea></div>
+            </div>
+          </div>
+
+          <!-- 26 Conclusions -->
+          <div class="audit-section-card" id="sec-conclusions">
+            <div class="audit-section-header"><div><span class="audit-section-label">26</span><h3>Conclusiones y Score final</h3></div></div>
+            <div class="audit-section-body">
+              <div class="audit-guide-box"><strong>Evaluación global</strong>Sintetizá los hallazgos más importantes. Calculá el score final (el sistema lo sugiere automáticamente basado en los puntajes ingresados). Escribí una conclusión ejecutiva para el cliente.</div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label class="field-label">Score final (0–100)</label>
+                  <input class="field-input" type="number" min="0" max="100" id="finalScoreInput" data-field="finalScore" placeholder="Ej: 72">
+                </div>
+                <div class="field-group" style="display:flex;align-items:flex-end;">
+                  <button class="btn-outline" onclick="calcAutoScore()" style="width:100%;">Calcular automáticamente</button>
+                </div>
+              </div>
+              <div class="field-group"><label class="field-label">Fortalezas detectadas</label><textarea class="field-textarea" rows="4" data-field="conclusions.strengths" placeholder="Listá los puntos fuertes del sitio..."></textarea></div>
+              <div class="field-group"><label class="field-label">Debilidades principales</label><textarea class="field-textarea" rows="4" data-field="conclusions.weaknesses"></textarea></div>
+              <div class="field-group"><label class="field-label">Conclusión ejecutiva (para el cliente)</label><textarea class="field-textarea" rows="6" data-field="conclusions.executive" placeholder="Resumen en lenguaje no técnico para el cliente..."></textarea></div>
+              <div class="field-group"><label class="field-label">Notas internas del auditor</label><textarea class="field-textarea" rows="4" data-field="conclusions.internalNotes" placeholder="Solo visible en el informe interno..."></textarea></div>
+            </div>
+          </div>
+
+        </div><!-- end wizard-main -->
+      </div><!-- end wizard -->
+
+      <!-- Sticky action bar -->
+      <div class="audit-action-bar">
+        <div class="audit-action-bar-left">
+          <div class="audit-progress-bar"><div class="audit-progress-fill" id="progressFill" style="width:0%"></div></div>
+          <span class="audit-progress-label" id="progressLabel">0% completado</span>
+        </div>
+        <div style="display:flex;gap:0.75rem;">
+          <button class="btn-outline" id="saveDraftBtn2">Guardar borrador</button>
+          <a href="../templates/client-report.html" class="btn-outline" id="viewClientReportBtn" target="_blank" style="display:none;">Ver informe cliente</a>
+          <a href="../templates/internal-report.html" class="btn-outline" id="viewInternalReportBtn" target="_blank" style="display:none;">Ver informe interno</a>
+          <button class="btn-primary" id="generateBtn2">Generar informe</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="../js/auth-config.js"></script>
+  <script src="../js/audit-store.js"></script>
+  <script src="../js/audit-form.js"></script>
+</body>
+</html>
