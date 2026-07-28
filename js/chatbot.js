@@ -13,7 +13,7 @@
   const KB = {
     company: {
       name: "Fstail Solution",
-      founded: 2020,
+      founded: 2025,
       email: "contact@fstailsolution.com",
       tagline: "Soluciones profesionales de auditoría y reportes",
       description: "Fstail Solution ofrece auditorías profesionales, generación de informes y soluciones digitales para equipos que necesitan resultados claros y accionables.",

@@ -62,7 +62,7 @@
     loginBtn.textContent = 'Verificando...';
     const result = await Auth.login(username, password);
     if (result.ok) {
-      window.location.href = './dashboard.html';
+      window.location.href = 'https://fstail-platform-web.vercel.app/';
     } else {
       errDiv.textContent = result.error;
       errDiv.classList.add('show');

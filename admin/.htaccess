@@ -1,0 +1,29 @@
+# phase1/admin/.htaccess
+# W-04 Fix — Server-side protection for /admin/ directory
+#
+# PREVIOUS STATE (HIGH — W-04):
+#   Admin panel HTML pages were publicly accessible by URL.
+#   Security relied entirely on client-side JS redirects — which are
+#   not a security control. Any user could access /admin/dashboard.html
+#   directly by typing the URL.
+#
+# CURRENT STATE:
+#   All /admin/ requests are blocked at the web server level.
+#   A 403 Forbidden is returned before any HTML is served.
+#   This eliminates the exposure while the real solution (NestJS
+#   server-rendered admin behind JWT auth) is built in Phase 3.
+#
+# DEPLOYMENT:
+#   Apache: Place this file at /admin/.htaccess on your server
+#   Nginx:  Use the nginx.conf snippet in this same folder instead
+#
+# ─── Apache (.htaccess) ─────────────────────────────────────────────
+
+# Block all direct browser access to admin pages
+Order Deny,Allow
+Deny from all
+
+# If your hosting uses mod_authz_core (Apache 2.4+), use this instead:
+# <RequireAll>
+#   Require all denied
+# </RequireAll>
