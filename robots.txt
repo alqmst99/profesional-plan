@@ -39,4 +39,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://fstailsolutions.com.ar/sitemap.xml
+Sitemap: https://alqmst99.github.io/profesional-plan/sitemap.xml

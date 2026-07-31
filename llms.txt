@@ -5,11 +5,11 @@
 FSTail Solutions builds modern web platforms, landing pages, full websites and ongoing maintenance. Clean code, precise design, measurable results. Founded in Santa Fe, Argentina. Team: Nahuel Pierini (Full Stack) and Anaclara Ferrando (Backend).
 
 ## Main pages
-- [Home](https://fstailsolutions.com.ar/): Services overview, projects and contact CTA
-- [About](https://fstailsolutions.com.ar/pages/about.html): Team and company story
-- [Services](https://fstailsolutions.com.ar/pages/service.html): Landing pages, maintenance plans, full websites with pricing
-- [Projects](https://fstailsolutions.com.ar/pages/projects.html): Portfolio of client work
-- [Contact](https://fstailsolutions.com.ar/pages/contact.html): Start a project
+- [Home](https://alqmst99.github.io/profesional-plan/): Services overview, projects and contact CTA
+- [About](https://alqmst99.github.io/profesional-plan/pages/about.html): Team and company story
+- [Services](https://alqmst99.github.io/profesional-plan/pages/service.html): Landing pages, maintenance plans, full websites with pricing
+- [Projects](https://alqmst99.github.io/profesional-plan/pages/projects.html): Portfolio of client work
+- [Contact](https://alqmst99.github.io/profesional-plan/pages/contact.html): Start a project
 - [Blog](https://blog-fst-ecru.vercel.app/): Technical articles on performance, CSS, SEO and more
 
 ## Services
@@ -25,5 +25,5 @@ FSTail Solutions builds modern web platforms, landing pages, full websites and o
 - Address: 4073 Pasaje J E Galisteo, Santa Fe, Argentina
 
 ## Legal
-- [Privacy Policy](https://fstailsolutions.com.ar/pages/policy.html)
-- [Terms & Conditions](https://fstailsolutions.com.ar/pages/terms.html)
+- [Privacy Policy](https://alqmst99.github.io/profesional-plan/pages/policy.html)
+- [Terms & Conditions](https://alqmst99.github.io/profesional-plan/pages/terms.html)
