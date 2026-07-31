@@ -1,0 +1,29 @@
+# FSTail Solutions
+> Technology development startup from Santa Fe, Argentina. Web development, software, cybersecurity and automation.
+
+## About
+FSTail Solutions builds modern web platforms, landing pages, full websites and ongoing maintenance. Clean code, precise design, measurable results. Founded in Santa Fe, Argentina. Team: Nahuel Pierini (Full Stack) and Anaclara Ferrando (Backend).
+
+## Main pages
+- [Home](https://fstailsolutions.com.ar/): Services overview, projects and contact CTA
+- [About](https://fstailsolutions.com.ar/pages/about.html): Team and company story
+- [Services](https://fstailsolutions.com.ar/pages/service.html): Landing pages, maintenance plans, full websites with pricing
+- [Projects](https://fstailsolutions.com.ar/pages/projects.html): Portfolio of client work
+- [Contact](https://fstailsolutions.com.ar/pages/contact.html): Start a project
+- [Blog](https://blog-fst-ecru.vercel.app/): Technical articles on performance, CSS, SEO and more
+
+## Services
+- Landing Page plans (Basic / Standard / Professional)
+- Website Maintenance (monthly plans)
+- Full Website development
+- Custom software, backend systems and automation
+
+## Contact
+- Email: fstailsolution@gmail.com
+- WhatsApp: +54 9 342 542-8918
+- Location: Santa Fe, Argentina
+- Address: 4073 Pasaje J E Galisteo, Santa Fe, Argentina
+
+## Legal
+- [Privacy Policy](https://fstailsolutions.com.ar/pages/policy.html)
+- [Terms & Conditions](https://fstailsolutions.com.ar/pages/terms.html)
