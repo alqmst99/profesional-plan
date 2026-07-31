@@ -102,6 +102,69 @@
 
         <div class="proyectos-grid" id="proyectos_card">
 
+          <article class="proyectos_card" onclick="openDetail('bell-vita')">
+            <img loading="lazy" src="../assets/images/project-img-1.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Bell-Vita</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
+          <article class="proyectos_card" onclick="openDetail('fstail-blog')">
+            <img loading="lazy" src="../assets/images/project-img-2.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Personal Blog</span>
+              <h3 class="proyectos_title">FSTail Blog</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
+          <article class="proyectos_card" onclick="openDetail( 'industrial-site')">
+            <img loading="lazy" src="../assets/images/project-img-3.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Axium Industrial</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
+          <article class="proyectos_card" onclick="openDetail('ortopedia')">
+            <img loading="lazy" src="../assets/images/project-img-4.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">ORTOPECTUS</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
+          <article class="proyectos_card" onclick="openDetail('standard-plan')">
+            <img loading="lazy" src="../assets/images/project-img-5.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">MERIDIAN</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
+          <article class="proyectos_card" onclick="openDetail('industrial-web')">
+            <img loading="lazy" src="../assets/images/project-img-6.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Industrial Consultant</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
+          <article class="proyectos_card" onclick="openDetail('metric-international')">
+            <img loading="lazy" src="../assets/images/project-img-3.jpg" alt="Standard Plan" class="project_img">
+            <div class="project_modal">
+              <span class="proyectos_subtitle">Web</span>
+              <h3 class="proyectos_title">Metric</h3>
+              <span class="proyectos_button">View detail →</span>
+            </div>
+          </article>
+
           <article class="proyectos_card" onclick="openDetail('standard-plan')">
             <img loading="lazy" src="../assets/images/project-img-2.jpg" alt="Standard Plan" class="project_img">
             <div class="project_modal">
@@ -303,243 +366,678 @@
   </footer>
 
   <script src="../main.js"></script>
-  <script>
-    const projects = {
-      'standard-plan': {
-        cat: 'Web — Landing Page',
-        title: 'Standard Plan',
-        desc: 'A professional multi-section landing page built as a reference for the Standard service tier. Features a hero, services grid, pricing cards and a contact form — all with smooth scroll animations and full mobile responsiveness.',
-        url: 'https://alqmst99.github.io/Plan-Est-ndar/',
-        type: 'Landing Page',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '5 days',
-        banner: '../assets/images/project-img-2.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-5.jpg'],
-        tags: ['HTML5','CSS3','JavaScript','Responsive','SEO']
-      },
-      'bakery': {
-        cat: 'Web — Food & Beverage',
-        title: 'Bakery Website',
-        desc: 'A warm and inviting website for an artisan bakery. Showcases the product catalogue with image cards, an about section and an integrated contact form with WhatsApp link. Designed mobile-first with a clean editorial style.',
-        url: 'https://anaclara-95.github.io/bakery-website/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '7 days',
-        banner: '../assets/images/project-img-3.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-5.jpg'],
-        tags: ['HTML5','CSS3','JavaScript','Mobile-first','Food']
-      },
-      'cake': {
-        cat: 'Web — Food & Beverage',
-        title: 'Cake Website',
-        desc: 'Custom site for a specialty cake brand. Elegant layout with full-bleed photography, a featured products section and smooth CSS animations. Optimized for local search with structured data markup.',
-        url: 'https://anaclara-95.github.io/cake-website/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '6 days',
-        banner: '../assets/images/project-img-2.jpg',
-        thumbs: ['../assets/images/project-img-3.jpg','../assets/images/project-img-1.jpg','../assets/images/project-img-5.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','Animations','Local SEO']
-      },
-      'portfolio-ana': {
-        cat: 'Web — Portfolio',
-        title: 'Portfolio Ana',
-        desc: 'Personal portfolio for a backend developer. Minimal and typographic design with project cards, skills matrix and an integrated contact section. Deployed on GitHub Pages with full SEO optimization.',
-        url: 'https://anaclara-95.github.io/portfolio-frontend/',
-        type: 'Portfolio',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '4 days',
-        banner: '../assets/images/project-img-1.jpg',
-        thumbs: ['../assets/images/project-img-2.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-5.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','JavaScript','GitHub Pages','Portfolio']
-      },
-      'portfolio-nahuel': {
-        cat: 'Web — Portfolio',
-        title: 'Portfolio Nahuel',
-        desc: 'Dark-theme developer portfolio with an animated hero, project showcase grid, tech stack section and smooth page transitions. Features a custom scroll indicator and mobile hamburger navigation.',
-        url: 'https://alqmst99.github.io/PortaFolio-web/',
-        type: 'Portfolio',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '4 days',
-        banner: '../assets/images/project-img-3.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-5.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','JS Animations','Dark Theme']
-      },
-      'lawyer': {
-        cat: 'Web — Professional Services',
-        title: 'Lawyer Website',
-        desc: 'Institutional website for a law firm. Serious and authoritative design with a services area, attorney profiles and a contact form with Google Maps integration. Includes structured data for local SEO.',
-        url: 'https://alqmst99.github.io/site-lawyer/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '8 days',
-        banner: '../assets/images/project-img-2.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','Google Maps','SEO','Institutional']
-      },
-      'moto': {
-        cat: 'Web — Automotive',
-        title: 'Classic Moto Website',
-        desc: 'Landing page for a classic motorcycle brand. Full-bleed hero video background, parallax sections and a custom gallery modal. Strong visual identity with a dark editorial palette.',
-        url: 'https://alqmst99.github.io/Landing-Moto/',
-        type: 'Landing Page',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '5 days',
-        banner: '../assets/images/project-img-3.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-5.jpg','../assets/images/image-back-2.jpg'],
-        tags: ['HTML5','CSS3','Parallax','Gallery Modal']
-      },
-      'realestate': {
-        cat: 'Web — Real Estate',
-        title: 'Modern Real Estate',
-        desc: 'Property showcase site with filterable listings, large imagery, an interactive map and a lead-capture form. Clean grid layout designed to increase qualified inquiry conversions.',
-        url: 'https://alqmst99.github.io/Real-State-BT/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '10 days',
-        banner: '../assets/images/project-img-1.jpg',
-        thumbs: ['../assets/images/project-img-2.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','Filter UI','Map Integration','Lead Gen']
-      },
-      'shoes': {
-        cat: 'Web — E-Commerce / Fashion',
-        title: 'Shoes Website',
-        desc: 'Fashion-forward product landing for a footwear brand. High-contrast layout with product cards, hover zoom effects and a sticky cart-call-to-action bar. Fully responsive down to 320px.',
-        url: 'https://alqmst99.github.io/Shoes-WebSite/',
-        type: 'Landing Page',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '5 days',
-        banner: '../assets/images/image-back-2.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-5.jpg'],
-        tags: ['HTML5','CSS3','Product Cards','Responsive','Fashion']
-      },
-      'bookstore': {
-        cat: 'Web — Retail',
-        title: 'Modern Book Store',
-        desc: 'Online bookstore interface with category filtering, search bar, book detail modals and a shopping cart UI. Clean typographic hierarchy that puts the content first.',
-        url: 'https://alqmst99.github.io/Books/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '9 days',
-        banner: '../assets/images/project-img-4.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','JS Filters','Modal','Cart UI']
-      },
-      'gym': {
-        cat: 'Web — Fitness',
-        title: 'Modern Gym Website',
-        desc: 'High-energy landing for a gym brand. Features a class schedule table, trainer profiles, membership pricing cards and a WhatsApp CTA floating button. Bold, dark design with strong call-to-action hierarchy.',
-        url: 'https://alqmst99.github.io/Landing-Gym/',
-        type: 'Landing Page',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '5 days',
-        banner: '../assets/images/project-img-3.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-5.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['HTML5','CSS3','JavaScript','WhatsApp CTA','Fitness']
-      },
-      'medical': {
-        cat: 'Web — Healthcare',
-        title: 'Medical Care',
-        desc: 'Clean institutional website for a medical clinic. Includes a specialty services grid, doctor profiles, appointment request form and accessibility-first design with proper ARIA semantics.',
-        url: 'https://alqmst99.github.io/Medical-Care/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '10 days',
-        banner: '../assets/images/project-img-6.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-4.jpg'],
-        tags: ['HTML5','CSS3','Accessibility','ARIA','Healthcare']
-      },
-      'ecommerce': {
-        cat: 'Web — E-Commerce',
-        title: 'Modern E-Commerce',
-        desc: 'Full clothing e-commerce front-end with product grid, category sidebar, cart drawer, product detail page and checkout form. Designed for high conversion with sticky elements and urgency triggers.',
-        url: 'https://alqmst99.github.io/Clothes-comerce/',
-        type: 'Full Website',
-        stack: 'HTML5, CSS3, JavaScript',
-        year: '2024',
-        delivery: '14 days',
-        banner: '../assets/images/project-img-4.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-5.jpg'],
-        tags: ['HTML5','CSS3','Cart UI','E-Commerce','Conversion']
-      },
-      'api-ecommerce': {
-        cat: 'API — Backend',
-        title: 'API E-Commerce',
-        desc: 'RESTful e-commerce API built with Node.js and Express. Handles product catalogue, user authentication with JWT, cart management, order processing and MongoDB database integration.',
-        url: '#',
-        type: 'REST API',
-        stack: 'Node.js, Express, MongoDB, JWT',
-        year: '2024',
-        delivery: '20 days',
-        banner: '../assets/images/project-img-5.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-4.jpg','../assets/images/project-img-6.jpg'],
-        tags: ['Node.js','Express','MongoDB','JWT','REST API']
-      },
-      'blog-platform': {
-        cat: 'API — Backend',
-        title: 'Blogging Platform',
-        desc: 'Full-featured blogging API with user roles, post creation/editing, category tagging, comment threads and image upload support. Built with Java and Spring Boot, backed by MySQL.',
-        url: '#',
-        type: 'REST API',
-        stack: 'Java, Spring Boot, MySQL',
-        year: '2024',
-        delivery: '18 days',
-        banner: '../assets/images/project-img-6.jpg',
-        thumbs: ['../assets/images/project-img-1.jpg','../assets/images/project-img-2.jpg','../assets/images/project-img-3.jpg','../assets/images/project-img-5.jpg'],
-        tags: ['Java','Spring Boot','MySQL','REST API','Auth']
-      }
-    };
+<script>
+  const projects = {
 
-    function openDetail(id) {
-      const p = projects[id];
-      if (!p) return;
-      document.getElementById('detailBanner').src = p.banner;
-      document.getElementById('detailBanner').alt = p.title;
-      document.getElementById('detailCat').textContent = p.cat;
-      document.getElementById('detailTitle').textContent = p.title;
-      document.getElementById('detailDesc').textContent = p.desc;
-      document.getElementById('detailLink').href = p.url;
-      if (p.url === '#') document.getElementById('detailLink').style.display = 'none';
-      else document.getElementById('detailLink').style.display = 'inline-block';
+    /* =========================================================
+       NEW PROJECTS
+    ========================================================= */
 
-      const thumbs = document.getElementById('detailThumbs');
-      thumbs.innerHTML = p.thumbs.map(src => `<img loading="lazy" src="${src}" alt="Project screenshot">`).join('');
+    'industrial-web': {
+      cat: 'Web — Industrial / Corporate',
+      title: 'Industrial Corporate Website',
+      desc: 'Corporate website designed for an industrial business, focused on presenting its capabilities, services and solutions through a professional and structured digital experience. The site combines a strong visual identity with clear navigation, responsive layouts and a product and services-focused presentation.',
+      url: 'https://industrial-web.vercel.app/',
+      type: 'Corporate Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '10 days',
+      banner: '../assets/images/project-img-2.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Responsive',
+        'Corporate',
+        'Industrial'
+      ]
+    },
 
-      const meta = document.getElementById('detailMeta');
-      meta.innerHTML = `
-        <div class="detail-meta-item"><p>Type</p><p>${p.type}</p></div>
-        <div class="detail-meta-item"><p>Stack</p><p>${p.stack}</p></div>
-        <div class="detail-meta-item"><p>Year</p><p>${p.year}</p></div>
-        <div class="detail-meta-item"><p>Delivery</p><p>${p.delivery}</p></div>
-      `;
+    'fstail-blog': {
+      cat: 'Web — Personal Blog',
+      title: 'FSTail Personal Blog',
+      desc: 'Personal technical blog created to publish articles, ideas and practical content related to web development, technology, performance, SEO and digital products. The project focuses on readability, content organization, responsive design and a clean editorial experience.',
+      url: 'https://blog-fst-ecru.vercel.app/',
+      type: 'Personal Blog',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '7 days',
+      banner: '../assets/images/project-img-6.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'Blog',
+        'SEO',
+        'Responsive',
+        'Content',
+        'JavaScript',
+        'UI/UX'
+      ]
+    },
 
-      const tags = document.getElementById('detailTags');
-      tags.innerHTML = p.tags.map(t => `<span class="detail-tag">${t}</span>`).join('');
+    'industrial-site': {
+      cat: 'Web — Engineering / Industrial',
+      title: 'Industrial Engineering Website',
+      desc: 'Professional corporate website created for an industrial engineering business. The experience is structured around engineering capabilities, industrial solutions, projects and technical expertise, with a visual language designed to communicate reliability and international reach.',
+      url: 'https://industrial-site-sooty.vercel.app/pages/index.html',
+      type: 'Corporate Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '12 days',
+      banner: '../assets/images/project-img-3.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'Industrial',
+        'Engineering',
+        'Corporate',
+        'Responsive',
+        'SEO',
+        'JavaScript'
+      ]
+    },
 
-      document.getElementById('detailOverlay').classList.add('open');
-      document.getElementById('projectDetail').classList.add('open');
-      document.body.style.overflow = 'hidden';
+    'ortopedia': {
+      cat: 'Web — Healthcare',
+      title: 'ORTOPECTUS',
+      desc: 'Specialized medical website focused on thoracic surgery and chest wall conditions. The project presents medical information, treatments and specialized procedures through a clean, professional and accessible interface designed to establish trust and make complex healthcare information easier to understand.',
+      url: 'https://ortopedia-eight.vercel.app/',
+      type: 'Medical Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '10 days',
+      banner: '../assets/images/project-img-6.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'Healthcare',
+        'Medical',
+        'Responsive',
+        'Accessibility',
+        'SEO',
+        'UI/UX'
+      ]
+    },
+
+    'metric-international': {
+      cat: 'Web — Industrial / International',
+      title: 'Metric International',
+      desc: 'Large-scale corporate website for an international industrial organization. The platform presents engineering, EPC/EPCM capabilities, industrial services, equipment and projects through a structured architecture designed for international clients and complex industrial markets.',
+      url: 'https://metric-international.vercel.app/',
+      type: 'Corporate Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '14 days',
+      banner: '../assets/images/project-img-4.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'EPC',
+        'EPCM',
+        'Industrial',
+        'Engineering',
+        'Corporate',
+        'Responsive'
+      ]
+    },
+
+    'metric-inter': {
+      cat: 'Web — Industrial Consulting',
+      title: 'Metric International Consulting',
+      desc: 'Corporate consulting website focused on industrial expertise, strategic advisory and international business development. The design emphasizes authority, technical knowledge and clarity while presenting the company’s experience across industrial markets.',
+      url: 'https://metric-inter.vercel.app/',
+      type: 'Corporate / Consulting',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '9 days',
+      banner: '../assets/images/project-img-2.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'Consulting',
+        'Industrial',
+        'Corporate',
+        'Strategy',
+        'Responsive',
+        'SEO'
+      ]
+    },
+
+    /* =========================================================
+       REAL CLIENT PROJECT
+       ========================================================= */
+
+    'bell-vita': {
+      cat: 'Web — Real Client Project',
+      title: 'Bell Vita',
+      desc: 'Custom corporate website developed for a real client in the architecture and design industry. The project presents premium solutions for windows, doors, kitchens and home elevators through an elegant visual experience inspired by luxury brands, with a focus on refined layouts, product presentation and responsive performance.',
+      url: 'https://www.bell-vita.com/',
+      type: 'Client Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2026',
+      delivery: '14 days',
+      banner: '../assets/images/project-img-1.jpg',
+      thumbs: [
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'Client Project',
+        'Corporate',
+        'Architecture',
+        'Luxury',
+        'Responsive',
+        'Product Showcase'
+      ]
+    },
+
+
+    /* =========================================================
+       EXISTING PROJECTS
+       ========================================================= */
+
+    'standard-plan': {
+      cat: 'Web — Landing Page',
+      title: 'Standard Plan',
+      desc: 'A professional multi-section landing page built as a reference for the Standard service tier. Features a hero, services grid, pricing cards and a contact form with smooth interactions and responsive layouts.',
+      url: 'https://alqmst99.github.io/Plan-Est-ndar/',
+      type: 'Landing Page',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '5 days',
+      banner: '../assets/images/project-img-2.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Responsive',
+        'SEO'
+      ]
+    },
+
+    'bakery': {
+      cat: 'Web — Food & Beverage',
+      title: 'Bakery Website',
+      desc: 'A warm and inviting website for an artisan bakery. Showcases products with image cards, an about section and contact functionality with a mobile-first layout.',
+      url: 'https://anaclara-95.github.io/bakery-website/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '7 days',
+      banner: '../assets/images/project-img-3.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Mobile-first',
+        'Food'
+      ]
+    },
+
+    'cake': {
+      cat: 'Web — Food & Beverage',
+      title: 'Cake Website',
+      desc: 'Custom website for a specialty cake brand with full-bleed photography, featured products, smooth animations and a responsive layout.',
+      url: 'https://anaclara-95.github.io/cake-website/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '6 days',
+      banner: '../assets/images/project-img-2.jpg',
+      thumbs: [
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Animations',
+        'Local SEO'
+      ]
+    },
+
+    'portfolio-ana': {
+      cat: 'Web — Portfolio',
+      title: 'Portfolio Ana',
+      desc: 'Personal portfolio with a minimal typographic design, project cards, skills presentation and integrated contact section.',
+      url: 'https://anaclara-95.github.io/portfolio-frontend/',
+      type: 'Portfolio',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '4 days',
+      banner: '../assets/images/project-img-1.jpg',
+      thumbs: [
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Portfolio'
+      ]
+    },
+
+    'portfolio-nahuel': {
+      cat: 'Web — Portfolio',
+      title: 'Portfolio Nahuel',
+      desc: 'Developer portfolio with animated sections, project showcase, technology stack and responsive navigation.',
+      url: 'https://alqmst99.github.io/PortaFolio-web/',
+      type: 'Portfolio',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '4 days',
+      banner: '../assets/images/project-img-3.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Dark Theme'
+      ]
+    },
+
+    'lawyer': {
+      cat: 'Web — Professional Services',
+      title: 'Lawyer Website',
+      desc: 'Institutional website for a law firm with services, attorney profiles, contact functionality and a professional visual identity.',
+      url: 'https://alqmst99.github.io/site-lawyer/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '8 days',
+      banner: '../assets/images/project-img-2.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Google Maps',
+        'SEO',
+        'Institutional'
+      ]
+    },
+
+    'moto': {
+      cat: 'Web — Automotive',
+      title: 'Classic Moto Website',
+      desc: 'Landing page for a classic motorcycle brand with immersive visuals, parallax sections and a custom gallery experience.',
+      url: 'https://alqmst99.github.io/Landing-Moto/',
+      type: 'Landing Page',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '5 days',
+      banner: '../assets/images/project-img-3.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/image-back-2.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Parallax',
+        'Gallery'
+      ]
+    },
+
+    'realestate': {
+      cat: 'Web — Real Estate',
+      title: 'Modern Real Estate',
+      desc: 'Property showcase website with listings, large imagery, filtering and lead-capture functionality.',
+      url: 'https://alqmst99.github.io/Real-State-BT/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '10 days',
+      banner: '../assets/images/project-img-1.jpg',
+      thumbs: [
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Filter UI',
+        'Lead Generation'
+      ]
+    },
+
+    'shoes': {
+      cat: 'Web — E-Commerce / Fashion',
+      title: 'Shoes Website',
+      desc: 'Fashion-oriented product website for a footwear brand with product cards, hover interactions and responsive layouts.',
+      url: 'https://alqmst99.github.io/Shoes-WebSite/',
+      type: 'Landing Page',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '5 days',
+      banner: '../assets/images/image-back-2.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Product Cards',
+        'Responsive',
+        'Fashion'
+      ]
+    },
+
+    'bookstore': {
+      cat: 'Web — Retail',
+      title: 'Modern Book Store',
+      desc: 'Online bookstore interface with categories, search, book detail views and shopping cart interactions.',
+      url: 'https://alqmst99.github.io/Books/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '9 days',
+      banner: '../assets/images/project-img-4.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Modal',
+        'Cart UI'
+      ]
+    },
+
+    'gym': {
+      cat: 'Web — Fitness',
+      title: 'Modern Gym Website',
+      desc: 'High-energy landing page for a gym brand featuring classes, trainers, membership plans and strong calls to action.',
+      url: 'https://alqmst99.github.io/Landing-Gym/',
+      type: 'Landing Page',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '5 days',
+      banner: '../assets/images/project-img-3.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-5.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'CTA',
+        'Fitness'
+      ]
+    },
+
+    'medical': {
+      cat: 'Web — Healthcare',
+      title: 'Medical Care',
+      desc: 'Institutional website for a medical clinic with specialty services, doctor profiles, appointment functionality and accessibility-conscious design.',
+      url: 'https://alqmst99.github.io/Medical-Care/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '10 days',
+      banner: '../assets/images/project-img-6.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-4.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Accessibility',
+        'ARIA',
+        'Healthcare'
+      ]
+    },
+
+    'ecommerce': {
+      cat: 'Web — E-Commerce',
+      title: 'Modern E-Commerce',
+      desc: 'Full clothing e-commerce front-end with product grids, category navigation, cart drawer, product details and checkout UI.',
+      url: 'https://alqmst99.github.io/Clothes-comerce/',
+      type: 'Full Website',
+      stack: 'HTML5, CSS3, JavaScript',
+      year: '2024',
+      delivery: '14 days',
+      banner: '../assets/images/project-img-4.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'HTML5',
+        'CSS3',
+        'Cart UI',
+        'E-Commerce',
+        'Responsive'
+      ]
+    },
+
+    'api-ecommerce': {
+      cat: 'API — Backend',
+      title: 'API E-Commerce',
+      desc: 'RESTful e-commerce API handling products, authentication, carts, orders and database integration.',
+      url: '#',
+      type: 'REST API',
+      stack: 'Node.js, Express, MongoDB, JWT',
+      year: '2024',
+      delivery: '20 days',
+      banner: '../assets/images/project-img-5.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-4.jpg',
+        '../assets/images/project-img-6.jpg'
+      ],
+      tags: [
+        'Node.js',
+        'Express',
+        'MongoDB',
+        'JWT',
+        'REST API'
+      ]
+    },
+
+    'blog-platform': {
+      cat: 'API — Backend',
+      title: 'Blogging Platform',
+      desc: 'Full-featured blogging API with user roles, post management, categories, comments and image upload support.',
+      url: '#',
+      type: 'REST API',
+      stack: 'Backend API',
+      year: '2024',
+      delivery: '18 days',
+      banner: '../assets/images/project-img-6.jpg',
+      thumbs: [
+        '../assets/images/project-img-1.jpg',
+        '../assets/images/project-img-2.jpg',
+        '../assets/images/project-img-3.jpg',
+        '../assets/images/project-img-5.jpg'
+      ],
+      tags: [
+        'REST API',
+        'Authentication',
+        'Database',
+        'Blog',
+        'Backend'
+      ]
+    }
+  };
+
+
+  /* =========================================================
+     PROJECT DETAIL
+     ========================================================= */
+
+  function openDetail(id) {
+    const p = projects[id];
+
+    if (!p) return;
+
+    document.getElementById('detailBanner').src = p.banner;
+    document.getElementById('detailBanner').alt = p.title;
+
+    document.getElementById('detailCat').textContent = p.cat;
+    document.getElementById('detailTitle').textContent = p.title;
+    document.getElementById('detailDesc').textContent = p.desc;
+
+    const detailLink = document.getElementById('detailLink');
+
+    detailLink.href = p.url;
+
+    if (p.url === '#') {
+      detailLink.style.display = 'none';
+    } else {
+      detailLink.style.display = 'inline-block';
     }
 
-    function closeDetail() {
-      document.getElementById('detailOverlay').classList.remove('open');
-      document.getElementById('projectDetail').classList.remove('open');
-      document.body.style.overflow = '';
-    }
+    const thumbs = document.getElementById('detailThumbs');
 
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
-  </script>
+    thumbs.innerHTML = p.thumbs
+      .map(src => `
+        <img
+          loading="lazy"
+          src="${src}"
+          alt="${p.title} project screenshot"
+        >
+      `)
+      .join('');
+
+    const meta = document.getElementById('detailMeta');
+
+    meta.innerHTML = `
+      <div class="detail-meta-item">
+        <p>Type</p>
+        <p>${p.type}</p>
+      </div>
+
+      <div class="detail-meta-item">
+        <p>Stack</p>
+        <p>${p.stack}</p>
+      </div>
+
+      <div class="detail-meta-item">
+        <p>Year</p>
+        <p>${p.year}</p>
+      </div>
+
+      <div class="detail-meta-item">
+        <p>Delivery</p>
+        <p>${p.delivery}</p>
+      </div>
+    `;
+
+    const tags = document.getElementById('detailTags');
+
+    tags.innerHTML = p.tags
+      .map(t => `<span class="detail-tag">${t}</span>`)
+      .join('');
+
+    document
+      .getElementById('detailOverlay')
+      .classList
+      .add('open');
+
+    document
+      .getElementById('projectDetail')
+      .classList
+      .add('open');
+
+    document.body.style.overflow = 'hidden';
+  }
+
+
+  function closeDetail() {
+    document
+      .getElementById('detailOverlay')
+      .classList
+      .remove('open');
+
+    document
+      .getElementById('projectDetail')
+      .classList
+      .remove('open');
+
+    document.body.style.overflow = '';
+  }
+
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeDetail();
+    }
+  });
+</script>
 </body>
 </html>
