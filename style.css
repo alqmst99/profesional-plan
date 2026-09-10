@@ -1652,3 +1652,39 @@ header.scrolled {
   .hero-stats     { grid-template-columns: 1fr 1fr; }
   .hero-media     { aspect-ratio: 16 / 20; }
 }
+
+/* ── Language toggle ── */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-left: 0.75rem;
+  border: 1px solid var(--clr-border);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.lang-toggle button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--clr-text-muted, #888);
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.lang-toggle button.active {
+  background: var(--clr-accent, #c9a227);
+  color: #111;
+}
+.lang-toggle button:hover:not(.active) {
+  color: var(--clr-text);
+}
+@media (max-width: 768px) {
+  .lang-toggle { margin-left: 0.4rem; }
+}

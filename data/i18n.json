@@ -1,0 +1,396 @@
+{
+  "common": {
+    "nav": {
+      "home": { "en": "Home", "es": "Inicio" },
+      "about": { "en": "About", "es": "Nosotros" },
+      "services": { "en": "Services", "es": "Servicios" },
+      "projects": { "en": "Projects", "es": "Proyectos" },
+      "blog": { "en": "Blog", "es": "Blog" },
+      "contact": { "en": "Contact", "es": "Contacto" }
+    },
+    "menu": { "en": "Menu", "es": "Menú" },
+    "footerNav": { "en": "Navigation", "es": "Navegación" },
+    "footerLegal": { "en": "Legal", "es": "Legal" },
+    "footerContact": { "en": "Contact", "es": "Contacto" },
+    "privacy": { "en": "Privacy Policy", "es": "Política de Privacidad" },
+    "terms": { "en": "Terms & Conditions", "es": "Términos y Condiciones" },
+    "footerDesc": {
+      "en": "We build efficient, tailor-made digital solutions to boost your business growth.",
+      "es": "Construimos soluciones digitales eficientes y a medida para impulsar el crecimiento de tu negocio."
+    },
+    "footerDescLong": {
+      "en": "We build efficient, tailor-made digital solutions. Modern design, reliable technology and precise execution in every project.",
+      "es": "Construimos soluciones digitales eficientes y a medida. Diseño moderno, tecnología confiable y ejecución precisa en cada proyecto."
+    },
+    "footerCopy": {
+      "en": "© 2025 FSTail Solutions — All rights reserved.",
+      "es": "© 2025 FSTail Solutions — Todos los derechos reservados."
+    },
+    "hours": { "en": "Mon–Fri 09:00–18:00", "es": "Lun–Vie 09:00–18:00" },
+    "backHome": { "en": "Back to home", "es": "Volver al inicio" },
+    "seeAll": { "en": "See all", "es": "Ver todos" },
+    "hire": { "en": "Hire", "es": "Contratar" },
+    "recommended": { "en": "Recommended", "es": "Recomendado" },
+    "popular": { "en": "Popular", "es": "Popular" },
+    "seePlans": { "en": "See plans", "es": "Ver planes" },
+    "scroll": { "en": "Scroll", "es": "Scroll" },
+    "seeDemo": { "en": "See demo →", "es": "Ver demo →" }
+  },
+  "index": {
+    "title": {
+      "en": "FSTail Solutions — Web Development & Digital Solutions in Santa Fe",
+      "es": "FSTail Solutions — Desarrollo Web y Soluciones Digitales en Santa Fe"
+    },
+    "metaDesc": {
+      "en": "Technology startup from Santa Fe, Argentina. We build landing pages, full websites, maintenance and custom software. Clean code, precise design, results that last.",
+      "es": "Startup tecnológica de Santa Fe, Argentina. Creamos landing pages, sitios web completos, mantenimiento y software a medida. Código limpio, diseño preciso y resultados que perduran."
+    },
+    "heroEyebrow": { "en": "Santa Fe, Argentina", "es": "Santa Fe, Argentina" },
+    "heroHeadline": {
+      "en": "Digital solutions<br>built to<br><em>grow.</em>",
+      "es": "Soluciones digitales<br>hechas para<br><em>crecer.</em>"
+    },
+    "heroSub": {
+      "en": "Web development, maintenance and digital presence tailored to you. Clean code, precise design and results that last.",
+      "es": "Desarrollo web, mantenimiento y presencia digital a tu medida. Código limpio, diseño preciso y resultados que perduran."
+    },
+    "heroCtaServices": { "en": "Our services", "es": "Nuestros servicios" },
+    "heroCtaProjects": { "en": "Projects", "es": "Proyectos" },
+    "statProjects": { "en": "Projects", "es": "Proyectos" },
+    "statYears": { "en": "Years of work", "es": "Años de trabajo" },
+    "statSatisfaction": { "en": "Satisfaction", "es": "Satisfacción" },
+    "aboutLabel": { "en": "Who we are", "es": "Quiénes somos" },
+    "aboutRole": { "en": "Technology Development Startup", "es": "Startup de Desarrollo Tecnológico" },
+    "aboutBio": {
+      "en": "We are a technology development startup focused on comprehensive solutions in software, cybersecurity and automation. We specialize in robust backend systems, hardware integration and modern web platforms. We merge art, electronics and data analysis with a practical, fast and no-nonsense approach.",
+      "es": "Somos una startup de desarrollo tecnológico enfocada en soluciones integrales de software, ciberseguridad y automatización. Nos especializamos en backends robustos, integración de hardware y plataformas web modernas. Combinamos arte, electrónica y análisis de datos con un enfoque práctico, rápido y sin rodeos."
+    },
+    "meetTeam": { "en": "Meet the team", "es": "Conocé al equipo" },
+    "getInTouch": { "en": "Get in touch", "es": "Contactanos" },
+    "servicesLabel": { "en": "What we do", "es": "Qué hacemos" },
+    "servicesTitle": {
+      "en": "Services built<br>to <em>grow</em><br>your business.",
+      "es": "Servicios pensados<br>para <em>hacer crecer</em><br>tu negocio."
+    },
+    "landingName": { "en": "Landing Page", "es": "Landing Page" },
+    "landingDesc": {
+      "en": "Fast and effective digital presence. Modern design optimized to convert visitors into clients. Ideal for campaigns and presentations.",
+      "es": "Presencia digital rápida y efectiva. Diseño moderno optimizado para convertir visitantes en clientes. Ideal para campañas y presentaciones."
+    },
+    "mantName": { "en": "Maintenance", "es": "Mantenimiento" },
+    "mantDesc": {
+      "en": "Updates, backups, security and speed. Your site always in top condition, without you having to worry about it.",
+      "es": "Actualizaciones, backups, seguridad y velocidad. Tu sitio siempre en óptimas condiciones, sin que tengas que preocuparte."
+    },
+    "fullName": { "en": "Full Website", "es": "Sitio Completo" },
+    "fullDesc": {
+      "en": "From e-commerce to institutional sites. Solid structure, attractive design and everything you need to scale without limits.",
+      "es": "Desde e-commerce hasta sitios institucionales. Estructura sólida, diseño atractivo y todo lo que necesitás para escalar sin límites."
+    },
+    "projectsLabel": { "en": "Our work", "es": "Nuestro trabajo" },
+    "projectsTitle": {
+      "en": "Projects that<br><em>speak</em> for themselves.",
+      "es": "Proyectos que<br><em>hablan</em> por sí solos."
+    },
+    "seeAllProjects": { "en": "See all projects", "es": "Ver todos los proyectos" },
+    "ctaHeadline": {
+      "en": "Ready to take your<br>business to the <em>next level?</em>",
+      "es": "¿Listo para llevar tu<br>negocio al <em>siguiente nivel?</em>"
+    },
+    "startProject": { "en": "Start a project", "es": "Empezar un proyecto" },
+    "planBasic": { "en": "Basic", "es": "Básico" },
+    "planStandard": { "en": "Standard", "es": "Estándar" },
+    "planProfessional": { "en": "Professional", "es": "Profesional" },
+    "planComplete": { "en": "Complete", "es": "Completo" }
+  },
+  "about": {
+    "title": {
+      "en": "About Us — FSTail Solutions | Team in Santa Fe",
+      "es": "Nosotros — FSTail Solutions | Equipo en Santa Fe"
+    },
+    "metaDesc": {
+      "en": "Meet Nahuel Pierini and Anaclara Ferrando. Technology startup from Santa Fe focused on software, web platforms and automation.",
+      "es": "Conocé a Nahuel Pierini y Anaclara Ferrando. Startup tecnológica de Santa Fe enfocada en software, plataformas web y automatización."
+    },
+    "label": { "en": "Who we are", "es": "Quiénes somos" },
+    "heroTitle": {
+      "en": "A startup built on<br><em>craft, speed and code.</em>",
+      "es": "Una startup basada en<br><em>oficio, velocidad y código.</em>"
+    },
+    "role": {
+      "en": "Technology Development Startup — Santa Fe, Argentina",
+      "es": "Startup de Desarrollo Tecnológico — Santa Fe, Argentina"
+    },
+    "bio1": {
+      "en": "We are a technology development startup focused on comprehensive solutions in software, cybersecurity and automation. We specialize in robust backend systems, hardware integration and modern web platforms. We merge art, electronics and data analysis with a practical, fast and no-nonsense approach.",
+      "es": "Somos una startup de desarrollo tecnológico enfocada en soluciones integrales de software, ciberseguridad y automatización. Nos especializamos en backends robustos, integración de hardware y plataformas web modernas. Combinamos arte, electrónica y análisis de datos con un enfoque práctico, rápido y sin rodeos."
+    },
+    "bio2": {
+      "en": "Founded in Santa Fe, Argentina, we work with clients across Latin America and beyond — delivering clean code, intentional design and measurable results. Every project we ship reflects our commitment to quality and transparency.",
+      "es": "Fundada en Santa Fe, Argentina, trabajamos con clientes de toda Latinoamérica y más allá — entregando código limpio, diseño intencional y resultados medibles. Cada proyecto que entregamos refleja nuestro compromiso con la calidad y la transparencia."
+    },
+    "startConversation": { "en": "Start a conversation", "es": "Empezar una conversación" },
+    "v1Label": { "en": "01 — Focus", "es": "01 — Enfoque" },
+    "v1Title": { "en": "Practical by design", "es": "Prácticos por diseño" },
+    "v1Text": {
+      "en": "We cut the unnecessary and ship what actually matters. Fast, clean and to the point.",
+      "es": "Recortamos lo innecesario y entregamos lo que realmente importa. Rápido, limpio y al punto."
+    },
+    "v2Label": { "en": "02 — Quality", "es": "02 — Calidad" },
+    "v2Title": { "en": "Code that lasts", "es": "Código que dura" },
+    "v2Text": {
+      "en": "Every line is written to be maintained, scaled and understood — not just to work today.",
+      "es": "Cada línea se escribe para ser mantenida, escalada y entendida — no solo para funcionar hoy."
+    },
+    "v3Label": { "en": "03 — Partnership", "es": "03 — Alianza" },
+    "v3Title": { "en": "Your growth is ours", "es": "Tu crecimiento es el nuestro" },
+    "v3Text": {
+      "en": "We don't just build and disappear. We stay involved, iterate and support you as you grow.",
+      "es": "No solo construimos y desaparecemos. Nos involucramos, iteramos y te acompañamos mientras crecés."
+    },
+    "nahuelRole": { "en": "Full Stack Developer", "es": "Desarrollador Full Stack" },
+    "nahuelBio": {
+      "en": "Developer focused on MERN and Java back-end. Trained at MindHub and Oracle Next Education, with experience in modern interfaces, efficient APIs and integral application architecture. Handles React, Node, Express, MongoDB and SQL databases. Also a network, CCTV and digital hardware installer.",
+      "es": "Desarrollador enfocado en MERN y backend Java. Formado en MindHub y Oracle Next Education, con experiencia en interfaces modernas, APIs eficientes y arquitectura integral de aplicaciones. Maneja React, Node, Express, MongoDB y bases de datos SQL. También instalador de redes, CCTV y hardware digital."
+    },
+    "talkNahuel": { "en": "Talk to Nahuel", "es": "Hablar con Nahuel" },
+    "anaRole": { "en": "Backend Developer", "es": "Desarrolladora Backend" },
+    "anaBio": {
+      "en": "Backend-oriented developer with solid training in Java, Spring Boot and MySQL. Certified in SQL, OOP and web development by Alura Latam, Oracle Next Education and Cisco. Handles relational databases, system security and stable APIs, with solid fundamentals in HTML, CSS and JavaScript.",
+      "es": "Desarrolladora orientada a backend con sólida formación en Java, Spring Boot y MySQL. Certificada en SQL, POO y desarrollo web por Alura Latam, Oracle Next Education y Cisco. Maneja bases de datos relacionales, seguridad de sistemas y APIs estables, con fundamentos sólidos en HTML, CSS y JavaScript."
+    },
+    "talkAna": { "en": "Talk to Anaclara", "es": "Hablar con Anaclara" },
+    "ctaHeadline": {
+      "en": "Ready to build<br>something <em>great?</em>",
+      "es": "¿Listos para construir<br>algo <em>grande?</em>"
+    },
+    "seeServices": { "en": "See our services", "es": "Ver nuestros servicios" },
+    "startProject": { "en": "Start a project", "es": "Empezar un proyecto" }
+  },
+  "service": {
+    "title": {
+      "en": "Services & Pricing — Landing Pages, Websites & Maintenance | FSTail",
+      "es": "Servicios y Precios — Landing Pages, Sitios Web y Mantenimiento | FSTail"
+    },
+    "metaDesc": {
+      "en": "Landing pages from $120, full websites from $300, monthly maintenance plans. Clear pricing, fast delivery, clean code.",
+      "es": "Landing pages desde $120, sitios completos desde $300, planes de mantenimiento mensual. Precios claros, entrega rápida, código limpio."
+    },
+    "label": { "en": "Our services", "es": "Nuestros servicios" },
+    "heroTitle": {
+      "en": "Plans designed for every<br>stage of your <em>digital business.</em>",
+      "es": "Planes pensados para cada<br>etapa de tu <em>negocio digital.</em>"
+    },
+    "landingLabel": { "en": "01 — Landing Page", "es": "01 — Landing Page" },
+    "landingTitle": {
+      "en": "Your digital presence,<br><em>without the hassle.</em>",
+      "es": "Tu presencia digital,<br><em>sin complicaciones.</em>"
+    },
+    "landingDesc": {
+      "en": "Our Landing Pages are fast, effective and designed to convert visitors into customers. Ideal for campaigns, services or simple but impactful presentations. Delivery in 3–5 business days.",
+      "es": "Nuestras Landing Pages son rápidas, efectivas y diseñadas para convertir visitantes en clientes. Ideales para campañas, servicios o presentaciones simples pero impactantes. Entrega en 3–5 días hábiles."
+    },
+    "mantLabel": { "en": "02 — Maintenance", "es": "02 — Mantenimiento" },
+    "mantTitle": {
+      "en": "Your site always<br><em>at its best.</em>",
+      "es": "Tu sitio siempre<br><em>en su mejor versión.</em>"
+    },
+    "mantDesc": {
+      "en": "We keep your site fast, secure and up to date each month. Updates, performance monitoring, backups and direct support so you never have downtime.",
+      "es": "Mantenemos tu sitio rápido, seguro y actualizado cada mes. Actualizaciones, monitoreo de rendimiento, backups y soporte directo para que nunca tengas caídas."
+    },
+    "fullLabel": { "en": "03 — Full Website", "es": "03 — Sitio Completo" },
+    "fullTitle": {
+      "en": "A complete site<br><em>built to scale.</em>",
+      "es": "Un sitio completo<br><em>pensado para escalar.</em>"
+    },
+    "fullDesc": {
+      "en": "From institutional sites to e-commerce. Solid structure, attractive design and everything you need to grow without limits.",
+      "es": "Desde sitios institucionales hasta e-commerce. Estructura sólida, diseño atractivo y todo lo que necesitás para crecer sin límites."
+    },
+    "basic": { "en": "Basic", "es": "Básico" },
+    "standard": { "en": "Standard", "es": "Estándar" },
+    "professional": { "en": "Professional", "es": "Profesional" },
+    "complete": { "en": "Complete", "es": "Completo" },
+    "hire": { "en": "Hire", "es": "Contratar" },
+    "popular": { "en": "Popular", "es": "Popular" }
+  },
+  "contact": {
+    "title": {
+      "en": "Contact — Start Your Project | FSTail Solutions",
+      "es": "Contacto — Empezá tu Proyecto | FSTail Solutions"
+    },
+    "metaDesc": {
+      "en": "Tell us about your project. We reply within 24 hours. WhatsApp +54 9 342 542-8918 · Santa Fe, Argentina.",
+      "es": "Contanos sobre tu proyecto. Respondemos en menos de 24 horas. WhatsApp +54 9 342 542-8918 · Santa Fe, Argentina."
+    },
+    "pageTitle": { "en": "Contact", "es": "Contacto" },
+    "label": { "en": "Start your project", "es": "Empezá tu proyecto" },
+    "headline": {
+      "en": "Let's build something<br><em style=\"font-style:italic;color:var(--clr-accent);\">extraordinary together.</em>",
+      "es": "Construyamos algo<br><em style=\"font-style:italic;color:var(--clr-accent);\">extraordinario juntos.</em>"
+    },
+    "intro": {
+      "en": "Fill out the form and we'll get back to you in less than 24 hours. Or reach us directly via WhatsApp or email.",
+      "es": "Completá el formulario y te respondemos en menos de 24 horas. O escribinos directo por WhatsApp o email."
+    },
+    "extraTitle": {
+      "en": "What does our <em style=\"font-style:italic;color:var(--clr-accent);\">Extra Landing</em> include?",
+      "es": "¿Qué incluye nuestra <em style=\"font-style:italic;color:var(--clr-accent);\">Extra Landing</em>?"
+    },
+    "extraIntro": {
+      "en": "Ideal for ad campaigns, product launches or special events.",
+      "es": "Ideal para campañas publicitarias, lanzamientos de producto o eventos especiales."
+    },
+    "extra1": { "en": "1 main conversion-focused section", "es": "1 sección principal orientada a conversión" },
+    "extra2": { "en": "Custom contact form", "es": "Formulario de contacto personalizado" },
+    "extra3": { "en": "WhatsApp and social media integration", "es": "Integración WhatsApp y redes sociales" },
+    "extra4": { "en": "Responsive design (mobile-first)", "es": "Diseño responsive (mobile-first)" },
+    "extra5": { "en": "Local SEO and basic analytics", "es": "SEO local y analytics básico" },
+    "extra6": { "en": "Delivery in 3 business days", "es": "Entrega en 3 días hábiles" },
+    "formTitle": { "en": "Write to us directly", "es": "Escribinos directamente" },
+    "phName": { "en": "Your name", "es": "Tu nombre" },
+    "phEmail": { "en": "Your email", "es": "Tu email" },
+    "phMessage": {
+      "en": "What kind of project do you need? Tell us the details.",
+      "es": "¿Qué tipo de proyecto necesitás? Contanos los detalles."
+    },
+    "send": { "en": "Send inquiry", "es": "Enviar consulta" },
+    "backHome": { "en": "Back to home", "es": "Volver al inicio" }
+  },
+  "projects": {
+    "title": {
+      "en": "Projects Portfolio — FSTail Solutions",
+      "es": "Portafolio de Proyectos — FSTail Solutions"
+    },
+    "metaDesc": {
+      "en": "Selected web projects by FSTail: Bell Vita, Axium, portfolios, e-commerce, landing pages and more.",
+      "es": "Proyectos web seleccionados de FSTail: Bell Vita, Axium, portafolios, e-commerce, landing pages y más."
+    },
+    "heroLabel": { "en": "Portfolio", "es": "Portafolio" },
+    "heroTitle": {
+      "en": "Projects that demonstrate<br>our <em>level of craft.</em>",
+      "es": "Proyectos que demuestran<br>nuestro <em>nivel de oficio.</em>"
+    },
+    "viewDetail": { "en": "View detail →", "es": "Ver detalle →" },
+    "seeMore": { "en": "See more projects", "es": "Ver más proyectos" },
+    "ctaTitle": {
+      "en": "Want a project like this<br>for your <em>business?</em>",
+      "es": "¿Querés un proyecto así<br>para tu <em>negocio?</em>"
+    },
+    "ctaBtn": { "en": "Start now", "es": "Empezar ahora" },
+    "viewLive": { "en": "View live demo →", "es": "Ver demo en vivo →" },
+    "type": { "en": "Type", "es": "Tipo" },
+    "stack": { "en": "Stack", "es": "Stack" },
+    "year": { "en": "Year", "es": "Año" },
+    "delivery": { "en": "Delivery", "es": "Entrega" },
+    "emptyCategory": {
+      "en": "No projects in this category yet. Coming soon.",
+      "es": "Aún no hay proyectos en esta categoría. Próximamente."
+    }
+  },
+  "policy": {
+    "title": { "en": "Privacy Policy | FSTail Solutions", "es": "Política de Privacidad | FSTail Solutions" },
+    "metaDesc": {
+      "en": "Learn how FSTail Solutions protects and manages your personal data.",
+      "es": "Conocé cómo FSTail Solutions protege y gestiona tus datos personales."
+    },
+    "pageTitle": { "en": "Privacy Policy", "es": "Política de Privacidad" },
+    "label": { "en": "Transparency first", "es": "Transparencia primero" },
+    "headline": {
+      "en": "Privacy<br><em style=\"font-style:italic;color:var(--clr-accent);\">Policy</em>",
+      "es": "Política de<br><em style=\"font-style:italic;color:var(--clr-accent);\">Privacidad</em>"
+    },
+    "intro": {
+      "en": "At FSTail Solutions we respect your privacy and protect your personal data with the utmost care. Data you provide through forms, email or WhatsApp is used exclusively to respond to your inquiries and provide our services.",
+      "es": "En FSTail Solutions respetamos tu privacidad y protegemos tus datos personales con el máximo cuidado. Los datos que nos brindás por formularios, email o WhatsApp se usan exclusivamente para responder tus consultas y prestar nuestros servicios."
+    },
+    "hWhat": { "en": "What data do we collect?", "es": "¿Qué datos recopilamos?" },
+    "what1": { "en": "Full name, when you contact us voluntarily.", "es": "Nombre completo, cuando nos contactás de forma voluntaria." },
+    "what2": { "en": "Email address, to reply to you.", "es": "Dirección de email, para responderte." },
+    "what3": { "en": "Phone or WhatsApp number, if you provide it.", "es": "Teléfono o WhatsApp, si lo indicás." },
+    "what4": { "en": "Messages or inquiries you send through our forms.", "es": "Mensajes o consultas que enviás por nuestros formularios." },
+    "hHow": { "en": "How do we use your data?", "es": "¿Cómo usamos tus datos?" },
+    "how1": { "en": "To respond to your inquiries and manage the contracted service.", "es": "Para responder tus consultas y gestionar el servicio contratado." },
+    "how2": { "en": "To send you information related to your project (never spam).", "es": "Para enviarte información relacionada a tu proyecto (nunca spam)." },
+    "how3": { "en": "We do not share your data with third parties without your explicit consent.", "es": "No compartimos tus datos con terceros sin tu consentimiento explícito." },
+    "how4": { "en": "We do not sell or rent any personal data.", "es": "No vendemos ni alquilamos ningún dato personal." },
+    "hRights": { "en": "Your rights", "es": "Tus derechos" },
+    "right1": { "en": "You may request deletion or modification of your data at any time.", "es": "Podés solicitar la eliminación o modificación de tus datos en cualquier momento." },
+    "right2": { "en": "You may request a copy of the data we hold about you.", "es": "Podés solicitar una copia de los datos que tenemos sobre vos." },
+    "right3": {
+      "en": "To exercise these rights, write to us at fstailsolution@gmail.com.",
+      "es": "Para ejercer estos derechos, escribinos a fstailsolution@gmail.com."
+    },
+    "updated": { "en": "Last updated: 19/08/2025", "es": "Última actualización: 19/08/2025" }
+  },
+  "terms": {
+    "title": { "en": "Terms & Conditions | FSTail Solutions", "es": "Términos y Condiciones | FSTail Solutions" },
+    "metaDesc": {
+      "en": "Terms and conditions of use for FSTail Solutions services.",
+      "es": "Términos y condiciones de uso de los servicios de FSTail Solutions."
+    },
+    "pageTitle": { "en": "Terms & Conditions", "es": "Términos y Condiciones" },
+    "label": { "en": "Terms of use", "es": "Términos de uso" },
+    "headline": {
+      "en": "Terms &amp;<br><em style=\"font-style:italic;color:var(--clr-accent);\">Conditions</em>",
+      "es": "Términos y<br><em style=\"font-style:italic;color:var(--clr-accent);\">Condiciones</em>"
+    },
+    "intro": {
+      "en": "By using FSTail Solutions services and products, you accept the following terms and conditions. We recommend reading them carefully before hiring any service.",
+      "es": "Al usar los servicios y productos de FSTail Solutions, aceptás los siguientes términos y condiciones. Te recomendamos leerlos con atención antes de contratar cualquier servicio."
+    },
+    "hIp": { "en": "Intellectual property", "es": "Propiedad intelectual" },
+    "ip1": {
+      "en": "Contents and designs are property of FSTail Solutions, unless a specific written agreement states otherwise.",
+      "es": "Los contenidos y diseños son propiedad de FSTail Solutions, salvo acuerdo escrito específico en contrario."
+    },
+    "ip2": {
+      "en": "Once the project is delivered and paid for, the client has full rights of use over it.",
+      "es": "Una vez entregado y abonado el proyecto, el cliente tiene plenos derechos de uso sobre el mismo."
+    },
+    "ip3": {
+      "en": "Source code may be shared under a specific agreement.",
+      "es": "El código fuente puede compartirse bajo un acuerdo específico."
+    },
+    "hClient": { "en": "Client responsibilities", "es": "Responsabilidades del cliente" },
+    "client1": {
+      "en": "The user agrees to provide truthful, up-to-date and complete information.",
+      "es": "El usuario se compromete a brindar información veraz, actualizada y completa."
+    },
+    "client2": {
+      "en": "The client is responsible for the content they request to publish on the site.",
+      "es": "El cliente es responsable del contenido que solicita publicar en el sitio."
+    },
+    "client3": {
+      "en": "Payment for plans is agreed upon in advance through a formal quote.",
+      "es": "El pago de los planes se acuerda de antemano mediante un presupuesto formal."
+    },
+    "hLimits": { "en": "Limitations", "es": "Limitaciones" },
+    "limit1": {
+      "en": "Services offered may vary and are subject to availability and schedule.",
+      "es": "Los servicios ofrecidos pueden variar y están sujetos a disponibilidad y agenda."
+    },
+    "limit2": {
+      "en": "FSTail Solutions is not responsible for misuse of information published on client sites.",
+      "es": "FSTail Solutions no se responsabiliza por el mal uso de la información publicada en sitios de clientes."
+    },
+    "limit3": {
+      "en": "Delivery times are estimates and may vary depending on project complexity.",
+      "es": "Los plazos de entrega son estimativos y pueden variar según la complejidad del proyecto."
+    },
+    "hContact": { "en": "Contact", "es": "Contacto" },
+    "contactText": {
+      "en": "For questions or complaints related to these terms, write to us at fstailsolution@gmail.com.",
+      "es": "Para consultas o reclamos relacionados con estos términos, escribinos a fstailsolution@gmail.com."
+    },
+    "updated": { "en": "Last updated: 19/08/2025", "es": "Última actualización: 19/08/2025" }
+  },
+  "blog": {
+    "title": { "en": "Blog | FSTail Solutions", "es": "Blog | FSTail Solutions" },
+    "redirectNote": {
+      "en": "Redirecting to our blog…",
+      "es": "Redirigiendo a nuestro blog…"
+    }
+  }
+}

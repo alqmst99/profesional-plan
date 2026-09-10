@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="service.title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <<title>Services & Pricing — Landing Pages, Websites & Maintenance | FSTail</title>
-<meta name="description" content="Landing pages from $120, full websites from $300, monthly maintenance plans. Clear pricing, fast delivery, clean code." />
+  <title>Services & Pricing — Landing Pages, Websites & Maintenance | FSTail</title>
+<meta name="description" data-i18n-content="service.metaDesc" content="Landing pages from $120, full websites from $300, monthly maintenance plans. Clear pricing, fast delivery, clean code." />
 <link rel="canonical" href="https://alqmst99.github.io/profesional-plan/pages/service.html" />
 <link rel="alternate" type="application/rss+xml" title="FSTail Blog RSS" href="https://blog-fst-ecru.vercel.app/rss.xml" />
   <meta name="robots" content="index, follow">
@@ -29,31 +29,41 @@
         <span class="logo-wordmark"><em>FS</em>Tail</span>
       </a>
       <nav class="nav-links">
-        <a href="../index.html" rel="noopener noreferrer">Home</a>
-        <a href="./about.html" rel="noopener noreferrer">About</a>
-        <a href="./service.html#servicios" rel="noopener noreferrer">Services</a>
-        <a href="./projects.html" rel="noopener noreferrer">Projects</a>
-        <a href="./blog.html" rel="noopener noreferrer">Blog</a>
+        <a href="../index.html" rel="noopener noreferrer" data-i18n="common.nav.home">Home</a>
+        <a href="./about.html" rel="noopener noreferrer" data-i18n="common.nav.about">About</a>
+        <a href="./service.html#servicios" rel="noopener noreferrer" data-i18n="common.nav.services">Services</a>
+        <a href="./projects.html" rel="noopener noreferrer" data-i18n="common.nav.projects">Projects</a>
+        <a href="./blog.html" rel="noopener noreferrer" data-i18n="common.nav.blog">Blog</a>
       </nav>
-      <a href="./contact.html" class="btn-nav-cta" target="_blank" rel="noopener noreferrer">Contact</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <a href="./contact.html" class="btn-nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="common.nav.contact">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" data-i18n-aria="common.menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <nav class="mobile-nav" id="mobile-nav">
-    <a href="../index.html" rel="noopener noreferrer" onclick="closeMobileNav()">Home</a>
-    <a href="./about.html" rel="noopener noreferrer" onclick="closeMobileNav()">About</a>
-    <a href="./service.html#servicios" rel="noopener noreferrer" onclick="closeMobileNav()">Services</a>
-    <a href="./projects.html" rel="noopener noreferrer" onclick="closeMobileNav()">Projects</a>
-    <a href="./contact.html" rel="noopener noreferrer" class="btn-primary mobile-nav-cta">Contact</a>
+    <a href="../index.html" rel="noopener noreferrer" onclick="closeMobileNav()" data-i18n="common.nav.home">Home</a>
+    <a href="./about.html" rel="noopener noreferrer" onclick="closeMobileNav()" data-i18n="common.nav.about">About</a>
+    <a href="./service.html#servicios" rel="noopener noreferrer" onclick="closeMobileNav()" data-i18n="common.nav.services">Services</a>
+    <a href="./projects.html" rel="noopener noreferrer" onclick="closeMobileNav()" data-i18n="common.nav.projects">Projects</a>
+    <a href="./contact.html" rel="noopener noreferrer" class="btn-primary mobile-nav-cta" data-i18n="common.nav.contact">Contact</a>
+    <div class="lang-toggle" style="margin-top:1.25rem;align-self:center;" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
   </nav>
 
   <main class="main-padded">
 
     <div class="page-hero">
       <div class="container">
-        <p class="section-label">Our services</p>
-        <h1 class="section-title page-hero-title">Plans designed for every<br>stage of your <em>digital business.</em></h1>
+        <p class="section-label" data-i18n="service.label">Our services</p>
+        <h1 class="section-title page-hero-title" data-i18n-html="service.heroTitle">Plans designed for every<br>stage of your <em>digital business.</em></h1>
       </div>
     </div>
 
@@ -65,14 +75,14 @@
             <img loading="lazy" src="../assets/images/service-landing.png" alt="Landing Page Service" class="service-img">
           </div>
           <div class="service-content-col">
-            <p class="section-label">01 — Landing Page</p>
-            <h2 class="section-title service-title">Your digital presence,<br><em>without the hassle.</em></h2>
-            <p class="service-desc">
+            <p class="section-label" data-i18n="service.landingLabel">01 — Landing Page</p>
+            <h2 class="section-title service-title" data-i18n-html="service.landingTitle">Your digital presence,<br><em>without the hassle.</em></h2>
+            <p class="service-desc" data-i18n="service.landingDesc">
               Our Landing Pages are fast, effective and designed to convert visitors into customers. Ideal for campaigns, services or simple but impactful presentations. Delivery in 3–5 business days.
             </p>
             <div class="plans-grid">
               <div class="section-modal-card">
-                <p class="modal-plan-label">Basic</p>
+                <p class="modal-plan-label" data-i18n="service.basic">Basic</p>
                 <p class="modal-plan-price">$120 <sub>USD</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 3 sections</li>
@@ -83,11 +93,11 @@
                   <li class="tip">Deploy included</li>
                   <li class="tip">1 pre-delivery revision</li>
                 </ul>
-                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Basic%20Landing%20Page." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Basic%20Landing%20Page." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
               <div class="section-modal-card modal-featured">
-                <span class="modal-featured-badge">Popular</span>
-                <p class="modal-plan-label">Standard</p>
+                <span class="modal-featured-badge" data-i18n="service.popular">Popular</span>
+                <p class="modal-plan-label" data-i18n="service.standard">Standard</p>
                 <p class="modal-plan-price">$220 <sub>USD</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 5 sections</li>
@@ -98,10 +108,10 @@
                   <li class="tip">Deploy included</li>
                   <li class="tip">2 pre-delivery revisions</li>
                 </ul>
-                <a class="btn-primary plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20am%20interested%20in%20the%20Standard%20Landing%20Page." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-primary plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20am%20interested%20in%20the%20Standard%20Landing%20Page." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
               <div class="section-modal-card">
-                <p class="modal-plan-label">Professional</p>
+                <p class="modal-plan-label" data-i18n="service.professional">Professional</p>
                 <p class="modal-plan-price">$380 <sub>USD</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 7 sections</li>
@@ -112,7 +122,7 @@
                   <li class="tip">Basic analytics</li>
                   <li class="tip">3 pre-delivery revisions</li>
                 </ul>
-                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Professional%20Landing%20Page." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Professional%20Landing%20Page." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
             </div>
           </div>
@@ -128,14 +138,14 @@
             <img loading="lazy" src="../assets/images/service-maintence.jpg" alt="Web Maintenance" class="service-img">
           </div>
           <div class="service-content-col">
-            <p class="section-label">02 — Maintenance</p>
-            <h2 class="section-title service-title">Your site always<br><em>at its best.</em></h2>
-            <p class="service-desc">
+            <p class="section-label" data-i18n="service.mantLabel">02 — Maintenance</p>
+            <h2 class="section-title service-title" data-i18n-html="service.mantTitle">Your site always<br><em>at its best.</em></h2>
+            <p class="service-desc" data-i18n="service.mantDesc">
               We keep your site fast, secure and up to date each month. Updates, performance monitoring, backups and direct support so you never have downtime.
             </p>
             <div class="plans-grid">
               <div class="section-modal-card">
-                <p class="modal-plan-label">Basic</p>
+                <p class="modal-plan-label" data-i18n="service.basic">Basic</p>
                 <p class="modal-plan-price">$40 <sub>USD/mo</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 2 minor changes/month</li>
@@ -143,11 +153,11 @@
                   <li class="tip">General visual review</li>
                   <li class="tip">Support within 48h</li>
                 </ul>
-                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20Basic%20Maintenance." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20Basic%20Maintenance." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
               <div class="section-modal-card modal-featured">
-                <span class="modal-featured-badge">Popular</span>
-                <p class="modal-plan-label">Standard</p>
+                <span class="modal-featured-badge" data-i18n="service.popular">Popular</span>
+                <p class="modal-plan-label" data-i18n="service.standard">Standard</p>
                 <p class="modal-plan-price">$80 <sub>USD/mo</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 5 changes/month</li>
@@ -156,10 +166,10 @@
                   <li class="tip">Support within 24h</li>
                   <li class="tip">Monthly basic SEO review</li>
                 </ul>
-                <a class="btn-primary plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20am%20interested%20in%20Standard%20Maintenance." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-primary plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20am%20interested%20in%20Standard%20Maintenance." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
               <div class="section-modal-card">
-                <p class="modal-plan-label">Complete</p>
+                <p class="modal-plan-label" data-i18n="service.complete">Complete</p>
                 <p class="modal-plan-price">$150 <sub>USD/mo</sub></p>
                 <ul class="tips">
                   <li class="tip">Unlimited minor changes</li>
@@ -168,7 +178,7 @@
                   <li class="tip">Full UX improvement</li>
                   <li class="tip">Priority same-day support</li>
                 </ul>
-                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20Complete%20Maintenance." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20Complete%20Maintenance." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
             </div>
           </div>
@@ -184,14 +194,14 @@
             <img loading="lazy" src="../assets/images/service-full.png" alt="Full Website Service" class="service-img">
           </div>
           <div class="service-content-col">
-            <p class="section-label">03 — Full Website</p>
+            <p class="section-label"><span data-i18n="service.fullLabel">03 — Full Website</span></p>
             <h2 class="section-title service-title">A complete site,<br><em>built to scale.</em></h2>
             <p class="service-desc">
               From e-commerce to portfolios or institutional sites. Solid structure, attractive design and everything you need to grow without limits.
             </p>
             <div class="plans-grid">
               <div class="section-modal-card">
-                <p class="modal-plan-label">Basic</p>
+                <p class="modal-plan-label" data-i18n="service.basic">Basic</p>
                 <p class="modal-plan-price">$300 <sub>USD</sub></p>
                 <ul class="tips">
                   <li class="tip">3 complete pages</li>
@@ -202,11 +212,11 @@
                   <li class="tip">1 month FREE maintenance</li>
                   <li class="tip">Delivery: 7–10 days</li>
                 </ul>
-                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Basic%20Full%20Website." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Basic%20Full%20Website." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
               <div class="section-modal-card modal-featured">
-                <span class="modal-featured-badge">Popular</span>
-                <p class="modal-plan-label">Standard</p>
+                <span class="modal-featured-badge" data-i18n="service.popular">Popular</span>
+                <p class="modal-plan-label" data-i18n="service.standard">Standard</p>
                 <p class="modal-plan-price">$550 <sub>USD</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 5 pages</li>
@@ -216,10 +226,10 @@
                   <li class="tip">Technical documentation</li>
                   <li class="tip">Delivery: 10–14 days</li>
                 </ul>
-                <a class="btn-primary plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20am%20interested%20in%20the%20Standard%20Full%20Website." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-primary plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20am%20interested%20in%20the%20Standard%20Full%20Website." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
               <div class="section-modal-card">
-                <p class="modal-plan-label">Professional</p>
+                <p class="modal-plan-label" data-i18n="service.professional">Professional</p>
                 <p class="modal-plan-price">$950 <sub>USD</sub></p>
                 <ul class="tips">
                   <li class="tip">Up to 8 dynamic pages</li>
@@ -229,7 +239,7 @@
                   <li class="tip">Third-party integrations</li>
                   <li class="tip">Delivery: 15–20 days</li>
                 </ul>
-                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Professional%20Full%20Website." target="_blank" rel="noopener noreferrer">Hire</a>
+                <a class="btn-outline plans-btn" href="https://wa.me/5493425428918?text=Hello%20FSTail%20Solutions,%20I%20want%20the%20Professional%20Full%20Website." target="_blank" rel="noopener noreferrer" data-i18n="service.hire">Hire</a>
               </div>
             </div>
           </div>
@@ -289,5 +299,6 @@
     </div>
   </footer>
   <script src="../main.js"></script>
+  <script src="../js/i18n.js"></script>
 </body>
 </html>

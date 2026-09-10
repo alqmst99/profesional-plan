@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="contact.title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Start Your Project | FSTail Solutions</title>
-<meta name="description" content="Tell us about your project. We reply within 24 hours. WhatsApp +54 9 342 542-8918 · Santa Fe, Argentina." />
+<meta name="description" data-i18n-content="contact.metaDesc" content="Tell us about your project. We reply within 24 hours. WhatsApp +54 9 342 542-8918 · Santa Fe, Argentina." />
 <link rel="canonical" href="https://alqmst99.github.io/profesional-plan/pages/contact.html" />
 <link rel="alternate" type="application/rss+xml" title="FSTail Blog RSS" href="https://blog-fst-ecru.vercel.app/rss.xml" />
   <meta name="robots" content="index, follow">
@@ -18,17 +18,23 @@
   <header class="secondary-page-header">
     <div class="secondary-page-header-content">
       <img src="../assets/images/logo-official.png" alt="Logo FSTail">
-      <span class="secondary-page-title">Contact</span>
-      <nav><a href="../index.html" class="secondary-page-btn">Back to home</a></nav>
+      <span class="secondary-page-title" data-i18n="contact.pageTitle">Contact</span>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <nav><a href="../index.html" class="secondary-page-btn" data-i18n="contact.backHome">Back to home</a></nav>
+      </div>
     </div>
   </header>
 
   <main class="secondary-page-main" style="max-width:960px;">
 
     <section class="secondary-page-section">
-      <p class="section-label" style="margin-bottom:1rem;">Start your project</p>
-      <h1 class="secondary-page-h1">Let's build something<br><em style="font-style:italic;color:var(--clr-accent);">extraordinary together.</em></h1>
-      <p>Fill out the form and we'll get back to you in less than 24 hours. Or reach us directly via WhatsApp or email.</p>
+      <p class="section-label" style="margin-bottom:1rem;" data-i18n="contact.label">Start your project</p>
+      <h1 class="secondary-page-h1" data-i18n-html="contact.headline">Let's build something<br><em style="font-style:italic;color:var(--clr-accent);">extraordinary together.</em></h1>
+      <p data-i18n="contact.intro">Fill out the form and we'll get back to you in less than 24 hours. Or reach us directly via WhatsApp or email.</p>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);margin-top:2.5rem;">
         <div style="background:var(--clr-surface);padding:2rem;">
@@ -43,27 +49,27 @@
     </section>
 
     <section class="secondary-page-section">
-      <h2 class="secondary-page-h2">What does our <em style="font-style:italic;color:var(--clr-accent);">Extra Landing</em> include?</h2>
-      <p>Ideal for ad campaigns, product launches or special events.</p>
+      <h2 class="secondary-page-h2" data-i18n-html="contact.extraTitle">What does our <em style="font-style:italic;color:var(--clr-accent);">Extra Landing</em> include?</h2>
+      <p data-i18n="contact.extraIntro">Ideal for ad campaigns, product launches or special events.</p>
       <ul class="secondary-page-list">
-        <li>1 main conversion-focused section</li>
-        <li>Custom contact form</li>
-        <li>WhatsApp and social media integration</li>
-        <li>Responsive design (mobile-first)</li>
-        <li>Local SEO and basic analytics</li>
-        <li>Delivery in 3 business days</li>
+        <li data-i18n="contact.extra1">1 main conversion-focused section</li>
+        <li data-i18n="contact.extra2">Custom contact form</li>
+        <li data-i18n="contact.extra3">WhatsApp and social media integration</li>
+        <li data-i18n="contact.extra4">Responsive design (mobile-first)</li>
+        <li data-i18n="contact.extra5">Local SEO and basic analytics</li>
+        <li data-i18n="contact.extra6">Delivery in 3 business days</li>
       </ul>
       <img src="../assets/images/service-landing.png" alt="Extra Landing Page" class="secondary-page-img">
     </section>
 
     <section class="secondary-page-section">
-      <h2 class="secondary-page-h2">Write to us directly</h2>
+      <h2 class="secondary-page-h2" data-i18n="contact.formTitle">Write to us directly</h2>
       <form id="landingForm" class="secondary-page-form" novalidate>
-        <input type="text" name="name" id="name" placeholder="Your name" required autocomplete="name">
-        <input type="email" name="email" id="email" placeholder="Your email" required autocomplete="email">
-        <textarea name="message" id="message" placeholder="What kind of project do you need? Tell us the details." required rows="5"></textarea>
+        <input type="text" name="name" id="name" placeholder="Your name" data-i18n-placeholder="contact.phName" required autocomplete="name">
+        <input type="email" name="email" id="email" placeholder="Your email" data-i18n-placeholder="contact.phEmail" required autocomplete="email">
+        <textarea name="message" id="message" placeholder="What kind of project do you need? Tell us the details." data-i18n-placeholder="contact.phMessage" required rows="5"></textarea>
         <button type="submit" class="btn-primary" id="sendBtn">
-          Send inquiry
+          <span data-i18n="contact.send">Send inquiry</span>
           <span id="loader-spin" style="display:none;">...</span>
         </button>
         <div id="formMsg" role="status" aria-live="polite"></div>
@@ -73,11 +79,12 @@
   </main>
 
   <footer class="secondary-page-footer">
-    <p>© 2025 FSTail Solutions — All rights reserved.</p>
+    <p data-i18n="common.footerCopy">© 2025 FSTail Solutions — All rights reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js" defer></script>
   <script src="../emailjs.js" defer></script>
   <script src="../main.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
 </body>
 </html>

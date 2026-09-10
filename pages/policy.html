@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="policy.title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | FSTail Solutions</title>
-  <meta name="description" content="Learn how FSTail Solutions protects and manages your personal data.">
+  <meta name="description" data-i18n-content="policy.metaDesc" content="Learn how FSTail Solutions protects and manages your personal data.">
   <link rel="shortcut icon" href="../assets/images/logo-official-3.png" type="image/x-icon">
   <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://alqmst99.github.io/profesional-plan/pages/policy.html" />
@@ -18,48 +18,55 @@
   <header class="secondary-page-header">
     <div class="secondary-page-header-content">
       <img src="../assets/images/logo-official.png" alt="Logo FSTail">
-      <span class="secondary-page-title">Privacy Policy</span>
-      <nav><a href="../index.html" class="secondary-page-btn">Back to home</a></nav>
+      <span class="secondary-page-title" data-i18n="policy.pageTitle">Privacy Policy</span>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <nav><a href="../index.html" class="secondary-page-btn" data-i18n="common.backHome">Back to home</a></nav>
+      </div>
     </div>
   </header>
 
   <main class="secondary-page-main">
     <section class="secondary-page-section">
-      <p class="section-label" style="margin-bottom:1rem;">Transparency first</p>
-      <h1 class="secondary-page-h1">Privacy<br><em style="font-style:italic;color:var(--clr-accent);">Policy</em></h1>
+      <p class="section-label" style="margin-bottom:1rem;" data-i18n="policy.label">Transparency first</p>
+      <h1 class="secondary-page-h1" data-i18n-html="policy.headline">Privacy<br><em style="font-style:italic;color:var(--clr-accent);">Policy</em></h1>
 
-      <p>At FSTail Solutions we respect your privacy and protect your personal data with the utmost care. Data you provide through forms, email or WhatsApp is used exclusively to respond to your inquiries and provide our services.</p>
+      <p data-i18n="policy.intro">At FSTail Solutions we respect your privacy and protect your personal data with the utmost care. Data you provide through forms, email or WhatsApp is used exclusively to respond to your inquiries and provide our services.</p>
 
-      <h2 class="secondary-page-h2" style="margin-top:2.5rem;">What data do we collect?</h2>
+      <h2 class="secondary-page-h2" style="margin-top:2.5rem;" data-i18n="policy.hWhat">What data do we collect?</h2>
       <ul class="secondary-page-list">
-        <li>Full name, when you contact us voluntarily.</li>
-        <li>Email address, to reply to you.</li>
-        <li>Phone or WhatsApp number, if you provide it.</li>
-        <li>Messages or inquiries you send through our forms.</li>
+        <li data-i18n="policy.what1">Full name, when you contact us voluntarily.</li>
+        <li data-i18n="policy.what2">Email address, to reply to you.</li>
+        <li data-i18n="policy.what3">Phone or WhatsApp number, if you provide it.</li>
+        <li data-i18n="policy.what4">Messages or inquiries you send through our forms.</li>
       </ul>
 
-      <h2 class="secondary-page-h2" style="margin-top:2.5rem;">How do we use your data?</h2>
+      <h2 class="secondary-page-h2" style="margin-top:2.5rem;" data-i18n="policy.hHow">How do we use your data?</h2>
       <ul class="secondary-page-list">
-        <li>To respond to your inquiries and manage the contracted service.</li>
-        <li>To send you information related to your project (never spam).</li>
-        <li>We do not share your data with third parties without your explicit consent.</li>
-        <li>We do not sell or rent any personal data.</li>
+        <li data-i18n="policy.how1">To respond to your inquiries and manage the contracted service.</li>
+        <li data-i18n="policy.how2">To send you information related to your project (never spam).</li>
+        <li data-i18n="policy.how3">We do not share your data with third parties without your explicit consent.</li>
+        <li data-i18n="policy.how4">We do not sell or rent any personal data.</li>
       </ul>
 
-      <h2 class="secondary-page-h2" style="margin-top:2.5rem;">Your rights</h2>
+      <h2 class="secondary-page-h2" style="margin-top:2.5rem;" data-i18n="policy.hRights">Your rights</h2>
       <ul class="secondary-page-list">
-        <li>You may request deletion or modification of your data at any time.</li>
-        <li>You may request a copy of the data we hold about you.</li>
-        <li>To exercise these rights, write to us at <a href="mailto:fstailsolution@gmail.com" style="color:var(--clr-accent);">fstailsolution@gmail.com</a>.</li>
+        <li data-i18n="policy.right1">You may request deletion or modification of your data at any time.</li>
+        <li data-i18n="policy.right2">You may request a copy of the data we hold about you.</li>
+        <li data-i18n="policy.right3">To exercise these rights, write to us at fstailsolution@gmail.com.</li>
       </ul>
 
-      <p class="secondary-page-update">Last updated: 19/08/2025</p>
+      <p class="secondary-page-update" data-i18n="policy.updated">Last updated: 19/08/2025</p>
     </section>
   </main>
 
   <footer class="secondary-page-footer">
-    <p>© 2025 FSTail Solutions — All rights reserved.</p>
+    <p data-i18n="common.footerCopy">© 2025 FSTail Solutions — All rights reserved.</p>
   </footer>
 
+  <script src="../js/i18n.js"></script>
 </body>
 </html>
