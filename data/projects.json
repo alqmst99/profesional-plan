@@ -22,7 +22,10 @@
     },
     {
       "id": "wordpress",
-      "label": { "en": "WordPress / WooCommerce / Shopify", "es": "WordPress / WooCommerce / Shopify" }
+      "label": {
+        "en": "WordPress / WooCommerce / Shopify",
+        "es": "WordPress / WooCommerce / Shopify"
+      }
     },
     {
       "id": "ecommerce",
@@ -83,6 +86,132 @@
   },
   "projects": [
     {
+      "id": "barberia-97",
+      "category": "wordpress",
+      "subtitle": { "en": "WordPress", "es": "WordPress" },
+      "cardTitle": { "en": "Barbería 97", "es": "Barbería 97" },
+      "image": "../assets/images/project-img-1.jpg",
+      "cat": {
+        "en": "WordPress — Barbershop Landing",
+        "es": "WordPress — Landing de Barbería"
+      },
+      "title": { "en": "Barbería 97", "es": "Barbería 97" },
+      "desc": {
+        "en": "WordPress one-page for a barbershop with custom Astra child theme, services, gallery lightbox, WhatsApp booking and a rustic olive-and-wood visual system.",
+        "es": "One-page en WordPress para barbería con child theme de Astra a medida, servicios, galería con lightbox, turnos por WhatsApp y sistema visual rústico oliva y madera."
+      },
+      "url": "https://barberia97.free.je/",
+      "type": { "en": "WordPress Landing", "es": "Landing WordPress" },
+      "stack": "WordPress, Astra, PHP, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": { "en": "Portfolio demo", "es": "Demo portfolio" },
+      "banner": "../assets/images/project-img-1.jpg",
+      "thumbs": [
+        "../assets/images/project-img-2.jpg",
+        "../assets/images/project-img-3.jpg",
+        "../assets/images/project-img-4.jpg",
+        "../assets/images/project-img-6.jpg"
+      ],
+      "tags": [
+        "WordPress",
+        "Astra",
+        "Landing",
+        "WhatsApp",
+        "Barbershop",
+        "Responsive"
+      ]
+    },
+    {
+      "id": "figma-fstail-web-design",
+      "category": "web-design",
+      "subtitle": { "en": "UI Design", "es": "Diseño UI" },
+      "cardTitle": { "en": "FSTail Web Design", "es": "FSTail Web Design" },
+      "image": "../assets/images/project-img-2.jpg",
+      "cat": {
+        "en": "Figma — Web Design System",
+        "es": "Figma — Sistema de Diseño Web"
+      },
+      "title": { "en": "FSTail Web Design", "es": "FSTail Web Design" },
+      "desc": {
+        "en": "Figma design file for the FSTail web presence: layout structure, visual hierarchy, sections and UI components for a professional services brand.",
+        "es": "Archivo de diseño en Figma para la web de FSTail: estructura de layouts, jerarquía visual, secciones y componentes UI para una marca de servicios profesionales."
+      },
+      "url": "https://www.figma.com/design/yLCMxlNr9oTviRJ60LuXB7/FSTail---web-Desing?node-id=0-1",
+      "type": { "en": "UI / Web Design", "es": "UI / Diseño Web" },
+      "stack": "Figma",
+      "year": "2026",
+      "delivery": { "en": "Design file", "es": "Archivo de diseño" },
+      "banner": "../assets/images/project-img-2.jpg",
+      "thumbs": [
+        "../assets/images/project-img-1.jpg",
+        "../assets/images/project-img-3.jpg",
+        "../assets/images/project-img-4.jpg",
+        "../assets/images/project-img-5.jpg"
+      ],
+      "tags": ["Figma", "Web Design", "UI", "Layout", "Brand"]
+    },
+    {
+      "id": "figma-bell-vita-design",
+      "category": "web-design",
+      "subtitle": { "en": "UI Design", "es": "Diseño UI" },
+      "cardTitle": { "en": "Bell Vita Design", "es": "Bell Vita Design" },
+      "image": "../assets/images/project-img-1.jpg",
+      "cat": {
+        "en": "Figma — Luxury Corporate UI",
+        "es": "Figma — UI Corporativa Premium"
+      },
+      "title": {
+        "en": "Bell Vita — Web Design",
+        "es": "Bell Vita — Diseño Web"
+      },
+      "desc": {
+        "en": "Figma design for Bell Vita: premium corporate UI for architecture and home solutions, focused on elegant layouts, product presentation and luxury visual language.",
+        "es": "Diseño en Figma para Bell Vita: UI corporativa premium para arquitectura y soluciones para el hogar, con layouts elegantes, presentación de producto y lenguaje visual de lujo."
+      },
+      "url": "https://www.figma.com/design/iaohQ3T40bHwVFoF3oOhy5/Bell-Vita---Web-Dsesing?node-id=0-1",
+      "type": { "en": "UI / Web Design", "es": "UI / Diseño Web" },
+      "stack": "Figma",
+      "year": "2026",
+      "delivery": { "en": "Design file", "es": "Archivo de diseño" },
+      "banner": "../assets/images/project-img-1.jpg",
+      "thumbs": [
+        "../assets/images/project-img-2.jpg",
+        "../assets/images/project-img-3.jpg",
+        "../assets/images/project-img-4.jpg",
+        "../assets/images/project-img-6.jpg"
+      ],
+      "tags": ["Figma", "Web Design", "UI", "Luxury", "Corporate"]
+    },
+    {
+      "id": "figma-gallery",
+      "category": "web-design",
+      "subtitle": { "en": "UI Design", "es": "Diseño UI" },
+      "cardTitle": { "en": "Gallery UI", "es": "Gallery UI" },
+      "image": "../assets/images/project-img-4.jpg",
+      "cat": {
+        "en": "Figma — Gallery Interface",
+        "es": "Figma — Interfaz de Galería"
+      },
+      "title": { "en": "Gallery", "es": "Gallery" },
+      "desc": {
+        "en": "Figma design focused on a gallery experience: image grids, visual rhythm, detail states and a clean interface for showcasing work or products.",
+        "es": "Diseño en Figma orientado a una experiencia de galería: grillas de imágenes, ritmo visual, estados de detalle e interfaz limpia para mostrar trabajos o productos."
+      },
+      "url": "https://www.figma.com/design/laWYO5SwwNVPyDpulNCT09/Gallery?node-id=0-1",
+      "type": { "en": "UI / Web Design", "es": "UI / Diseño Web" },
+      "stack": "Figma",
+      "year": "2026",
+      "delivery": { "en": "Design file", "es": "Archivo de diseño" },
+      "banner": "../assets/images/project-img-4.jpg",
+      "thumbs": [
+        "../assets/images/project-img-1.jpg",
+        "../assets/images/project-img-2.jpg",
+        "../assets/images/project-img-3.jpg",
+        "../assets/images/project-img-5.jpg"
+      ],
+      "tags": ["Figma", "Web Design", "UI", "Gallery", "Layout"]
+    },
+    {
       "id": "bell-vita",
       "category": "web-design",
       "subtitle": { "en": "Web", "es": "Web" },
@@ -109,7 +238,14 @@
         "../assets/images/project-img-4.jpg",
         "../assets/images/project-img-6.jpg"
       ],
-      "tags": ["Client Project", "Corporate", "Architecture", "Luxury", "Responsive", "Product Showcase"]
+      "tags": [
+        "Client Project",
+        "Corporate",
+        "Architecture",
+        "Luxury",
+        "Responsive",
+        "Product Showcase"
+      ]
     },
     {
       "id": "fstail-blog",
@@ -170,7 +306,14 @@
         "../assets/images/project-img-5.jpg",
         "../assets/images/project-img-6.jpg"
       ],
-      "tags": ["Industrial", "Engineering", "Corporate", "Responsive", "SEO", "JavaScript"]
+      "tags": [
+        "Industrial",
+        "Engineering",
+        "Corporate",
+        "Responsive",
+        "SEO",
+        "JavaScript"
+      ]
     },
     {
       "id": "ortopedia",
@@ -199,7 +342,14 @@
         "../assets/images/project-img-4.jpg",
         "../assets/images/project-img-5.jpg"
       ],
-      "tags": ["Healthcare", "Medical", "Responsive", "Accessibility", "SEO", "UI/UX"]
+      "tags": [
+        "Healthcare",
+        "Medical",
+        "Responsive",
+        "Accessibility",
+        "SEO",
+        "UI/UX"
+      ]
     },
     {
       "id": "metric-international",
@@ -228,13 +378,23 @@
         "../assets/images/project-img-3.jpg",
         "../assets/images/project-img-6.jpg"
       ],
-      "tags": ["EPC", "EPCM", "Industrial", "Engineering", "Corporate", "Responsive"]
+      "tags": [
+        "EPC",
+        "EPCM",
+        "Industrial",
+        "Engineering",
+        "Corporate",
+        "Responsive"
+      ]
     },
     {
       "id": "industrial-web",
       "category": "web-design",
       "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Industrial Consultant", "es": "Consultor Industrial" },
+      "cardTitle": {
+        "en": "Industrial Consultant",
+        "es": "Consultor Industrial"
+      },
       "image": "../assets/images/project-img-6.jpg",
       "cat": {
         "en": "Web — Industrial / Corporate",
@@ -260,7 +420,14 @@
         "../assets/images/project-img-4.jpg",
         "../assets/images/project-img-5.jpg"
       ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Responsive", "Corporate", "Industrial"]
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive",
+        "Corporate",
+        "Industrial"
+      ]
     },
     {
       "id": "standard-plan",
@@ -440,13 +607,19 @@
       "id": "moto",
       "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Classic Moto Website", "es": "Sitio Motos Clásicas" },
+      "cardTitle": {
+        "en": "Classic Moto Website",
+        "es": "Sitio Motos Clásicas"
+      },
       "image": "../assets/images/project-img-3.jpg",
       "cat": {
         "en": "Web — Automotive",
         "es": "Web — Automotor"
       },
-      "title": { "en": "Classic Moto Website", "es": "Sitio de Motos Clásicas" },
+      "title": {
+        "en": "Classic Moto Website",
+        "es": "Sitio de Motos Clásicas"
+      },
       "desc": {
         "en": "Landing page for a classic motorcycle brand with immersive visuals, parallax sections and a custom gallery experience.",
         "es": "Landing page para una marca de motos clásicas con visuales inmersivos, secciones parallax y galería personalizada."
@@ -562,7 +735,10 @@
         "en": "Web — Fitness",
         "es": "Web — Fitness"
       },
-      "title": { "en": "Modern Gym Website", "es": "Sitio de Gimnasio Moderno" },
+      "title": {
+        "en": "Modern Gym Website",
+        "es": "Sitio de Gimnasio Moderno"
+      },
       "desc": {
         "en": "High-energy landing page for a gym brand featuring classes, trainers, membership plans and strong calls to action.",
         "es": "Landing page de alta energía para una marca de gimnasio, con clases, entrenadores, planes de membresía y CTAs potentes."
