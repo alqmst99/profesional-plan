@@ -9,57 +9,64 @@
   },
   "popup": {
     "enabled": true,
-    "homeOnly": true,
+    "homeOnly": false,
     "delayMs": 5000,
-    "cooldownDays": 7
+    "cooldownDays": 1
   },
+  "discountOptions": [80, 70, 50, 40, 20, 15, 10],
   "services": {
     "landing": {
       "en": "Landing page",
       "es": "Landing page",
+      "discount": { "active": true, "percent": 70 },
       "plans": [
-        { "id": "landing-basic", "name": "Basic", "price": 90, "discountPercent": 15, "active": true },
-        { "id": "landing-standard", "name": "Standard", "price": 160, "discountPercent": 15, "active": true },
-        { "id": "landing-professional", "name": "Professional", "price": 260, "discountPercent": 15, "active": true }
+        { "id": "landing-basic", "name": "Basic", "price": 90 },
+        { "id": "landing-standard", "name": "Standard", "price": 160 },
+        { "id": "landing-professional", "name": "Professional", "price": 260 }
       ]
     },
     "maintenance": {
       "en": "Website maintenance",
       "es": "Mantenimiento web",
+      "discount": { "active": true, "percent": 70 },
       "plans": [
-        { "id": "maintenance-basic", "name": "Basic", "price": 15, "discountPercent": 15, "active": true, "period": "month" },
-        { "id": "maintenance-standard", "name": "Standard", "price": 35, "discountPercent": 15, "active": true, "period": "month" },
-        { "id": "maintenance-complete", "name": "Complete", "price": 65, "discountPercent": 15, "active": true, "period": "month" }
+        { "id": "maintenance-basic", "name": "Basic", "price": 15, "period": "month" },
+        { "id": "maintenance-standard", "name": "Standard", "price": 35, "period": "month" },
+        { "id": "maintenance-complete", "name": "Complete", "price": 65, "period": "month" }
       ]
     },
     "full-website": {
       "en": "Full website",
       "es": "Sitio web completo",
+      "discount": { "active": true, "percent": 70 },
       "plans": [
-        { "id": "full-basic", "name": "Basic", "price": 220, "discountPercent": 15, "active": true },
-        { "id": "full-standard", "name": "Standard", "price": 400, "discountPercent": 15, "active": true },
-        { "id": "full-professional", "name": "Professional", "price": 700, "discountPercent": 15, "active": true }
+        { "id": "full-basic", "name": "Basic", "price": 220 },
+        { "id": "full-standard", "name": "Standard", "price": 400 },
+        { "id": "full-professional", "name": "Professional", "price": 700 }
       ]
     },
     "catalog-store": {
       "en": "Product catalog / light online store",
       "es": "Catálogo de productos / tienda online",
+      "discount": { "active": true, "percent": 70 },
       "plans": [
-        { "id": "catalog-store-entry", "name": "Catalog launch", "price": 350, "discountPercent": 15, "active": true }
+        { "id": "catalog-store-entry", "name": "Catalog launch", "price": 350 }
       ]
     },
     "dashboard-crm": {
       "en": "Dashboard, CRM or admin panel",
       "es": "Dashboard, CRM o panel administrativo",
+      "discount": { "active": true, "percent": 70 },
       "plans": [
-        { "id": "dashboard-crm-entry", "name": "Custom dashboard", "price": 550, "discountPercent": 15, "active": true }
+        { "id": "dashboard-crm-entry", "name": "Custom dashboard", "price": 550 }
       ]
     },
     "desktop-app": {
       "en": "Desktop app (Electron)",
       "es": "Aplicación de escritorio (Electron)",
+      "discount": { "active": true, "percent": 70 },
       "plans": [
-        { "id": "desktop-app-entry", "name": "Desktop app", "price": 850, "discountPercent": 15, "active": true }
+        { "id": "desktop-app-entry", "name": "Desktop app", "price": 850 }
       ]
     }
   }

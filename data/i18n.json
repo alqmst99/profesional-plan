@@ -50,8 +50,8 @@
       "es": "FSTail Solutions — Desarrollo Web y Soluciones Digitales en Santa Fe"
     },
     "metaDesc": {
-      "en": "Technology startup from Santa Fe, Argentina. We build landing pages, full websites, maintenance and custom software. Clean code, precise design, results that last.",
-      "es": "Startup tecnológica de Santa Fe, Argentina. Creamos landing pages, sitios web completos, mantenimiento y software a medida. Código limpio, diseño preciso y resultados que perduran."
+      "en": "Product catalogs and online stores for entrepreneurs, plus landing pages, websites and custom software from Santa Fe, Argentina.",
+      "es": "Catálogos de productos y tiendas online para emprendedores, además de landing pages, sitios web y software a medida desde Santa Fe, Argentina."
     },
     "heroEyebrow": { "en": "Santa Fe, Argentina", "es": "Santa Fe, Argentina" },
     "heroHeadline": {
@@ -79,6 +79,16 @@
     "servicesTitle": {
       "en": "Services built<br>to <em>grow</em><br>your business.",
       "es": "Servicios pensados<br>para <em>hacer crecer</em><br>tu negocio."
+    },
+    "catalogName": { "en": "Online Catalog & Store", "es": "Catálogo y tienda online" },
+    "featuredService": { "en": "Star service for entrepreneurs", "es": "Servicio estrella para emprendedores" },
+    "catalogAlt": {
+      "en": "Online store service for entrepreneurs",
+      "es": "Servicio de tienda online para emprendedores"
+    },
+    "catalogDesc": {
+      "en": "Launch a product catalog with category filters, cart and WhatsApp orders. A practical first store for an emerging business.",
+      "es": "Lanzá un catálogo con filtros por categoría, carrito y pedidos por WhatsApp. Una tienda práctica para empezar a vender online."
     },
     "landingName": { "en": "Landing Page", "es": "Landing Page" },
     "landingDesc": {
@@ -177,21 +187,25 @@
   },
   "service": {
     "title": {
-      "en": "Services & Pricing — Landing Pages, Websites & Maintenance | FSTail",
-      "es": "Servicios y Precios — Landing Pages, Sitios Web y Mantenimiento | FSTail"
+      "en": "Online Stores & Product Catalogs for Entrepreneurs | FSTail Solutions",
+      "es": "Tiendas online y catálogos para emprendedores | FSTail Solutions"
     },
     "metaDesc": {
-      "en": "Landing pages, complete websites and monthly maintenance by FSTail Solutions in Santa Fe, Argentina. Explore service scope and introductory pricing.",
-      "es": "Landing pages, sitios web completos y mantenimiento mensual de FSTail Solutions en Santa Fe, Argentina. Conocé el alcance y los precios iniciales."
+      "en": "Online product catalogs and stores for entrepreneurs, with category filters, cart and WhatsApp orders. Also landing pages, full websites and maintenance in Argentina.",
+      "es": "Catálogos de productos y tiendas online para emprendedores, con filtros, carrito y pedidos por WhatsApp. También landing pages, sitios web y mantenimiento."
     },
     "label": { "en": "Our services", "es": "Nuestros servicios" },
     "heroTitle": {
-      "en": "Services shaped around<br>your <em>next step.</em>",
-      "es": "Servicios pensados para<br>tu <em>próximo paso.</em>"
+      "en": "Online stores for<br>your <em>next step.</em>",
+      "es": "Tiendas online para<br>tu <em>emprendimiento.</em>"
     },
     "heroIntro": {
-      "en": "Websites and ongoing support, scoped to what your business needs.",
-      "es": "Sitios web y soporte continuo, definidos según lo que tu negocio necesita."
+      "en": "Online catalogs for entrepreneurs, websites and ongoing support, scoped to what your business needs.",
+      "es": "Catálogos online para emprendedores, sitios web y soporte continuo según lo que tu negocio necesita."
+    },
+    "catalogAlt": {
+      "en": "Pet shop online catalog service example",
+      "es": "Ejemplo del servicio de catálogo online para mascotas"
     },
     "bannerAlt": {
       "en": "Dual-monitor web design workspace",
@@ -200,7 +214,27 @@
     "photoCredit": { "en": "Photo by Tranmautritam / Pexels", "es": "Foto de Tranmautritam / Pexels" },
     "startingAt": { "en": "Starting at", "es": "Desde" },
     "askQuote": { "en": "Ask for a quote", "es": "Pedir presupuesto" },
-    "landingLabel": { "en": "01 — Landing Page", "es": "01 — Landing Page" },
+    "catalogLabel": { "en": "01 — Online catalog & store", "es": "01 — Catálogo y tienda online" },
+    "catalogTitle": {
+      "en": "Your first online store,<br><em>ready to take orders.</em>",
+      "es": "Tu primera tienda online,<br><em>lista para recibir pedidos.</em>"
+    },
+    "catalogDesc": {
+      "en": "A focused, easy-to-manage online catalog for entrepreneurs and small businesses. Products can be maintained from JSON, organized by category, added to a cart and sent to WhatsApp to complete the order.",
+      "es": "Un catálogo online claro y fácil de mantener para emprendedores y pequeños negocios. Los productos se administran desde JSON, se organizan por categoría, se agregan al carrito y el pedido se envía por WhatsApp."
+    },
+    "catalogFeature1": { "en": "Product catalog organized by categories", "es": "Catálogo de productos organizado por categorías" },
+    "catalogFeature2": { "en": "Product data managed from a simple JSON file", "es": "Productos administrados desde un archivo JSON sencillo" },
+    "catalogFeature3": { "en": "Search/filtering and a cart for assembling orders", "es": "Búsqueda y filtros, más un carrito para armar pedidos" },
+    "catalogFeature4": { "en": "WhatsApp checkout to confirm the order directly", "es": "Cierre del pedido por WhatsApp, directo con el negocio" },
+    "catalogFeature5": { "en": "Mobile-friendly design and technical SEO foundations", "es": "Diseño adaptable a móviles y bases de SEO técnico" },
+    "catalogPaymentNote": {
+      "en": "Online card payments are not included by default; payment gateway integration is scoped separately.",
+      "es": "No incluye cobro con tarjeta online por defecto; la integración de una pasarela se cotiza aparte."
+    },
+    "catalogExample": { "en": "See the Pet Shop catalog", "es": "Ver demo de catálogo para mascotas" },
+    "catalogQuote": { "en": "Plan my online store", "es": "Quiero crear mi tienda" },
+    "landingLabel": { "en": "02 — Landing Page", "es": "02 — Landing Page" },
     "landingTitle": {
       "en": "Your digital presence,<br><em>without the hassle.</em>",
       "es": "Tu presencia digital,<br><em>sin complicaciones.</em>"
@@ -209,7 +243,7 @@
       "en": "Our Landing Pages are fast, effective and designed to convert visitors into customers. Ideal for campaigns, services or simple but impactful presentations. Delivery in 3–5 business days.",
       "es": "Nuestras Landing Pages son rápidas, efectivas y diseñadas para convertir visitantes en clientes. Ideales para campañas, servicios o presentaciones simples pero impactantes. Entrega en 3–5 días hábiles."
     },
-    "mantLabel": { "en": "02 — Maintenance", "es": "02 — Mantenimiento" },
+    "mantLabel": { "en": "03 — Maintenance", "es": "03 — Mantenimiento" },
     "mantTitle": {
       "en": "Your site always<br><em>at its best.</em>",
       "es": "Tu sitio siempre<br><em>en su mejor versión.</em>"
@@ -218,7 +252,7 @@
       "en": "We keep your site fast, secure and up to date each month. Updates, performance monitoring, backups and direct support so you never have downtime.",
       "es": "Mantenemos tu sitio rápido, seguro y actualizado cada mes. Actualizaciones, monitoreo de rendimiento, backups y soporte directo para que nunca tengas caídas."
     },
-    "fullLabel": { "en": "03 — Full Website", "es": "03 — Sitio Completo" },
+    "fullLabel": { "en": "04 — Full Website", "es": "04 — Sitio Completo" },
     "fullTitle": {
       "en": "A complete site<br><em>built to scale.</em>",
       "es": "Un sitio completo<br><em>pensado para escalar.</em>"

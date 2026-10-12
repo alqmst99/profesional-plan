@@ -116,7 +116,7 @@
       form.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 
-    fetch(`${path}data/offers.json`)
+    fetch(`${path}data/offers.json?v=${Date.now()}`)
       .then(response => {
         if (!response.ok) throw new Error(`Service list load failed: ${response.status}`);
         return response.json();

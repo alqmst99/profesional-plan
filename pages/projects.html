@@ -256,7 +256,7 @@
   <script src="../js/i18n.js"></script>
   <script>
   (function () {
-    const DATA_URL = '../data/projects.json';
+    const DATA_URL = `../data/projects.json?v=${Date.now()}`;
     let data = null;
     let lang = (window.FSTailI18n && window.FSTailI18n.getLang()) || localStorage.getItem('fstail_lang') || 'en';
     let activeCategory = 'all';

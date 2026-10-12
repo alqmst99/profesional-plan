@@ -86,6 +86,33 @@
   },
   "projects": [
     {
+      "id": "pet-shop-catalog",
+      "category": "ecommerce",
+      "subtitle": { "en": "Product Catalog", "es": "Catálogo de productos" },
+      "cardTitle": { "en": "Pet Shop Catalog", "es": "Catálogo para tienda de mascotas" },
+      "image": "../assets/images/project-img-3.jpg",
+      "cat": {
+        "en": "Web — Pet Products / E-Commerce",
+        "es": "Web — Productos para mascotas / E-Commerce"
+      },
+      "title": { "en": "Pet Shop Product Catalog", "es": "Catálogo de productos para mascotas" },
+      "desc": {
+        "en": "Product catalog managed from JSON, with category filters, a shopping cart and WhatsApp order handoff for a neighborhood pet shop.",
+        "es": "Catálogo administrado desde JSON, con filtros por categoría, carrito y envío del pedido por WhatsApp para una tienda de mascotas."
+      },
+      "url": "https://alqmst99.github.io/Pet_Shop/pages/catalogo.html",
+      "type": { "en": "E-Commerce Catalog", "es": "Catálogo E-Commerce" },
+      "stack": "HTML5, CSS3, JavaScript, JSON, WhatsApp",
+      "year": "2026",
+      "delivery": { "en": "Custom build", "es": "Desarrollo a medida" },
+      "banner": "../assets/images/project-img-3.jpg",
+      "thumbs": [        "../assets/images/project-img-5.jpg",
+        "../assets/images/project-img-3.jpg",
+        "../assets/images/project-img-4.jpg",
+        "../assets/images/project-img-6.jpg"],
+      "tags": ["E-Commerce", "Product Catalog", "JSON", "Cart", "WhatsApp", "Responsive"]
+    },
+    {
       "id": "barberia-97",
       "category": "wordpress",
       "subtitle": { "en": "WordPress", "es": "WordPress" },

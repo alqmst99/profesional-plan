@@ -1,5 +1,5 @@
 # FSTail Solutions
-> Technology development startup from Santa Fe, Argentina. Web development, software, cybersecurity and automation.
+> FSTail Solutions is a technology development studio from Santa Fe, Argentina, building online product catalogs and stores for entrepreneurs, websites, maintenance and custom software.
 
 ## About
 FSTail Solutions builds modern web platforms, landing pages, full websites and ongoing maintenance. Clean code, precise design, measurable results. Founded in Santa Fe, Argentina. Team: Nahuel Pierini (Full Stack) and Anaclara Ferrando (Backend).
@@ -7,12 +7,14 @@ FSTail Solutions builds modern web platforms, landing pages, full websites and o
 ## Main pages
 - [Home](https://alqmst99.github.io/profesional-plan/): Services overview, projects and contact CTA
 - [About](https://alqmst99.github.io/profesional-plan/pages/about.html): Team and company story
-- [Services](https://alqmst99.github.io/profesional-plan/pages/service.html): Landing pages, maintenance plans, full websites with pricing
+- [Services](https://alqmst99.github.io/profesional-plan/pages/service.html): Online catalogs and stores for entrepreneurs, landing pages, full websites and maintenance
 - [Projects](https://alqmst99.github.io/profesional-plan/pages/projects.html): Portfolio of client work
 - [Contact](https://alqmst99.github.io/profesional-plan/pages/contact.html): Start a project
 - [Blog](https://blog-fst-ecru.vercel.app/): Technical articles on performance, CSS, SEO and more
 
 ## Services
+- Online product catalogs and stores for entrepreneurs: category filters, products managed from JSON, cart and WhatsApp order handoff. Card payment gateways are scoped separately. Starting prices and active promotions are shown on the Services page.
+- [Pet shop catalog demo](https://alqmst99.github.io/Pet_Shop/pages/catalogo.html): example of product catalog, filters, cart and WhatsApp order flow
 - Landing Page plans (Basic / Standard / Professional)
 - Website Maintenance (monthly plans)
 - Full Website development

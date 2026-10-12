@@ -2,27 +2,29 @@
   const path = window.location.pathname.includes('/pages/') ? '../' : './';
   const translations = {
     en: {
-      eyebrow: 'Limited-time pricing',
-      title: 'Catalogs, websites and custom software.',
-      description: 'Introductory offers on product stores, dashboards, CRMs and desktop apps.',
+      eyebrow: 'Two projects. One clear next step.',
+      title: 'Your next shop could look like this.',
+      description: 'Explore a pet shop catalog, then choose the right starting point for your own online store or digital product.',
       offer: 'OFF',
       from: 'From',
       month: '/mo',
-      seeOffers: 'Explore offers',
-      close: 'Close offer',
+      seeOffers: 'Quote my catalog',
+      close: 'Close promotion',
+      dismiss: 'Keep exploring',
       plans: 'View plans',
       includes: 'Introductory price',
       dialogLabel: 'Current FSTail Solutions offers'
     },
     es: {
-      eyebrow: 'Precios promocionales',
-      title: 'Catálogos, sitios y software a medida.',
-      description: 'Precios promocionales para tiendas, dashboards, CRM y aplicaciones de escritorio.',
+      eyebrow: 'Dos proyectos. Un próximo paso.',
+      title: 'Tu tienda online puede verse así.',
+      description: 'Mirá un catálogo para una tienda de mascotas y elegí el punto de partida para tu tienda o producto digital.',
       offer: 'OFF',
       from: 'Desde',
       month: '/mes',
-      seeOffers: 'Ver ofertas',
-      close: 'Cerrar oferta',
+      seeOffers: 'Cotizar mi catálogo',
+      close: 'Cerrar promoción',
+      dismiss: 'Seguir explorando',
       plans: 'Ver planes',
       includes: 'Precio inicial',
       dialogLabel: 'Ofertas vigentes de FSTail Solutions'
@@ -50,15 +52,28 @@
 
   function activePlan(plan) {
     const now = Date.now();
-    return plan.active === true &&
+    return plan.discountActive === true &&
       (!plan.startsAt || now >= Date.parse(plan.startsAt)) &&
       (!plan.endsAt || now <= Date.parse(plan.endsAt)) &&
       Number(plan.discountPercent) > 0 && Number(plan.discountPercent) < 100;
   }
 
+  function servicePlans(serviceKey, service, config) {
+    const discountPercent = Number(service.discount?.percent) || 0;
+    const allowed = config.discountOptions || [80, 70, 50, 40, 20, 15, 10];
+    const discountActive = service.discount?.active === true && allowed.includes(discountPercent);
+    return service.plans.map(plan => ({
+      ...plan,
+      serviceKey,
+      service,
+      discountActive,
+      discountPercent: discountActive ? discountPercent : 0
+    }));
+  }
+
   function allPlans(config) {
     return Object.entries(config.services).flatMap(([key, service]) =>
-      service.plans.map(plan => ({ ...plan, serviceKey: key, service }))
+      servicePlans(key, service, config)
     );
   }
 
@@ -145,7 +160,7 @@
     document.querySelectorAll('[data-price-from]').forEach(element => {
       const service = config.services[element.dataset.priceFrom];
       if (!service) return;
-      const plan = service.plans[0];
+      const plan = servicePlans(element.dataset.priceFrom, service, config)[0];
       const currency = selectedCurrency(config);
       const discounted = activePlan(plan);
       const amount = discounted ? currentPrice(plan, config, currency) : basePrice(plan, config, currency);
@@ -209,8 +224,9 @@
         return;
       }
       const locale = language();
-      Object.entries(config.services).forEach(([key, service]) => {
-        container.append(offerCard(key, service, service.plans, locale, config));
+        Object.entries(config.services).forEach(([key, service]) => {
+          const plans = servicePlans(key, service, config);
+          if (plans.some(activePlan)) container.append(offerCard(key, service, plans, locale, config));
       });
       container.closest('[data-offers-section]')?.removeAttribute('hidden');
     });
@@ -221,7 +237,8 @@
     const popup = config.popup || {};
     const pathname = window.location.pathname;
     const isHomepage = pathname.endsWith('/') || pathname.endsWith('/index.html');
-    if (popup.homeOnly === true && !isHomepage) return;
+    const forceShow = new URLSearchParams(window.location.search).get('promo') === 'show';
+    if (popup.homeOnly === true && !isHomepage && !forceShow) return;
     if (!offers.length || popup.enabled !== true) return;
 
     const dialog = document.createElement('dialog');
@@ -248,19 +265,66 @@
     title.id = 'offer-dialog-title';
     const description = document.createElement('p');
     description.className = 'offer-dialog-description';
+    const content = document.createElement('div');
+    content.className = 'offer-dialog-content';
     const list = document.createElement('ul');
     list.className = 'offer-dialog-list';
     const actions = document.createElement('div');
     actions.className = 'offer-dialog-actions';
     const cta = document.createElement('a');
     cta.className = 'btn-primary';
-    cta.href = `${path}pages/service.html#ofertas`;
+    cta.href = `${path}pages/contact.html?service=catalog-store#consulta`;
     const dismiss = document.createElement('button');
     dismiss.type = 'button';
     dismiss.className = 'offer-dialog-dismiss';
     dismiss.addEventListener('click', closeDialog);
     actions.append(cta, dismiss);
-    dialog.append(close, eyebrow, title, description, list, actions);
+
+    const showcase = document.createElement('aside');
+    showcase.className = 'offer-dialog-showcase';
+    const gallery = document.createElement('div');
+    gallery.className = 'offer-dialog-gallery';
+    const examples = [
+      {
+        name: 'Pet shop · product catalog',
+        esName: 'Pet shop · catálogo de productos',
+        image: 'https://images.pexels.com/photos/38587869/pexels-photo-38587869.jpeg?auto=compress&cs=tinysrgb&w=960',
+        alt: 'A dog and a cat outside a neighborhood shop',
+        esAlt: 'Un perro y un gato frente a una tienda de barrio',
+        href: 'https://alqmst99.github.io/Pet_Shop/pages/catalogo.html',
+        photo: 'https://www.pexels.com/photo/friendly-dog-and-curious-cat-with-storefront-background-38587869/'
+      }
+    ];
+    examples.forEach(example => {
+      const figure = document.createElement('figure');
+      figure.className = 'offer-example';
+      const image = document.createElement('img');
+      image.src = example.image;
+      image.alt = language() === 'es' ? example.esAlt : example.alt;
+      image.loading = 'eager';
+      const caption = document.createElement('figcaption');
+      const projectLink = document.createElement('a');
+      projectLink.className = 'offer-example-link';
+      projectLink.href = example.href;
+      projectLink.target = '_blank';
+      projectLink.rel = 'noopener noreferrer';
+      projectLink.textContent = language() === 'es' ? example.esName : example.name;
+      const photoCredit = document.createElement('a');
+      photoCredit.className = 'offer-example-credit';
+      photoCredit.href = example.photo;
+      photoCredit.target = '_blank';
+      photoCredit.rel = 'noopener noreferrer';
+      photoCredit.textContent = 'Photo: Pexels';
+      caption.append(projectLink, photoCredit);
+      figure.append(image, caption);
+      gallery.append(figure);
+    });
+    showcase.append(gallery);
+    content.append(eyebrow, title, description, list, actions);
+    const layout = document.createElement('div');
+    layout.className = 'offer-dialog-layout';
+    layout.append(showcase, content);
+    dialog.append(close, layout);
     document.body.append(dialog);
     const onEscape = event => {
       if (event.key !== 'Escape' || !dialog.open) return;
@@ -286,13 +350,19 @@
       title.textContent = copy.title;
       description.textContent = copy.description;
       cta.textContent = copy.seeOffers;
-      dismiss.textContent = copy.close;
+      dismiss.textContent = copy.dismiss;
+      examples.forEach((example, index) => {
+        const link = gallery.children[index]?.querySelector('.offer-example-link');
+        const image = gallery.children[index]?.querySelector('img');
+        if (link) link.textContent = language() === 'es' ? example.esName : example.name;
+        if (image) image.alt = language() === 'es' ? example.esAlt : example.alt;
+      });
       list.replaceChildren();
       const preferredOrder = ['catalog-store', 'dashboard-crm', 'desktop-app', 'landing', 'full-website', 'maintenance'];
       Object.entries(config.services)
         .sort(([first], [second]) => preferredOrder.indexOf(first) - preferredOrder.indexOf(second))
-        .forEach(([, service]) => {
-        const plan = service.plans.find(activePlan);
+        .forEach(([key, service]) => {
+        const plan = servicePlans(key, service, config).find(activePlan);
         if (!plan) return;
         const item = document.createElement('li');
         const name = document.createElement('span');
@@ -313,21 +383,23 @@
     });
     document.addEventListener('fstail:langchange', updateCopy);
 
-    const storageKey = 'fstail_offer_popup_last_shown';
+    const storageKey = 'fstail_offer_popup_last_shown_v3';
     let lastShown = 0;
     try {
       lastShown = Number(localStorage.getItem(storageKey)) || 0;
     } catch (_) {}
     const cooldown = Math.max(0, Number(popup.cooldownDays) || 0) * 86400000;
-    if (Date.now() - lastShown < cooldown) return;
+    if (!forceShow && Date.now() - lastShown < cooldown) return;
 
     const showAfterLoader = () => {
       window.setTimeout(() => {
         if (!dialog.isConnected || dialog.open) return;
         originalBodyOverflow = document.body.style.overflow;
-        try {
-          localStorage.setItem(storageKey, String(Date.now()));
-        } catch (_) {}
+        if (!forceShow) {
+          try {
+            localStorage.setItem(storageKey, String(Date.now()));
+          } catch (_) {}
+        }
         dialog.showModal();
         document.body.style.overflow = 'hidden';
         close.focus();
@@ -349,11 +421,9 @@
 
   function addStructuredData(config) {
     const currency = selectedCurrency(config);
-    const startingPlans = Object.entries(config.services).map(([serviceKey, service]) => ({
-      ...service.plans[0],
-      serviceKey,
-      service
-    }));
+    const startingPlans = Object.entries(config.services).map(([serviceKey, service]) =>
+      servicePlans(serviceKey, service, config)[0]
+    );
     const offers = startingPlans.map(plan => {
       const discounted = activePlan(plan);
       const offer = {
@@ -382,7 +452,7 @@
     document.head.append(structuredData);
   }
 
-  fetch(`${path}data/offers.json`)
+  fetch(`${path}data/offers.json?v=${Date.now()}`)
     .then(response => {
       if (!response.ok) throw new Error(`Offer configuration load failed: ${response.status}`);
       return response.json();

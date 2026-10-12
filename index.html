@@ -8,8 +8,8 @@
   <!-- Primary SEO -->
   <title>FSTail Solutions — Web Development & Digital Solutions in Santa Fe</title>
   <!-- i18n title via data-i18n-title on <html> -->
-  <meta name="description" data-i18n-content="index.metaDesc" content="Technology startup from Santa Fe, Argentina. We build landing pages, full websites, maintenance and custom software. Clean code, precise design, results that last." />
-  <meta name="keywords" content="web development, landing page, website maintenance, Santa Fe, Argentina, FSTail, software, cybersecurity, full stack" />
+  <meta name="description" data-i18n-content="index.metaDesc" content="Product catalogs and online stores for entrepreneurs, plus landing pages, websites and custom software from Santa Fe, Argentina." />
+  <meta name="keywords" content="online store development, product catalog website, e-commerce for entrepreneurs, WhatsApp orders, web development, Santa Fe, Argentina, FSTail Solutions" />
   <meta name="author" content="FSTail Solutions" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="alternate" type="application/rss+xml" title="FSTail Blog RSS" href="https://blog-fst-ecru.vercel.app/rss.xml" />
@@ -23,7 +23,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alqmst99.github.io/profesional-plan/" />
   <meta property="og:title" content="FSTail Solutions — Web Development in Santa Fe" />
-  <meta property="og:description" content="Landing pages, full websites and maintenance. Clean code, precise design, results that last." />
+  <meta property="og:description" content="Online product catalogs and stores for entrepreneurs, with category filters, cart and WhatsApp orders." />
   <meta property="og:image" content="https://alqmst99.github.io/profesional-plan/assets/images/logo-official.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -249,8 +249,17 @@
           <a href="pages/service.html" class="btn-ghost"><span data-i18n="common.seeAll">See all</span> <span class="arrow">→</span></a>
         </div>
         <div class="services-grid">
-          <div class="service-card reveal reveal-delay-1">
+          <div class="service-card service-card--featured reveal reveal-delay-1">
             <div class="service-number">01</div>
+            <img loading="lazy" src="https://images.pexels.com/photos/38587869/pexels-photo-38587869.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=960" alt="Online store service for entrepreneurs" data-i18n-alt="index.catalogAlt" class="service-img">
+            <p class="service-featured-label" data-i18n="index.featuredService">Star service for entrepreneurs</p>
+            <h3 class="service-name" data-i18n="index.catalogName">Online Catalog &amp; Store</h3>
+            <p class="service-starting-price" data-price-from="catalog-store">Desde US$ 350</p>
+            <p class="service-desc" data-i18n="index.catalogDesc">Launch a product catalog with category filters, cart and WhatsApp orders. A practical first store for an emerging business.</p>
+            <a class="btn-ghost btn-s" href="pages/service.html#catalogo-tienda"><span data-i18n="common.serviceDetails">View service</span> <span class="arrow">→</span></a>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-number">02</div>
             <img loading="lazy" src="./assets/images/service-landing.png" alt="Landing Page" class="service-img">
             <h3 class="service-name" data-i18n="index.landingName">Landing Page</h3>
             <p class="service-starting-price" data-price-from="landing">Desde $90 USD</p>
@@ -259,7 +268,7 @@
             <a class="btn-ghost btn-s" href="pages/service.html#servicios"><span data-i18n="common.serviceDetails">View service</span> <span class="arrow">→</span></a>
           </div>
           <div class="service-card reveal reveal-delay-2">
-            <div class="service-number">02</div>
+            <div class="service-number">03</div>
             <img loading="lazy" src="./assets/images/service-maintence.jpg" alt="Web Maintenance" class="service-img">
             <h3 class="service-name" data-i18n="index.mantName">Maintenance</h3>
             <p class="service-starting-price" data-price-from="maintenance">Desde $15 USD/mes</p>
@@ -268,7 +277,7 @@
             <a class="btn-ghost btn-s" href="pages/service.html#mantenimiento"><span data-i18n="common.serviceDetails">View service</span> <span class="arrow">→</span></a>
           </div>
           <div class="service-card reveal reveal-delay-3">
-            <div class="service-number">03</div>
+            <div class="service-number">04</div>
             <img loading="lazy" src="./assets/images/service-full.png" alt="Full Website" class="service-img">
             <h3 class="service-name" data-i18n="index.fullName">Full Website</h3>
             <p class="service-starting-price" data-price-from="full-website">Desde $220 USD</p>
@@ -599,7 +608,7 @@
 
   <script src="main.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/offers.js"></script>
+  <script src="js/offers.js?v=4"></script>
   <script src="js/chatbot.js"></script>
 </body>
 
