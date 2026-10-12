@@ -1,7 +1,6 @@
 /**
  * FSTail Solutions — shared i18n
- * Loads data/i18n.json, applies [data-i18n], [data-i18n-html], [data-i18n-placeholder],
- * [data-i18n-content], [data-i18n-aria], and manages EN/ES toggle + localStorage.
+ * Loads data/i18n.json, applies translated content and attributes, and manages EN/ES toggle + localStorage.
  */
 (function () {
   const STORAGE_KEY = 'fstail_lang';
@@ -54,6 +53,11 @@
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const text = t(el.getAttribute('data-i18n-placeholder'));
       if (text) el.setAttribute('placeholder', text);
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const text = t(el.getAttribute('data-i18n-alt'));
+      if (text) el.setAttribute('alt', text);
     });
 
     document.querySelectorAll('[data-i18n-content]').forEach(el => {

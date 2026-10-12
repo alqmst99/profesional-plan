@@ -27,6 +27,13 @@
       const name    = document.getElementById('name').value.trim();
       const email   = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
+      const serviceSelect = document.getElementById('projectService');
+      const serviceName = serviceSelect?.selectedOptions[0]?.textContent.trim();
+      const lang = window.FSTailI18n?.getLang() || document.documentElement.lang;
+      const serviceLabel = lang === 'es' ? 'Servicio elegido' : 'Selected service';
+      const emailMessage = serviceName && !message.toLocaleLowerCase().includes(serviceName.toLocaleLowerCase())
+        ? `${serviceLabel}: ${serviceName}\n\n${message}`
+        : message;
 
       msgDiv.textContent = '';
       msgDiv.style.color = '';
@@ -49,7 +56,7 @@
       emailjs.send('service_iygdv6h', 'template_p3kpndh', {
         from_name:  name,
         from_email: email,
-        message:    message,
+        message:    emailMessage,
       })
       .then(() => {
         msgDiv.textContent = '¡Consulta enviada con éxito! Te respondemos en menos de 24 hs.';

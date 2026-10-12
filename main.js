@@ -85,52 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => observer.observe(el));
   }
 
-  /* ── SERVICE MODALS ── */
-  const serviceModal = document.getElementById('servicios-modal');
-  const modals = {
-    plan: document.getElementById('modal-plan'),
-    mant: document.getElementById('modal-mant'),
-    full: document.getElementById('modal-full'),
-  };
-
-  const openModal = (type) => {
-    if (!serviceModal || !modals[type]) return;
-    // hide all sub-modals first
-    Object.values(modals).forEach(m => { if (m) m.style.display = 'none'; });
-    modals[type].style.display = 'block';
-    serviceModal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    if (!serviceModal) return;
-    serviceModal.classList.remove('open');
-    Object.values(modals).forEach(m => { if (m) m.style.display = 'none'; });
-    document.body.style.overflow = '';
-  };
-
-  // Buttons that open modals (.btn-s with data-type)
-  document.querySelectorAll('.btn-s[data-type]').forEach(btn => {
-    btn.addEventListener('click', () => openModal(btn.getAttribute('data-type')));
-  });
-
-  // Close buttons inside modal
-  document.querySelectorAll('.modal-close').forEach(btn => {
-    btn.addEventListener('click', closeModal);
-  });
-
-  // Click outside content
-  if (serviceModal) {
-    serviceModal.addEventListener('click', (e) => {
-      if (!e.target.closest('.section-modal-content')) closeModal();
-    });
-  }
-
-  // ESC key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
-
   /* ── PROJECTS "VER MÁS" (projects.html) ── */
   const cardsP   = document.querySelectorAll('#proyectos_card .proyectos_card');
   const verMaBtn = document.getElementById('ver-mas');

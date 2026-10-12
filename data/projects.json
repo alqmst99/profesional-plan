@@ -213,7 +213,7 @@
     },
     {
       "id": "bell-vita",
-      "category": "web-design",
+      "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Bell-Vita", "es": "Bell-Vita" },
       "image": "../assets/images/project-img-1.jpg",
@@ -278,7 +278,7 @@
     },
     {
       "id": "industrial-site",
-      "category": "web-design",
+      "category": "react",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Axium Industrial", "es": "Axium Industrial" },
       "image": "../assets/images/project-img-3.jpg",
@@ -317,7 +317,7 @@
     },
     {
       "id": "ortopedia",
-      "category": "web-design",
+      "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "ORTOPECTUS", "es": "ORTOPECTUS" },
       "image": "../assets/images/project-img-4.jpg",
@@ -353,7 +353,7 @@
     },
     {
       "id": "metric-international",
-      "category": "web-design",
+      "category": "react",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Metric", "es": "Metric" },
       "image": "../assets/images/project-img-3.jpg",
@@ -389,7 +389,7 @@
     },
     {
       "id": "industrial-web",
-      "category": "web-design",
+      "category": "react",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": {
         "en": "Industrial Consultant",
@@ -576,7 +576,7 @@
     },
     {
       "id": "lawyer",
-      "category": "web-design",
+      "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Lawyer Website", "es": "Sitio Abogados" },
       "image": "../assets/images/project-img-2.jpg",
@@ -640,7 +640,7 @@
     },
     {
       "id": "realestate",
-      "category": "web-design",
+      "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Modern Real Estate", "es": "Inmobiliaria Moderna" },
       "image": "../assets/images/project-img-1.jpg",
@@ -698,7 +698,7 @@
     },
     {
       "id": "bookstore",
-      "category": "ecommerce",
+      "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Modern Book Store", "es": "Librería Moderna" },
       "image": "../assets/images/project-img-4.jpg",
@@ -759,7 +759,7 @@
     },
     {
       "id": "medical",
-      "category": "web-design",
+      "category": "statics",
       "subtitle": { "en": "Web", "es": "Web" },
       "cardTitle": { "en": "Medical Care", "es": "Medical Care" },
       "image": "../assets/images/project-img-6.jpg",

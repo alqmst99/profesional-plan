@@ -34,44 +34,44 @@
     <section class="secondary-page-section">
       <p class="section-label" style="margin-bottom:1rem;" data-i18n="contact.label">Start your project</p>
       <h1 class="secondary-page-h1" data-i18n-html="contact.headline">Let's build something<br><em style="font-style:italic;color:var(--clr-accent);">extraordinary together.</em></h1>
-      <p data-i18n="contact.intro">Fill out the form and we'll get back to you in less than 24 hours. Or reach us directly via WhatsApp or email.</p>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--clr-border);border:1px solid var(--clr-border);margin-top:2.5rem;">
-        <div style="background:var(--clr-surface);padding:2rem;">
-          <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:0.5rem;">WhatsApp</p>
-          <a href="https://wa.me/5493425428918" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-serif);font-size:1.2rem;color:var(--clr-text);">+54 9 3425428918</a>
-        </div>
-        <div style="background:var(--clr-surface);padding:2rem;">
-          <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:0.5rem;">Email</p>
-          <a href="mailto:fstailsolution@gmail.com" style="font-family:var(--font-serif);font-size:1.1rem;color:var(--clr-text);">fstailsolution@gmail.com</a>
-        </div>
+      <p data-i18n="contact.intro">Tell us what you want to improve or launch. You do not need a finished brief; we can help define scope, timing and budget.</p>
+      <div class="contact-path-actions">
+        <a class="btn-primary" href="#consulta" data-i18n="contact.formCta">Start with the form</a>
+        <a class="btn-outline" href="https://wa.me/5493425428918" data-contact-whatsapp target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsappCta">Start on WhatsApp</a>
       </div>
+      <p class="contact-email-note"><span data-i18n="contact.emailNote">Prefer email?</span> <a href="mailto:fstailsolution@gmail.com">fstailsolution@gmail.com</a></p>
     </section>
 
     <section class="secondary-page-section">
-      <h2 class="secondary-page-h2" data-i18n-html="contact.extraTitle">What does our <em style="font-style:italic;color:var(--clr-accent);">Extra Landing</em> include?</h2>
-      <p data-i18n="contact.extraIntro">Ideal for ad campaigns, product launches or special events.</p>
+      <h2 class="secondary-page-h2" data-i18n="contact.guidanceTitle">A useful first message</h2>
+      <p data-i18n="contact.guidanceIntro">A few details help us suggest the right next step. Share whatever you already know:</p>
       <ul class="secondary-page-list">
-        <li data-i18n="contact.extra1">1 main conversion-focused section</li>
-        <li data-i18n="contact.extra2">Custom contact form</li>
-        <li data-i18n="contact.extra3">WhatsApp and social media integration</li>
-        <li data-i18n="contact.extra4">Responsive design (mobile-first)</li>
-        <li data-i18n="contact.extra5">Local SEO and basic analytics</li>
-        <li data-i18n="contact.extra6">Delivery in 3 business days</li>
+        <li data-i18n="contact.guidance1">What you want to launch, improve or make easier</li>
+        <li data-i18n="contact.guidance2">Who will use it and what they need to do</li>
+        <li data-i18n="contact.guidance3">Key features, examples you like or content you already have</li>
+        <li data-i18n="contact.guidance4">Your preferred timeframe and approximate budget, if known</li>
       </ul>
-      <img src="../assets/images/service-landing.png" alt="Extra Landing Page" class="secondary-page-img">
+      <p data-i18n="contact.guidanceClose">Not sure yet? Choose the closest service and we will help you shape the brief together.</p>
     </section>
 
-    <section class="secondary-page-section">
-      <h2 class="secondary-page-h2" data-i18n="contact.formTitle">Write to us directly</h2>
+    <section class="secondary-page-section" id="consulta">
+      <h2 class="secondary-page-h2" data-i18n="contact.formTitle">Tell us about your project</h2>
+      <p data-i18n="contact.formIntro">Choose a service to add a helpful prompt. Edit it freely before sending.</p>
       <form id="landingForm" class="secondary-page-form" novalidate>
         <input type="text" name="name" id="name" placeholder="Your name" data-i18n-placeholder="contact.phName" required autocomplete="name">
         <input type="email" name="email" id="email" placeholder="Your email" data-i18n-placeholder="contact.phEmail" required autocomplete="email">
+        <label class="contact-field-label" for="projectService" data-i18n="contact.serviceLabel">What would you like to build?</label>
+        <select name="project_service" id="projectService" required>
+          <option value="" selected disabled data-i18n="contact.selectService">Choose a service</option>
+        </select>
         <textarea name="message" id="message" placeholder="What kind of project do you need? Tell us the details." data-i18n-placeholder="contact.phMessage" required rows="5"></textarea>
-        <button type="submit" class="btn-primary" id="sendBtn">
-          <span data-i18n="contact.send">Send inquiry</span>
-          <span id="loader-spin" style="display:none;">...</span>
-        </button>
+        <div class="contact-form-actions">
+          <button type="submit" class="btn-primary" id="sendBtn">
+            <span data-i18n="contact.send">Send inquiry</span>
+            <span id="loader-spin" style="display:none;">...</span>
+          </button>
+          <a class="btn-outline" href="https://wa.me/5493425428918" data-contact-whatsapp target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsappCta">Start on WhatsApp</a>
+        </div>
         <div id="formMsg" role="status" aria-live="polite"></div>
       </form>
     </section>
@@ -86,5 +86,6 @@
   <script src="../emailjs.js" defer></script>
   <script src="../main.js" defer></script>
   <script src="../js/i18n.js" defer></script>
+  <script src="../js/contact.js" defer></script>
 </body>
 </html>

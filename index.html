@@ -253,33 +253,33 @@
             <div class="service-number">01</div>
             <img loading="lazy" src="./assets/images/service-landing.png" alt="Landing Page" class="service-img">
             <h3 class="service-name" data-i18n="index.landingName">Landing Page</h3>
+            <p class="service-starting-price" data-price-from="landing">Desde $90 USD</p>
             <p class="service-desc" data-i18n="index.landingDesc">Fast and effective digital presence. Modern design optimized to convert visitors
               into clients. Ideal for campaigns and presentations.</p>
-            <button class="btn-ghost btn-s" data-type="plan" aria-label="See landing plans"><span data-i18n="common.seePlans">See plans</span> <span
-                class="arrow">→</span></button>
+            <a class="btn-ghost btn-s" href="pages/service.html#servicios"><span data-i18n="common.serviceDetails">View service</span> <span class="arrow">→</span></a>
           </div>
           <div class="service-card reveal reveal-delay-2">
             <div class="service-number">02</div>
             <img loading="lazy" src="./assets/images/service-maintence.jpg" alt="Web Maintenance" class="service-img">
             <h3 class="service-name" data-i18n="index.mantName">Maintenance</h3>
+            <p class="service-starting-price" data-price-from="maintenance">Desde $15 USD/mes</p>
             <p class="service-desc" data-i18n="index.mantDesc">Updates, backups, security and speed. Your site always in top condition, without you
               having to worry about it.</p>
-            <button class="btn-ghost btn-s" data-type="mant" aria-label="See maintenance plans"><span data-i18n="common.seePlans">See plans</span> <span
-                class="arrow">→</span></button>
+            <a class="btn-ghost btn-s" href="pages/service.html#mantenimiento"><span data-i18n="common.serviceDetails">View service</span> <span class="arrow">→</span></a>
           </div>
           <div class="service-card reveal reveal-delay-3">
             <div class="service-number">03</div>
             <img loading="lazy" src="./assets/images/service-full.png" alt="Full Website" class="service-img">
             <h3 class="service-name" data-i18n="index.fullName">Full Website</h3>
+            <p class="service-starting-price" data-price-from="full-website">Desde $220 USD</p>
             <p class="service-desc" data-i18n="index.fullDesc">From e-commerce to institutional sites. Solid structure, attractive design and
               everything you need to scale without limits.</p>
-            <button class="btn-ghost btn-s" data-type="full" aria-label="See full page plans"><span data-i18n="common.seePlans">See plans</span> <span
-                class="arrow">→</span></button>
+            <a class="btn-ghost btn-s" href="pages/service.html#sitio-completo"><span data-i18n="common.serviceDetails">View service</span> <span class="arrow">→</span></a>
           </div>
         </div>
       </div>
 
-      <!-- SERVICE MODAL -->
+      <template id="legacy-service-plan-details">
       <div class="servicios-modal" id="servicios-modal">
         <!-- Modal Landing -->
         <div class="section-modal-plan" id="modal-plan">
@@ -288,7 +288,7 @@
             <div class="section-modal-card">
               <p class="modal-plan-label">Landing Page</p>
               <h3 class="modal-plan-name">Basic</h3>
-              <p class="modal-plan-price">$350 <sub>USD</sub></p>
+              <p class="modal-plan-price" data-price-id="landing-basic">$90 <sub>USD</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 3 sections</li>
                 <li class="tip">Contact form</li>
@@ -306,7 +306,7 @@
               <span class="modal-featured-badge" data-i18n="common.recommended">Recommended</span>
               <p class="modal-plan-label">Landing Page</p>
               <h3 class="modal-plan-name">Standard</h3>
-              <p class="modal-plan-price">$550 <sub>USD</sub></p>
+              <p class="modal-plan-price" data-price-id="landing-standard">$160 <sub>USD</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 5 sections</li>
                 <li class="tip">Contact form</li>
@@ -323,7 +323,7 @@
             <div class="section-modal-card">
               <p class="modal-plan-label">Landing Page</p>
               <h3 class="modal-plan-name">Professional</h3>
-              <p class="modal-plan-price">$850 <sub>USD</sub></p>
+              <p class="modal-plan-price" data-price-id="landing-professional">$260 <sub>USD</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 7 sections</li>
                 <li class="tip">WhatsApp + Social media</li>
@@ -346,7 +346,7 @@
             <div class="section-modal-card">
               <p class="modal-plan-label">Maintenance</p>
               <h3 class="modal-plan-name">Basic</h3>
-              <p class="modal-plan-price">$150 <sub>USD/mo</sub></p>
+              <p class="modal-plan-price" data-price-id="maintenance-basic">$15 <sub>USD/mo</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 2 minor changes/month</li>
                 <li class="tip">Text, image or link fixes</li>
@@ -361,7 +361,7 @@
               <span class="modal-featured-badge" data-i18n="common.recommended">Recommended</span>
               <p class="modal-plan-label">Maintenance</p>
               <h3 class="modal-plan-name">Standard</h3>
-              <p class="modal-plan-price">$280 <sub>USD/mo</sub></p>
+              <p class="modal-plan-price" data-price-id="maintenance-standard">$35 <sub>USD/mo</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 5 changes/month</li>
                 <li class="tip">New basic sections</li>
@@ -376,7 +376,7 @@
             <div class="section-modal-card">
               <p class="modal-plan-label">Maintenance</p>
               <h3 class="modal-plan-name">Complete</h3>
-              <p class="modal-plan-price">$550 <sub>USD/mo</sub></p>
+              <p class="modal-plan-price" data-price-id="maintenance-complete">$65 <sub>USD/mo</sub></p>
               <ul class="tips">
                 <li class="tip">Unlimited minor changes</li>
                 <li class="tip">JS code refactoring</li>
@@ -397,7 +397,7 @@
             <div class="section-modal-card">
               <p class="modal-plan-label">Full Website</p>
               <h3 class="modal-plan-name">Basic</h3>
-              <p class="modal-plan-price">$700 <sub>USD</sub></p>
+              <p class="modal-plan-price" data-price-id="full-basic">$220 <sub>USD</sub></p>
               <ul class="tips">
                 <li class="tip">3 sections (Home, Services, Contact)</li>
                 <li class="tip">Responsive design</li>
@@ -415,7 +415,7 @@
               <span class="modal-featured-badge" data-i18n="common.recommended">Recommended</span>
               <p class="modal-plan-label">Full Website</p>
               <h3 class="modal-plan-name">Standard</h3>
-              <p class="modal-plan-price">$1,200 <sub>USD</sub></p>
+              <p class="modal-plan-price" data-price-id="full-standard">$400 <sub>USD</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 5 sections</li>
                 <li class="tip">JS animations &amp; transitions</li>
@@ -431,7 +431,7 @@
             <div class="section-modal-card">
               <p class="modal-plan-label">Full Website</p>
               <h3 class="modal-plan-name">Professional</h3>
-              <p class="modal-plan-price">$2,200 <sub>USD</sub></p>
+              <p class="modal-plan-price" data-price-id="full-professional">$700 <sub>USD</sub></p>
               <ul class="tips">
                 <li class="tip">Up to 8 sections + dynamic features</li>
                 <li class="tip">Custom modals, sliders, tabs</li>
@@ -446,6 +446,17 @@
             </div>
           </div>
         </div>
+      </div>
+      </template>
+    </section>
+
+    <section class="offers-section" id="ofertas" data-offers-section hidden>
+      <div class="offers-inner">
+        <div class="offers-heading">
+          <p class="section-label" data-i18n="offers.label">Limited-time offers</p>
+          <h2 class="section-title" data-i18n-html="offers.title">A little more room<br>to <em>get started.</em></h2>
+        </div>
+        <div class="offers-grid" data-offers-list aria-live="polite"></div>
       </div>
     </section>
 
@@ -588,6 +599,7 @@
 
   <script src="main.js"></script>
   <script src="js/i18n.js"></script>
+  <script src="js/offers.js"></script>
   <script src="js/chatbot.js"></script>
 </body>
 

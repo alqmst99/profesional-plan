@@ -6,6 +6,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /js/auth-config.js
 Disallow: /templates/
+Allow: /data/offers.json
 Disallow: /*.json$
 
 # Allow AI crawlers

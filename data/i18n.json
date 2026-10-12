@@ -29,12 +29,20 @@
     "hours": { "en": "Mon–Fri 09:00–18:00", "es": "Lun–Vie 09:00–18:00" },
     "backHome": { "en": "Back to home", "es": "Volver al inicio" },
     "seeAll": { "en": "See all", "es": "Ver todos" },
+    "serviceDetails": { "en": "View service", "es": "Ver servicio" },
     "hire": { "en": "Hire", "es": "Contratar" },
     "recommended": { "en": "Recommended", "es": "Recomendado" },
     "popular": { "en": "Popular", "es": "Popular" },
     "seePlans": { "en": "See plans", "es": "Ver planes" },
     "scroll": { "en": "Scroll", "es": "Scroll" },
     "seeDemo": { "en": "See demo →", "es": "Ver demo →" }
+  },
+  "offers": {
+    "label": { "en": "Limited-time offers", "es": "Ofertas por tiempo limitado" },
+    "title": {
+      "en": "A little more room<br>to <em>get started.</em>",
+      "es": "Un impulso para<br><em>empezar.</em>"
+    }
   },
   "index": {
     "title": {
@@ -173,14 +181,25 @@
       "es": "Servicios y Precios — Landing Pages, Sitios Web y Mantenimiento | FSTail"
     },
     "metaDesc": {
-      "en": "Landing pages from $120, full websites from $300, monthly maintenance plans. Clear pricing, fast delivery, clean code.",
-      "es": "Landing pages desde $120, sitios completos desde $300, planes de mantenimiento mensual. Precios claros, entrega rápida, código limpio."
+      "en": "Landing pages, complete websites and monthly maintenance by FSTail Solutions in Santa Fe, Argentina. Explore service scope and introductory pricing.",
+      "es": "Landing pages, sitios web completos y mantenimiento mensual de FSTail Solutions en Santa Fe, Argentina. Conocé el alcance y los precios iniciales."
     },
     "label": { "en": "Our services", "es": "Nuestros servicios" },
     "heroTitle": {
-      "en": "Plans designed for every<br>stage of your <em>digital business.</em>",
-      "es": "Planes pensados para cada<br>etapa de tu <em>negocio digital.</em>"
+      "en": "Services shaped around<br>your <em>next step.</em>",
+      "es": "Servicios pensados para<br>tu <em>próximo paso.</em>"
     },
+    "heroIntro": {
+      "en": "Websites and ongoing support, scoped to what your business needs.",
+      "es": "Sitios web y soporte continuo, definidos según lo que tu negocio necesita."
+    },
+    "bannerAlt": {
+      "en": "Dual-monitor web design workspace",
+      "es": "Espacio de trabajo de diseño web con dos monitores"
+    },
+    "photoCredit": { "en": "Photo by Tranmautritam / Pexels", "es": "Foto de Tranmautritam / Pexels" },
+    "startingAt": { "en": "Starting at", "es": "Desde" },
+    "askQuote": { "en": "Ask for a quote", "es": "Pedir presupuesto" },
     "landingLabel": { "en": "01 — Landing Page", "es": "01 — Landing Page" },
     "landingTitle": {
       "en": "Your digital presence,<br><em>without the hassle.</em>",
@@ -208,6 +227,66 @@
       "en": "From institutional sites to e-commerce. Solid structure, attractive design and everything you need to grow without limits.",
       "es": "Desde sitios institucionales hasta e-commerce. Estructura sólida, diseño atractivo y todo lo que necesitás para crecer sin límites."
     },
+    "landingFeature1": {
+      "en": "Responsive, custom visual design",
+      "es": "Diseño visual a medida y adaptable a móviles"
+    },
+    "landingFeature2": {
+      "en": "Content sections and clear calls to action",
+      "es": "Secciones de contenido y llamados a la acción claros"
+    },
+    "landingFeature3": {
+      "en": "Contact forms and social or WhatsApp links",
+      "es": "Formularios de contacto y enlaces a redes o WhatsApp"
+    },
+    "landingFeature4": {
+      "en": "Technical SEO foundations and deployment",
+      "es": "SEO técnico inicial y publicación del sitio"
+    },
+    "landingFeature5": {
+      "en": "Revisions and final scope agreed for your project",
+      "es": "Revisiones y alcance final acordados para tu proyecto"
+    },
+    "maintenanceFeature1": {
+      "en": "Security, dependency and platform updates",
+      "es": "Actualizaciones de seguridad, dependencias y plataforma"
+    },
+    "maintenanceFeature2": {
+      "en": "Backups, uptime and performance checks",
+      "es": "Copias de seguridad y controles de disponibilidad y rendimiento"
+    },
+    "maintenanceFeature3": {
+      "en": "Small content fixes and visual adjustments",
+      "es": "Cambios pequeños de contenido y ajustes visuales"
+    },
+    "maintenanceFeature4": {
+      "en": "SEO and site health reviews",
+      "es": "Revisiones de SEO y estado general del sitio"
+    },
+    "maintenanceFeature5": {
+      "en": "Support cadence matched to the agreed scope",
+      "es": "Frecuencia de soporte según el alcance acordado"
+    },
+    "fullFeature1": {
+      "en": "Responsive pages structured around your content",
+      "es": "Páginas adaptables y organizadas según tu contenido"
+    },
+    "fullFeature2": {
+      "en": "Forms, maps and WhatsApp or social integrations",
+      "es": "Formularios, mapas e integraciones con WhatsApp o redes"
+    },
+    "fullFeature3": {
+      "en": "Custom interactions and reusable components",
+      "es": "Interacciones a medida y componentes reutilizables"
+    },
+    "fullFeature4": {
+      "en": "Technical SEO, analytics and deployment",
+      "es": "SEO técnico, analítica y publicación del sitio"
+    },
+    "fullFeature5": {
+      "en": "Final page count and functionality scoped to your project",
+      "es": "Cantidad de páginas y funcionalidades según el alcance acordado"
+    },
     "basic": { "en": "Basic", "es": "Básico" },
     "standard": { "en": "Standard", "es": "Estándar" },
     "professional": { "en": "Professional", "es": "Profesional" },
@@ -231,29 +310,49 @@
       "es": "Construyamos algo<br><em style=\"font-style:italic;color:var(--clr-accent);\">extraordinario juntos.</em>"
     },
     "intro": {
-      "en": "Fill out the form and we'll get back to you in less than 24 hours. Or reach us directly via WhatsApp or email.",
-      "es": "Completá el formulario y te respondemos en menos de 24 horas. O escribinos directo por WhatsApp o email."
+      "en": "Tell us what you want to improve or launch. You do not need a finished brief; we can help define scope, timing and budget.",
+      "es": "Contanos qué querés lanzar o mejorar. No hace falta tener todo definido; te ayudamos a orientar el alcance, los tiempos y el presupuesto."
     },
-    "extraTitle": {
-      "en": "What does our <em style=\"font-style:italic;color:var(--clr-accent);\">Extra Landing</em> include?",
-      "es": "¿Qué incluye nuestra <em style=\"font-style:italic;color:var(--clr-accent);\">Extra Landing</em>?"
+    "formCta": { "en": "Start with the form", "es": "Empezar por el formulario" },
+    "whatsappCta": { "en": "Start on WhatsApp", "es": "Consultar por WhatsApp" },
+    "emailNote": { "en": "Prefer email?", "es": "¿Preferís email?" },
+    "guidanceTitle": { "en": "A useful first message", "es": "Una primera consulta útil" },
+    "guidanceIntro": {
+      "en": "A few details help us suggest the right next step. Share whatever you already know:",
+      "es": "Con algunos datos podemos orientarte mejor. Contanos lo que ya tengas definido:"
     },
-    "extraIntro": {
-      "en": "Ideal for ad campaigns, product launches or special events.",
-      "es": "Ideal para campañas publicitarias, lanzamientos de producto o eventos especiales."
+    "guidance1": {
+      "en": "What you want to launch, improve or make easier",
+      "es": "Qué querés lanzar, mejorar o hacer más simple"
     },
-    "extra1": { "en": "1 main conversion-focused section", "es": "1 sección principal orientada a conversión" },
-    "extra2": { "en": "Custom contact form", "es": "Formulario de contacto personalizado" },
-    "extra3": { "en": "WhatsApp and social media integration", "es": "Integración WhatsApp y redes sociales" },
-    "extra4": { "en": "Responsive design (mobile-first)", "es": "Diseño responsive (mobile-first)" },
-    "extra5": { "en": "Local SEO and basic analytics", "es": "SEO local y analytics básico" },
-    "extra6": { "en": "Delivery in 3 business days", "es": "Entrega en 3 días hábiles" },
-    "formTitle": { "en": "Write to us directly", "es": "Escribinos directamente" },
+    "guidance2": {
+      "en": "Who will use it and what they need to do",
+      "es": "Quiénes lo van a usar y qué necesitan resolver"
+    },
+    "guidance3": {
+      "en": "Key features, examples you like or content you already have",
+      "es": "Funciones importantes, ejemplos que te gustan o contenido que ya tenés"
+    },
+    "guidance4": {
+      "en": "Your preferred timeframe and approximate budget, if known",
+      "es": "El plazo que manejás y un presupuesto aproximado, si lo sabés"
+    },
+    "guidanceClose": {
+      "en": "Not sure yet? Choose the closest service and we will help you shape the brief together.",
+      "es": "¿Todavía no lo tenés claro? Elegí el servicio más cercano y armamos la idea juntos."
+    },
+    "formTitle": { "en": "Tell us about your project", "es": "Contanos sobre tu proyecto" },
+    "formIntro": {
+      "en": "Choose a service to add a helpful prompt. Edit it freely before sending.",
+      "es": "Elegí un servicio para cargar una guía inicial. Podés editarla antes de enviar."
+    },
+    "serviceLabel": { "en": "What would you like to build?", "es": "¿Qué te gustaría crear?" },
+    "selectService": { "en": "Choose a service", "es": "Elegí un servicio" },
     "phName": { "en": "Your name", "es": "Tu nombre" },
     "phEmail": { "en": "Your email", "es": "Tu email" },
     "phMessage": {
-      "en": "What kind of project do you need? Tell us the details.",
-      "es": "¿Qué tipo de proyecto necesitás? Contanos los detalles."
+      "en": "Tell us the goal, key features, audience, references and ideal timeframe. Start wherever you like.",
+      "es": "Contanos el objetivo, las funciones clave, el público, referencias y el plazo que tenés en mente. Empezá por donde quieras."
     },
     "send": { "en": "Send inquiry", "es": "Enviar consulta" },
     "backHome": { "en": "Back to home", "es": "Volver al inicio" }
