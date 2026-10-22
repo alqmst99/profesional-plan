@@ -747,11 +747,11 @@ header.scrolled {
   content: attr(data-discount);
   display: inline-block;
   margin-left: 0.55rem;
-  padding: 0.15rem 0.4rem;
+  padding: 0.15rem 0.2rem;
   color: var(--clr-bg);
   background: var(--clr-accent);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .offers-section {
