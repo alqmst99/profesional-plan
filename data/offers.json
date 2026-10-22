@@ -28,7 +28,7 @@
     "maintenance": {
       "en": "Website maintenance",
       "es": "Mantenimiento web",
-      "discount": { "active": true, "percent": 70 },
+      "discount": { "active": true, "percent": 40 },
       "plans": [
         { "id": "maintenance-basic", "name": "Basic", "price": 15, "period": "month" },
         { "id": "maintenance-standard", "name": "Standard", "price": 35, "period": "month" },
@@ -38,7 +38,7 @@
     "full-website": {
       "en": "Full website",
       "es": "Sitio web completo",
-      "discount": { "active": true, "percent": 70 },
+      "discount": { "active": true, "percent": 80 },
       "plans": [
         { "id": "full-basic", "name": "Basic", "price": 220 },
         { "id": "full-standard", "name": "Standard", "price": 400 },
@@ -56,7 +56,7 @@
     "dashboard-crm": {
       "en": "Dashboard, CRM or admin panel",
       "es": "Dashboard, CRM o panel administrativo",
-      "discount": { "active": true, "percent": 70 },
+      "discount": { "active": true, "percent": 80 },
       "plans": [
         { "id": "dashboard-crm-entry", "name": "Custom dashboard", "price": 550 }
       ]
@@ -64,7 +64,7 @@
     "desktop-app": {
       "en": "Desktop app (Electron)",
       "es": "Aplicación de escritorio (Electron)",
-      "discount": { "active": true, "percent": 70 },
+      "discount": { "active": true, "percent": 80 },
       "plans": [
         { "id": "desktop-app-entry", "name": "Desktop app", "price": 850 }
       ]

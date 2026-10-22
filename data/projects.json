@@ -2,34 +2,38 @@
   "categories": [
     {
       "id": "all",
-      "label": { "en": "All", "es": "Todos" }
-    },
-    {
-      "id": "web-design",
-      "label": { "en": "Web Design", "es": "Diseño Web" }
-    },
-    {
-      "id": "statics",
-      "label": { "en": "Static Sites", "es": "Sitios Estáticos" }
-    },
-    {
-      "id": "react",
-      "label": { "en": "React", "es": "React" }
-    },
-    {
-      "id": "backend",
-      "label": { "en": "Backend / API", "es": "Backend / API" }
-    },
-    {
-      "id": "wordpress",
       "label": {
-        "en": "WordPress / WooCommerce / Shopify",
-        "es": "WordPress / WooCommerce / Shopify"
+        "en": "All Projects",
+        "es": "Todos los Proyectos"
       }
     },
     {
-      "id": "ecommerce",
-      "label": { "en": "E-Commerce", "es": "E-Commerce" }
+      "id": "client",
+      "label": {
+        "en": "Client Projects",
+        "es": "Proyectos de Cliente"
+      }
+    },
+    {
+      "id": "web-app",
+      "label": {
+        "en": "Web Applications",
+        "es": "Aplicaciones Web"
+      }
+    },
+    {
+      "id": "desktop",
+      "label": {
+        "en": "Desktop Applications",
+        "es": "Aplicaciones de Escritorio"
+      }
+    },
+    {
+      "id": "demos",
+      "label": {
+        "en": "Demos & Concepts",
+        "es": "Demos y Conceptos"
+      }
     }
   ],
   "ui": {
@@ -42,39 +46,99 @@
       "es": "Proyectos web seleccionados de FSTail: Bell Vita, Axium, portafolios, e-commerce, landing pages y más."
     },
     "nav": {
-      "home": { "en": "Home", "es": "Inicio" },
-      "about": { "en": "About", "es": "Nosotros" },
-      "services": { "en": "Services", "es": "Servicios" },
-      "projects": { "en": "Projects", "es": "Proyectos" },
-      "blog": { "en": "Blog", "es": "Blog" },
-      "contact": { "en": "Contact", "es": "Contacto" }
+      "home": {
+        "en": "Home",
+        "es": "Inicio"
+      },
+      "about": {
+        "en": "About",
+        "es": "Nosotros"
+      },
+      "services": {
+        "en": "Services",
+        "es": "Servicios"
+      },
+      "projects": {
+        "en": "Projects",
+        "es": "Proyectos"
+      },
+      "blog": {
+        "en": "Blog",
+        "es": "Blog"
+      },
+      "contact": {
+        "en": "Contact",
+        "es": "Contacto"
+      }
     },
-    "heroLabel": { "en": "Portfolio", "es": "Portafolio" },
+    "heroLabel": {
+      "en": "Portfolio",
+      "es": "Portafolio"
+    },
     "heroTitle": {
       "en": "Projects that demonstrate<br>our <em>level of craft.</em>",
       "es": "Proyectos que demuestran<br>nuestro <em>nivel de oficio.</em>"
     },
-    "viewDetail": { "en": "View detail →", "es": "Ver detalle →" },
-    "seeMore": { "en": "See more projects", "es": "Ver más proyectos" },
+    "viewDetail": {
+      "en": "View detail →",
+      "es": "Ver detalle →"
+    },
+    "seeMore": {
+      "en": "See more projects",
+      "es": "Ver más proyectos"
+    },
     "ctaTitle": {
       "en": "Want a project like this<br>for your <em>business?</em>",
       "es": "¿Querés un proyecto así<br>para tu <em>negocio?</em>"
     },
-    "ctaBtn": { "en": "Start now", "es": "Empezar ahora" },
-    "viewLive": { "en": "View live demo →", "es": "Ver demo en vivo →" },
-    "type": { "en": "Type", "es": "Tipo" },
-    "stack": { "en": "Stack", "es": "Stack" },
-    "year": { "en": "Year", "es": "Año" },
-    "delivery": { "en": "Delivery", "es": "Entrega" },
+    "ctaBtn": {
+      "en": "Start now",
+      "es": "Empezar ahora"
+    },
+    "viewLive": {
+      "en": "View live demo →",
+      "es": "Ver demo en vivo →"
+    },
+    "type": {
+      "en": "Type",
+      "es": "Tipo"
+    },
+    "stack": {
+      "en": "Stack",
+      "es": "Stack"
+    },
+    "year": {
+      "en": "Year",
+      "es": "Año"
+    },
+    "delivery": {
+      "en": "Delivery",
+      "es": "Entrega"
+    },
     "emptyCategory": {
       "en": "No projects in this category yet. Coming soon.",
       "es": "Aún no hay proyectos en esta categoría. Próximamente."
     },
-    "footerNav": { "en": "Navigation", "es": "Navegación" },
-    "footerLegal": { "en": "Legal", "es": "Legal" },
-    "footerContact": { "en": "Contact", "es": "Contacto" },
-    "privacy": { "en": "Privacy Policy", "es": "Política de Privacidad" },
-    "terms": { "en": "Terms & Conditions", "es": "Términos y Condiciones" },
+    "footerNav": {
+      "en": "Navigation",
+      "es": "Navegación"
+    },
+    "footerLegal": {
+      "en": "Legal",
+      "es": "Legal"
+    },
+    "footerContact": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "privacy": {
+      "en": "Privacy Policy",
+      "es": "Política de Privacidad"
+    },
+    "terms": {
+      "en": "Terms & Conditions",
+      "es": "Términos y Condiciones"
+    },
     "footerDesc": {
       "en": "We build efficient, tailor-made digital solutions to boost your business growth.",
       "es": "Construimos soluciones digitales eficientes y a medida para impulsar el crecimiento de tu negocio."
@@ -82,62 +146,591 @@
     "footerCopy": {
       "en": "© 2025 FSTail Solutions — All rights reserved.",
       "es": "© 2025 FSTail Solutions — Todos los derechos reservados."
+    },
+    "backToProjects": {
+      "en": "← Back to projects",
+      "es": "← Volver a proyectos"
+    },
+    "workDone": {
+      "en": "Work performed",
+      "es": "Trabajo realizado"
+    },
+    "techStack": {
+      "en": "Technologies",
+      "es": "Tecnologías"
+    },
+    "screenshots": {
+      "en": "Screenshots",
+      "es": "Capturas"
+    },
+    "keyFeatures": {
+      "en": "Key features",
+      "es": "Funcionalidades clave"
+    },
+    "projectType": {
+      "en": "Project type",
+      "es": "Tipo de proyecto"
     }
   },
   "projects": [
     {
+      "id": "bell-vita",
+      "category": "client",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Bell-Vita",
+        "es": "Bell-Vita"
+      },
+      "image": "../assets/images/projects/bell-vita/01-hero.jpg",
+      "cat": {
+        "en": "Web — Real Client Project",
+        "es": "Web — Proyecto de Cliente Real"
+      },
+      "title": {
+        "en": "Bell Vita",
+        "es": "Bell Vita"
+      },
+      "desc": {
+        "en": "Custom corporate website developed for a real client in the architecture and design industry. The project presents premium solutions for windows, doors, kitchens and home elevators through an elegant visual experience inspired by luxury brands, with a focus on refined layouts, product presentation and responsive performance.",
+        "es": "Sitio corporativo a medida desarrollado para un cliente real del sector arquitectura y diseño. Presenta soluciones premium de ventanas, puertas, cocinas y ascensores residenciales con una experiencia visual elegante inspirada en marcas de lujo, enfocada en layouts refinados, presentación de productos y rendimiento responsive."
+      },
+      "url": "https://www.bell-vita.com/",
+      "type": {
+        "en": "Client Website",
+        "es": "Sitio de Cliente"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": {
+        "en": "14 days",
+        "es": "14 días"
+      },
+      "banner": "../assets/images/projects/bell-vita/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/bell-vita/01-hero.jpg",
+        "../assets/images/projects/bell-vita/03-mobile.jpg",
+        "../assets/images/projects/bell-vita/02-collection-section.jpg",
+        "../assets/images/projects/bell-vita/02-window-systems.jpg"
+      ],
+      "tags": [
+        "Client Project",
+        "Corporate",
+        "Architecture",
+        "Luxury",
+        "Responsive",
+        "Product Showcase"
+      ],
+      "summary": {
+        "en": "Custom corporate website developed for a real client in the architecture and design industry.",
+        "es": "Sitio corporativo a medida desarrollado para un cliente real del sector arquitectura y diseño."
+      },
+      "work": {
+        "en": [
+          "Full custom front-end development from design system to production",
+          "Responsive layouts for product showcase and collections",
+          "Elegant typography and visual hierarchy inspired by luxury brands",
+          "Performance-oriented image handling and smooth interactions",
+          "SEO-friendly structure and clean semantic HTML"
+        ],
+        "es": [
+          "Desarrollo front-end a medida desde el sistema de diseño hasta producción",
+          "Layouts responsive para showcase de productos y colecciones",
+          "Tipografía elegante y jerarquía visual inspirada en marcas de lujo",
+          "Manejo de imágenes orientado a rendimiento e interacciones fluidas",
+          "Estructura amigable con SEO y HTML semántico limpio"
+        ]
+      },
+      "features": {
+        "en": [
+          "Premium product presentation for windows, doors and finishes",
+          "Collections and system detail pages",
+          "Contact and quote flows",
+          "Fully responsive across devices"
+        ],
+        "es": [
+          "Presentación premium de productos para ventanas, puertas y terminaciones",
+          "Páginas de colecciones y detalle de sistemas",
+          "Flujos de contacto y cotización",
+          "Totalmente responsive en todos los dispositivos"
+        ]
+      },
+      "longDesc": {
+        "en": "The site focuses on product storytelling: window systems, collections and a clear path to request a quote. Layouts prioritize large photography, restrained typography and smooth section transitions so the brand feels closer to luxury architecture than to a generic contractor brochure. The front-end is fully custom (no page builder), with responsive behaviour tuned for desktop showrooms and mobile browsing.",
+        "es": "El sitio se centra en el storytelling de producto: sistemas de ventanas, colecciones y un camino claro para pedir cotización. Los layouts priorizan fotografía grande, tipografía contenida y transiciones suaves para que la marca se sienta más cercana a arquitectura de lujo que a un brochure genérico. El front-end es 100% a medida (sin page builder), con comportamiento responsive pensado para escritorio y mobile."
+      }
+    },
+    {
+      "id": "bookstore",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web App",
+        "es": "Web App"
+      },
+      "cardTitle": {
+        "en": "FSTBooks — Digital Library",
+        "es": "FSTBooks — Biblioteca Digital"
+      },
+      "image": "../assets/images/projects/bookstore/01-hero.jpg",
+      "cat": {
+        "en": "Web — Digital Library & PDF Reader",
+        "es": "Web — Biblioteca digital y lector de PDF"
+      },
+      "title": {
+        "en": "FSTBooks — Digital Library & Reader",
+        "es": "FSTBooks — Biblioteca digital y lector"
+      },
+      "desc": {
+        "en": "Free digital library of public-domain books with an online reader, catalog, search and the ability to open your own PDF in the browser (processed locally, nothing uploaded). Includes AI-assisted summaries and bilingual support.",
+        "es": "Biblioteca digital gratuita de libros de dominio público con lector online, catálogo, búsqueda y la posibilidad de abrir tu propio PDF en el navegador (procesado localmente, sin subir nada). Incluye resúmenes asistidos por IA y soporte bilingüe."
+      },
+      "url": "https://alqmst99.github.io/Books/",
+      "type": {
+        "en": "Web Application",
+        "es": "Aplicación Web"
+      },
+      "stack": "HTML5, CSS3, JavaScript, PDF.js",
+      "year": "2026",
+      "delivery": {
+        "en": "9 days",
+        "es": "9 días"
+      },
+      "banner": "../assets/images/projects/bookstore/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/bookstore/01-hero.jpg",
+        "../assets/images/projects/bookstore/02-section.jpg",
+        "../assets/images/projects/bookstore/02-full.jpg",
+        "../assets/images/projects/bookstore/03-mobile.jpg"
+      ],
+      "tags": [
+        "Digital Library",
+        "PDF Reader",
+        "Catalog",
+        "Search",
+        "AI Summaries",
+        "Responsive"
+      ],
+      "summary": {
+        "en": "Digital library with online book reader, catalog, local PDF viewer and AI summaries.",
+        "es": "Biblioteca digital con lector online, catálogo, visor local de PDF y resúmenes con IA."
+      },
+      "features": {
+        "en": [
+          "Online reader for public-domain books",
+          "Catalog with search and categories",
+          "Open your own PDF locally in the browser (no upload)",
+          "AI-assisted summaries",
+          "Bilingual interface (ES / EN)"
+        ],
+        "es": [
+          "Lector online de libros de dominio público",
+          "Catálogo con búsqueda y categorías",
+          "Abrí tu propio PDF en el navegador (sin subir archivos)",
+          "Resúmenes asistidos por IA",
+          "Interfaz bilingüe (ES / EN)"
+        ]
+      },
+      "longDesc": {
+        "en": "FSTBooks combines a public-domain catalog with an in-browser reading experience. Users can browse titles, open books in the online reader, and also load their own PDF files locally — processing stays in the browser, nothing is uploaded. The product is bilingual and includes AI-assisted summaries as an optional aid while reading.",
+        "es": "FSTBooks combina un catálogo de dominio público con una experiencia de lectura en el navegador. Se pueden recorrer títulos, abrir libros en el lector online y también cargar PDF propios de forma local: el procesamiento queda en el navegador, sin subir archivos. El producto es bilingüe e incluye resúmenes asistidos por IA como ayuda opcional durante la lectura."
+      }
+    },
+    {
+      "id": "fstail-blog",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Personal Blog",
+        "es": "Blog Personal"
+      },
+      "cardTitle": {
+        "en": "FSTail Blog",
+        "es": "FSTail Blog"
+      },
+      "image": "../assets/images/projects/fstail-blog/01-hero.jpg",
+      "cat": {
+        "en": "Web — Personal Blog",
+        "es": "Web — Blog Personal"
+      },
+      "title": {
+        "en": "FSTail Personal Blog",
+        "es": "Blog Personal FSTail"
+      },
+      "desc": {
+        "en": "Personal technical blog created to publish articles, ideas and practical content related to web development, technology, performance, SEO and digital products. The project focuses on readability, content organization, responsive design and a clean editorial experience.",
+        "es": "Blog técnico personal creado para publicar artículos, ideas y contenido práctico sobre desarrollo web, tecnología, rendimiento, SEO y productos digitales. El proyecto se centra en legibilidad, organización de contenido, diseño responsive y una experiencia editorial limpia."
+      },
+      "url": "https://blog-fst-ecru.vercel.app/",
+      "type": {
+        "en": "Personal Blog",
+        "es": "Blog Personal"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": {
+        "en": "7 days",
+        "es": "7 días"
+      },
+      "banner": "../assets/images/projects/fstail-blog/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/fstail-blog/01-hero.jpg",
+        "../assets/images/projects/fstail-blog/02-section.jpg",
+        "../assets/images/projects/fstail-blog/02-full.jpg",
+        "../assets/images/projects/fstail-blog/03-mobile.jpg"
+      ],
+      "tags": [
+        "Blog",
+        "SEO",
+        "Responsive",
+        "Content",
+        "JavaScript",
+        "UI/UX"
+      ],
+      "summary": {
+        "en": "Personal technical blog created to publish articles, ideas and practical content related to web development, technology, performance, SEO and digital products.",
+        "es": "Blog técnico personal creado para publicar artículos, ideas y contenido práctico sobre desarrollo web, tecnología, rendimiento, SEO y productos digitales."
+      },
+      "longDesc": {
+        "en": "Content site for FSTail notes and articles, with SEO-minded structure and a reading-focused UI. Hosted as a lightweight blog deployment.",
+        "es": "Sitio de contenidos para notas y artículos de FSTail, con estructura pensada para SEO y UI orientada a lectura. Blog liviano en deployment propio."
+      }
+    },
+    {
+      "id": "industrial-site",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Axium Industrial",
+        "es": "Axium Industrial"
+      },
+      "image": "../assets/images/projects/industrial-site/01-hero.jpg",
+      "cat": {
+        "en": "Web — Engineering / Industrial",
+        "es": "Web — Ingeniería / Industrial"
+      },
+      "title": {
+        "en": "Industrial Engineering Website",
+        "es": "Sitio de Ingeniería Industrial"
+      },
+      "desc": {
+        "en": "Professional corporate website created for an industrial engineering business. The experience is structured around engineering capabilities, industrial solutions, projects and technical expertise, with a visual language designed to communicate reliability and international reach.",
+        "es": "Sitio corporativo profesional para una empresa de ingeniería industrial. La experiencia se estructura en torno a capacidades de ingeniería, soluciones industriales, proyectos y expertise técnico, con un lenguaje visual pensado para transmitir confiabilidad y alcance internacional."
+      },
+      "url": "https://industrial-site-sooty.vercel.app/pages/index.html",
+      "type": {
+        "en": "Corporate Website",
+        "es": "Sitio Corporativo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": {
+        "en": "12 days",
+        "es": "12 días"
+      },
+      "banner": "../assets/images/projects/industrial-site/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/industrial-site/01-hero.jpg",
+        "../assets/images/projects/industrial-site/02-section.jpg",
+        "../assets/images/projects/industrial-site/02-full.jpg",
+        "../assets/images/projects/industrial-site/03-mobile.jpg"
+      ],
+      "tags": [
+        "Industrial",
+        "Engineering",
+        "Corporate",
+        "Responsive",
+        "SEO",
+        "JavaScript"
+      ],
+      "summary": {
+        "en": "Professional corporate website created for an industrial engineering business.",
+        "es": "Sitio corporativo profesional para una empresa de ingeniería industrial."
+      },
+      "longDesc": {
+        "en": "Corporate presence for an industrial / engineering profile: clear service blocks, project-oriented layout and a structure ready for SEO. Implemented as a modern multi-page web app deployable on Vercel.",
+        "es": "Presencia corporativa para un perfil industrial / de ingeniería: bloques de servicio claros, layout orientado a proyectos y estructura preparada para SEO. Implementado como web app multipágina desplegable en Vercel."
+      }
+    },
+    {
+      "id": "industrial-web",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Industrial Consultant",
+        "es": "Consultor Industrial"
+      },
+      "image": "../assets/images/projects/industrial-web/01-hero.jpg",
+      "cat": {
+        "en": "Web — Industrial / Corporate",
+        "es": "Web — Industrial / Corporativo"
+      },
+      "title": {
+        "en": "Industrial Corporate Website",
+        "es": "Sitio Corporativo Industrial"
+      },
+      "desc": {
+        "en": "Corporate website designed for an industrial business, focused on presenting its capabilities, services and solutions through a professional and structured digital experience. The site combines a strong visual identity with clear navigation, responsive layouts and a product and services-focused presentation.",
+        "es": "Sitio corporativo diseñado para una empresa industrial, enfocado en presentar capacidades, servicios y soluciones con una experiencia digital profesional y estructurada. Combina una identidad visual sólida con navegación clara, layouts responsive y presentación orientada a productos y servicios."
+      },
+      "url": "https://industrial-web.vercel.app/",
+      "type": {
+        "en": "Corporate Website",
+        "es": "Sitio Corporativo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": {
+        "en": "10 days",
+        "es": "10 días"
+      },
+      "banner": "../assets/images/projects/industrial-web/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/industrial-web/01-hero.jpg",
+        "../assets/images/projects/industrial-web/02-section.jpg",
+        "../assets/images/projects/industrial-web/02-full.jpg",
+        "../assets/images/projects/industrial-web/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive",
+        "Corporate",
+        "Industrial"
+      ],
+      "summary": {
+        "en": "Corporate website designed for an industrial business, focused on presenting its capabilities, services and solutions through a professional and structured digital experience.",
+        "es": "Sitio corporativo diseñado para una empresa industrial, enfocado en presentar capacidades, servicios y soluciones con una experiencia digital profesional y estructurada."
+      },
+      "longDesc": {
+        "en": "Industrial consultant web presence with service storytelling and a clean technical aesthetic. Built as a deployable web application focused on clarity of offer.",
+        "es": "Presencia web de consultora industrial con storytelling de servicios y estética técnica limpia. Aplicación web desplegable con foco en claridad de la oferta."
+      }
+    },
+    {
+      "id": "metric-international",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Metric",
+        "es": "Metric"
+      },
+      "image": "../assets/images/projects/metric-international/01-hero.jpg",
+      "cat": {
+        "en": "Web — Industrial / International",
+        "es": "Web — Industrial / Internacional"
+      },
+      "title": {
+        "en": "Metric International",
+        "es": "Metric International"
+      },
+      "desc": {
+        "en": "Large-scale corporate website for an international industrial organization. The platform presents engineering, EPC/EPCM capabilities, industrial services, equipment and projects through a structured architecture designed for international clients and complex industrial markets.",
+        "es": "Sitio corporativo de gran escala para una organización industrial internacional. Presenta capacidades de ingeniería, EPC/EPCM, servicios industriales, equipos y proyectos con una arquitectura estructurada pensada para clientes internacionales y mercados industriales complejos."
+      },
+      "url": "https://metric-international.vercel.app/",
+      "type": {
+        "en": "Corporate Website",
+        "es": "Sitio Corporativo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": {
+        "en": "14 days",
+        "es": "14 días"
+      },
+      "banner": "../assets/images/projects/metric-international/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/metric-international/01-hero.jpg",
+        "../assets/images/projects/metric-international/02-section.jpg",
+        "../assets/images/projects/metric-international/02-full.jpg",
+        "../assets/images/projects/metric-international/03-mobile.jpg"
+      ],
+      "tags": [
+        "EPC",
+        "EPCM",
+        "Industrial",
+        "Engineering",
+        "Corporate",
+        "Responsive"
+      ],
+      "summary": {
+        "en": "Large-scale corporate website for an international industrial organization.",
+        "es": "Sitio corporativo de gran escala para una organización industrial internacional."
+      },
+      "longDesc": {
+        "en": "React-based corporate site for a metrics / international business context, with multi-section navigation and a modern component-driven layout.",
+        "es": "Sitio corporativo en React para un contexto de métricas / negocio internacional, con navegación multi-sección y layout moderno basado en componentes."
+      }
+    },
+    {
+      "id": "ortopedia",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "ORTOPECTUS",
+        "es": "ORTOPECTUS"
+      },
+      "image": "../assets/images/projects/ortopedia/01-hero.jpg",
+      "cat": {
+        "en": "Web — Healthcare",
+        "es": "Web — Salud"
+      },
+      "title": {
+        "en": "ORTOPECTUS",
+        "es": "ORTOPECTUS"
+      },
+      "desc": {
+        "en": "Specialized medical website focused on thoracic surgery and chest wall conditions. The project presents medical information, treatments and specialized procedures through a clean, professional and accessible interface designed to establish trust and make complex healthcare information easier to understand.",
+        "es": "Sitio médico especializado en cirugía torácica y patologías de la pared torácica. Presenta información médica, tratamientos y procedimientos a través de una interfaz limpia, profesional y accesible, pensada para generar confianza y facilitar la comprensión de información de salud compleja."
+      },
+      "url": "https://ortopedia-eight.vercel.app/",
+      "type": {
+        "en": "Medical Website",
+        "es": "Sitio Médico"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2026",
+      "delivery": {
+        "en": "10 days",
+        "es": "10 días"
+      },
+      "banner": "../assets/images/projects/ortopedia/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/ortopedia/01-hero.jpg",
+        "../assets/images/projects/ortopedia/02-section.jpg",
+        "../assets/images/projects/ortopedia/02-full.jpg",
+        "../assets/images/projects/ortopedia/03-mobile.jpg"
+      ],
+      "tags": [
+        "Healthcare",
+        "Medical",
+        "Responsive",
+        "Accessibility",
+        "SEO",
+        "UI/UX"
+      ],
+      "summary": {
+        "en": "Specialized medical website focused on thoracic surgery and chest wall conditions.",
+        "es": "Sitio médico especializado en cirugía torácica y patologías de la pared torácica."
+      },
+      "longDesc": {
+        "en": "Medical-oriented website with accessibility and clarity in mind: services, contact and a calm visual language suitable for healthcare audiences.",
+        "es": "Sitio orientado al ámbito médico con foco en accesibilidad y claridad: servicios, contacto y un lenguaje visual calmado, adecuado para audiencias de salud."
+      }
+    },
+    {
       "id": "pet-shop-catalog",
-      "category": "ecommerce",
-      "subtitle": { "en": "Product Catalog", "es": "Catálogo de productos" },
-      "cardTitle": { "en": "Pet Shop Catalog", "es": "Catálogo para tienda de mascotas" },
-      "image": "../assets/images/project-img-3.jpg",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Product Catalog",
+        "es": "Catálogo de productos"
+      },
+      "cardTitle": {
+        "en": "Pet Shop Catalog",
+        "es": "Catálogo para tienda de mascotas"
+      },
+      "image": "../assets/images/projects/pet-shop-catalog/01-hero.jpg",
       "cat": {
         "en": "Web — Pet Products / E-Commerce",
         "es": "Web — Productos para mascotas / E-Commerce"
       },
-      "title": { "en": "Pet Shop Product Catalog", "es": "Catálogo de productos para mascotas" },
+      "title": {
+        "en": "Pet Shop Product Catalog",
+        "es": "Catálogo de productos para mascotas"
+      },
       "desc": {
-        "en": "Product catalog managed from JSON, with category filters, a shopping cart and WhatsApp order handoff for a neighborhood pet shop.",
-        "es": "Catálogo administrado desde JSON, con filtros por categoría, carrito y envío del pedido por WhatsApp para una tienda de mascotas."
+        "en": "Product catalog managed from JSON for a neighborhood pet shop. Visitors filter by category, add items to a cart and send the order through WhatsApp so the store can confirm stock and delivery without a full checkout backend. Built as a lightweight static front-end that is easy to update from a single data file.",
+        "es": "Catálogo de productos administrado desde JSON para una tienda de mascotas de barrio. El visitante filtra por categoría, agrega ítems al carrito y envía el pedido por WhatsApp para que el local confirme stock y entrega sin un backend de checkout completo. Front-end estático liviano, fácil de actualizar desde un solo archivo de datos."
       },
       "url": "https://alqmst99.github.io/Pet_Shop/pages/catalogo.html",
-      "type": { "en": "E-Commerce Catalog", "es": "Catálogo E-Commerce" },
+      "type": {
+        "en": "E-Commerce Catalog",
+        "es": "Catálogo E-Commerce"
+      },
       "stack": "HTML5, CSS3, JavaScript, JSON, WhatsApp",
       "year": "2026",
-      "delivery": { "en": "Custom build", "es": "Desarrollo a medida" },
-      "banner": "../assets/images/project-img-3.jpg",
-      "thumbs": [        "../assets/images/project-img-5.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-6.jpg"],
-      "tags": ["E-Commerce", "Product Catalog", "JSON", "Cart", "WhatsApp", "Responsive"]
+      "delivery": {
+        "en": "Custom build",
+        "es": "Desarrollo a medida"
+      },
+      "banner": "../assets/images/projects/pet-shop-catalog/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/pet-shop-catalog/01-hero.jpg",
+        "../assets/images/projects/pet-shop-catalog/02-full.jpg",
+        "../assets/images/projects/pet-shop-catalog/03-mobile.jpg"
+      ],
+      "tags": [
+        "E-Commerce",
+        "Product Catalog",
+        "JSON",
+        "Cart",
+        "WhatsApp",
+        "Responsive"
+      ],
+      "summary": {
+        "en": "Product catalog managed from JSON for a neighborhood pet shop.",
+        "es": "Catálogo de productos administrado desde JSON para una tienda de mascotas de barrio."
+      },
+      "longDesc": {
+        "en": "The goal was speed and simplicity for the shop owner: edit products in JSON, republish, and keep orders flowing on WhatsApp — the channel customers already use.",
+        "es": "El objetivo fue velocidad y simpleza para el dueño del local: editar productos en JSON, republicar y mantener los pedidos en WhatsApp, el canal que ya usa la clientela."
+      }
     },
     {
       "id": "barberia-97",
-      "category": "wordpress",
-      "subtitle": { "en": "WordPress", "es": "WordPress" },
-      "cardTitle": { "en": "Barbería 97", "es": "Barbería 97" },
-      "image": "../assets/images/project-img-1.jpg",
+      "category": "demos",
+      "subtitle": {
+        "en": "WordPress",
+        "es": "WordPress"
+      },
+      "cardTitle": {
+        "en": "Barbería 97",
+        "es": "Barbería 97"
+      },
+      "image": "../assets/images/projects/barberia-97/01-hero.jpg",
       "cat": {
         "en": "WordPress — Barbershop Landing",
         "es": "WordPress — Landing de Barbería"
       },
-      "title": { "en": "Barbería 97", "es": "Barbería 97" },
+      "title": {
+        "en": "Barbería 97",
+        "es": "Barbería 97"
+      },
       "desc": {
-        "en": "WordPress one-page for a barbershop with custom Astra child theme, services, gallery lightbox, WhatsApp booking and a rustic olive-and-wood visual system.",
-        "es": "One-page en WordPress para barbería con child theme de Astra a medida, servicios, galería con lightbox, turnos por WhatsApp y sistema visual rústico oliva y madera."
+        "en": "WordPress landing for Barbería 97 focused on services, atmosphere and a direct WhatsApp contact path. Built to load fast on mobile, highlight cuts and schedules, and make booking intent obvious without a heavy booking plugin.",
+        "es": "Landing en WordPress para Barbería 97 enfocada en servicios, atmósfera y un contacto directo por WhatsApp. Pensada para cargar rápido en mobile, destacar cortes y horarios, y dejar clara la intención de reserva sin un plugin pesado de turnos."
       },
       "url": "https://barberia97.free.je/",
-      "type": { "en": "WordPress Landing", "es": "Landing WordPress" },
+      "type": {
+        "en": "WordPress Landing",
+        "es": "Landing WordPress"
+      },
       "stack": "WordPress, Astra, PHP, CSS3, JavaScript",
       "year": "2026",
-      "delivery": { "en": "Portfolio demo", "es": "Demo portfolio" },
-      "banner": "../assets/images/project-img-1.jpg",
+      "delivery": {
+        "en": "Portfolio demo",
+        "es": "Demo portfolio"
+      },
+      "banner": "../assets/images/projects/barberia-97/01-hero.jpg",
       "thumbs": [
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-6.jpg"
+        "../assets/images/projects/barberia-97/01-hero.jpg",
+        "../assets/images/projects/barberia-97/02-section.jpg",
+        "../assets/images/projects/barberia-97/02-full.jpg",
+        "../assets/images/projects/barberia-97/03-mobile.jpg"
       ],
       "tags": [
         "WordPress",
@@ -146,42 +739,665 @@
         "WhatsApp",
         "Barbershop",
         "Responsive"
-      ]
+      ],
+      "summary": {
+        "en": "WordPress landing for Barbería 97 focused on services, atmosphere and a direct WhatsApp contact path.",
+        "es": "Landing en WordPress para Barbería 97 enfocada en servicios, atmósfera y un contacto directo por WhatsApp."
+      }
     },
     {
-      "id": "figma-fstail-web-design",
-      "category": "web-design",
-      "subtitle": { "en": "UI Design", "es": "Diseño UI" },
-      "cardTitle": { "en": "FSTail Web Design", "es": "FSTail Web Design" },
-      "image": "../assets/images/project-img-2.jpg",
+      "id": "shoes",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Shoes Website",
+        "es": "Sitio de Zapatos"
+      },
+      "image": "../assets/images/projects/shoes/01-hero.jpg",
       "cat": {
-        "en": "Figma — Web Design System",
-        "es": "Figma — Sistema de Diseño Web"
+        "en": "Web — E-Commerce / Fashion",
+        "es": "Web — E-Commerce / Moda"
       },
-      "title": { "en": "FSTail Web Design", "es": "FSTail Web Design" },
+      "title": {
+        "en": "Shoes Website",
+        "es": "Sitio de Zapatos"
+      },
       "desc": {
-        "en": "Figma design file for the FSTail web presence: layout structure, visual hierarchy, sections and UI components for a professional services brand.",
-        "es": "Archivo de diseño en Figma para la web de FSTail: estructura de layouts, jerarquía visual, secciones y componentes UI para una marca de servicios profesionales."
+        "en": "E-commerce oriented footwear site with product presentation, category browsing and cart-style interactions. Static front-end demo focused on catalog UX and responsive product cards.",
+        "es": "Sitio de calzado orientado a e-commerce con presentación de productos, navegación por categorías e interacciones tipo carrito. Demo front-end estática enfocada en UX de catálogo y cards responsive."
       },
-      "url": "https://www.figma.com/design/yLCMxlNr9oTviRJ60LuXB7/FSTail---web-Desing?node-id=0-1",
-      "type": { "en": "UI / Web Design", "es": "UI / Diseño Web" },
-      "stack": "Figma",
-      "year": "2026",
-      "delivery": { "en": "Design file", "es": "Archivo de diseño" },
-      "banner": "../assets/images/project-img-2.jpg",
+      "url": "https://alqmst99.github.io/Shoes-WebSite/",
+      "type": {
+        "en": "Landing Page",
+        "es": "Landing Page"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "5 days",
+        "es": "5 días"
+      },
+      "banner": "../assets/images/projects/shoes/01-hero.jpg",
       "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
+        "../assets/images/projects/shoes/01-hero.jpg",
+        "../assets/images/projects/shoes/02-section.jpg",
+        "../assets/images/projects/shoes/02-full.jpg",
+        "../assets/images/projects/shoes/03-mobile.jpg"
       ],
-      "tags": ["Figma", "Web Design", "UI", "Layout", "Brand"]
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Product Cards",
+        "Responsive",
+        "Fashion"
+      ],
+      "summary": {
+        "en": "E-commerce oriented footwear site with product presentation, category browsing and cart-style interactions.",
+        "es": "Sitio de calzado orientado a e-commerce con presentación de productos, navegación por categorías e interacciones tipo carrito."
+      }
+    },
+    {
+      "id": "ecommerce",
+      "category": "web-app",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Modern E-Commerce",
+        "es": "E-Commerce Moderno"
+      },
+      "image": "../assets/images/projects/ecommerce/01-hero.jpg",
+      "cat": {
+        "en": "Web — E-Commerce",
+        "es": "Web — E-Commerce"
+      },
+      "title": {
+        "en": "Modern E-Commerce",
+        "es": "E-Commerce Moderno"
+      },
+      "desc": {
+        "en": "Clothing e-commerce demo with product grid, detail views and cart flow. Built to practice catalog structure, filters and mobile-friendly shopping UI without a full backend.",
+        "es": "Demo de e-commerce de indumentaria con grilla de productos, vistas de detalle y flujo de carrito. Pensada para practicar estructura de catálogo, filtros y UI de compra mobile-friendly sin backend completo."
+      },
+      "url": "https://alqmst99.github.io/Clothes-comerce/",
+      "type": {
+        "en": "Full Website",
+        "es": "Sitio Completo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "14 days",
+        "es": "14 días"
+      },
+      "banner": "../assets/images/projects/ecommerce/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/ecommerce/01-hero.jpg",
+        "../assets/images/projects/ecommerce/02-section.jpg",
+        "../assets/images/projects/ecommerce/02-full.jpg",
+        "../assets/images/projects/ecommerce/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Cart UI",
+        "E-Commerce",
+        "Responsive"
+      ],
+      "summary": {
+        "en": "Clothing e-commerce demo with product grid, detail views and cart flow.",
+        "es": "Demo de e-commerce de indumentaria con grilla de productos, vistas de detalle y flujo de carrito."
+      }
+    },
+    {
+      "id": "portfolio-nahuel",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Portfolio Nahuel",
+        "es": "Portfolio Nahuel"
+      },
+      "image": "../assets/images/projects/portfolio-nahuel/01-hero.jpg",
+      "cat": {
+        "en": "Web — Portfolio",
+        "es": "Web — Portfolio"
+      },
+      "title": {
+        "en": "Portfolio Nahuel",
+        "es": "Portfolio Nahuel"
+      },
+      "desc": {
+        "en": "Personal front-end portfolio showcasing selected work, skills and contact paths. Designed as a clean static site to present projects and professional profile with fast load times.",
+        "es": "Portfolio personal de front-end con trabajos seleccionados, skills y vías de contacto. Sitio estático limpio para presentar proyectos y perfil profesional con tiempos de carga rápidos."
+      },
+      "url": "https://alqmst99.github.io/PortaFolio-web/",
+      "type": {
+        "en": "Portfolio",
+        "es": "Portfolio"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "4 days",
+        "es": "4 días"
+      },
+      "banner": "../assets/images/projects/portfolio-nahuel/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/portfolio-nahuel/01-hero.jpg",
+        "../assets/images/projects/portfolio-nahuel/02-full.jpg",
+        "../assets/images/projects/portfolio-nahuel/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Dark Theme"
+      ],
+      "summary": {
+        "en": "Personal front-end portfolio showcasing selected work, skills and contact paths.",
+        "es": "Portfolio personal de front-end con trabajos seleccionados, skills y vías de contacto."
+      }
+    },
+    {
+      "id": "portfolio-ana",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Portfolio Ana",
+        "es": "Portfolio Ana"
+      },
+      "image": "../assets/images/projects/portfolio-ana/01-hero.jpg",
+      "cat": {
+        "en": "Web — Portfolio",
+        "es": "Web — Portfolio"
+      },
+      "title": {
+        "en": "Portfolio Ana",
+        "es": "Portfolio Ana"
+      },
+      "desc": {
+        "en": "Personal front-end portfolio with project highlights and a refined visual layout. Static build focused on presentation quality and responsive behaviour.",
+        "es": "Portfolio personal de front-end con destacados de proyectos y un layout visual cuidado. Build estático orientado a calidad de presentación y comportamiento responsive."
+      },
+      "url": "https://anaclara-95.github.io/portfolio-frontend/",
+      "type": {
+        "en": "Portfolio",
+        "es": "Portfolio"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "4 days",
+        "es": "4 días"
+      },
+      "banner": "../assets/images/projects/portfolio-ana/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/portfolio-ana/01-hero.jpg",
+        "../assets/images/projects/portfolio-ana/02-section.jpg",
+        "../assets/images/projects/portfolio-ana/02-full.jpg",
+        "../assets/images/projects/portfolio-ana/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Portfolio"
+      ],
+      "summary": {
+        "en": "Personal front-end portfolio with project highlights and a refined visual layout.",
+        "es": "Portfolio personal de front-end con destacados de proyectos y un layout visual cuidado."
+      }
+    },
+    {
+      "id": "standard-plan",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Standard Plan",
+        "es": "Plan Estándar"
+      },
+      "image": "../assets/images/projects/standard-plan/01-hero.jpg",
+      "cat": {
+        "en": "Web — Landing Page",
+        "es": "Web — Landing Page"
+      },
+      "title": {
+        "en": "Standard Plan",
+        "es": "Plan Estándar"
+      },
+      "desc": {
+        "en": "Template-style business site representing a standard web plan: home, services, about and contact patterns. Useful as a baseline structure for small-business presentations.",
+        "es": "Sitio tipo plantilla que representa un plan web estándar: patrones de home, servicios, about y contacto. Útil como estructura base para presentaciones de pequeños negocios."
+      },
+      "url": "https://alqmst99.github.io/Plan-Est-ndar/",
+      "type": {
+        "en": "Landing Page",
+        "es": "Landing Page"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "5 days",
+        "es": "5 días"
+      },
+      "banner": "../assets/images/projects/standard-plan/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/standard-plan/01-hero.jpg",
+        "../assets/images/projects/standard-plan/02-section.jpg",
+        "../assets/images/projects/standard-plan/02-full.jpg",
+        "../assets/images/projects/standard-plan/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive",
+        "SEO"
+      ],
+      "summary": {
+        "en": "Template-style business site representing a standard web plan: home, services, about and contact patterns.",
+        "es": "Sitio tipo plantilla que representa un plan web estándar: patrones de home, servicios, about y contacto."
+      }
+    },
+    {
+      "id": "lawyer",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Lawyer Website",
+        "es": "Sitio Abogados"
+      },
+      "image": "../assets/images/projects/lawyer/01-hero.jpg",
+      "cat": {
+        "en": "Web — Professional Services",
+        "es": "Web — Servicios Profesionales"
+      },
+      "title": {
+        "en": "Lawyer Website",
+        "es": "Sitio de Abogados"
+      },
+      "desc": {
+        "en": "Law firm style website with practice areas, professional tone and clear contact entry points. Static build focused on trust, readability and mobile accessibility.",
+        "es": "Sitio estilo estudio jurídico con áreas de práctica, tono profesional y puntos de contacto claros. Build estático orientado a confianza, legibilidad y accesibilidad mobile."
+      },
+      "url": "https://alqmst99.github.io/site-lawyer/",
+      "type": {
+        "en": "Full Website",
+        "es": "Sitio Completo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "8 days",
+        "es": "8 días"
+      },
+      "banner": "../assets/images/projects/lawyer/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/lawyer/01-hero.jpg",
+        "../assets/images/projects/lawyer/02-section.jpg",
+        "../assets/images/projects/lawyer/02-full.jpg",
+        "../assets/images/projects/lawyer/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Google Maps",
+        "SEO",
+        "Institutional"
+      ],
+      "summary": {
+        "en": "Law firm style website with practice areas, professional tone and clear contact entry points.",
+        "es": "Sitio estilo estudio jurídico con áreas de práctica, tono profesional y puntos de contacto claros."
+      }
+    },
+    {
+      "id": "realestate",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Modern Real Estate",
+        "es": "Inmobiliaria Moderna"
+      },
+      "image": "../assets/images/projects/realestate/01-hero.jpg",
+      "cat": {
+        "en": "Web — Real Estate",
+        "es": "Web — Inmobiliaria"
+      },
+      "title": {
+        "en": "Modern Real Estate",
+        "es": "Inmobiliaria Moderna"
+      },
+      "desc": {
+        "en": "Real estate landing with property-oriented sections, visual hierarchy for listings and inquiry-focused contact paths. Static front-end suitable as a base for a brokerage brochure site.",
+        "es": "Landing inmobiliaria con secciones orientadas a propiedades, jerarquía visual para listados y contacto orientado a consultas. Front-end estático útil como base de brochure para inmobiliaria."
+      },
+      "url": "https://alqmst99.github.io/Real-State-BT/",
+      "type": {
+        "en": "Full Website",
+        "es": "Sitio Completo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "10 days",
+        "es": "10 días"
+      },
+      "banner": "../assets/images/projects/realestate/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/realestate/01-hero.jpg",
+        "../assets/images/projects/realestate/02-section.jpg",
+        "../assets/images/projects/realestate/02-full.jpg",
+        "../assets/images/projects/realestate/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Filter UI",
+        "Lead Generation"
+      ],
+      "summary": {
+        "en": "Real estate landing with property-oriented sections, visual hierarchy for listings and inquiry-focused contact paths.",
+        "es": "Landing inmobiliaria con secciones orientadas a propiedades, jerarquía visual para listados y contacto orientado a consultas."
+      }
+    },
+    {
+      "id": "gym",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Modern Gym Website",
+        "es": "Sitio de Gimnasio"
+      },
+      "image": "../assets/images/projects/gym/01-hero.jpg",
+      "cat": {
+        "en": "Web — Fitness",
+        "es": "Web — Fitness"
+      },
+      "title": {
+        "en": "Modern Gym Website",
+        "es": "Sitio de Gimnasio Moderno"
+      },
+      "desc": {
+        "en": "Modern gym landing page with membership messaging, class highlights and a strong call-to-action structure. Static site tuned for conversion-oriented sections and mobile reading.",
+        "es": "Landing moderna de gimnasio con mensajes de membresía, destacados de clases y estructura de llamados a la acción. Sitio estático orientado a secciones de conversión y lectura en mobile."
+      },
+      "url": "https://alqmst99.github.io/Landing-Gym/",
+      "type": {
+        "en": "Landing Page",
+        "es": "Landing Page"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "5 days",
+        "es": "5 días"
+      },
+      "banner": "../assets/images/projects/gym/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/gym/01-hero.jpg",
+        "../assets/images/projects/gym/02-section.jpg",
+        "../assets/images/projects/gym/02-full.jpg",
+        "../assets/images/projects/gym/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "CTA",
+        "Fitness"
+      ],
+      "summary": {
+        "en": "Modern gym landing page with membership messaging, class highlights and a strong call-to-action structure.",
+        "es": "Landing moderna de gimnasio con mensajes de membresía, destacados de clases y estructura de llamados a la acción."
+      }
+    },
+    {
+      "id": "medical",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Medical Care",
+        "es": "Medical Care"
+      },
+      "image": "../assets/images/projects/medical/01-hero.jpg",
+      "cat": {
+        "en": "Web — Healthcare",
+        "es": "Web — Salud"
+      },
+      "title": {
+        "en": "Medical Care",
+        "es": "Medical Care"
+      },
+      "desc": {
+        "en": "Medical care landing with service overview, trust cues and appointment-oriented contact. Calm palette and clear hierarchy for healthcare audiences.",
+        "es": "Landing de atención médica con overview de servicios, señales de confianza y contacto orientado a turnos. Paleta calmada y jerarquía clara para audiencias de salud."
+      },
+      "url": "https://alqmst99.github.io/Medical-Care/",
+      "type": {
+        "en": "Full Website",
+        "es": "Sitio Completo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "10 days",
+        "es": "10 días"
+      },
+      "banner": "../assets/images/projects/medical/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/medical/01-hero.jpg",
+        "../assets/images/projects/medical/02-section.jpg",
+        "../assets/images/projects/medical/02-full.jpg",
+        "../assets/images/projects/medical/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Accessibility",
+        "ARIA",
+        "Healthcare"
+      ],
+      "summary": {
+        "en": "Medical care landing with service overview, trust cues and appointment-oriented contact.",
+        "es": "Landing de atención médica con overview de servicios, señales de confianza y contacto orientado a turnos."
+      }
+    },
+    {
+      "id": "moto",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Classic Moto Website",
+        "es": "Sitio Motos Clásicas"
+      },
+      "image": "../assets/images/projects/moto/01-hero.jpg",
+      "cat": {
+        "en": "Web — Automotive",
+        "es": "Web — Automotor"
+      },
+      "title": {
+        "en": "Classic Moto Website",
+        "es": "Sitio de Motos Clásicas"
+      },
+      "desc": {
+        "en": "Classic motorcycle landing with hero storytelling, feature blocks and contact CTA. Visual-first static page aimed at brand atmosphere rather than heavy application logic.",
+        "es": "Landing de motos clásicas con storytelling en el hero, bloques de features y CTA de contacto. Página estática visual, orientada a atmósfera de marca más que a lógica de aplicación."
+      },
+      "url": "https://alqmst99.github.io/Landing-Moto/",
+      "type": {
+        "en": "Landing Page",
+        "es": "Landing Page"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "5 days",
+        "es": "5 días"
+      },
+      "banner": "../assets/images/projects/moto/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/moto/01-hero.jpg",
+        "../assets/images/projects/moto/02-section.jpg",
+        "../assets/images/projects/moto/02-full.jpg",
+        "../assets/images/projects/moto/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Parallax",
+        "Gallery"
+      ],
+      "summary": {
+        "en": "Classic motorcycle landing with hero storytelling, feature blocks and contact CTA.",
+        "es": "Landing de motos clásicas con storytelling en el hero, bloques de features y CTA de contacto."
+      }
+    },
+    {
+      "id": "bakery",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Bakery Website",
+        "es": "Sitio Panadería"
+      },
+      "image": "../assets/images/projects/bakery/01-hero.jpg",
+      "cat": {
+        "en": "Web — Food & Beverage",
+        "es": "Web — Alimentos y Bebidas"
+      },
+      "title": {
+        "en": "Bakery Website",
+        "es": "Sitio de Panadería"
+      },
+      "desc": {
+        "en": "Bakery website with product mood, menu-style sections and a warm visual system. Static demo centered on food presentation and simple inquiry flows.",
+        "es": "Sitio de panadería con mood de producto, secciones tipo menú y un sistema visual cálido. Demo estática centrada en presentación de comida y consultas simples."
+      },
+      "url": "https://anaclara-95.github.io/bakery-website/",
+      "type": {
+        "en": "Full Website",
+        "es": "Sitio Completo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "7 days",
+        "es": "7 días"
+      },
+      "banner": "../assets/images/projects/bakery/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/bakery/01-hero.jpg",
+        "../assets/images/projects/bakery/02-section.jpg",
+        "../assets/images/projects/bakery/02-full.jpg",
+        "../assets/images/projects/bakery/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Mobile-first",
+        "Food"
+      ],
+      "summary": {
+        "en": "Bakery website with product mood, menu-style sections and a warm visual system.",
+        "es": "Sitio de panadería con mood de producto, secciones tipo menú y un sistema visual cálido."
+      }
+    },
+    {
+      "id": "cake",
+      "category": "demos",
+      "subtitle": {
+        "en": "Web",
+        "es": "Web"
+      },
+      "cardTitle": {
+        "en": "Cake Website",
+        "es": "Sitio Pastelería"
+      },
+      "image": "../assets/images/projects/cake/01-hero.jpg",
+      "cat": {
+        "en": "Web — Food & Beverage",
+        "es": "Web — Alimentos y Bebidas"
+      },
+      "title": {
+        "en": "Cake Website",
+        "es": "Sitio de Pastelería"
+      },
+      "desc": {
+        "en": "Cake / pastry showcase site with gallery-led sections and contact for custom orders. Lightweight static front-end for product photography and seasonal offers.",
+        "es": "Sitio de tortas / pastelería con secciones guiadas por galería y contacto para encargos. Front-end estático liviano para fotografía de producto y ofertas de temporada."
+      },
+      "url": "https://anaclara-95.github.io/cake-website/",
+      "type": {
+        "en": "Full Website",
+        "es": "Sitio Completo"
+      },
+      "stack": "HTML5, CSS3, JavaScript",
+      "year": "2024",
+      "delivery": {
+        "en": "6 days",
+        "es": "6 días"
+      },
+      "banner": "../assets/images/projects/cake/01-hero.jpg",
+      "thumbs": [
+        "../assets/images/projects/cake/01-hero.jpg",
+        "../assets/images/projects/cake/02-section.jpg",
+        "../assets/images/projects/cake/02-full.jpg",
+        "../assets/images/projects/cake/03-mobile.jpg"
+      ],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Animations",
+        "Local SEO"
+      ],
+      "summary": {
+        "en": "Cake / pastry showcase site with gallery-led sections and contact for custom orders.",
+        "es": "Sitio de tortas / pastelería con secciones guiadas por galería y contacto para encargos."
+      }
     },
     {
       "id": "figma-bell-vita-design",
-      "category": "web-design",
-      "subtitle": { "en": "UI Design", "es": "Diseño UI" },
-      "cardTitle": { "en": "Bell Vita Design", "es": "Bell Vita Design" },
+      "category": "demos",
+      "subtitle": {
+        "en": "UI Design",
+        "es": "Diseño UI"
+      },
+      "cardTitle": {
+        "en": "Bell Vita Design",
+        "es": "Bell Vita Design"
+      },
       "image": "../assets/images/project-img-1.jpg",
       "cat": {
         "en": "Figma — Luxury Corporate UI",
@@ -196,10 +1412,16 @@
         "es": "Diseño en Figma para Bell Vita: UI corporativa premium para arquitectura y soluciones para el hogar, con layouts elegantes, presentación de producto y lenguaje visual de lujo."
       },
       "url": "https://www.figma.com/design/iaohQ3T40bHwVFoF3oOhy5/Bell-Vita---Web-Dsesing?node-id=0-1",
-      "type": { "en": "UI / Web Design", "es": "UI / Diseño Web" },
+      "type": {
+        "en": "UI / Web Design",
+        "es": "UI / Diseño Web"
+      },
       "stack": "Figma",
       "year": "2026",
-      "delivery": { "en": "Design file", "es": "Archivo de diseño" },
+      "delivery": {
+        "en": "Design file",
+        "es": "Archivo de diseño"
+      },
       "banner": "../assets/images/project-img-1.jpg",
       "thumbs": [
         "../assets/images/project-img-2.jpg",
@@ -207,28 +1429,107 @@
         "../assets/images/project-img-4.jpg",
         "../assets/images/project-img-6.jpg"
       ],
-      "tags": ["Figma", "Web Design", "UI", "Luxury", "Corporate"]
+      "tags": [
+        "Figma",
+        "Web Design",
+        "UI",
+        "Luxury",
+        "Corporate"
+      ],
+      "summary": {
+        "en": "Figma design for Bell Vita: premium corporate UI for architecture and home solutions, focused on elegant layouts, product presentation and luxury visual language.",
+        "es": "Diseño en Figma para Bell Vita: UI corporativa premium para arquitectura y soluciones para el hogar, con layouts elegantes, presentación de producto y lenguaje visual de lujo."
+      }
+    },
+    {
+      "id": "figma-fstail-web-design",
+      "category": "demos",
+      "subtitle": {
+        "en": "UI Design",
+        "es": "Diseño UI"
+      },
+      "cardTitle": {
+        "en": "FSTail Web Design",
+        "es": "FSTail Web Design"
+      },
+      "image": "../assets/images/project-img-2.jpg",
+      "cat": {
+        "en": "Figma — Web Design System",
+        "es": "Figma — Sistema de Diseño Web"
+      },
+      "title": {
+        "en": "FSTail Web Design",
+        "es": "FSTail Web Design"
+      },
+      "desc": {
+        "en": "Figma design file for the FSTail web presence: layout structure, visual hierarchy, sections and UI components for a professional services brand.",
+        "es": "Archivo de diseño en Figma para la web de FSTail: estructura de layouts, jerarquía visual, secciones y componentes UI para una marca de servicios profesionales."
+      },
+      "url": "https://www.figma.com/design/yLCMxlNr9oTviRJ60LuXB7/FSTail---web-Desing?node-id=0-1",
+      "type": {
+        "en": "UI / Web Design",
+        "es": "UI / Diseño Web"
+      },
+      "stack": "Figma",
+      "year": "2026",
+      "delivery": {
+        "en": "Design file",
+        "es": "Archivo de diseño"
+      },
+      "banner": "../assets/images/project-img-2.jpg",
+      "thumbs": [
+        "../assets/images/project-img-1.jpg",
+        "../assets/images/project-img-3.jpg",
+        "../assets/images/project-img-4.jpg",
+        "../assets/images/project-img-5.jpg"
+      ],
+      "tags": [
+        "Figma",
+        "Web Design",
+        "UI",
+        "Layout",
+        "Brand"
+      ],
+      "summary": {
+        "en": "Figma design file for the FSTail web presence: layout structure, visual hierarchy, sections and UI components for a professional services brand.",
+        "es": "Archivo de diseño en Figma para la web de FSTail: estructura de layouts, jerarquía visual, secciones y componentes UI para una marca de servicios profesionales."
+      }
     },
     {
       "id": "figma-gallery",
-      "category": "web-design",
-      "subtitle": { "en": "UI Design", "es": "Diseño UI" },
-      "cardTitle": { "en": "Gallery UI", "es": "Gallery UI" },
+      "category": "demos",
+      "subtitle": {
+        "en": "UI Design",
+        "es": "Diseño UI"
+      },
+      "cardTitle": {
+        "en": "Gallery UI",
+        "es": "Gallery UI"
+      },
       "image": "../assets/images/project-img-4.jpg",
       "cat": {
         "en": "Figma — Gallery Interface",
         "es": "Figma — Interfaz de Galería"
       },
-      "title": { "en": "Gallery", "es": "Gallery" },
+      "title": {
+        "en": "Gallery",
+        "es": "Gallery"
+      },
       "desc": {
         "en": "Figma design focused on a gallery experience: image grids, visual rhythm, detail states and a clean interface for showcasing work or products.",
         "es": "Diseño en Figma orientado a una experiencia de galería: grillas de imágenes, ritmo visual, estados de detalle e interfaz limpia para mostrar trabajos o productos."
       },
       "url": "https://www.figma.com/design/laWYO5SwwNVPyDpulNCT09/Gallery?node-id=0-1",
-      "type": { "en": "UI / Web Design", "es": "UI / Diseño Web" },
+      "type": {
+        "en": "UI / Web Design",
+        "es": "UI / Diseño Web"
+      },
       "stack": "Figma",
       "year": "2026",
-      "delivery": { "en": "Design file", "es": "Archivo de diseño" },
+      "delivery": {
+        "en": "Design file",
+        "es": "Archivo de diseño"
+      },
       "banner": "../assets/images/project-img-4.jpg",
       "thumbs": [
         "../assets/images/project-img-1.jpg",
@@ -236,632 +1537,53 @@
         "../assets/images/project-img-3.jpg",
         "../assets/images/project-img-5.jpg"
       ],
-      "tags": ["Figma", "Web Design", "UI", "Gallery", "Layout"]
-    },
-    {
-      "id": "bell-vita",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Bell-Vita", "es": "Bell-Vita" },
-      "image": "../assets/images/project-img-1.jpg",
-      "cat": {
-        "en": "Web — Real Client Project",
-        "es": "Web — Proyecto de Cliente Real"
-      },
-      "title": { "en": "Bell Vita", "es": "Bell Vita" },
-      "desc": {
-        "en": "Custom corporate website developed for a real client in the architecture and design industry. The project presents premium solutions for windows, doors, kitchens and home elevators through an elegant visual experience inspired by luxury brands, with a focus on refined layouts, product presentation and responsive performance.",
-        "es": "Sitio corporativo a medida desarrollado para un cliente real del sector arquitectura y diseño. Presenta soluciones premium de ventanas, puertas, cocinas y ascensores residenciales con una experiencia visual elegante inspirada en marcas de lujo, enfocada en layouts refinados, presentación de productos y rendimiento responsive."
-      },
-      "url": "https://www.bell-vita.com/",
-      "type": { "en": "Client Website", "es": "Sitio de Cliente" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2026",
-      "delivery": { "en": "14 days", "es": "14 días" },
-      "banner": "../assets/images/project-img-1.jpg",
-      "thumbs": [
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
       "tags": [
-        "Client Project",
-        "Corporate",
-        "Architecture",
-        "Luxury",
-        "Responsive",
-        "Product Showcase"
-      ]
-    },
-    {
-      "id": "fstail-blog",
-      "category": "statics",
-      "subtitle": { "en": "Personal Blog", "es": "Blog Personal" },
-      "cardTitle": { "en": "FSTail Blog", "es": "FSTail Blog" },
-      "image": "../assets/images/project-img-2.jpg",
-      "cat": {
-        "en": "Web — Personal Blog",
-        "es": "Web — Blog Personal"
-      },
-      "title": { "en": "FSTail Personal Blog", "es": "Blog Personal FSTail" },
-      "desc": {
-        "en": "Personal technical blog created to publish articles, ideas and practical content related to web development, technology, performance, SEO and digital products. The project focuses on readability, content organization, responsive design and a clean editorial experience.",
-        "es": "Blog técnico personal creado para publicar artículos, ideas y contenido práctico sobre desarrollo web, tecnología, rendimiento, SEO y productos digitales. El proyecto se centra en legibilidad, organización de contenido, diseño responsive y una experiencia editorial limpia."
-      },
-      "url": "https://blog-fst-ecru.vercel.app/",
-      "type": { "en": "Personal Blog", "es": "Blog Personal" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2026",
-      "delivery": { "en": "7 days", "es": "7 días" },
-      "banner": "../assets/images/project-img-6.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
+        "Figma",
+        "Web Design",
+        "UI",
+        "Gallery",
+        "Layout"
       ],
-      "tags": ["Blog", "SEO", "Responsive", "Content", "JavaScript", "UI/UX"]
-    },
-    {
-      "id": "industrial-site",
-      "category": "react",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Axium Industrial", "es": "Axium Industrial" },
-      "image": "../assets/images/project-img-3.jpg",
-      "cat": {
-        "en": "Web — Engineering / Industrial",
-        "es": "Web — Ingeniería / Industrial"
-      },
-      "title": {
-        "en": "Industrial Engineering Website",
-        "es": "Sitio de Ingeniería Industrial"
-      },
-      "desc": {
-        "en": "Professional corporate website created for an industrial engineering business. The experience is structured around engineering capabilities, industrial solutions, projects and technical expertise, with a visual language designed to communicate reliability and international reach.",
-        "es": "Sitio corporativo profesional para una empresa de ingeniería industrial. La experiencia se estructura en torno a capacidades de ingeniería, soluciones industriales, proyectos y expertise técnico, con un lenguaje visual pensado para transmitir confiabilidad y alcance internacional."
-      },
-      "url": "https://industrial-site-sooty.vercel.app/pages/index.html",
-      "type": { "en": "Corporate Website", "es": "Sitio Corporativo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2026",
-      "delivery": { "en": "12 days", "es": "12 días" },
-      "banner": "../assets/images/project-img-3.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-5.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": [
-        "Industrial",
-        "Engineering",
-        "Corporate",
-        "Responsive",
-        "SEO",
-        "JavaScript"
-      ]
-    },
-    {
-      "id": "ortopedia",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "ORTOPECTUS", "es": "ORTOPECTUS" },
-      "image": "../assets/images/project-img-4.jpg",
-      "cat": {
-        "en": "Web — Healthcare",
-        "es": "Web — Salud"
-      },
-      "title": { "en": "ORTOPECTUS", "es": "ORTOPECTUS" },
-      "desc": {
-        "en": "Specialized medical website focused on thoracic surgery and chest wall conditions. The project presents medical information, treatments and specialized procedures through a clean, professional and accessible interface designed to establish trust and make complex healthcare information easier to understand.",
-        "es": "Sitio médico especializado en cirugía torácica y patologías de la pared torácica. Presenta información médica, tratamientos y procedimientos a través de una interfaz limpia, profesional y accesible, pensada para generar confianza y facilitar la comprensión de información de salud compleja."
-      },
-      "url": "https://ortopedia-eight.vercel.app/",
-      "type": { "en": "Medical Website", "es": "Sitio Médico" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2026",
-      "delivery": { "en": "10 days", "es": "10 días" },
-      "banner": "../assets/images/project-img-6.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
-      ],
-      "tags": [
-        "Healthcare",
-        "Medical",
-        "Responsive",
-        "Accessibility",
-        "SEO",
-        "UI/UX"
-      ]
-    },
-    {
-      "id": "metric-international",
-      "category": "react",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Metric", "es": "Metric" },
-      "image": "../assets/images/project-img-3.jpg",
-      "cat": {
-        "en": "Web — Industrial / International",
-        "es": "Web — Industrial / Internacional"
-      },
-      "title": { "en": "Metric International", "es": "Metric International" },
-      "desc": {
-        "en": "Large-scale corporate website for an international industrial organization. The platform presents engineering, EPC/EPCM capabilities, industrial services, equipment and projects through a structured architecture designed for international clients and complex industrial markets.",
-        "es": "Sitio corporativo de gran escala para una organización industrial internacional. Presenta capacidades de ingeniería, EPC/EPCM, servicios industriales, equipos y proyectos con una arquitectura estructurada pensada para clientes internacionales y mercados industriales complejos."
-      },
-      "url": "https://metric-international.vercel.app/",
-      "type": { "en": "Corporate Website", "es": "Sitio Corporativo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2026",
-      "delivery": { "en": "14 days", "es": "14 días" },
-      "banner": "../assets/images/project-img-4.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": [
-        "EPC",
-        "EPCM",
-        "Industrial",
-        "Engineering",
-        "Corporate",
-        "Responsive"
-      ]
-    },
-    {
-      "id": "industrial-web",
-      "category": "react",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": {
-        "en": "Industrial Consultant",
-        "es": "Consultor Industrial"
-      },
-      "image": "../assets/images/project-img-6.jpg",
-      "cat": {
-        "en": "Web — Industrial / Corporate",
-        "es": "Web — Industrial / Corporativo"
-      },
-      "title": {
-        "en": "Industrial Corporate Website",
-        "es": "Sitio Corporativo Industrial"
-      },
-      "desc": {
-        "en": "Corporate website designed for an industrial business, focused on presenting its capabilities, services and solutions through a professional and structured digital experience. The site combines a strong visual identity with clear navigation, responsive layouts and a product and services-focused presentation.",
-        "es": "Sitio corporativo diseñado para una empresa industrial, enfocado en presentar capacidades, servicios y soluciones con una experiencia digital profesional y estructurada. Combina una identidad visual sólida con navegación clara, layouts responsive y presentación orientada a productos y servicios."
-      },
-      "url": "https://industrial-web.vercel.app/",
-      "type": { "en": "Corporate Website", "es": "Sitio Corporativo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2026",
-      "delivery": { "en": "10 days", "es": "10 días" },
-      "banner": "../assets/images/project-img-2.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
-      ],
-      "tags": [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Responsive",
-        "Corporate",
-        "Industrial"
-      ]
-    },
-    {
-      "id": "standard-plan",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Standard Plan", "es": "Plan Estándar" },
-      "image": "../assets/images/project-img-5.jpg",
-      "cat": {
-        "en": "Web — Landing Page",
-        "es": "Web — Landing Page"
-      },
-      "title": { "en": "Standard Plan", "es": "Plan Estándar" },
-      "desc": {
-        "en": "A professional multi-section landing page built as a reference for the Standard service tier. Features a hero, services grid, pricing cards and a contact form with smooth interactions and responsive layouts.",
-        "es": "Landing page profesional de múltiples secciones como referencia del plan Estándar. Incluye hero, grilla de servicios, tarjetas de precios y formulario de contacto con interacciones fluidas y layouts responsive."
-      },
-      "url": "https://alqmst99.github.io/Plan-Est-ndar/",
-      "type": { "en": "Landing Page", "es": "Landing Page" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "5 days", "es": "5 días" },
-      "banner": "../assets/images/project-img-2.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Responsive", "SEO"]
-    },
-    {
-      "id": "bakery",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Bakery Website", "es": "Sitio Panadería" },
-      "image": "../assets/images/project-img-3.jpg",
-      "cat": {
-        "en": "Web — Food & Beverage",
-        "es": "Web — Alimentos y Bebidas"
-      },
-      "title": { "en": "Bakery Website", "es": "Sitio de Panadería" },
-      "desc": {
-        "en": "A warm and inviting website for an artisan bakery. Showcases products with image cards, an about section and contact functionality with a mobile-first layout.",
-        "es": "Sitio cálido y acogedor para una panadería artesanal. Muestra productos con tarjetas de imagen, sección sobre nosotros y contacto, con layout mobile-first."
-      },
-      "url": "https://anaclara-95.github.io/bakery-website/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "7 days", "es": "7 días" },
-      "banner": "../assets/images/project-img-3.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Mobile-first", "Food"]
-    },
-    {
-      "id": "cake",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Cake Website", "es": "Sitio Pastelería" },
-      "image": "../assets/images/project-img-2.jpg",
-      "cat": {
-        "en": "Web — Food & Beverage",
-        "es": "Web — Alimentos y Bebidas"
-      },
-      "title": { "en": "Cake Website", "es": "Sitio de Pastelería" },
-      "desc": {
-        "en": "Custom website for a specialty cake brand with full-bleed photography, featured products, smooth animations and a responsive layout.",
-        "es": "Sitio a medida para una marca de tortas especiales, con fotografía a pantalla completa, productos destacados, animaciones suaves y layout responsive."
-      },
-      "url": "https://anaclara-95.github.io/cake-website/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "6 days", "es": "6 días" },
-      "banner": "../assets/images/project-img-2.jpg",
-      "thumbs": [
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-5.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Animations", "Local SEO"]
-    },
-    {
-      "id": "portfolio-ana",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Portfolio Ana", "es": "Portfolio Ana" },
-      "image": "../assets/images/project-img-1.jpg",
-      "cat": {
-        "en": "Web — Portfolio",
-        "es": "Web — Portfolio"
-      },
-      "title": { "en": "Portfolio Ana", "es": "Portfolio Ana" },
-      "desc": {
-        "en": "Personal portfolio with a minimal typographic design, project cards, skills presentation and integrated contact section.",
-        "es": "Portfolio personal con diseño tipográfico minimalista, tarjetas de proyectos, presentación de skills y sección de contacto integrada."
-      },
-      "url": "https://anaclara-95.github.io/portfolio-frontend/",
-      "type": { "en": "Portfolio", "es": "Portfolio" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "4 days", "es": "4 días" },
-      "banner": "../assets/images/project-img-1.jpg",
-      "thumbs": [
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Portfolio"]
-    },
-    {
-      "id": "portfolio-nahuel",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Portfolio Nahuel", "es": "Portfolio Nahuel" },
-      "image": "../assets/images/project-img-3.jpg",
-      "cat": {
-        "en": "Web — Portfolio",
-        "es": "Web — Portfolio"
-      },
-      "title": { "en": "Portfolio Nahuel", "es": "Portfolio Nahuel" },
-      "desc": {
-        "en": "Developer portfolio with animated sections, project showcase, technology stack and responsive navigation.",
-        "es": "Portfolio de desarrollador con secciones animadas, showcase de proyectos, stack tecnológico y navegación responsive."
-      },
-      "url": "https://alqmst99.github.io/PortaFolio-web/",
-      "type": { "en": "Portfolio", "es": "Portfolio" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "4 days", "es": "4 días" },
-      "banner": "../assets/images/project-img-3.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-5.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Dark Theme"]
-    },
-    {
-      "id": "lawyer",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Lawyer Website", "es": "Sitio Abogados" },
-      "image": "../assets/images/project-img-2.jpg",
-      "cat": {
-        "en": "Web — Professional Services",
-        "es": "Web — Servicios Profesionales"
-      },
-      "title": { "en": "Lawyer Website", "es": "Sitio de Abogados" },
-      "desc": {
-        "en": "Institutional website for a law firm with services, attorney profiles, contact functionality and a professional visual identity.",
-        "es": "Sitio institucional para un estudio jurídico con servicios, perfiles de abogados, contacto e identidad visual profesional."
-      },
-      "url": "https://alqmst99.github.io/site-lawyer/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "8 days", "es": "8 días" },
-      "banner": "../assets/images/project-img-2.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Google Maps", "SEO", "Institutional"]
-    },
-    {
-      "id": "moto",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": {
-        "en": "Classic Moto Website",
-        "es": "Sitio Motos Clásicas"
-      },
-      "image": "../assets/images/project-img-3.jpg",
-      "cat": {
-        "en": "Web — Automotive",
-        "es": "Web — Automotor"
-      },
-      "title": {
-        "en": "Classic Moto Website",
-        "es": "Sitio de Motos Clásicas"
-      },
-      "desc": {
-        "en": "Landing page for a classic motorcycle brand with immersive visuals, parallax sections and a custom gallery experience.",
-        "es": "Landing page para una marca de motos clásicas con visuales inmersivos, secciones parallax y galería personalizada."
-      },
-      "url": "https://alqmst99.github.io/Landing-Moto/",
-      "type": { "en": "Landing Page", "es": "Landing Page" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "5 days", "es": "5 días" },
-      "banner": "../assets/images/project-img-3.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-5.jpg",
-        "../assets/images/image-back-2.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Parallax", "Gallery"]
-    },
-    {
-      "id": "realestate",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Modern Real Estate", "es": "Inmobiliaria Moderna" },
-      "image": "../assets/images/project-img-1.jpg",
-      "cat": {
-        "en": "Web — Real Estate",
-        "es": "Web — Inmobiliaria"
-      },
-      "title": { "en": "Modern Real Estate", "es": "Inmobiliaria Moderna" },
-      "desc": {
-        "en": "Property showcase website with listings, large imagery, filtering and lead-capture functionality.",
-        "es": "Sitio de exhibición de propiedades con listados, imágenes grandes, filtros y captura de leads."
-      },
-      "url": "https://alqmst99.github.io/Real-State-BT/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "10 days", "es": "10 días" },
-      "banner": "../assets/images/project-img-1.jpg",
-      "thumbs": [
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Filter UI", "Lead Generation"]
-    },
-    {
-      "id": "shoes",
-      "category": "ecommerce",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Shoes Website", "es": "Sitio de Zapatos" },
-      "image": "../assets/images/image-back-2.jpg",
-      "cat": {
-        "en": "Web — E-Commerce / Fashion",
-        "es": "Web — E-Commerce / Moda"
-      },
-      "title": { "en": "Shoes Website", "es": "Sitio de Zapatos" },
-      "desc": {
-        "en": "Fashion-oriented product website for a footwear brand with product cards, hover interactions and responsive layouts.",
-        "es": "Sitio de producto orientado a moda para una marca de calzado, con tarjetas de producto, interacciones hover y layouts responsive."
-      },
-      "url": "https://alqmst99.github.io/Shoes-WebSite/",
-      "type": { "en": "Landing Page", "es": "Landing Page" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "5 days", "es": "5 días" },
-      "banner": "../assets/images/image-back-2.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-4.jpg",
-        "../assets/images/project-img-5.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Product Cards", "Responsive", "Fashion"]
-    },
-    {
-      "id": "bookstore",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Modern Book Store", "es": "Librería Moderna" },
-      "image": "../assets/images/project-img-4.jpg",
-      "cat": {
-        "en": "Web — Retail",
-        "es": "Web — Retail"
-      },
-      "title": { "en": "Modern Book Store", "es": "Librería Moderna" },
-      "desc": {
-        "en": "Online bookstore interface with categories, search, book detail views and shopping cart interactions.",
-        "es": "Interfaz de librería online con categorías, búsqueda, vistas de detalle de libros e interacciones de carrito."
-      },
-      "url": "https://alqmst99.github.io/Books/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "9 days", "es": "9 días" },
-      "banner": "../assets/images/project-img-4.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Modal", "Cart UI"]
-    },
-    {
-      "id": "gym",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Modern Gym Website", "es": "Sitio de Gimnasio" },
-      "image": "../assets/images/project-img-3.jpg",
-      "cat": {
-        "en": "Web — Fitness",
-        "es": "Web — Fitness"
-      },
-      "title": {
-        "en": "Modern Gym Website",
-        "es": "Sitio de Gimnasio Moderno"
-      },
-      "desc": {
-        "en": "High-energy landing page for a gym brand featuring classes, trainers, membership plans and strong calls to action.",
-        "es": "Landing page de alta energía para una marca de gimnasio, con clases, entrenadores, planes de membresía y CTAs potentes."
-      },
-      "url": "https://alqmst99.github.io/Landing-Gym/",
-      "type": { "en": "Landing Page", "es": "Landing Page" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "5 days", "es": "5 días" },
-      "banner": "../assets/images/project-img-3.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-5.jpg",
-        "../assets/images/project-img-6.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "CTA", "Fitness"]
-    },
-    {
-      "id": "medical",
-      "category": "statics",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Medical Care", "es": "Medical Care" },
-      "image": "../assets/images/project-img-6.jpg",
-      "cat": {
-        "en": "Web — Healthcare",
-        "es": "Web — Salud"
-      },
-      "title": { "en": "Medical Care", "es": "Medical Care" },
-      "desc": {
-        "en": "Institutional website for a medical clinic with specialty services, doctor profiles, appointment functionality and accessibility-conscious design.",
-        "es": "Sitio institucional para una clínica médica con especialidades, perfiles de médicos, turnos y diseño consciente de la accesibilidad."
-      },
-      "url": "https://alqmst99.github.io/Medical-Care/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "10 days", "es": "10 días" },
-      "banner": "../assets/images/project-img-6.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-4.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Accessibility", "ARIA", "Healthcare"]
-    },
-    {
-      "id": "ecommerce",
-      "category": "ecommerce",
-      "subtitle": { "en": "Web", "es": "Web" },
-      "cardTitle": { "en": "Modern E-Commerce", "es": "E-Commerce Moderno" },
-      "image": "../assets/images/project-img-4.jpg",
-      "cat": {
-        "en": "Web — E-Commerce",
-        "es": "Web — E-Commerce"
-      },
-      "title": { "en": "Modern E-Commerce", "es": "E-Commerce Moderno" },
-      "desc": {
-        "en": "Full clothing e-commerce front-end with product grids, category navigation, cart drawer, product details and checkout UI.",
-        "es": "Front-end completo de e-commerce de ropa con grillas de productos, navegación por categorías, drawer de carrito, detalle de producto y UI de checkout."
-      },
-      "url": "https://alqmst99.github.io/Clothes-comerce/",
-      "type": { "en": "Full Website", "es": "Sitio Completo" },
-      "stack": "HTML5, CSS3, JavaScript",
-      "year": "2024",
-      "delivery": { "en": "14 days", "es": "14 días" },
-      "banner": "../assets/images/project-img-4.jpg",
-      "thumbs": [
-        "../assets/images/project-img-1.jpg",
-        "../assets/images/project-img-2.jpg",
-        "../assets/images/project-img-3.jpg",
-        "../assets/images/project-img-5.jpg"
-      ],
-      "tags": ["HTML5", "CSS3", "Cart UI", "E-Commerce", "Responsive"]
+      "summary": {
+        "en": "Figma design focused on a gallery experience: image grids, visual rhythm, detail states and a clean interface for showcasing work or products.",
+        "es": "Diseño en Figma orientado a una experiencia de galería: grillas de imágenes, ritmo visual, estados de detalle e interfaz limpia para mostrar trabajos o productos."
+      }
     },
     {
       "id": "api-ecommerce",
-      "category": "backend",
-      "subtitle": { "en": "API", "es": "API" },
-      "cardTitle": { "en": "API E-Commerce", "es": "API E-Commerce" },
+      "category": "web-app",
+      "subtitle": {
+        "en": "API",
+        "es": "API"
+      },
+      "cardTitle": {
+        "en": "API E-Commerce",
+        "es": "API E-Commerce"
+      },
       "image": "../assets/images/project-img-5.jpg",
       "cat": {
         "en": "API — Backend",
         "es": "API — Backend"
       },
-      "title": { "en": "API E-Commerce", "es": "API E-Commerce" },
+      "title": {
+        "en": "API E-Commerce",
+        "es": "API E-Commerce"
+      },
       "desc": {
         "en": "RESTful e-commerce API handling products, authentication, carts, orders and database integration.",
         "es": "API RESTful de e-commerce que gestiona productos, autenticación, carritos, pedidos e integración con base de datos."
       },
       "url": "#",
-      "type": { "en": "REST API", "es": "REST API" },
+      "type": {
+        "en": "REST API",
+        "es": "REST API"
+      },
       "stack": "Node.js, Express, MongoDB, JWT",
       "year": "2024",
-      "delivery": { "en": "20 days", "es": "20 días" },
+      "delivery": {
+        "en": "20 days",
+        "es": "20 días"
+      },
       "banner": "../assets/images/project-img-5.jpg",
       "thumbs": [
         "../assets/images/project-img-1.jpg",
@@ -869,28 +1591,53 @@
         "../assets/images/project-img-4.jpg",
         "../assets/images/project-img-6.jpg"
       ],
-      "tags": ["Node.js", "Express", "MongoDB", "JWT", "REST API"]
+      "tags": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "REST API"
+      ],
+      "summary": {
+        "en": "RESTful e-commerce API handling products, authentication, carts, orders and database integration.",
+        "es": "API RESTful de e-commerce que gestiona productos, autenticación, carritos, pedidos e integración con base de datos."
+      }
     },
     {
       "id": "blog-platform",
-      "category": "backend",
-      "subtitle": { "en": "API", "es": "API" },
-      "cardTitle": { "en": "Blogging Platform", "es": "Plataforma de Blog" },
+      "category": "web-app",
+      "subtitle": {
+        "en": "API",
+        "es": "API"
+      },
+      "cardTitle": {
+        "en": "Blogging Platform",
+        "es": "Plataforma de Blog"
+      },
       "image": "../assets/images/project-img-6.jpg",
       "cat": {
         "en": "API — Backend",
         "es": "API — Backend"
       },
-      "title": { "en": "Blogging Platform", "es": "Plataforma de Blog" },
+      "title": {
+        "en": "Blogging Platform",
+        "es": "Plataforma de Blog"
+      },
       "desc": {
         "en": "Full-featured blogging API with user roles, post management, categories, comments and image upload support.",
         "es": "API de blogging completa con roles de usuario, gestión de posts, categorías, comentarios y soporte de subida de imágenes."
       },
       "url": "#",
-      "type": { "en": "REST API", "es": "REST API" },
+      "type": {
+        "en": "REST API",
+        "es": "REST API"
+      },
       "stack": "Backend API",
       "year": "2024",
-      "delivery": { "en": "18 days", "es": "18 días" },
+      "delivery": {
+        "en": "18 days",
+        "es": "18 días"
+      },
       "banner": "../assets/images/project-img-6.jpg",
       "thumbs": [
         "../assets/images/project-img-1.jpg",
@@ -898,7 +1645,84 @@
         "../assets/images/project-img-3.jpg",
         "../assets/images/project-img-5.jpg"
       ],
-      "tags": ["REST API", "Authentication", "Database", "Blog", "Backend"]
+      "tags": [
+        "REST API",
+        "Authentication",
+        "Database",
+        "Blog",
+        "Backend"
+      ],
+      "summary": {
+        "en": "Full-featured blogging API with user roles, post management, categories, comments and image upload support.",
+        "es": "API de blogging completa con roles de usuario, gestión de posts, categorías, comentarios y soporte de subida de imágenes."
+      }
+    },
+    {
+      "id": "osint-investigator",
+      "category": "desktop",
+      "subtitle": {
+        "en": "Desktop",
+        "es": "Escritorio"
+      },
+      "cardTitle": {
+        "en": "OSINT Investigator",
+        "es": "OSINT Investigator"
+      },
+      "image": "../assets/images/project-img-5.jpg",
+      "cat": {
+        "en": "Desktop — Open Source Intelligence Tool",
+        "es": "Escritorio — Herramienta de Inteligencia de Fuentes Abiertas"
+      },
+      "title": {
+        "en": "OSINT Investigator",
+        "es": "OSINT Investigator"
+      },
+      "desc": {
+        "en": "Desktop application concept for structured open-source intelligence workflows. Focuses on collecting publicly available information, correlating entities and producing organized reports. Designed for researchers and analysts; no sensitive or private data is collected or stored in the demo materials.",
+        "es": "Concepto de aplicación de escritorio para flujos de trabajo de inteligencia de fuentes abiertas. Se centra en recopilar información pública disponible, correlacionar entidades y generar reportes organizados. Diseñada para investigadores y analistas; los materiales de demo no incluyen datos sensibles ni privados."
+      },
+      "summary": {
+        "en": "Desktop concept for structured OSINT workflows: public data collection, entity correlation and organized reporting.",
+        "es": "Concepto de escritorio para flujos OSINT estructurados: recolección de datos públicos, correlación de entidades y reportes organizados."
+      },
+      "url": "#",
+      "type": {
+        "en": "Desktop Application (Concept)",
+        "es": "Aplicación de Escritorio (Concepto)"
+      },
+      "stack": "Python, Tauri / Electron (concept), local storage",
+      "year": "2026",
+      "delivery": {
+        "en": "Concept / Demo",
+        "es": "Concepto / Demo"
+      },
+      "banner": "../assets/images/project-img-5.jpg",
+      "thumbs": [
+        "../assets/images/project-img-5.jpg",
+        "../assets/images/project-img-4.jpg",
+        "../assets/images/project-img-6.jpg"
+      ],
+      "tags": [
+        "Desktop",
+        "OSINT",
+        "Concept",
+        "Python",
+        "Research Tool"
+      ],
+      "features": {
+        "en": [
+          "Structured investigation workspace",
+          "Entity linking from public sources only",
+          "Local-first report generation",
+          "No cloud storage of investigation data in the concept"
+        ],
+        "es": [
+          "Espacio de trabajo de investigación estructurado",
+          "Vinculación de entidades solo desde fuentes públicas",
+          "Generación de reportes local-first",
+          "Sin almacenamiento en la nube de datos de investigación en el concepto"
+        ]
+      }
     }
   ]
 }

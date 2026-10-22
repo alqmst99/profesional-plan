@@ -185,7 +185,7 @@
 
         <div class="projects-filters" id="projectsFilters" role="tablist" aria-label="Project categories"></div>
 
-        <div class="proyectos-grid" id="proyectos_card">
+        <div class="proyectos-grid catalog" id="proyectos_card">
           <!-- cards rendered by JS -->
         </div>
 
@@ -203,20 +203,6 @@
     </section>
 
   </main>
-
-  <!-- PROJECT DETAIL PANEL -->
-  <div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
-  <aside class="project-detail" id="projectDetail" role="dialog" aria-modal="true" aria-label="Project detail">
-    <button class="detail-close" onclick="closeDetail()" aria-label="Close">&times;</button>
-    <img id="detailBanner" class="detail-banner" src="" alt="">
-    <div class="detail-thumb-row" id="detailThumbs"></div>
-    <p class="detail-subtitle" id="detailCat"></p>
-    <h2 class="detail-title" id="detailTitle"></h2>
-    <p class="detail-desc" id="detailDesc"></p>
-    <div class="detail-meta" id="detailMeta"></div>
-    <div class="detail-tags" id="detailTags"></div>
-    <a id="detailLink" href="#" class="btn-primary" target="_blank" rel="noopener noreferrer" style="display:inline-block;" data-i18n="viewLive">View live demo →</a>
-  </aside>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -268,50 +254,45 @@
       return obj[lang] || obj.en || '';
     }
 
+    function techList(stack) {
+      if (!stack) return [];
+      return String(stack).split(',').map(s => s.trim()).filter(Boolean).slice(0, 5);
+    }
+
     function applyUI() {
       if (!data || !data.ui) return;
       const ui = data.ui;
 
       document.documentElement.lang = lang;
 
-      // title
       const titleEl = document.querySelector('title[data-i18n]');
       if (titleEl) titleEl.textContent = t(ui.pageTitle);
 
-      // meta description
       const metaDesc = document.querySelector('meta[data-i18n-content]');
       if (metaDesc) metaDesc.setAttribute('content', t(ui.metaDesc));
 
-      // data-i18n text nodes
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const parts = key.split('.');
         let val = ui;
-        for (const p of parts) {
-          val = val && val[p];
-        }
+        for (const p of parts) { val = val && val[p]; }
         if (val) el.textContent = t(val);
       });
 
-      // data-i18n-html
       document.querySelectorAll('[data-i18n-html]').forEach(el => {
         const key = el.getAttribute('data-i18n-html');
         const parts = key.split('.');
         let val = ui;
-        for (const p of parts) {
-          val = val && val[p];
-        }
+        for (const p of parts) { val = val && val[p]; }
         if (val) el.innerHTML = t(val);
       });
 
-      // lang toggle buttons
       document.querySelectorAll('.lang-toggle button').forEach(btn => {
         const isActive = btn.getAttribute('data-lang') === lang;
         btn.classList.toggle('active', isActive);
         btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
       });
 
-      // re-render filters + cards (labels change)
       renderFilters();
       renderCards();
     }
@@ -353,98 +334,37 @@
         return;
       }
 
-      grid.innerHTML = list.map(p => `
-        <article class="proyectos_card" data-id="${p.id}" role="button" tabindex="0">
-          <img loading="lazy" src="${p.image}" alt="${t(p.cardTitle)}" class="project_img">
-          <div class="project_modal">
-            <span class="proyectos_subtitle">${t(p.subtitle)}</span>
-            <h3 class="proyectos_title">${t(p.cardTitle)}</h3>
-            <span class="proyectos_button">${t(data.ui.viewDetail)}</span>
+      grid.innerHTML = list.map(p => {
+        const detailHref = `./project-detail.html?id=${encodeURIComponent(p.id)}`;
+        const techs = techList(p.stack);
+        const summary = t(p.summary) || t(p.desc) || '';
+        return `
+        <article class="project-card" data-id="${p.id}">
+          <div class="project-card-img-wrap">
+            <img loading="lazy" src="${p.image}" alt="${t(p.cardTitle)}">
+            <span class="project-card-type">${t(p.type) || t(p.subtitle)}</span>
           </div>
-        </article>
-      `).join('');
-
-      grid.querySelectorAll('.proyectos_card').forEach(card => {
-        const id = card.getAttribute('data-id');
-        card.addEventListener('click', () => openDetail(id));
-        card.addEventListener('keydown', e => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openDetail(id);
-          }
-        });
-      });
+          <div class="project-card-body">
+            <h3 class="project-card-title">${t(p.cardTitle)}</h3>
+            <p class="project-card-desc">${summary}</p>
+            <div class="project-card-tech">
+              ${techs.map(tech => `<span>${tech}</span>`).join('')}
+            </div>
+            <a class="project-card-link" href="${detailHref}">${t(data.ui.viewDetail)}</a>
+          </div>
+        </article>`;
+      }).join('');
     }
 
-    window.openDetail = function (id) {
-      const p = projectsById[id];
-      if (!p) return;
-
-      document.getElementById('detailBanner').src = p.banner;
-      document.getElementById('detailBanner').alt = t(p.title);
-      document.getElementById('detailCat').textContent = t(p.cat);
-      document.getElementById('detailTitle').textContent = t(p.title);
-      document.getElementById('detailDesc').textContent = t(p.desc);
-
-      const detailLink = document.getElementById('detailLink');
-      detailLink.href = p.url || '#';
-      detailLink.textContent = t(data.ui.viewLive);
-      detailLink.style.display = (!p.url || p.url === '#') ? 'none' : 'inline-block';
-
-      document.getElementById('detailThumbs').innerHTML = (p.thumbs || [])
-        .map(src => `<img loading="lazy" src="${src}" alt="${t(p.title)} project screenshot">`)
-        .join('');
-
-      document.getElementById('detailMeta').innerHTML = `
-        <div class="detail-meta-item">
-          <p>${t(data.ui.type)}</p>
-          <p>${t(p.type)}</p>
-        </div>
-        <div class="detail-meta-item">
-          <p>${t(data.ui.stack)}</p>
-          <p>${p.stack}</p>
-        </div>
-        <div class="detail-meta-item">
-          <p>${t(data.ui.year)}</p>
-          <p>${p.year}</p>
-        </div>
-        <div class="detail-meta-item">
-          <p>${t(data.ui.delivery)}</p>
-          <p>${t(p.delivery)}</p>
-        </div>
-      `;
-
-      document.getElementById('detailTags').innerHTML = (p.tags || [])
-        .map(tag => `<span class="detail-tag">${tag}</span>`)
-        .join('');
-
-      document.getElementById('detailOverlay').classList.add('open');
-      document.getElementById('projectDetail').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    };
-
-    window.closeDetail = function () {
-      document.getElementById('detailOverlay').classList.remove('open');
-      document.getElementById('projectDetail').classList.remove('open');
-      document.body.style.overflow = '';
-    };
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeDetail();
-    });
-
-    // Lang toggle listeners
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
       btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
     });
-
 
     document.addEventListener('fstail:langchange', (e) => {
       lang = e.detail.lang;
       applyUI();
     });
 
-    // Load JSON
     fetch(DATA_URL)
       .then(r => {
         if (!r.ok) throw new Error('Failed to load projects.json');
