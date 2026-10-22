@@ -292,7 +292,7 @@
         alt: 'A dog and a cat outside a neighborhood shop',
         esAlt: 'Un perro y un gato frente a una tienda de barrio',
         href: 'https://alqmst99.github.io/Pet_Shop/pages/catalogo.html',
-        photo: 'https://www.pexels.com/photo/friendly-dog-and-curious-cat-with-storefront-background-38587869/'
+        photo: './assets/images/service-2.png'
       }
     ];
     examples.forEach(example => {
