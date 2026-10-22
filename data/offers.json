@@ -13,12 +13,12 @@
     "delayMs": 5000,
     "cooldownDays": 1
   },
-  "discountOptions": [80, 70, 50, 40, 20, 15, 10],
+  "discountOptions": [80, 75, 70, 50, 40, 20, 15, 10],
   "services": {
     "landing": {
       "en": "Landing page",
       "es": "Landing page",
-      "discount": { "active": true, "percent": 70 },
+      "discount": { "active": true, "percent": 40 },
       "plans": [
         { "id": "landing-basic", "name": "Basic", "price": 90 },
         { "id": "landing-standard", "name": "Standard", "price": 160 },
@@ -38,7 +38,7 @@
     "full-website": {
       "en": "Full website",
       "es": "Sitio web completo",
-      "discount": { "active": true, "percent": 80 },
+      "discount": { "active": true, "percent": 75 },
       "plans": [
         { "id": "full-basic", "name": "Basic", "price": 220 },
         { "id": "full-standard", "name": "Standard", "price": 400 },
@@ -48,7 +48,7 @@
     "catalog-store": {
       "en": "Product catalog / light online store",
       "es": "Catálogo de productos / tienda online",
-      "discount": { "active": true, "percent": 70 },
+      "discount": { "active": true, "percent": 75 },
       "plans": [
         { "id": "catalog-store-entry", "name": "Catalog launch", "price": 350 }
       ]
