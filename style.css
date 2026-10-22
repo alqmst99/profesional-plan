@@ -305,7 +305,6 @@ header.scrolled {
 }
 
 .hero-layout {
-  max-width: 1260px;
   margin: 0 auto;
   padding: 0 var(--space-md);
   position: relative;
@@ -393,7 +392,7 @@ header.scrolled {
 
 .hero-media {
   position: relative;
-  width: 100%;
+
   aspect-ratio: 4 / 5;
   overflow: hidden;
   opacity: 0;
